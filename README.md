@@ -2,61 +2,67 @@
 
 This repository serves as a **template** for setting up **C++ and Rust projects** using **Bazel**.
 It provides a **standardized project structure**, ensuring best practices for:
+
 - **Build configuration** with Bazel.
 - **Testing** (unit and integration tests).
 - **Documentation** setup.
 - **CI/CD workflows**.
 - **Development environment** configuration.
 
-The template includes a **basic "Hello World" example** for both **C++ and Rust**, making it **buildable out of the box**.
-
 ---
 
 ## 📂 Project Structure
 
-| File/Folder           | Description |
-|-----------------------|-------------|
-| `README.md`          | Short description & build instructions |
-| `src/`               | Source files for the module |
-| `tests/`             | Unit tests (UT) and integration tests (IT) |
-| `docs/`              | Documentation (Doxygen for C++ / mdBook for Rust) |
-| `.github/workflows/`  | CI/CD pipelines |
-| `.vscode/`           | Recommended VS Code settings |
-| `.bazelrc`, `MODULE.bazel`, `BUILD` | Bazel configuration & settings |
-| `LICENSE.md`         | Licensing information |
-| `CONTRIBUTION.md`    | Contribution guidelines |
+| File/Folder                         | Description                                       |
+| ----------------------------------- | ------------------------------------------------- |
+| `README.md`                         | Short description & build instructions            |
+| `src/`                              | Source files for the module                       |
+| `tests/`                            | Unit tests (UT) and integration tests (IT)        |
+| `docs/`                             | Documentation (Doxygen for C++ / mdBook for Rust) |
+| `.github/workflows/`                | CI/CD pipelines                                   |
+| `.vscode/`                          | Recommended VS Code settings                      |
+| `.bazelrc`, `MODULE.bazel`, `BUILD` | Bazel configuration & settings                    |
+| `LICENSE.md`                        | Licensing information                             |
+| `CONTRIBUTION.md`                   | Contribution guidelines                           |
 
 ---
 
 ## 🚀 Getting Started
 
 ### 1️⃣ Clone the Repository
+
 ```sh
 git clone https://github.com/eclipse-score/YOUR_PROJECT.git
 cd YOUR_PROJECT
 ```
 
-### 2️⃣ Build the Project
-#### C++
+### 2️⃣ Build the Examples of module
+
+> DISCLAMER: Depending what module implements, it's possible that different
+> configuration flags needs to be set on command line.
+
+To build all targets of the module the following command can be used:
+
 ```sh
-bazel build //...
-```
-#### Rust
-```sh
-bazel build //rust/...
+bazel build //src/...
 ```
 
-### 3️⃣ Run the Example
-#### C++
+This command will instruct Bazel to build all targets that are under Bazel
+package `src/`. The ideal solution is to provide single target that builds
+artifacts, for example:
+
 ```sh
-bazel run //src:main
-```
-#### Rust
-```sh
-bazel run //rust:main
+bazel build //src/<module_name>:release_artifacts
 ```
 
-### 4️⃣ Run Tests
+where `:release_artifacts` is filegroup target that collects all release
+artifacts of the module.
+
+> NOTE: This is just proposal, the final decision is on module maintainer how
+> the module code needs to be built.
+
+### 3️⃣ Run Tests
+
 ```sh
 bazel test //tests/...
 ```
