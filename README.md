@@ -1,3 +1,9 @@
+# DO NOT USE
+
+⚠️ This repo is not working yet! It's not that it's incomplete. It doesn't even work yet! ⚠️
+
+---
+
 # C++ & Rust Bazel Template Repository
 
 This repository serves as a **template** for setting up **C++ and Rust projects** using **Bazel**.
