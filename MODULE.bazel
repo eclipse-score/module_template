@@ -35,7 +35,26 @@ llvm.toolchain(
 use_repo(llvm, "llvm_toolchain")
 use_repo(llvm, "llvm_toolchain_llvm")
 
-register_toolchains("@llvm_toolchain//:all")
+# GCC Toolchain Rules - host configuration
+bazel_dep(name = "score_toolchains_gcc", version = "0.1")
+gcc = use_extension("@score_toolchains_gcc//extentions:gcc.bzl", "gcc")
+gcc.toolchain(
+    url = "https://github.com/eclipse-score/toolchains_gcc/releases/download/0.0.1/x86_64-unknown-linux-gnu_gcc12.tar.gz",
+    sha256 = "457f5f20f57528033cb840d708b507050d711ae93e009388847e113b11bf3600",
+    strip_prefix = "x86_64-unknown-linux-gnu",
+)
+gcc.extra_features(
+    features = [
+        "minimal_warnings",
+        "treat_warnings_as_errors",
+    ],
+)
+gcc.warning_flags(
+    minimal_warnings = ["-Wall", "-Wno-error=deprecated-declarations"],
+    strict_warnings = ["-Wextra", "-Wpedantic"],
+    treat_warnings_as_errors = ["-Werror"],
+)
+use_repo(gcc, "gcc_toolchain", "gcc_toolchain_gcc")
 
 # Dash license checker
 bazel_dep(name = "dash_license_checker", version = "0.1.0")
