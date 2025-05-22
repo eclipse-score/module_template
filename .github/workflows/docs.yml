@@ -38,4 +38,5 @@ jobs:
       id-token: write
 
     with:
+      bazel-target: "//docs:github_pages"
       retention-days: 3
