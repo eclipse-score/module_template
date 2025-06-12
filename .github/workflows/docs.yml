@@ -38,5 +38,6 @@ jobs:
       id-token: write
 
     with:
-      bazel-target: "//docs:github_pages"
+      # the bazel-target depends on your repo specific docs_targets configuration (e.g. "suffix")
+      bazel-target: "//docs:incremental -- --github_user=${{ github.repository_owner }} --github_repo=${{ github.event.repository.name }}"
       retention-days: 3
