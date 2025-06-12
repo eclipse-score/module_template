@@ -31,7 +31,7 @@ runs:
       git config --global --add safe.directory /github/workspace && \
       git fetch origin +refs/heads/main:refs/remotes/origin/main && \
       git fetch origin +refs/pull/${{ inputs.pr-number }}/head && \
-      if ! gitlint --commits origin/main..HEAD; then \
+      if ! gitlint --commits ${{ inputs.base-branch }}..HEAD; then \
         echo -e "\nWARNING: Your commit message does not follow the required format." && \
         echo "Formatting rules: https://eclipse-score.github.io/score/process/guidance/git/index.html" && \
         echo -e "To fix your commit message, run:\n" && \
