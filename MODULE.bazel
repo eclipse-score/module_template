@@ -27,21 +27,16 @@ python.toolchain(
 use_repo(python)
 
 # Add GoogleTest dependency
-bazel_dep(name = "googletest", version = "1.14.0")
+bazel_dep(name = "googletest", version = "1.17.0")
 
 # Rust rules for Bazel
-bazel_dep(name = "rules_rust", version = "0.56.0")
-
-# Checker rule for CopyRight checks/fixs
-bazel_dep(name = "score_cr_checker", version = "0.3.1")
-bazel_dep(name = "score_python_basics", version = "0.3.4")
-bazel_dep(name = "score_starpls_lsp", version = "0.1.0")
+bazel_dep(name = "rules_rust", version = "0.63.0")
 
 # C/C++ rules for Bazel
-bazel_dep(name = "rules_cc", version = "0.1.1")
+bazel_dep(name = "rules_cc", version = "0.2.1")
 
 # LLVM Toolchains Rules - host configuration
-bazel_dep(name = "toolchains_llvm", version = "1.2.0")
+bazel_dep(name = "toolchains_llvm", version = "1.4.0")
 
 llvm = use_extension("@toolchains_llvm//toolchain/extensions:llvm.bzl", "llvm")
 llvm.toolchain(
@@ -53,13 +48,10 @@ use_repo(llvm, "llvm_toolchain_llvm")
 
 register_toolchains("@llvm_toolchain//:all")
 
-# Dash license checker
-bazel_dep(name = "score_dash_license_checker", version = "0.1.2")
-
-# Format checker
-bazel_dep(name = "score_format_checker", version = "0.1.1")
-bazel_dep(name = "aspect_rules_lint", version = "1.4.4")
+# tooling
+bazel_dep(name = "score_tooling", version = "1.0.1")
+bazel_dep(name = "aspect_rules_lint", version = "1.5.3")
 bazel_dep(name = "buildifier_prebuilt", version = "8.2.0.2")
 
 #docs-as-code
-bazel_dep(name = "score_docs_as_code", version = "1.0.1")
+bazel_dep(name = "score_docs_as_code", version = "1.1.0")
