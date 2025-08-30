@@ -2,9 +2,5 @@
   {
     "version": "main",
     "url": "https://eclipse-score.github.io/module_template/main/"
-  },
-  {
-    "version": "pr-35",
-    "url": "https://eclipse-score.github.io/module_template/pr-35/"
   }
 ]
