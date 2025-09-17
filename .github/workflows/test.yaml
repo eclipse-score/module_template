@@ -1,0 +1,39 @@
+name: Test Org Tokens
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-tokens:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        token_name:
+          - RENOVATE_TOKEN
+          - GH_PUBLISH_TOKEN
+          - SCORE_BOT_PAT
+    steps:
+      - name: Test token ${{ matrix.token_name }}
+        env:
+          TOKEN: ${{ secrets[matrix.token_name] }}
+          TOKEN_NAME: ${{ matrix.token_name }}
+        run: |
+          echo "🔎 Testing token: $TOKEN_NAME"
+
+          echo "==> /user"
+          curl -s -H "Authorization: token $TOKEN" https://api.github.com/user | jq '{login, id}'
+
+          echo "==> Token scopes"
+          curl -sI -H "Authorization: token $TOKEN" https://api.github.com/user | grep x-oauth-scopes || true
+
+          echo "==> Try PR reviews API"
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: token $TOKEN" \
+            https://api.github.com/repos/qorix-group/sccache_server_image/pulls/1/reviews)
+          echo "PR Reviews: $STATUS"
+
+          echo "==> Try team members API"
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: token $TOKEN" \
+            https://api.github.com/orgs/qorix-group/teams/qorix-reviewers/members)
+          echo "Team Members: $STATUS"
