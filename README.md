@@ -104,7 +104,7 @@ It provides structured configuration that helps determine behavior such as:
 ```python
 PROJECT_CONFIG = {
     "asil_level": "QM",  # or "ASIL-A", "ASIL-B", etc.
-    "source_code": ["cpp", "rust"]  # Languages used in the module
+    "source_code": ["python", "rust"]  # Languages used in the module
 }
 ```
 
@@ -112,3 +112,5 @@ PROJECT_CONFIG = {
 
 When used with macros like `dash_license_checker`, it allows dynamic selection of file types
  (e.g., `cargo`, `requirements`) based on the languages declared in `source_code`.
+
+> C++ is not supported by `dash_license_checker`
