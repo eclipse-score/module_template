@@ -48,13 +48,6 @@
             99
         ]
     },
-
-    "bazel.lsp.command": "bazel",
-    "bazel.lsp.args": [
-        "run",
-        "//:starpls_server"
-    ],
-
     // RST Settings
     "[restructuredtext]": {
         "editor.tabSize": 3,
