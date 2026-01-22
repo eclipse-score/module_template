@@ -30,7 +30,7 @@ body:
       required: true
   - type: checkboxes
     attributes:
-      label: Impact analysis for code changes:
+      label: Impact analysis for code changes
       options:
         - label: This change does not violate any requirements and is covered by existing requirements
         - label: This change does not violate any design decisions, architectural, detailed designs
@@ -39,7 +39,7 @@ body:
       required: true
   - type: checkboxes
     attributes:
-      label: Before requesting a review, please confirm that you have:
+      label: Before requesting a review, please confirm that you have
       options:
         - label: Added/updated relevant documentation for code changes
         - label: Added/updated tests to cover the relevant code changes

@@ -15,6 +15,7 @@ name: "Component Request"
 description: Issue to track a component request
 title: "Component: Your Component Request title"
 labels: ["component_request"]
+type: 'Component'
 body:
   - type: dropdown
     attributes:
