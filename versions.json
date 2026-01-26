@@ -26,5 +26,9 @@
   {
     "version": "pr-41",
     "url": "https://eclipse-score.github.io/module_template/pr-41/"
+  },
+  {
+    "version": "pr-42",
+    "url": "https://eclipse-score.github.io/module_template/pr-42/"
   }
 ]
