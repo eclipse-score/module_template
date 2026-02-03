@@ -44,8 +44,8 @@ Project Layout
 
 The module template includes the following top-level structure:
 
-- `src/`: Main C++/Rust sources
-- `tests/`: Unit and integration tests
+- `src/`: Main C++/Rust sources with Unit Tests
+- `tests/`: Component and Feature Integration Tests
 - `examples/`: Usage examples
 - `docs/`: Documentation using `docs-as-code`
 - `.github/workflows/`: CI/CD pipelines
@@ -59,7 +59,19 @@ To build the module:
 
    bazel build //src/...
 
-To run tests:
+To run all tests:
+
+.. code-block:: bash
+
+   bazel test //...
+
+To run Unit Tests:
+
+.. code-block:: bash
+
+   bazel test //src/...
+
+To run Component / Feature Integration Tests:
 
 .. code-block:: bash
 
