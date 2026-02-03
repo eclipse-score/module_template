@@ -5,12 +5,10 @@
     "files.trimTrailingWhitespace": true,
     "editor.insertSpaces": true,
     "editor.tabCompletion": "on",
-
     // Default for any filetype
     "editor.rulers": [
         99
     ],
-
     // Exclude build, temp and cache folders
     "files.watcherExclude": {
         ".*/**": true,
@@ -19,7 +17,6 @@
         ".venv*/**": true,
         "_build/**": true,
     },
-
     // Python Settings
     // Exclude build, temp and cache folders
     "python.analysis.exclude": [
@@ -42,25 +39,24 @@
         },
         "editor.defaultFormatter": "charliermarsh.ruff",
     },
-
     // Markdown Settings
     "[markdown]": {
         // We mostly write markdown in some combination with python,
         // so we use the same rulers as python.
         "editor.rulers": [
-            79, 99
+            79,
+            99
         ]
     },
-
-    "bazel.lsp.command": "bazel",
-    "bazel.lsp.args": [
-        "run",
-        "//:starpls_server"
-    ],
-
     // RST Settings
     "[restructuredtext]": {
         "editor.tabSize": 3,
+    },
+    // Patch files
+    "[diff]": {
+        "files.insertFinalNewline": false,
+        "files.trimFinalNewlines": false,
+        "files.trimTrailingWhitespace": false,
     },
     //
     //
@@ -80,9 +76,11 @@
     //
     //
     // Esbonio 1.x (Preview)
-    "esbonio.sphinx.pythonCommand": [
-        ".venv_docs/bin/python"
-    ],
+    "esbonio.sphinx.pythonCommand": {
+        "command": [
+            ".venv_docs/bin/python"
+        ]
+    },
     "esbonio.sphinx.buildCommand": [
         "docs",
         "_build",
@@ -99,8 +97,13 @@
         "--ignore-glob=bazel-*/*",
         "--ignore-glob=.venv_docs/*",
         "--ignore-glob=_build/*",
-
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}/",
+        "--pretty",
+        "--background-index",
+        "--query-driver=/var/cache/bazel/*/execroot/_main/external/toolchains_llvm++llvm+llvm_toolchain/bin/cc_wrapper.sh"
+    ],
 }
