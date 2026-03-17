@@ -27,3 +27,8 @@ repos:
     rev: 31ff8eee214e4e97ef8f5cb46e443273515b63ec
     hooks:
       - id: copyright
+
+  - repo: https://github.com/google/yamlfmt
+    rev: 21ca5323a9c87ee37a434e0ca908efc0a89daa07 # v0.21.0
+    hooks:
+      - id: yamlfmt
