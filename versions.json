@@ -34,5 +34,9 @@
   {
     "version": "pr-55",
     "url": "https://eclipse-score.github.io/module_template/pr-55/"
+  },
+  {
+    "version": "pr-56",
+    "url": "https://eclipse-score.github.io/module_template/pr-56/"
   }
 ]
