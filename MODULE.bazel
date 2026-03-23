@@ -31,7 +31,7 @@ python.toolchain(
 )
 
 # Add GoogleTest dependency
-bazel_dep(name = "googletest", version = "1.17.0", dev_dependency = True)
+bazel_dep(name = "googletest", version = "1.17.0.bcr.2", dev_dependency = True)
 
 # Rust rules for Bazel
 bazel_dep(name = "rules_rust", version = "0.63.0")
