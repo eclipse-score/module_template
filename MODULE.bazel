@@ -58,7 +58,7 @@ register_toolchains("@llvm_toolchain//:all")
 
 # tooling
 bazel_dep(name = "score_tooling", version = "1.0.4", dev_dependency = True)
-bazel_dep(name = "aspect_rules_lint", version = "1.10.2", dev_dependency = True)
+bazel_dep(name = "aspect_rules_lint", version = "2.3.0", dev_dependency = True)
 bazel_dep(name = "buildifier_prebuilt", version = "8.2.0.2", dev_dependency = True)
 
 #docs-as-code
