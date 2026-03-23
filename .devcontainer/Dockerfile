@@ -11,12 +11,5 @@
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
 
-build --java_language_version=17
-build --tool_java_language_version=17
-build --java_runtime_version=remotejdk_17
-build --tool_java_runtime_version=remotejdk_17
-
-test --test_output=errors
-
-common --registry=https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/
-common --registry=https://bcr.bazel.build
+# Use Dockerfile to get dependabot version bumps after new image is released
+FROM ghcr.io/eclipse-score/devcontainer:v1.2.0

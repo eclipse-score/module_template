@@ -10,13 +10,18 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
-
-build --java_language_version=17
-build --tool_java_language_version=17
-build --java_runtime_version=remotejdk_17
-build --tool_java_runtime_version=remotejdk_17
-
-test --test_output=errors
-
-common --registry=https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/
-common --registry=https://bcr.bazel.build
+name: pre-commit
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+jobs:
+  self_test:
+    name: 🔬 Self Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Check out
+        uses: actions/checkout@v6
+      - name: ⚙️ Setup uv
+        uses: astral-sh/setup-uv@v5
+      - name: 🛠️ Run pre-commit
+        run: uvx pre-commit run --all-files
