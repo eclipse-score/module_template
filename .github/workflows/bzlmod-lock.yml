@@ -14,10 +14,7 @@ name: Bzlmod Lockfile Check
 permissions:
   contents: read
 on:
-  pull_request:
-    types: [opened, reopened, synchronize]
-  merge_group:
-    types: [checks_requested]
+  workflow_call:
   push:
     branches:
       - main
