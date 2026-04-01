@@ -31,7 +31,7 @@ It provides a **standardized project structure**, ensuring best practices for:
 | File/Folder                         | Description                                       |
 | ----------------------------------- | ------------------------------------------------- |
 | `README.md`                         | Short description & build instructions            |
-| `src/`                              | Source files and Unit Tests for the module        |
+| `score/`                            | Source files and Unit Tests for the module        |
 | `tests/`                            | Component and Feature Integration Tests (CIT&FIT) |
 | `examples/`                         | Example files used for guidance                   |
 | `docs/`                             | Documentation (Doxygen for C++ / mdBook for Rust) |
@@ -61,15 +61,15 @@ cd YOUR_PROJECT
 To build all targets of the module the following command can be used:
 
 ```sh
-bazel build //src/...
+bazel build //score/...
 ```
 
 This command will instruct Bazel to build all targets that are under Bazel
-package `src/`. The ideal solution is to provide single target that builds
+package `score/`. The ideal solution is to provide single target that builds
 artifacts, for example:
 
 ```sh
-bazel build //src/<module_name>:release_artifacts
+bazel build //score/<module_name>:release_artifacts
 ```
 
 where `:release_artifacts` is filegroup target that collects all release
@@ -89,7 +89,7 @@ bazel test //...
 Unit tests:
 
 ```sh
-bazel test //src/...
+bazel test //score/...
 ```
 
 Component / Feature integration tests:
@@ -113,6 +113,10 @@ The template integrates **tools and linters** from **centralized repositories** 
 ## 📖 Documentation
 
 - A **centralized docs structure** is planned.
+
+```sh
+bazel run //:docs
+```
 
 ---
 

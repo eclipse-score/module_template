@@ -1,0 +1,10 @@
+@startuml dd_example_ex_dyn
+title Detailed Design Example Dynamic View
+
+participant unit1
+participant unit2
+
+unit1 -> unit2 : call
+unit2 --> unit1 : result
+
+@enduml

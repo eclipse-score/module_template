@@ -17,6 +17,15 @@ Module Template Documentation
 
 This documentation describes the structure, usage and configuration of the Bazel-based C++/Rust module template.
 
+.. toctree::
+   :maxdepth: 1
+
+   aou_requirements_template
+   architecture/architecture_modeling_example
+   score/example_component/component_architecture_template
+   score/example_component/detailed_design_example
+   stakeholder_requirements_template
+
 .. contents:: Table of Contents
    :depth: 2
    :local:
@@ -26,6 +35,11 @@ Overview
 
 This repository provides a standardized setup for projects using **C++** or **Rust** and **Bazel** as a build system.
 It integrates best practices for build, test, CI/CD and documentation.
+It also provides Assumption of Use requirement snippets in :doc:`aou_requirements_template`.
+It also provides an example of modeling architecture in Sphinx Needs in :doc:`architecture/architecture_modeling_example`.
+It also provides the component architecture template snippets in :doc:`score/example_component/component_architecture_template`.
+It also provides an example of documenting detailed design in :doc:`score/example_component/detailed_design_example`.
+It also provides the stakeholder requirements template snippet in :doc:`stakeholder_requirements_template`.
 
 Requirements
 ------------

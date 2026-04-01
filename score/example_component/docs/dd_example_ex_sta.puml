@@ -1,0 +1,9 @@
+@startuml dd_example_ex_sta
+title Detailed Design Example Static View
+
+component unit1
+component unit2
+
+unit1 --> unit2 : uses
+
+@enduml
