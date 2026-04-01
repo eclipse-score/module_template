@@ -23,7 +23,6 @@ setup_starpls(
 copyright_checker(
     name = "copyright",
     srcs = [
-        "src",
         "score",
         "tests",
         "//:BUILD",
