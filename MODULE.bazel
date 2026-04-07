@@ -64,8 +64,9 @@ bazel_dep(name = "buildifier_prebuilt", version = "8.2.0.2", dev_dependency = Tr
 #docs-as-code
 bazel_dep(name = "score_docs_as_code", version = "3.1.0", dev_dependency = True)
 bazel_dep(name = "score_process", version = "1.5.1", dev_dependency = True)
+
 git_override(
     module_name = "score_docs_as_code",
-    remote = "https://github.com/eclipse-score/docs-as-code.git",
     commit = "927fcd9a3eb624248af6bb990ea85edfe63cb38c",
+    remote = "https://github.com/eclipse-score/docs-as-code.git",
 )
