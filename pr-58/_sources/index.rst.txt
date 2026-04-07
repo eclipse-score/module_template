@@ -22,6 +22,12 @@ This documentation describes the structure, usage and configuration of the Bazel
 
    aou_requirements_template
    architecture/architecture_modeling_example
+   manual/index
+   release/release_note
+   safety_mgt/index
+   security_mgt/index
+   verification_report/index
+   score/example_component/index
    score/example_component/component_architecture_template
    score/example_component/detailed_design_example
    stakeholder_requirements_template

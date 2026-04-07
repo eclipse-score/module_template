@@ -52,7 +52,7 @@ Component AoU
 .. code-block:: rst
 
    .. aou_req:: Next Title
-      :id: aou_req__component_name__next_title
+      :id: aou_req__mod_temp_component_name__next_title
       :reqtype: Process
       :security: YES
       :safety: ASIL_B
@@ -61,7 +61,7 @@ Component AoU
       The Component User shall do xyz to use the component safely/securely
 
    .. aou_req:: Another Title
-      :id: aou_req__component_name__another_title
+      :id: aou_req__mod_temp_component_name__another
       :reqtype: Process
       :security: YES
       :safety: ASIL_B
