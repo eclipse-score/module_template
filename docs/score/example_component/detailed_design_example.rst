@@ -12,4 +12,4 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-.. include:: ../../../score/example_component/docs/detailed_design_example.rst
+.. include:: ../../../score/example_component/docs/detailed_design/detailed_design_example.rst
