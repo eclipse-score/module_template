@@ -30,7 +30,7 @@ Static Architecture
 .. code-block:: rst
 
    .. comp:: Component Name
-      :id: comp__component_name_template
+      :id: comp__mod_temp_component_name_template
       :security: YES
       :safety: ASIL_B
       :status: invalid
@@ -39,13 +39,13 @@ Static Architecture
       :belongs_to: feat__feature_name
 
    .. comp_arc_sta:: Component Name (Static View)
-      :id: comp_arc_sta__component_name__static_view
+      :id: comp_arc_sta__mod_temp_component_name__sv
       :security: YES
       :safety: ASIL_B
       :status: invalid
-      :belongs_to: comp__component_name_template
+      :belongs_to: comp__mod_temp_component_name_template
       :uses: logic_arc_int__feature_name__interface_name1
-      :fulfils: comp_req__component_name__some_title
+      :fulfils: comp_req__mod_temp_component_name__some_title
 
       .. needarch::
          :scale: 50
@@ -59,12 +59,12 @@ Dynamic Architecture
 .. code-block:: rst
 
    .. comp_arc_dyn:: Dynamic View
-      :id: comp_arc_dyn__component_name__dynamic_view
+      :id: comp_arc_dyn__mod_temp_component_name__dv
       :security: YES
       :safety: ASIL_B
       :status: invalid
-      :belongs_to: comp__component_name_template
-      :fulfils: comp_req__component_name__some_title
+      :belongs_to: comp__mod_temp_component_name_template
+      :fulfils: comp_req__mod_temp_component_name__some_title
 
       Put here a sequence diagram
 
@@ -75,7 +75,7 @@ The rendered component-interface example is maintained here so the module templa
 repository owns the live ``real_arc_int`` example.
 
 .. real_arc_int:: Component Interface 1
-   :id: real_arc_int__example_feature__archdes_component_interface_1
+   :id: real_arc_int__mod_temp_component_name__if_1
    :status: valid
    :safety: ASIL_B
    :security: NO
@@ -93,12 +93,12 @@ Internal Components
 .. code-block:: rst
 
    .. comp_arc_sta:: Component Name Static View
-      :id: comp_arc_sta__component_name__2
+      :id: comp_arc_sta__mod_temp_component_name__2
       :status: invalid
       :safety: ASIL_B
       :security: YES
-      :fulfils: comp_req__component_name__some_title
-      :belongs_to: comp__component_name_template
+      :fulfils: comp_req__mod_temp_component_name__some_title
+      :belongs_to: comp__mod_temp_component_name_template
 
       No architecture but detailed design
 

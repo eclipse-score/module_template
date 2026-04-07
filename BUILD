@@ -45,4 +45,7 @@ use_format_targets()
 
 docs(
     source_dir = "docs",
+    data = [
+        "@score_process//:needs_json",
+    ],
 )

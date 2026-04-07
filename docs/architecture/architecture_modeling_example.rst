@@ -23,23 +23,23 @@ Feature Architecture File
 =========================
 
 .. feat:: Feature 1
-   :id: feat__example_feature
+   :id: feat__mtef
    :security: YES
    :safety: QM
    :status: valid
-   :includes: logic_arc_int__example_feature__archex_logical_interface_1, logic_arc_int__example_feature__archex_logical_interface_2, logic_arc_int__example_feature__archex_logical_interface_3
-   :consists_of: comp__component_example_1, comp__component_example_2, comp__component_example_3
+   :includes: logic_arc_int__example_feature__if_1, logic_arc_int__example_feature__if_2, logic_arc_int__example_feature__if_3
+   :consists_of: comp__mod_temp_component_example_1, comp__mod_temp_component_example_2, comp__mod_temp_component_example_3
 
    This is the example feature.
 
 .. feat_arc_sta:: Feature 1 Static View
-   :id: feat_arc_sta__example_feature__archdes_static
+   :id: feat_arc_sta__example_feature__sta
    :security: YES
    :safety: QM
    :status: valid
-   :includes: logic_arc_int__example_feature__archex_logical_interface_1, logic_arc_int__example_feature__archex_logical_interface_2, logic_arc_int__example_feature__archex_logical_interface_3
-   :fulfils: feat_req__example_feature__archdes_example_req
-   :belongs_to: feat__example_feature
+   :includes: logic_arc_int__example_feature__if_1, logic_arc_int__example_feature__if_2, logic_arc_int__example_feature__if_3
+   :fulfils: feat_req__example_feature__example_req
+   :belongs_to: feat__mtef
 
    .. needarch::
       :scale: 50
@@ -50,11 +50,11 @@ Feature Architecture File
 .. Logical Interfaces
 
 .. logic_arc_int:: Logical Interface 1
-   :id: logic_arc_int__example_feature__archex_logical_interface_1
+   :id: logic_arc_int__example_feature__if_1
    :security: YES
    :safety: ASIL_B
    :status: valid
-   :fulfils: feat_req__example_feature__archdes_example_req
+   :fulfils: feat_req__example_feature__example_req
 
    .. needarch::
       :scale: 50
@@ -64,11 +64,11 @@ Feature Architecture File
 
 
 .. logic_arc_int:: Logical Interface 2
-   :id: logic_arc_int__example_feature__archex_logical_interface_2
+   :id: logic_arc_int__example_feature__if_2
    :security: YES
    :safety: ASIL_B
    :status: valid
-   :fulfils: feat_req__example_feature__archdes_example_req
+   :fulfils: feat_req__example_feature__example_req
 
    .. needarch::
       :scale: 50
@@ -78,87 +78,87 @@ Feature Architecture File
 
 
 .. logic_arc_int:: Logical Interface 3
-   :id: logic_arc_int__example_feature__archex_logical_interface_3
+   :id: logic_arc_int__example_feature__if_3
    :security: YES
    :safety: ASIL_B
    :status: valid
-   :fulfils: feat_req__example_feature__archdes_example_req
+   :fulfils: feat_req__example_feature__example_req
 
 
 .. Logical Interface Operation
 
 .. logic_arc_int_op:: Logical Operation 1
-   :id: logic_arc_int_op__example_feature__archex_logical_operation_1
+   :id: logic_arc_int_op__example_feature__op_1
    :security: YES
    :safety: ASIL_B
    :status: valid
-   :included_by: logic_arc_int__example_feature__archex_logical_interface_1
+   :included_by: logic_arc_int__example_feature__if_1
 
 .. logic_arc_int_op:: Logical Operation 2
-   :id: logic_arc_int_op__example_feature__archex_logical_operation_2
+   :id: logic_arc_int_op__example_feature__op_2
    :security: YES
    :safety: ASIL_B
    :status: valid
-   :included_by: logic_arc_int__example_feature__archex_logical_interface_1
+   :included_by: logic_arc_int__example_feature__if_1
 
 .. logic_arc_int_op:: Logical Operation 3
-   :id: logic_arc_int_op__example_feature__archex_logical_operation_3
+   :id: logic_arc_int_op__example_feature__op_3
    :security: YES
    :safety: ASIL_B
    :status: valid
-   :included_by: logic_arc_int__example_feature__archex_logical_interface_2
+   :included_by: logic_arc_int__example_feature__if_2
 
 .. logic_arc_int_op:: Logical Operation 4
-   :id: logic_arc_int_op__example_feature__archex_logical_operation_4
+   :id: logic_arc_int_op__example_feature__op_4
    :security: YES
    :safety: ASIL_B
    :status: valid
-   :included_by: logic_arc_int__example_feature__archex_logical_interface_2
+   :included_by: logic_arc_int__example_feature__if_2
 
 .. logic_arc_int_op:: Logical Operation 5
-   :id: logic_arc_int_op__example_feature__archex_logical_operation_5
+   :id: logic_arc_int_op__example_feature__op_5
    :security: YES
    :safety: ASIL_B
    :status: valid
-   :included_by: logic_arc_int__example_feature__archex_logical_interface_3
+   :included_by: logic_arc_int__example_feature__if_3
 
 .. logic_arc_int_op:: Logical Operation 6
-   :id: logic_arc_int_op__example_feature__archex_logical_operation_6
+   :id: logic_arc_int_op__example_feature__op_6
    :security: YES
    :safety: ASIL_B
    :status: valid
-   :included_by: logic_arc_int__example_feature__archex_logical_interface_3
+   :included_by: logic_arc_int__example_feature__if_3
 
 .. logic_arc_int_op:: Logical Operation 7
-   :id: logic_arc_int_op__example_feature__archex_logical_operation_7
+   :id: logic_arc_int_op__example_feature__op_7
    :security: YES
    :safety: ASIL_B
    :status: valid
-   :included_by: logic_arc_int__example_feature__archex_logical_interface_3
+   :included_by: logic_arc_int__example_feature__if_3
 
 .. logic_arc_int_op:: Logical Operation 8
-   :id: logic_arc_int_op__example_feature__archex_logical_operation_8
+   :id: logic_arc_int_op__example_feature__op_8
    :security: YES
    :safety: ASIL_B
    :status: valid
-   :included_by: logic_arc_int__example_feature__archex_logical_interface_3
+   :included_by: logic_arc_int__example_feature__if_3
 
 
 Module Viewpoint
 ================
 
 .. mod:: Module 1
-   :id: mod__example_feature_archex_module_1
+   :id: mod__mtef_archex_module_1
    :security: YES
    :safety: ASIL_B
    :status: valid
-   :includes: comp__component_example_1, comp__component_example_2
+   :includes: comp__mod_temp_component_example_1, comp__mod_temp_component_example_2
 
    This is Module 1.
 
 .. mod_view_sta:: Module 1 Static View
-   :id: mod_view_sta__example_feature__archex_1
-   :includes: comp__component_example_1, comp__component_example_2
+   :id: mod_view_sta__example_feature__1
+   :includes: comp__mod_temp_component_example_1, comp__mod_temp_component_example_2
 
    .. needarch::
       :scale: 50
@@ -167,17 +167,17 @@ Module Viewpoint
       {{ draw_module(need(), needs) }}
 
 .. mod:: Module 2
-   :id: mod__example_feature_archex_module_2
+   :id: mod__mtef_archex_module_2
    :security: YES
    :safety: ASIL_B
    :status: valid
-   :includes: comp__component_example_3
+   :includes: comp__mod_temp_component_example_3
 
    This is Module 2.
 
 .. mod_view_sta:: Module 2 Static View
-   :id: mod_view_sta__example_feature__archex_2
-   :includes: comp__component_example_3
+   :id: mod_view_sta__example_feature__2
+   :includes: comp__mod_temp_component_example_3
 
    .. needarch::
       :scale: 50
@@ -189,40 +189,40 @@ Component Architecture File(s)
 ==============================
 
 .. comp:: Component 1
-   :id: comp__component_example_1
+   :id: comp__mod_temp_component_example_1
    :security: YES
    :safety: ASIL_B
    :status: invalid
-   :implements: logic_arc_int__example_feature__archex_logical_interface_1
-   :consists_of: comp__archex_sub_component_1, comp__archex_sub_component_2, comp__archex_sub_component_3
+   :implements: logic_arc_int__example_feature__if_1
+   :consists_of: comp__mod_temp_archex_sub_component_1, comp__mod_temp_archex_sub_component_2, comp__mod_temp_archex_sub_component_3
 
    Example Component 1 description.
 
 .. comp:: Component 2
-   :id: comp__component_example_2
+   :id: comp__mod_temp_component_example_2
    :security: YES
    :safety: ASIL_B
    :status: invalid
-   :implements: logic_arc_int__example_feature__archex_logical_interface_2
+   :implements: logic_arc_int__example_feature__if_2
 
    Example Component 2 description.
 
 .. comp:: Component 3
-   :id: comp__component_example_3
+   :id: comp__mod_temp_component_example_3
    :security: YES
    :safety: QM
    :status: invalid
-   :implements: logic_arc_int__example_feature__archex_logical_interface_3
+   :implements: logic_arc_int__example_feature__if_3
 
    Example Component 3 description.
 
 .. comp_arc_sta:: Component 1 Static View
-   :id: comp_arc_sta__example_feature__archdes_component_1
+   :id: comp_arc_sta__example_feature__comp_1
    :status: valid
    :safety: ASIL_B
    :security: NO
-   :belongs_to: comp__component_example_1
-   :fulfils: comp_req__example_feature__archex_example_req
+   :belongs_to: comp__mod_temp_component_example_1
+   :fulfils: comp_req__example_feature__example_req
 
    .. needarch::
       :scale: 50
@@ -233,23 +233,23 @@ Component Architecture File(s)
 .. Subcomponents
 
 .. comp:: Component 1_1
-   :id: comp__archex_sub_component_1
+   :id: comp__mod_temp_archex_sub_component_1
    :status: valid
    :safety: ASIL_B
    :security: NO
-   :uses: logic_arc_int__example_feature__archex_logical_interface_2
-   :implements: logic_arc_int__example_feature__archex_logical_interface_1
+   :uses: logic_arc_int__example_feature__if_2
+   :implements: logic_arc_int__example_feature__if_1
 
 .. comp:: Component 1_2
-   :id: comp__archex_sub_component_2
+   :id: comp__mod_temp_archex_sub_component_2
    :status: valid
    :safety: ASIL_B
    :security: NO
-   :uses: logic_arc_int__example_feature__archex_logical_interface_2
-   :implements: logic_arc_int__example_feature__archex_logical_interface_2
+   :uses: logic_arc_int__example_feature__if_2
+   :implements: logic_arc_int__example_feature__if_2
 
 .. comp:: Component 1_3
-   :id: comp__archex_sub_component_3
+   :id: comp__mod_temp_archex_sub_component_3
    :status: valid
    :safety: ASIL_B
    :security: NO
@@ -261,7 +261,7 @@ Requirements for the Example
 .. Requirements
 
 .. stkh_req:: Example Stkh Req
-   :id: stkh_req__example_feature__archdes_example_req
+   :id: stkh_req__mtfn__example_req
    :reqtype: Functional
    :safety: ASIL_B
    :security: YES
@@ -271,23 +271,23 @@ Requirements for the Example
    The platform shall provide the feature ....
 
 .. feat_req:: Example Feature Req
-   :id: feat_req__example_feature__archdes_example_req
+   :id: feat_req__example_feature__example_req
    :reqtype: Functional
    :security: YES
    :safety: ASIL_B
-   :satisfies: stkh_req__example_feature__archdes_example_req
+   :satisfies: stkh_req__mtfn__example_req
    :status: valid
-   :belongs_to: feat__example_feature
+   :belongs_to: feat__mtef
 
    The feature shall provide the functionality to ....
 
 .. comp_req:: Example Component Req
-   :id: comp_req__example_feature__archex_example_req
+   :id: comp_req__example_feature__example_req
    :reqtype: Functional
    :security: YES
    :safety: ASIL_B
-   :satisfies: feat_req__example_feature__archdes_example_req
+   :satisfies: feat_req__example_feature__example_req
    :status: valid
-   :belongs_to: comp__component_example_2
+   :belongs_to: comp__mod_temp_component_example_2
 
    The component shall provide the Logical Operation 4 to get the ..

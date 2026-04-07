@@ -26,12 +26,12 @@ Static Diagrams for Unit Interactions
 -------------------------------------
 
 .. dd_sta:: dd example static
-    :id: dd_sta__example_feature__doc_approver
+    :id: dd_sta__example_feature__approver
     :security: NO
     :safety: ASIL_B
     :status: valid
-    :implements: comp_req__example_feature__archex_example_req
-    :satisfies: comp_arc_sta__example_feature__archdes_component_1
+    :implements: comp_req__example_feature__example_req
+    :satisfies: comp_arc_sta__example_feature__comp_1
     :includes: sw_unit__example_feature__unit1, sw_unit__example_feature__unit2
 
 .. uml:: ../../../score/example_component/docs/detailed_design/dd_example_ex_sta.puml
@@ -40,12 +40,12 @@ Dynamic Diagrams for Unit Interactions
 --------------------------------------
 
 .. dd_dyn:: dd example dynamic
-    :id: dd_dyn__example_feature__dd_example_dynamic
+    :id: dd_dyn__example_feature__dynamic
     :security: NO
     :safety: ASIL_B
     :status: valid
-    :implements: comp_req__example_feature__archex_example_req
-    :satisfies: comp_arc_sta__example_feature__archdes_component_1
+    :implements: comp_req__example_feature__example_req
+    :satisfies: comp_arc_sta__example_feature__comp_1
 
 .. uml:: ../../../score/example_component/docs/detailed_design/dd_example_ex_dyn.puml
 
@@ -56,43 +56,23 @@ From here onwards the needs are defined in the source code and will be automatic
 SW Unit
 *******
 
-.. sw_unit:: unit1
-    :id: sw_unit__example_feature__unit1
-    :security: NO
-    :safety: ASIL_B
-    :status: valid
-
-    Placeholder for the description that will be generated from doxygen
+The unit description is generated from the source code and linked with
+the need ID sw_unit__example_feature__unit1.
 
 Interface
 *********
 
-.. sw_unit_int:: int1
-    :id: sw_unit_int__example_feature__unit1_int1
-    :security: NO
-    :safety: ASIL_B
-    :status: valid
-
-    Placeholder for the description that will be generated from doxygen
+The interface description is generated from the source code and linked with
+the need ID sw_unit_int__example_feature__u1_i1.
 
 SW Unit
 *******
 
-.. sw_unit:: unit2
-    :id: sw_unit__example_feature__unit2
-    :security: NO
-    :safety: ASIL_B
-    :status: valid
-
-    Placeholder for the description that will be generated from doxygen
+The unit description is generated from the source code and linked with
+the need ID sw_unit__example_feature__unit2.
 
 Interface
 *********
 
-.. sw_unit_int:: int2
-    :id: sw_unit_int__example_feature__unit2_int2
-    :security: NO
-    :safety: ASIL_B
-    :status: valid
-
-    Placeholder for the description that will be generated from doxygen
+The interface description is generated from the source code and linked with
+the need ID sw_unit_int__example_feature__u2_i2.
