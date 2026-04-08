@@ -512,7 +512,7 @@
                   
   <section id="module-template-documentation">
 <h1>Module Template Documentation<a class="headerlink" href="#module-template-documentation" title="Link to this heading">#</a></h1>
-<p>This documentation describes the structure, usage and configuration of the Bazel-based C++/Rust module template according to the <a class="reference external" href="https://eclipse-score.github.io/score/main/contribute/general/folder.html#module-folder-structure">SCORE module folder structure</a>.</p>
+<p>This documentation describes the structure, usage and configuration of the Bazel-based C++/Rust module template according to the <a class="reference external" href="https://eclipse-score.github.io/score/main/contribute/general/folder.html#module-folder-structure">SCORE module folder structure</a> and the <a class="reference external" href="https://eclipse-score.github.io/process_description/main/general_concepts/score_building_blocks_concept.html">SCORE building blocks concept</a>.</p>
 <nav class="contents local" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
@@ -537,13 +537,53 @@ It also provides the stakeholder requirements template snippet in <a class="refe
 <section id="module-layout">
 <h2><a class="toc-backref" href="#id2" role="doc-backlink">Module Layout</a><a class="headerlink" href="#module-layout" title="Link to this heading">#</a></h2>
 <p>The module template includes the following top-level structure:</p>
-<ul class="simple">
-<li><p><cite>score/</cite>: Main C++/Rust sources with Unit Tests and component documentation and component integration tests, as well as architecture modeling and detailed design examples and component requirements, safety and security analysis documentation, and verification report documentation</p></li>
-<li><p><cite>tests/</cite>: Module / Feature Integration Tests</p></li>
-<li><p><cite>examples/</cite>: Usage examples for the module or feature</p></li>
-<li><p><cite>docs/</cite>: Documentation using <cite>docs-as-code</cite> for the module and feature, including architecture modeling and detailed design examples, and release notes, safety and security management documentation, and verification report documentation</p></li>
-<li><p><cite>.github/workflows/</cite>: CI/CD pipelines</p></li>
-</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&lt;module_name&gt;/
+├── .github/
+│   └── workflows/                  # CI/CD pipelines
+├── docs/                           # Global documentation of the module
+│   ├── architecture/               # Feature architecture [wp__feature_arch]
+│   ├── manual/                     # Module manual, integration manual, assumptions of use,
+│   │                               #   safety manual [wp__requirements_comp_aou],
+│   │                               #   [wp__module_safety_manual],
+│   │                               #   security manual [wp__module_security_manual]
+│   ├── release/                    # Module release note [wp__module_sw_release_note]
+│   ├── safety_mgt/                 # Module safety plan [wp__module_safety_plan],
+│   │                               #   module safety package [wp__module_safety_package],
+│   │                               #   formal document reviews [wp__fdr_reports]
+│   ├── security_mgt/               # Module security plan [wp__module_security_plan],
+│   │                               #   module security package [wp__module_security_package],
+│   │                               #   formal document reviews [wp__fdr_reports_security],
+│   │                               #   module SW bill of material [wp__sw_module_sbom]
+│   └── verification_report/        # Module verification report,
+│                                   #   components verifications [wp__verification_module_ver_report],
+│                                   #   safety analysis formal reviews [wp__fdr_reports]
+├── examples/                       # Usage examples for the module
+├── tests/                          # Module / Feature Integration Tests
+├── score/                          # Components of the module
+│   └── &lt;component_name&gt;/           # Component folder
+│       ├── src/                    # Source files, include files, unit tests [wp__verification_sw_unit_test],
+│       │   │                       #   test doubles
+│       │   ├── &lt;lower_level_comp&gt;/ # Lower level component (follows &lt;component_name&gt; structure)
+│       │   └── tests/              # Component integration tests, if &gt; 1 component
+│       └── docs/                   # Documentation of the component
+│           ├── architecture/       # Component architecture [wp__component_arch]
+│           │                       #   (only if lower level components exist)
+│           ├── detailed_design/    # Detailed design [wp__sw_implementation]
+│           ├── requirements/       # Component requirements [wp__requirements_comp]
+│           ├── safety_analysis/    # Safety analysis [wp__sw_component_fmea], [wp__sw_component_dfa]
+│           │                       #   (only if component architecture exists)
+│           ├── security_analysis/  # Security analysis [wp__sw_component_security_analysis]
+│           │                       #   (only if component architecture exists)
+│           ├── user_docs/          # User documentation
+│           └── verification/       # Component verification: architecture review [wp__sw_arch_verification],
+│               │                   #   code inspection [wp__sw_implementation_inspection]
+│               └── integration_tests/ # Component integration tests [wp__verification_comp_int_test]
+├── MODULE.bazel                    # Bazel module definition
+├── BUILD                           # Root build rules
+├── project_config.bzl              # Project metadata used by Bazel macros
+└── README.md                       # Entry point of the repository
+</pre></div>
+</div>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="stakeholder_requirements_template.html">Stakeholder Requirements Template</a></li>
