@@ -45,6 +45,7 @@ The module template includes the following top-level structure:
     │   └── workflows/                  # CI/CD pipelines
     ├── docs/                           # Global documentation of the module
     │   ├── architecture/               # Feature architecture [wp__feature_arch]
+    │   │                               #   for multiple features the architecture of each feature might be documented in separate subfolders
     │   ├── manual/                     # Module manual, integration manual, assumptions of use,
     │   │                               #   safety manual [wp__requirements_comp_aou],
     │   │                               #   [wp__module_safety_manual],
@@ -60,7 +61,7 @@ The module template includes the following top-level structure:
     │   └── verification_report/        # Module verification report,
     │                                   #   components verifications [wp__verification_module_ver_report],
     │                                   #   safety analysis formal reviews [wp__fdr_reports]
-    ├── examples/                       # Usage examples for the module
+    ├── examples/                       # Usage examples for the module / features
     ├── tests/                          # Module / Feature Integration Tests
     ├── score/                          # Components of the module
     │   └── <component_name>/           # Component folder
