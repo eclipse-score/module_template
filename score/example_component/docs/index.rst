@@ -172,7 +172,7 @@ Footnotes
 
    architecture/index.rst
    architecture/chklst_arc_inspection.rst
-   component_classification.rst
+   architecture/component_classification.rst
    detailed_design/index.rst
    detailed_design/chklst_impl_inspection.rst
    requirements/index.rst

@@ -34,7 +34,7 @@ Static Diagrams for Unit Interactions
     :satisfies: comp_arc_sta__example_feature__comp_1
     :includes: sw_unit__example_feature__unit1, sw_unit__example_feature__unit2
 
-.. uml:: ../../../score/example_component/docs/detailed_design/dd_example_ex_sta.puml
+.. uml:: dd_example_ex_sta.puml
 
 Dynamic Diagrams for Unit Interactions
 --------------------------------------
@@ -47,7 +47,7 @@ Dynamic Diagrams for Unit Interactions
     :implements: comp_req__example_feature__example_req
     :satisfies: comp_arc_sta__example_feature__comp_1
 
-.. uml:: ../../../score/example_component/docs/detailed_design/dd_example_ex_dyn.puml
+.. uml:: dd_example_ex_dyn.puml
 
 Units within the Component
 --------------------------
