@@ -17,21 +17,6 @@ Module Template Documentation
 
 This documentation describes the structure, usage and configuration of the Bazel-based C++/Rust module template according to the `SCORE module folder structure <https://eclipse-score.github.io/score/main/contribute/general/folder.html#module-folder-structure>`_.
 
-.. toctree::
-   :maxdepth: 1
-
-   aou_requirements_template
-   architecture/architecture_modeling_example
-   manual/index
-   release/release_note
-   safety_mgt/index
-   security_mgt/index
-   verification_report/index
-   score/example_component/index
-   score/example_component/component_architecture_template
-   score/example_component/detailed_design_example
-   stakeholder_requirements_template
-
 .. contents:: Table of Contents
    :depth: 2
    :local:
@@ -43,32 +28,52 @@ This repository provides a standardized setup for projects using **C++** or **Ru
 It integrates best practices for build, test, CI/CD and documentation.
 It also provides Assumption of Use requirement snippets in :doc:`aou_requirements_template`.
 It also provides an example of modeling architecture in Sphinx Needs in :doc:`architecture/architecture_modeling_example`.
-It also provides the component architecture template snippets in :doc:`score/example_component/component_architecture_template`.
-It also provides an example of documenting detailed design in :doc:`score/example_component/detailed_design_example`.
+It also provides the component architecture template snippets in :doc:`score/example_component/architecture/component_architecture_template`.
+It also provides an example of documenting detailed design in :doc:`score/example_component/detailed_design/detailed_design_example`.
 It also provides the stakeholder requirements template snippet in :doc:`stakeholder_requirements_template`.
 
-Requirements
-------------
 
-.. stkh_req:: Example Functional Requirement
-   :id: stkh_req__docgen_enabled__example
-   :status: valid
-   :safety: QM
-   :security: YES
-   :reqtype: Functional
-   :rationale: Ensure documentation builds are possible for all modules
-
-
-Project Layout
---------------
+Module Layout
+-------------
 
 The module template includes the following top-level structure:
 
-- `src/`: Main C++/Rust sources with Unit Tests
-- `tests/`: Component and Feature Integration Tests
-- `examples/`: Usage examples
-- `docs/`: Documentation using `docs-as-code`
+- `score/`: Main C++/Rust sources with Unit Tests and component documentation and component integration tests, as well as architecture modeling and detailed design examples and component requirements, safety and security analysis documentation, and verification report documentation
+- `tests/`: Module / Feature Integration Tests
+- `examples/`: Usage examples for the module or feature
+- `docs/`: Documentation using `docs-as-code` for the module and feature, including architecture modeling and detailed design examples, and release notes, safety and security management documentation, and verification report documentation
 - `.github/workflows/`: CI/CD pipelines
+
+.. toctree::
+   :maxdepth: 1
+
+   stakeholder_requirements_template
+   aou_requirements_template
+
+
+Module / Feature Documentation
+------------------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   architecture/architecture_modeling_example
+   manual/index
+   release/release_note
+   safety_mgt/index
+   security_mgt/index
+   verification_report/index
+
+Example component documentation
+-------------------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   score/example_component/index
+   score/example_component/architecture/component_architecture_template
+   score/example_component/detailed_design/detailed_design_example
+
 
 Quick Start
 -----------
@@ -97,8 +102,8 @@ To run Component / Feature Integration Tests:
 
    bazel test //tests/...
 
-Configuration
--------------
+Module Configuration
+--------------------
 
 The `project_config.bzl` file defines metadata used by Bazel macros.
 
