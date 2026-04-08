@@ -15,7 +15,7 @@
 Module Template Documentation
 =============================
 
-This documentation describes the structure, usage and configuration of the Bazel-based C++/Rust module template according to the `SCORE module folder structure <https://eclipse-score.github.io/score/main/contribute/general/folder.html#module-folder-structure>`_.
+This documentation describes the structure, usage and configuration of the Bazel-based C++/Rust module template according to the `SCORE module folder structure <https://eclipse-score.github.io/score/main/contribute/general/folder.html#module-folder-structure>`_ and the `SCORE building blocks concept <https://eclipse-score.github.io/process_description/main/general_concepts/score_building_blocks_concept.html>`_.
 
 .. contents:: Table of Contents
    :depth: 2
@@ -38,11 +38,54 @@ Module Layout
 
 The module template includes the following top-level structure:
 
-- `score/`: Main C++/Rust sources with Unit Tests and component documentation and component integration tests, as well as architecture modeling and detailed design examples and component requirements, safety and security analysis documentation, and verification report documentation
-- `tests/`: Module / Feature Integration Tests
-- `examples/`: Usage examples for the module or feature
-- `docs/`: Documentation using `docs-as-code` for the module and feature, including architecture modeling and detailed design examples, and release notes, safety and security management documentation, and verification report documentation
-- `.github/workflows/`: CI/CD pipelines
+.. code-block:: text
+
+    <module_name>/
+    ├── .github/
+    │   └── workflows/                  # CI/CD pipelines
+    ├── docs/                           # Global documentation of the module
+    │   ├── architecture/               # Feature architecture [wp__feature_arch]
+    │   ├── manual/                     # Module manual, integration manual, assumptions of use,
+    │   │                               #   safety manual [wp__requirements_comp_aou],
+    │   │                               #   [wp__module_safety_manual],
+    │   │                               #   security manual [wp__module_security_manual]
+    │   ├── release/                    # Module release note [wp__module_sw_release_note]
+    │   ├── safety_mgt/                 # Module safety plan [wp__module_safety_plan],
+    │   │                               #   module safety package [wp__module_safety_package],
+    │   │                               #   formal document reviews [wp__fdr_reports]
+    │   ├── security_mgt/               # Module security plan [wp__module_security_plan],
+    │   │                               #   module security package [wp__module_security_package],
+    │   │                               #   formal document reviews [wp__fdr_reports_security],
+    │   │                               #   module SW bill of material [wp__sw_module_sbom]
+    │   └── verification_report/        # Module verification report,
+    │                                   #   components verifications [wp__verification_module_ver_report],
+    │                                   #   safety analysis formal reviews [wp__fdr_reports]
+    ├── examples/                       # Usage examples for the module
+    ├── tests/                          # Module / Feature Integration Tests
+    ├── score/                          # Components of the module
+    │   └── <component_name>/           # Component folder
+    │       ├── src/                    # Source files, include files, unit tests [wp__verification_sw_unit_test],
+    │       │   │                       #   test doubles
+    │       │   ├── <lower_level_comp>/ # Lower level component (follows <component_name> structure)
+    │       │   └── tests/              # Component integration tests, if > 1 component
+    │       └── docs/                   # Documentation of the component
+    │           ├── architecture/       # Component architecture [wp__component_arch]
+    │           │                       #   (only if lower level components exist)
+    │           ├── detailed_design/    # Detailed design [wp__sw_implementation]
+    │           ├── requirements/       # Component requirements [wp__requirements_comp]
+    │           ├── safety_analysis/    # Safety analysis [wp__sw_component_fmea], [wp__sw_component_dfa]
+    │           │                       #   (only if component architecture exists)
+    │           ├── security_analysis/  # Security analysis [wp__sw_component_security_analysis]
+    │           │                       #   (only if component architecture exists)
+    │           ├── user_docs/          # User documentation
+    │           └── verification/       # Component verification: architecture review [wp__sw_arch_verification],
+    │               │                   #   code inspection [wp__sw_implementation_inspection]
+    │               └── integration_tests/ # Component integration tests [wp__verification_comp_int_test]
+    ├── MODULE.bazel                    # Bazel module definition
+    ├── BUILD                           # Root build rules
+    ├── project_config.bzl              # Project metadata used by Bazel macros
+    └── README.md                       # Entry point of the repository
+
 
 .. toctree::
    :maxdepth: 1
