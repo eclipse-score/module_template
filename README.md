@@ -113,6 +113,10 @@ The template integrates **tools and linters** from **centralized repositories** 
 ## 📖 Documentation
 
 - A **centralized docs structure** is planned.
+- This template builds Sphinx from the repository root. The configuration stays in
+    `conf.py`, the main document is `docs/index.rst`, and the root `BUILD` target uses
+    a repository-local `docs.bzl` wrapper because the upstream SCORE docs macro does not
+    currently support `source_dir = "."`.
 
 ```sh
 bazel run //:docs

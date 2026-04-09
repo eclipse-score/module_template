@@ -58,6 +58,8 @@ exclude_patterns = [
     ".venv_docs",
 ]
 
+root_doc = "docs/index"
+
 templates_path = ["docs/templates"]
 
 # Enable numref
