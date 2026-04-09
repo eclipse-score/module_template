@@ -89,7 +89,6 @@ The module template includes the following top-level structure:
 .. toctree::
    :maxdepth: 1
 
-   stakeholder_requirements_template
    aou_requirements_template
 
 
