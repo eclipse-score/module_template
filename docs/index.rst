@@ -30,8 +30,6 @@ It also provides Assumption of Use requirement snippets in :doc:`aou_requirement
 It also provides an example of modeling architecture in Sphinx Needs in :doc:`architecture/architecture_modeling_example`.
 It also provides the component architecture template snippets in :doc:`/score/example_component/docs/architecture/component_architecture_template`.
 It also provides an example of documenting detailed design in :doc:`/score/example_component/docs/detailed_design/detailed_design_example`.
-It also provides the stakeholder requirements template snippet in :doc:`stakeholder_requirements_template`.
-
 
 Module Layout
 -------------
