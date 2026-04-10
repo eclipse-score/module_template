@@ -28,7 +28,6 @@ Feature Architecture File
    :safety: QM
    :status: valid
    :includes: logic_arc_int__example_feature__if_1, logic_arc_int__example_feature__if_2, logic_arc_int__example_feature__if_3
-   :consists_of: comp__mod_temp_component_example_1, comp__mod_temp_component_example_2, comp__mod_temp_component_example_3
 
    This is the example feature.
 
@@ -195,6 +194,7 @@ Component Architecture File(s)
    :status: invalid
    :implements: logic_arc_int__example_feature__if_1
    :consists_of: comp__mod_temp_archex_sub_component_1, comp__mod_temp_archex_sub_component_2, comp__mod_temp_archex_sub_component_3
+   :belongs_to: feat__mtef
 
    Example Component 1 description.
 
@@ -204,6 +204,7 @@ Component Architecture File(s)
    :safety: ASIL_B
    :status: invalid
    :implements: logic_arc_int__example_feature__if_2
+   :belongs_to: feat__mtef
 
    Example Component 2 description.
 
@@ -213,6 +214,7 @@ Component Architecture File(s)
    :safety: QM
    :status: invalid
    :implements: logic_arc_int__example_feature__if_3
+   :belongs_to: feat__mtef
 
    Example Component 3 description.
 
@@ -239,6 +241,7 @@ Component Architecture File(s)
    :security: NO
    :uses: logic_arc_int__example_feature__if_2
    :implements: logic_arc_int__example_feature__if_1
+   :belongs_to: feat__mtef
 
 .. comp:: Component 1_2
    :id: comp__mod_temp_archex_sub_component_2
@@ -247,12 +250,14 @@ Component Architecture File(s)
    :security: NO
    :uses: logic_arc_int__example_feature__if_2
    :implements: logic_arc_int__example_feature__if_2
+   :belongs_to: feat__mtef
 
 .. comp:: Component 1_3
    :id: comp__mod_temp_archex_sub_component_3
    :status: valid
    :safety: ASIL_B
    :security: NO
+   :belongs_to: feat__mtef
 
 
 Requirements for the Example
