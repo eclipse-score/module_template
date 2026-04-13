@@ -20,9 +20,7 @@
 Abstract
 ========
 
-[A short (~200 word) description of the contribution being addressed.]
-
-[Describe potential impact (especially including safety and security impacts) and severity on pre-existing platform/project elements.]
+[A short (~200 word) description of the feature.]
 
 .. toctree::
    :hidden:
