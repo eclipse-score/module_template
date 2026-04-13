@@ -32,6 +32,7 @@ Abstract
    architecture/architecture_modeling_example.rst
    safety_analysis/fmea.rst
    safety_analysis/dfa.rst
+   safety_analysis/aou_requirements_template.rst
    safety_planning/index.rst
    security_planning/index.rst
    security_analysis/index.rst

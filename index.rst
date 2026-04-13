@@ -86,12 +86,6 @@ The module template includes the following top-level structure:
     └── README.md                       # Entry point of the repository
 
 
-.. toctree::
-   :maxdepth: 1
-
-   docs/aou_requirements_template
-
-
 Module / Feature Documentation
 ------------------------------
 
