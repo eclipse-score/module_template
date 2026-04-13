@@ -12,25 +12,11 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-AoU Requirements Template
-=========================
+AoU Component Requirements Template
+===================================
 
 This page contains Assumption of Use requirement snippets that belong to the
 template repository.
-
-Feature AoU
------------
-
-.. code-block:: rst
-
-   .. aou_req:: Some Other Title
-      :id: aou_req__feature_name__some_other_title
-      :reqtype: Process
-      :security: NO
-      :safety: ASIL_B
-      :status: invalid
-
-      The Feature User shall do xyz to use the feature safely.
 
 Component AoU
 -------------
