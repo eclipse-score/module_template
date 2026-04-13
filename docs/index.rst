@@ -27,7 +27,7 @@ Overview
 This repository provides a standardized setup for projects using **C++** or **Rust** and **Bazel** as a build system.
 It integrates best practices for build, test, CI/CD and documentation.
 It also provides Assumption of Use requirement snippets in :doc:`aou_requirements_template`.
-It also provides an example of modeling architecture in Sphinx Needs in :doc:`architecture/architecture_modeling_example`.
+It also provides an example of modeling architecture in Sphinx Needs in :doc:`/docs/features/feature_example/architecture/architecture_modeling_example`.
 It also provides the component architecture template snippets in :doc:`/score/example_component/docs/architecture/component_architecture_template`.
 It also provides an example of documenting detailed design in :doc:`/score/example_component/docs/detailed_design/detailed_design_example`.
 
@@ -98,12 +98,12 @@ Module / Feature Documentation
 .. toctree::
    :maxdepth: 1
 
-   architecture/architecture_modeling_example
+   features/index
    manual/index
    release/release_note
    safety_mgt/index
    security_mgt/index
-   verification_report/index
+   verification/module_verification_report
 
 Example component documentation
 -------------------------------

@@ -18,20 +18,6 @@ AoU Requirements Template
 This page contains Assumption of Use requirement snippets that belong to the
 template repository.
 
-Platform AoU
-------------
-
-.. code-block:: rst
-
-   .. aou_req:: Some Other Title
-      :id: aou_req__platform__some_other_title
-      :reqtype: Interface
-      :security: YES
-      :safety: ASIL_B
-      :status: invalid
-
-      The Platform User shall do xyz to use the platform safely.
-
 Feature AoU
 -----------
 

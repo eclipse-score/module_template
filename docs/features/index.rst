@@ -1,6 +1,6 @@
 ..
    # *******************************************************************************
-   # Copyright (c) 2026 Contributors to the Eclipse Foundation
+   # Copyright (c) 2024 Contributors to the Eclipse Foundation
    #
    # See the NOTICE file(s) distributed with this work for additional
    # information regarding copyright ownership.
@@ -12,10 +12,13 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-Verification Report
-###################
+.. _features_template:
+
+Features
+========
 
 .. toctree::
-   :titlesonly:
+   :maxdepth: 1
+   :glob:
 
-   module_verification_report
+   */index
