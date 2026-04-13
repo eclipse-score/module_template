@@ -45,6 +45,7 @@ extensions = [
 # component's docs folder. Using include_patterns (added in Sphinx 7.1) avoids
 # the need for symlinks inside the docs/ folder.
 include_patterns = [
+    "index.rst",
     "docs/**",
     "score/example_component/docs/**",
 ]
@@ -58,7 +59,7 @@ exclude_patterns = [
     ".venv_docs",
 ]
 
-root_doc = "docs/index"
+root_doc = "index"
 
 templates_path = ["docs/templates"]
 
