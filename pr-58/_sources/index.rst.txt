@@ -46,9 +46,9 @@ The module template includes the following top-level structure:
     │   │       ├── architecture/       # Feature architecture [wp__feature_arch]
     │   │       ├── safety_analysis/    # Feature safety analysis artifacts
     │   │       ├── safety_planning/    # Feature safety planning artifacts (FMEA, DFA, AoU, etc.)
-    │   │       ├── security_analysis/  # Feature security analysis artifacts
+    │   │       ├── security_analysis/  # Feature security analysis artifacts [wp__feature_security_analysis]
     │   │       ├── security_planning/  # Feature security planning artifacts
-    │   │       └── verification/       # Feature verification artifacts
+    │   │       └── verification/       # Feature verification artifacts, consisting of Architecture review [wp__sw_arch_verification]
     │   ├── manual/                     # Module manual, integration manual, assumptions of use,
     │   │                               #   safety manual [wp__requirements_comp_aou],
     │   │                               #   [wp__module_safety_manual],
@@ -65,9 +65,8 @@ The module template includes the following top-level structure:
     │                                   #   module verifications [wp__verification_module_ver_report],
     │                                   #   safety analysis formal reviews [wp__fdr_reports]
     ├── examples/                       # Usage examples for the module / features
-    ├── tests/                          # Module / Feature Integration Tests
     ├── score/                          # Components of the module
-    │   ├── tests/                      # Shared test utilities for SCORE components
+    │   ├── tests/                      # Module-level tests (e.g., feature integration tests, system tests)
     │   └── <component_name>/           # Component folder
     │       ├── docs/                   # Documentation of the component
     │       │   ├── architecture/       # Component architecture [wp__component_arch]
@@ -82,10 +81,9 @@ The module template includes the following top-level structure:
     │       │   ├── verification/       # Component verification: architecture review [wp__sw_arch_verification],
     │       │   │                       #   code inspection [wp__sw_implementation_inspection]
     │       │   └── integration_tests/  # Component integration tests [wp__verification_comp_int_test]
-    │       ├── src/                    # Source files, include files, unit tests [wp__verification_sw_unit_test],
-    │       │   │                       #   test doubles
-    │       │   └── <lower_level_comp>/ # Lower level component (follows <component_name> structure)
-    │       └── tests/                  # Component-level tests
+    │       └── src/                    # Source files, include files, unit tests [wp__verification_sw_unit_test],
+    │           ├── <lower_level_comp>/ # Lower level component (follows <component_name> structure)
+    │           └── tests/              # Component-level tests
     ├── MODULE.bazel                    # Bazel module definition
     ├── BUILD                           # Root build rules
     ├── project_config.bzl              # Project metadata used by Bazel macros
