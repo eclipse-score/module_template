@@ -519,14 +519,14 @@ It also provides an example of documenting detailed design in <a class="referenc
 │   ├── features/                   # Feature documentation and architecture [wp__feature_arch]
 │   │   └── &lt;feature_name&gt;/         # Feature folder parts for each feature which should be in module documentation
 │   │       ├── architecture/       # Feature architecture [wp__feature_arch]
-│   │       ├── safety_analysis/    # Feature safety analysis artifacts
-│   │       ├── safety_planning/    # Feature safety planning artifacts (FMEA, DFA, AoU, etc.)
+│   │       ├── safety_analysis/    # Feature safety analysis artifacts (FMEA, DFA, AoU, etc.)
+│   │       ├── safety_planning/    # Feature safety planning artifacts
 │   │       ├── security_analysis/  # Feature security analysis artifacts [wp__feature_security_analysis]
 │   │       ├── security_planning/  # Feature security planning artifacts
 │   │       └── verification/       # Feature verification artifacts, consisting of Architecture review [wp__sw_arch_verification]
 │   ├── manual/                     # Module manual, integration manual, assumptions of use,
-│   │                               #   safety manual [wp__requirements_comp_aou],
-│   │                               #   [wp__module_safety_manual],
+│   │                               #   safety manual [wp__module_safety_manual],
+│   │                               #   [wp__requirements_feat_aou]
 │   │                               #   security manual [wp__module_security_manual]
 │   ├── release/                    # Module release note [wp__module_sw_release_note]
 │   ├── safety_mgt/                 # Module safety plan [wp__module_safety_plan],
@@ -542,13 +542,13 @@ It also provides an example of documenting detailed design in <a class="referenc
 ├── examples/                       # Usage examples for the module / features
 ├── score/                          # Components of the module
 │   ├── tests/                      # Module-level tests (e.g., feature integration tests, system tests)
-│   └── &lt;component_name&gt;/           # Component folder
+│   └── &lt;component_name&gt;/           # Component folder for each component of the module
 │       ├── docs/                   # Documentation of the component
 │       │   ├── architecture/       # Component architecture [wp__component_arch]
 │       │   │                       #   (only if lower level components exist)
 │       │   ├── detailed_design/    # Detailed design [wp__sw_implementation]
 │       │   ├── requirements/       # Component requirements [wp__requirements_comp]
-│       │   ├── safety_analysis/    # Safety analysis [wp__sw_component_fmea], [wp__sw_component_dfa]
+│       │   ├── safety_analysis/    # Safety analysis [wp__sw_component_fmea], [wp__sw_component_dfa], [wp__sw_component_aou]
 │       │   │                       #   (only if component architecture exists)
 │       │   ├── security_analysis/  # Security analysis [wp__sw_component_security_analysis]
 │       │   │                       #   (only if component architecture exists)
