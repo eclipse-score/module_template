@@ -53,7 +53,14 @@ Rationale
 Specification
 =============
 
-[Describe the requirements, architecture of any component.]
+[Describe the requirements, architecture of any component.] or
+
+
+
+Backwards Compatibility
+=======================
+
+[Describe potential impact (especially including safety and security impacts) and severity on pre-existing platform/project elements.]
 
 
 Security Impact
