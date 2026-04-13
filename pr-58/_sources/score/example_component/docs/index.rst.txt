@@ -38,20 +38,7 @@
 Abstract
 ========
 
-[A short (~200 word) description of the contribution being addressed.]
-
-
-Motivation
-==========
-
-[Clearly explain why the existing platform/project solution is inadequate to address the topic that the CR solves.]
-
-.. note::
-   The motivation is critical for CRs that want to change the existing components.
-   It should clearly explain why the existing solution is inadequate to address the topic that the CR solves.
-   Motivation may based on criteria as resource requirements, scheduling issues, risks, benefits, etc.
-   CRs submissions without sufficient motivation may be rejected.
-
+[A short (~200 word) description of the component.]
 
 
 Rationale
@@ -66,18 +53,7 @@ Rationale
 Specification
 =============
 
-[Describe the requirements, architecture of any new component.] or
-[Describe the change to requirements, architecture, implementation, documentation of any change request.]
-
-.. note::
-   A CR shall specify the component requirements as part of our platform/project.
-   Thereby the :need:`rl__project_lead` will approve these requirements as part of accepting the CR (e.g. merging the PR with the CR).
-
-
-Backwards Compatibility
-=======================
-
-[Describe potential impact (especially including safety and security impacts) and severity on pre-existing platform/project elements.]
+[Describe the requirements, architecture of any component.]
 
 
 Security Impact
