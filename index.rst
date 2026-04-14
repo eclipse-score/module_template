@@ -66,7 +66,7 @@ The module template includes the following top-level structure:
     │                                   #   safety analysis formal reviews [wp__fdr_reports]
     ├── examples/                       # Usage examples for the module / features
     ├── score/                          # Components of the module
-    │   ├── tests/                      # Module-level tests (e.g., feature integration tests, system tests)
+    │   ├── tests/                      # Module-level tests (e.g., feature integration tests, system tests) [wp__verification_comp_int_test]
     │   └── <component_name>/           # Component folder for each component of the module
     │       ├── docs/                   # Documentation of the component
     │       │   ├── architecture/       # Component architecture [wp__component_arch]
@@ -78,12 +78,11 @@ The module template includes the following top-level structure:
     │       │   ├── security_analysis/  # Security analysis [wp__sw_component_security_analysis]
     │       │   │                       #   (only if component architecture exists)
     │       │   ├── user_docs/          # User documentation
-    │       │   ├── verification/       # Component verification: architecture review [wp__sw_arch_verification],
-    │       │   │                       #   code inspection [wp__sw_implementation_inspection]
-    │       │   └── integration_tests/  # Component integration tests [wp__verification_comp_int_test]
+    │       │   └── verification/       # Component verification: architecture review [wp__sw_arch_verification],
+    │       │                           #   code inspection [wp__sw_implementation_inspection]
     │       └── src/                    # Source files, include files, unit tests [wp__verification_sw_unit_test],
     │           ├── <lower_level_comp>/ # Lower level component (follows <component_name> structure)
-    │           └── tests/              # Component-level tests
+    │           └── tests/              # Component-level tests (e.g., unit tests) [wp__verification_sw_unit_test]
     ├── MODULE.bazel                    # Bazel module definition
     ├── BUILD                           # Root build rules
     ├── project_config.bzl              # Project metadata used by Bazel macros
