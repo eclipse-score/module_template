@@ -49,21 +49,7 @@ Description
 Requirements
 ------------
 
-.. code-block:: none
-
-   .. needtable:: Overview of Feature Requirements
-      :style: table
-      :columns: title;id
-      :filter: search("feat_arch_sta__archdes$", "fulfils_back")
-      :colwidths: 70,30
-
-
-.. needtable:: Overview of Feature Requirements
-   :style: table
-   :columns: title;id
-   :filter: search("feat_arch_sta__archdes$", "fulfils_back")
-   :colwidths: 70,30
-
+The requirements for the feature architecture are defined in the `requirements` section of the feature documentation in the project repository.
 
 Rationale Behind Architecture Decomposition
 *******************************************
@@ -79,15 +65,6 @@ The live feature architecture template snippets are maintained in the
 `module template documentation <https://eclipse-score.github.io/module_template/main/>`__.
 
 .. code-block:: rst
-
-   .. feat:: Feature Name
-      :id: feat__feature_name
-      :security: YES
-      :safety: ASIL_B
-      :status: invalid
-      :includes: logic_arc_int__feature_name__interface_name1
-
-      General Feature Description
 
    .. feat_arc_sta:: Feature Static View
       :id: feat_arc_sta__feature_name__static_view
@@ -122,31 +99,7 @@ Dynamic Architecture
 Logical Interfaces
 ------------------
 
-.. code-block:: rst
-
-   .. logic_arc_int:: Interface Name
-      :id: logic_arc_int__feature_name__interface_name1
-      :security: YES
-      :safety: ASIL_B
-      :status: invalid
-      :fulfils: feat_req__feature_name__some_title
-
-      General Interface Description
-
-      .. needarch::
-         :scale: 50
-         :align: center
-
-         {{ draw_interface(need(), needs) }}
-
-   .. logic_arc_int_op:: Operation
-      :id: logic_arc_int_op__feature_name__operation
-      :security: YES
-      :safety: ASIL_B
-      :status: invalid
-      :included_by: logic_arc_int__feature_name__interface_name1
-
-      General Operation Description
+The logical interfaces of the feature are defined in the `logical interfaces` section of the feature documentation in the project repository.
 
 Module Viewpoint
 ----------------

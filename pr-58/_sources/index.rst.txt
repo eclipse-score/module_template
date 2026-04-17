@@ -26,9 +26,9 @@ Overview
 
 This repository provides a standardized setup for projects using **C++** or **Rust** and **Bazel** as a build system.
 It integrates best practices for build, test, CI/CD and documentation.
-It also provides an example of modeling architecture in Sphinx Needs in :doc:`/docs/features/feature_example/architecture/architecture_modeling_example`.
-It also provides the component architecture template snippets in :doc:`/score/example_component/docs/architecture/component_architecture_template`.
-It also provides an example of documenting detailed design in :doc:`/score/example_component/docs/detailed_design/detailed_design_example`.
+It also provides an example of modeling architecture in Sphinx Needs in :doc:`/examples/docs/architecture_modeling_example`.
+It also provides the component architecture template snippets in :doc:`/score/component_example/docs/architecture/component_architecture_template`.
+It also provides an example of documenting detailed design in :doc:`/score/component_example/docs/detailed_design/detailed_design_example`.
 
 Module Layout
 -------------
@@ -41,7 +41,7 @@ The module template includes the following top-level structure:
     ├── .github/
     │   └── workflows/                  # CI/CD pipelines
     ├── docs/                           # Global documentation of the module
-    │   ├── features/                   # Feature documentation and architecture [wp__feature_arch]
+    │   ├── features/                   # Feature documentation and architecture
     │   │   └── <feature_name>/         # Feature folder parts for each feature which should be in module documentation
     │   │       ├── architecture/       # Feature architecture [wp__feature_arch]
     │   │       ├── safety_analysis/    # Feature safety analysis artifacts (FMEA, DFA, AoU, etc.)
@@ -72,7 +72,7 @@ The module template includes the following top-level structure:
     │       │   ├── architecture/       # Component architecture [wp__component_arch]
     │       │   │                       #   (only if lower level components exist)
     │       │   ├── detailed_design/    # Detailed design [wp__sw_implementation]
-    │       │   ├── requirements/       # Component requirements [wp__requirements_comp]
+    │       │   ├── requirements/       # Component requirements [wp__requirements_comp], [wp__requirements_inspect]
     │       │   ├── safety_analysis/    # Safety analysis [wp__sw_component_fmea], [wp__sw_component_dfa], [wp__sw_component_aou]
     │       │   │                       #   (only if component architecture exists)
     │       │   ├── security_analysis/  # Security analysis [wp__sw_component_security_analysis]
@@ -102,15 +102,24 @@ Module / Feature Documentation
    docs/security_mgt/index
    docs/verification/module_verification_report
 
-Example component documentation
+Component documentation
 -------------------------------
 
 .. toctree::
    :maxdepth: 1
 
-   /score/example_component/docs/index
-   /score/example_component/docs/architecture/component_architecture_template
-   /score/example_component/docs/detailed_design/detailed_design_example
+   /score/component_example/docs/index
+   /score/component_example/docs/architecture/component_architecture_template
+   /score/component_example/docs/detailed_design/detailed_design_example
+
+Examples
+--------
+
+.. toctree::
+   :maxdepth: 1
+
+   /examples/docs/architecture_modeling_example
+
 
 
 Quick Start

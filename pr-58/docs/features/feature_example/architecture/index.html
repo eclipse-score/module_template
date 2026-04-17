@@ -207,22 +207,29 @@
 
 
 <li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="../../../../score/example_component/docs/index.html">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../score/component_example/docs/index.html">
     [Your Component Name]
   </a>
 </li>
 
 
 <li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="../../../../score/example_component/docs/architecture/component_architecture_template.html">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../score/component_example/docs/architecture/component_architecture_template.html">
     Component Architecture Template
   </a>
 </li>
 
 
 <li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="../../../../score/example_component/docs/detailed_design/detailed_design_example.html">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../score/component_example/docs/detailed_design/detailed_design_example.html">
     Example: Detailed Design
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../examples/docs/architecture_modeling_example.html">
+    Example model of architectural design
   </a>
 </li>
 
@@ -381,22 +388,29 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../../../score/example_component/docs/index.html">
+  <a class="nav-link nav-internal" href="../../../../score/component_example/docs/index.html">
     [Your Component Name]
   </a>
 </li>
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../../../score/example_component/docs/architecture/component_architecture_template.html">
+  <a class="nav-link nav-internal" href="../../../../score/component_example/docs/architecture/component_architecture_template.html">
     Component Architecture Template
   </a>
 </li>
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../../../score/example_component/docs/detailed_design/detailed_design_example.html">
+  <a class="nav-link nav-internal" href="../../../../score/component_example/docs/detailed_design/detailed_design_example.html">
     Example: Detailed Design
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../examples/docs/architecture_modeling_example.html">
+    Example model of architectural design
   </a>
 </li>
 
@@ -474,7 +488,6 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">[Your Feature Name]</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Feature Architecture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chklst_arc_inspection.html">Architecture Inspection Checklist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="architecture_modeling_example.html">Example model of architectural design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../safety_analysis/fmea.html">FMEA (Failure Modes and Effects Analysis)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../safety_analysis/dfa.html">DFA (Dependent Failure Analysis)</a></li>
 
@@ -549,7 +562,7 @@
                   
   <section id="feature-architecture">
 <span id="feature-architecture-template"></span><h1>Feature Architecture<a class="headerlink" href="#feature-architecture" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-71cfbdfa">
+<div class="need_container docutils container" id="SNCB-ad539498">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__feature_example_architecture">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -614,14 +627,7 @@
 </section>
 <section id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. needtable:: Overview of Feature Requirements
-   :style: table
-   :columns: title;id
-   :filter: search(&quot;feat_arch_sta__archdes$&quot;, &quot;fulfils_back&quot;)
-   :colwidths: 70,30
-</pre></div>
-</div>
-<p class="needs_filter_warning" id="needtable-docs/features/feature_example/architecture/index-0">No needs passed the filters</p>
+<p>The requirements for the feature architecture are defined in the <cite>requirements</cite> section of the feature documentation in the project repository.</p>
 <section id="rationale-behind-architecture-decomposition">
 <h3>Rationale Behind Architecture Decomposition<a class="headerlink" href="#rationale-behind-architecture-decomposition" title="Link to this heading">#</a></h3>
 <p>Mandatory: A motivation for the decomposition</p>
@@ -635,16 +641,7 @@
 <h2>Static Architecture<a class="headerlink" href="#static-architecture" title="Link to this heading">#</a></h2>
 <p>The live feature architecture template snippets are maintained in the
 <a class="reference external" href="https://eclipse-score.github.io/module_template/main/">module template documentation</a>.</p>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">feat</span><span class="p">::</span> Feature Name
-   <span class="nc">:id:</span> feat__feature_name
-   <span class="nc">:security:</span> YES
-   <span class="nc">:safety:</span> ASIL_B
-   <span class="nc">:status:</span> invalid
-   <span class="nc">:includes:</span> logic_arc_int__feature_name__interface_name1
-
-   General Feature Description
-
-<span class="p">..</span> <span class="ow">feat_arc_sta</span><span class="p">::</span> Feature Static View
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">feat_arc_sta</span><span class="p">::</span> Feature Static View
    <span class="nc">:id:</span> feat_arc_sta__feature_name__static_view
    <span class="nc">:security:</span> YES
    <span class="nc">:safety:</span> ASIL_B
@@ -677,31 +674,7 @@
 </section>
 <section id="logical-interfaces">
 <h2>Logical Interfaces<a class="headerlink" href="#logical-interfaces" title="Link to this heading">#</a></h2>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">logic_arc_int</span><span class="p">::</span> Interface Name
-   <span class="nc">:id:</span> logic_arc_int__feature_name__interface_name1
-   <span class="nc">:security:</span> YES
-   <span class="nc">:safety:</span> ASIL_B
-   <span class="nc">:status:</span> invalid
-   <span class="nc">:fulfils:</span> feat_req__feature_name__some_title
-
-   General Interface Description
-
-<span class="p">   ..</span> <span class="ow">needarch</span><span class="p">::</span>
-      <span class="nc">:scale:</span> 50
-      <span class="nc">:align:</span> center
-
-      {{ draw_interface(need(), needs) }}
-
-<span class="p">..</span> <span class="ow">logic_arc_int_op</span><span class="p">::</span> Operation
-   <span class="nc">:id:</span> logic_arc_int_op__feature_name__operation
-   <span class="nc">:security:</span> YES
-   <span class="nc">:safety:</span> ASIL_B
-   <span class="nc">:status:</span> invalid
-   <span class="nc">:included_by:</span> logic_arc_int__feature_name__interface_name1
-
-   General Operation Description
-</pre></div>
-</div>
+<p>The logical interfaces of the feature are defined in the <cite>logical interfaces</cite> section of the feature documentation in the project repository.</p>
 </section>
 <section id="module-viewpoint">
 <h2>Module Viewpoint<a class="headerlink" href="#module-viewpoint" title="Link to this heading">#</a></h2>
