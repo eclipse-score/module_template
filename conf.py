@@ -47,7 +47,8 @@ extensions = [
 include_patterns = [
     "index.rst",
     "docs/**",
-    "score/example_component/docs/**",
+    "examples/docs/**",
+    "score/component_example/docs/**",
 ]
 
 exclude_patterns = [

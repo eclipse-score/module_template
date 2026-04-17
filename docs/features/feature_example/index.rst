@@ -12,8 +12,6 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-.. _feature_template:
-
 [Your Feature Name]
 ###################
 
@@ -27,7 +25,6 @@ Abstract
 
    architecture/index.rst
    architecture/chklst_arc_inspection.rst
-   architecture/architecture_modeling_example.rst
    safety_analysis/fmea.rst
    safety_analysis/dfa.rst
    safety_analysis/aou_requirements_template.rst
