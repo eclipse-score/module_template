@@ -51,7 +51,7 @@ The module template includes the following top-level structure:
     │   │       └── verification/       # Feature verification artifacts, consisting of Architecture review [wp__sw_arch_verification]
     │   ├── manual/                     # Module manual, integration manual, assumptions of use,
     │   │                               #   safety manual [wp__module_safety_manual],
-    │   │                               #   [wp__requirements_feat_aou]
+    │   │                               #   needs table of [wp__requirements_feat_aou]
     │   │                               #   security manual [wp__module_security_manual]
     │   ├── release/                    # Module release note [wp__module_sw_release_note]
     │   ├── safety_mgt/                 # Module safety plan [wp__module_safety_plan],
