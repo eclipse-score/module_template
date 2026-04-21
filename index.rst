@@ -44,7 +44,7 @@ The module template includes the following top-level structure:
     │   ├── features/                   # Feature documentation and architecture
     │   │   └── <feature_name>/         # Feature folder parts for each feature which should be in module documentation
     │   │       ├── architecture/       # Feature architecture [wp__feature_arch]
-    │   │       ├── safety_analysis/    # Feature safety analysis artifacts (FMEA, DFA, AoU, etc.)
+    │   │       ├── safety_analysis/    # Feature safety analysis artifacts ([wp__feature_fmea], [wp__feature_dfa], [wp__requirements_feat_aou])
     │   │       ├── safety_planning/    # Feature safety planning artifacts
     │   │       ├── security_analysis/  # Feature security analysis artifacts [wp__feature_security_analysis]
     │   │       ├── security_planning/  # Feature security planning artifacts
@@ -77,7 +77,7 @@ The module template includes the following top-level structure:
     │       │   │                       #   (only if component architecture exists)
     │       │   ├── security_analysis/  # Security analysis [wp__sw_component_security_analysis]
     │       │   │                       #   (only if component architecture exists)
-    │       │   ├── user_docs/          # User documentation
+    │       │   ├── user_docs/          # User documentation (of a single component, e.g., user manual of a library component, optional)
     │       │   └── verification/       # Component verification: architecture review [wp__sw_arch_verification],
     │       │                           #   code inspection [wp__sw_implementation_inspection]
     │       └── src/                    # Source files, include files, unit tests [wp__verification_sw_unit_test],
