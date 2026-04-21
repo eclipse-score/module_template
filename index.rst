@@ -72,8 +72,9 @@ The module template includes the following top-level structure:
     │       │   ├── architecture/       # Component architecture [wp__component_arch]
     │       │   │                       #   (only if lower level components exist)
     │       │   ├── detailed_design/    # Detailed design [wp__sw_implementation]
-    │       │   ├── requirements/       # Component requirements [wp__requirements_comp], [wp__requirements_inspect]
-    │       │   ├── safety_analysis/    # Safety analysis [wp__sw_component_fmea], [wp__sw_component_dfa], [wp__sw_component_aou]
+    │       │   ├── requirements/       # Component requirements [wp__requirements_comp],[wp__requirements_inspect]
+    │       │   ├── safety_analysis/    # Safety analysis [wp__sw_component_fmea], [wp__sw_component_dfa], [wp__requirements_comp_aou]
+    |       |   |                       # Component classification [wp__sw_component_class] for pre-existing software
     │       │   │                       #   (only if component architecture exists)
     │       │   ├── security_analysis/  # Security analysis [wp__sw_component_security_analysis]
     │       │   │                       #   (only if component architecture exists)
