@@ -56,6 +56,7 @@ exclude_patterns = [
     # build //docs:docs', as that command runs in a sandboxed environment. However, when
     # building the documentation via 'bazel run //docs:incremental' or esbonio, these
     # entries are required to prevent the build from failing.
+    "_build",
     "bazel-*",
     ".venv_docs",
 ]

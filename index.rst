@@ -108,9 +108,9 @@ Component documentation
 .. toctree::
    :maxdepth: 1
 
-   /score/component_example/docs/index
-   /score/component_example/docs/architecture/component_architecture_template
-   /score/component_example/docs/detailed_design/detailed_design_example
+   score/component_example/docs/index
+   score/component_example/docs/architecture/component_architecture_template
+   score/component_example/docs/detailed_design/detailed_design_example
 
 Examples
 --------
