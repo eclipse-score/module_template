@@ -20,7 +20,7 @@ Abstract
 
 [A short (~200 word) description of the feature.]
 
-For the main feature description, see the `Features <https://eclipse-score.github.io/score/main/features/index.html#features>`_ in the project repository.
+For the main feature description and requirements, see the belonging `Feature <https://eclipse-score.github.io/score/main/features/index.html#features>`_ in the project repository.
 
 .. toctree::
    :hidden:
