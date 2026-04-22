@@ -22,6 +22,8 @@ This chapter only serves as an example how an architecture could be modeled in *
 Feature Architecture File
 =========================
 
+.. note:: The feature is normally defined in the platform repo and imported from there as sphinx needs objects. In this example it is defined here only, to hold the example consistent.
+
 .. feat:: Feature 1
    :id: feat__mtef
    :security: YES
@@ -29,7 +31,7 @@ Feature Architecture File
    :status: valid
    :includes: logic_arc_int__example_feature__if_1, logic_arc_int__example_feature__if_2, logic_arc_int__example_feature__if_3
 
-   This is the example feature.
+   This is the example feature which shall normally defined in the platform repo.
 
 .. feat_arc_sta:: Feature 1 Static View
    :id: feat_arc_sta__example_feature__sta
@@ -143,7 +145,7 @@ Feature Architecture File
    :included_by: logic_arc_int__example_feature__if_3
 
 
-Module Viewpoint
+Module View File
 ================
 
 .. mod:: Module 1
@@ -184,8 +186,8 @@ Module Viewpoint
 
       {{ draw_module(need(), needs) }}
 
-Component Architecture File(s)
-==============================
+Feature or Component Architecture File(s)
+=========================================
 
 .. comp:: Component 1
    :id: comp__mod_temp_component_example_1
@@ -265,6 +267,8 @@ Requirements for the Example
 
 .. Requirements
 
+.. note:: The stakeholder requirements shall be defined in the platform repo. Here it is defined only to hold the example together and prevent errors because the sphinx needs meta model have mandatory links to it.
+
 .. stkh_req:: Example Stkh Req
    :id: stkh_req__mtfn__example_req
    :reqtype: Functional
@@ -274,6 +278,8 @@ Requirements for the Example
    :status: valid
 
    The platform shall provide the feature ....
+
+.. note:: The feature requirements shall be defined in the platform repo. Here it is defined only to hold the example together and prevent errors because the sphinx needs meta model have mandatory links to it.
 
 .. feat_req:: Example Feature Req
    :id: feat_req__example_feature__example_req
