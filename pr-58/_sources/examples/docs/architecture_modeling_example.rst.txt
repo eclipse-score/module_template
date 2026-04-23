@@ -22,7 +22,7 @@ This chapter only serves as an example how an architecture could be modeled in *
 Feature Architecture File
 =========================
 
-.. note:: The feature is normally defined in the platform repo and imported from there as sphinx needs objects. In this example it is defined here only, to hold the example consistent.
+.. note:: The feature and the logical interfaces are normally defined in the platform repo (`features folder <https://eclipse-score.github.io/score/main/features/index.html>`_) and imported from there as sphinx needs objects. In this example it is defined here only, to hold the example consistent.
 
 .. feat:: Feature 1
    :id: feat__mtef
@@ -267,7 +267,7 @@ Requirements for the Example
 
 .. Requirements
 
-.. note:: The stakeholder requirements shall be defined in the platform repo. Here it is defined only to hold the example together and prevent errors because the sphinx needs meta model have mandatory links to it.
+.. note:: The stakeholder requirements shall be defined in the platform repo (`stakeholder requirements folder <https://eclipse-score.github.io/score/main/requirements/index.html>`_) and imported as sphinx needs objects. Here it is defined only to hold the example together and prevent errors because the sphinx needs meta model have mandatory links to it.
 
 .. stkh_req:: Example Stkh Req
    :id: stkh_req__mtfn__example_req
@@ -279,7 +279,7 @@ Requirements for the Example
 
    The platform shall provide the feature ....
 
-.. note:: The feature requirements shall be defined in the platform repo. Here it is defined only to hold the example together and prevent errors because the sphinx needs meta model have mandatory links to it.
+.. note:: The feature requirements shall be defined in the platform repo (in the requirements folder of the (`features <https://eclipse-score.github.io/score/main/features/index.html>`_)) and imported as sphinx needs objects. Here it is defined only to hold the example together and prevent errors because the sphinx needs meta model have mandatory links to it.
 
 .. feat_req:: Example Feature Req
    :id: feat_req__example_feature__example_req
