@@ -41,16 +41,29 @@ extensions = [
     "score_layout",
 ]
 
+# Collect documentation from the module-level docs folder and from each
+# component's docs folder. Using include_patterns (added in Sphinx 7.1) avoids
+# the need for symlinks inside the docs/ folder.
+include_patterns = [
+    "index.rst",
+    "docs/**",
+    "examples/docs/**",
+    "score/component_example/docs/**",
+]
+
 exclude_patterns = [
     # The following entries are not required when building the documentation via 'bazel
     # build //docs:docs', as that command runs in a sandboxed environment. However, when
     # building the documentation via 'bazel run //docs:incremental' or esbonio, these
     # entries are required to prevent the build from failing.
+    "_build",
     "bazel-*",
     ".venv_docs",
 ]
 
-templates_path = ["templates"]
+root_doc = "index"
+
+templates_path = ["docs/templates"]
 
 # Enable numref
 numfig = True

@@ -15,7 +15,7 @@ module(
     version = "1.0",
 )
 
-bazel_dep(name = "rules_python", version = "1.4.1", dev_dependency = True)
+bazel_dep(name = "rules_python", version = "1.8.3", dev_dependency = True)
 
 # Python 3.12: Required for testing infrastructure and code generation tools
 PYTHON_VERSION = "3.12"
@@ -29,6 +29,20 @@ python.toolchain(
     is_default = True,
     python_version = PYTHON_VERSION,
 )
+
+pip = use_extension(
+    "@rules_python//python/extensions:pip.bzl",
+    "pip",
+    dev_dependency = True,
+)
+pip.parse(
+    envsubst = ["PIP_INDEX_URL"],
+    extra_pip_args = ["--index-url=${PIP_INDEX_URL:-https://pypi.org/simple/}"],
+    hub_name = "module_template_docs_hub_env",
+    python_version = PYTHON_VERSION,
+    requirements_lock = "@score_docs_as_code//src:requirements.txt",
+)
+use_repo(pip, "module_template_docs_hub_env")
 
 # Add GoogleTest dependency
 bazel_dep(name = "googletest", version = "1.17.0", dev_dependency = True)
@@ -57,9 +71,16 @@ use_repo(llvm, "llvm_toolchain_llvm")
 register_toolchains("@llvm_toolchain//:all")
 
 # tooling
-bazel_dep(name = "score_tooling", version = "1.0.4", dev_dependency = True)
+bazel_dep(name = "score_tooling", version = "1.2.0", dev_dependency = True)
 bazel_dep(name = "aspect_rules_lint", version = "1.10.2", dev_dependency = True)
 bazel_dep(name = "buildifier_prebuilt", version = "8.2.0.2", dev_dependency = True)
 
 #docs-as-code
-bazel_dep(name = "score_docs_as_code", version = "2.3.0", dev_dependency = True)
+bazel_dep(name = "score_docs_as_code", version = "3.1.0", dev_dependency = True)
+bazel_dep(name = "score_process", version = "1.5.1", dev_dependency = True)
+
+git_override(
+    module_name = "score_docs_as_code",
+    commit = "817080b1f184618a3ecb5bb9029e453ebc5fe806",
+    remote = "https://github.com/eclipse-score/docs-as-code.git",
+)
