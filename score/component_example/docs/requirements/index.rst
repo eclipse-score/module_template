@@ -42,7 +42,7 @@ Component Requirements
    :reqtype: Process
    :security: YES
    :safety: ASIL_B
-   :satisfies: feat_req__feature_name__some_title
+   :satisfies: feat_req__example_feature__example_req
    :status: invalid
    :belongs_to: comp__mod_temp_component_name_template
 

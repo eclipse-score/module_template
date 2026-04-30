@@ -31,8 +31,7 @@ Static Diagrams for Unit Interactions
     :safety: ASIL_B
     :status: valid
     :implements: comp_req__example_feature__example_req
-    :satisfies: comp_arc_sta__example_feature__comp_1
-    :includes: sw_unit__example_feature__unit1, sw_unit__example_feature__unit2
+    :satisfies: comp_arc_sta__mod_temp_component_name__sv
 
 .. uml:: dd_example_ex_sta.puml
 
@@ -45,7 +44,7 @@ Dynamic Diagrams for Unit Interactions
     :safety: ASIL_B
     :status: valid
     :implements: comp_req__example_feature__example_req
-    :satisfies: comp_arc_sta__example_feature__comp_1
+    :satisfies: comp_arc_sta__mod_temp_component_name__sv
 
 .. uml:: dd_example_ex_dyn.puml
 

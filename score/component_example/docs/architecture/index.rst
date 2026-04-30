@@ -78,7 +78,7 @@ A component can optional also consist of subcomponents to further structure the 
    :safety: ASIL_B
    :status: invalid
    :consists_of: comp__mod_temp_archex_sub_component_1, comp__mod_temp_archex_sub_component_2, comp__mod_temp_archex_sub_component_3
-   :belongs_to: feat__feature_name
+   :belongs_to: feat__mtef
 
 .. comp_arc_sta:: Component Name (Static View)
    :id: comp_arc_sta__mod_temp_component_name__sv
