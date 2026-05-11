@@ -32,7 +32,6 @@ Static Diagrams for Unit Interactions
     :status: valid
     :implements: comp_req__example_feature__example_req
     :satisfies: comp_arc_sta__example_feature__comp_1
-    :includes: sw_unit__example_feature__unit1, sw_unit__example_feature__unit2
 
 .. uml:: dd_example_ex_sta.puml
 
