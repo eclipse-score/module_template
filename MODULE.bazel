@@ -76,6 +76,11 @@ bazel_dep(name = "aspect_rules_lint", version = "1.10.2", dev_dependency = True)
 bazel_dep(name = "buildifier_prebuilt", version = "8.2.0.2", dev_dependency = True)
 
 #docs-as-code
-bazel_dep(name = "score_process", version = "1.5.4", dev_dependency = True)
+bazel_dep(name = "score_docs_as_code", version = "3.1.0", dev_dependency = True)
+bazel_dep(name = "score_process", version = "1.5.1", dev_dependency = True)
 
-bazel_dep(name = "score_docs_as_code", version = "4.0.3", dev_dependency = True)
+git_override(
+    module_name = "score_docs_as_code",
+    commit = "817080b1f184618a3ecb5bb9029e453ebc5fe806",
+    remote = "https://github.com/eclipse-score/docs-as-code.git",
+)
