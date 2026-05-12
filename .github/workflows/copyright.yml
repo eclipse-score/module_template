@@ -13,10 +13,7 @@
 
 name: Copyright checks
 on:
-  pull_request:
-    types: [opened, reopened, synchronize]
-  merge_group:
-    types: [checks_requested]
+  workflow_call:
 jobs:
   copyright-check:
     uses: eclipse-score/cicd-workflows/.github/workflows/copyright.yml@829b3e11ccbf924a5782f7bfed647cb1619fdf78 # v0.0.1
