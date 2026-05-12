@@ -70,7 +70,7 @@ Static Architecture
 The components are designed to cover the expectations from the feature architecture
 (i.e. if already exists a definition it should be taken over and enriched).
 
-A component can optional also consist of subcomponents to further structure the architecture. The component and its static views can also optionally use interfaces provided by other components.
+A component can optional also consist of lower level components to further structure the architecture. The component and its static views can also optionally use interfaces provided by other components.
 
 .. comp:: Component Name
    :id: comp__mod_temp_component_name_template
@@ -78,7 +78,7 @@ A component can optional also consist of subcomponents to further structure the 
    :safety: ASIL_B
    :status: invalid
    :consists_of: comp__mod_temp_archex_sub_component_1, comp__mod_temp_archex_sub_component_2, comp__mod_temp_archex_sub_component_3
-   :belongs_to: feat__feature_name
+   :belongs_to: feat__mtef
 
 .. comp_arc_sta:: Component Name (Static View)
    :id: comp_arc_sta__mod_temp_component_name__sv
