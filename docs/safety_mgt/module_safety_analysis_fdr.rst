@@ -34,9 +34,11 @@ Safety Analysis Checklist
 
 
 **Purpose**
+
 The purpose of this Safety Analysis (DFA and FMEA) formal review report template is to collect the topics to be checked during verification of the Safety Analysis.
 
 **Conduct**
+
 As described in :need:`wf__p_formal_rv`, the formal document review is performed by an "external" safety manager:
 
 - reviewer: **<committer with safety manager skills explicitly named here>**
