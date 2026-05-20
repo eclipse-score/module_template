@@ -46,7 +46,7 @@ As described in :need:`wf__p_formal_rv`, the formal document review is performed
 
 **Checklist**
 
-Please note that it is mandatory to fill in the "passed" column with "yes" or "no" for each checklist item and additional to add in the remarks why it is passed or not passed. In case of "no" an issue link to the issue tracking system has to be added in the last column. See also :ref:`review_concept` for further information about reviews in general and inspection in particular.
+Please note that it is mandatory to fill in the "passed" column with "yes" or "no" for each checklist item and additional to add in the remarks why it is passed or not passed. In case of "no" an issue link to the issue tracking system has to be added in the last column. See also :need:`doc_concept__wp_inspections` for further information about reviews in general and inspection in particular.
 
 
 .. list-table:: General Checklist
@@ -60,7 +60,7 @@ Please note that it is mandatory to fill in the "passed" column with "yes" or "n
         - Comment
 
       * - Gen 1
-        - Are the safety analysis performed according to the defined process and templates? See :ref:`process_requirements_safety_analysis` and also :ref:`FMEA_templates` and :ref:`dfa_templates`
+        - Are the safety analysis performed according to the defined process and templates? See :need:`gd_req__saf_structure` and also :need:`doc__feature_name_fmea` and :need:`doc__feature_name_dfa`
         - [YES | NO ]
         - :need:`[[title]] <std_req__iso26262__analysis_841>`, :need:`[[title]] <std_req__iso26262__analysis_849>`, :need:`[[title]] <std_req__iso26262__analysis_8410>`, :need:`[[title]] <std_req__iso26262__analysis_748>`
         - <Rationale for result>
@@ -107,7 +107,7 @@ Please note that it is mandatory to fill in the "passed" column with "yes" or "n
         - Comment
 
       * - DFA 1
-        - Are the potential dependent failures identified by performming a DFA?
+        - Are the potential dependent failures identified by performing a DFA?
         - [YES | NO ]
         - :need:`[[title]] <std_req__iso26262__analysis_741>`
         - <Rationale for result>
@@ -160,7 +160,7 @@ Please note that it is mandatory to fill in the "passed" column with "yes" or "n
         - Comment
 
       * - FMEA 1
-        - Are the fault models suitable and applied for the FMEA? See :ref:`fault_models` and also :ref:`process_requirements_safety_analysis`
+        - Are the fault models suitable and applied for the FMEA? See :need:`gd_guidl__fault_models` and also :need:`gd_req__saf_structure`
         - [YES | NO ]
         - :need:`[[title]] <std_req__iso26262__analysis_846>`
         - <Rationale for result>
