@@ -43,7 +43,7 @@ Component Requirements
    :security: YES
    :safety: ASIL_B
    :satisfies: feat_req__example_feature__example_req
-   :status: invalid
+   :status: valid
    :belongs_to: comp__mod_temp_component_name_template
 
    The Component shall do xyz to another component to bring it to this condition at this time
@@ -68,7 +68,7 @@ Assumption of Use Requirements
    :reqtype: Process
    :security: YES
    :safety: ASIL_B
-   :status: invalid
+   :status: valid
 
    The Component User shall do xyz to use the component safely/securely
 

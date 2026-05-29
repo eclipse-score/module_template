@@ -17,6 +17,11 @@
 Detailed Design
 ###############
 
+.. attention::
+
+   The detailed design document is optional and should be created if the design of the component is complex and cannot be easily understood from the architecture documentation and interface documentation alone.
+
+
 .. document:: [Your Component Name] Detailed Design
    :id: doc__mod_temp_component_name_detailed_design
    :status: draft
