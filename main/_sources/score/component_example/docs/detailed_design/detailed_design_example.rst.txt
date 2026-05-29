@@ -25,53 +25,18 @@ Description
 Static Diagrams for Unit Interactions
 -------------------------------------
 
-.. dd_sta:: dd example static
-    :id: dd_sta__example_feature__approver
-    :security: NO
-    :safety: ASIL_B
-    :status: valid
-    :implements: comp_req__example_feature__example_req
-    :satisfies: comp_arc_sta__mod_temp_component_name__sv
-
 .. uml:: dd_example_ex_sta.puml
 
-Dynamic Diagrams for Unit Interactions
---------------------------------------
-
-.. dd_dyn:: dd example dynamic
-    :id: dd_dyn__example_feature__dynamic
-    :security: NO
-    :safety: ASIL_B
-    :status: valid
-    :implements: comp_req__example_feature__example_req
-    :satisfies: comp_arc_sta__mod_temp_component_name__sv
+Dynamic Diagrams for Unit Interactions (optional)
+--------------------------------------------------
 
 .. uml:: dd_example_ex_dyn.puml
 
 Units within the Component
 --------------------------
-From here onwards the needs are defined in the source code and will be automatically generated and linked via doxygen.
 
-SW Unit
-*******
+The units are defined in the source code. The relationship between a unit and the
+component is established implicitly through the file path.
 
-The unit description is generated from the source code and linked with
-the need ID sw_unit__example_feature__unit1.
-
-Interface
-*********
-
-The interface description is generated from the source code and linked with
-the need ID sw_unit_int__example_feature__u1_i1.
-
-SW Unit
-*******
-
-The unit description is generated from the source code and linked with
-the need ID sw_unit__example_feature__unit2.
-
-Interface
-*********
-
-The interface description is generated from the source code and linked with
-the need ID sw_unit_int__example_feature__u2_i2.
+- unit1: implements the main logic (see source code for details)
+- unit2: injected into unit1 via dependency injection for testability
