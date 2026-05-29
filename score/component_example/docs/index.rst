@@ -149,17 +149,3 @@ Footnotes
 =========
 
 [A collection of footnotes cited in the CR, and a place to list non-inline hyperlink targets.]
-
-.. toctree::
-   :hidden:
-
-   architecture/index.rst
-   architecture/chklst_arc_inspection.rst
-   component_classification.rst
-   detailed_design/index.rst
-   detailed_design/chklst_impl_inspection.rst
-   requirements/index.rst
-   requirements/chklst_req_inspection.rst
-   safety_analysis/fmea.rst
-   safety_analysis/dfa.rst
-   safety_analysis/aou_requirements_template.rst

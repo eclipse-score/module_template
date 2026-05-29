@@ -99,3 +99,13 @@ Hints
 
 .. needextend:: "component_name" in id
    :+tags: component_name
+
+Requirements checklist
+----------------------
+
+See following requirements inspection checklist for verification of the requirements.
+
+.. toctree::
+   :hidden:
+
+   chklst_req_inspection

@@ -108,8 +108,13 @@ Component documentation
    :maxdepth: 1
 
    score/component_example/docs/index
-   score/component_example/docs/architecture/component_architecture_template
-   score/component_example/docs/detailed_design/detailed_design_example
+   score/component_example/docs/architecture/index
+   score/component_example/docs/detailed_design/index
+   score/component_example/docs/requirements/index
+   score/component_example/docs/safety_analysis/dfa
+   score/component_example/docs/safety_analysis/fmea
+   score/component_example/docs/safety_analysis/aou_requirements_template
+   score/component_example/docs/component_classification
 
 Examples
 --------

@@ -52,107 +52,48 @@ Rationale Behind Decomposition into Units
 
 Static Diagrams for Unit Interactions
 -------------------------------------
-.. code-block:: rst
 
-   .. dd_sta:: <Title>
-      :id: dd_sta__<Component>__<Title>
-      :security: <YES|NO>
-      :safety: <QM|ASIL_B>
-      :status: <valid|invalid>
-      :implements: <link to component requirement id>
-      :satisfies: <link to component architecture id>
-      :belongs_to: <link to component id>
-      :includes: <link to sw_unit id>, <link to sw_unit interface id>
+A static view provides an overview of the units and their relationships using
+UML 2.0 notations (e.g. class diagrams, component diagrams). Use ``.. uml::``
+or ``.. image::`` directives to include the diagram.
 
-      .. needarch:: or .. image:: <link to drawio image>
+Dynamic Diagrams for Unit Interactions (optional)
+--------------------------------------------------
 
-Dynamic Diagrams for Unit Interactions
---------------------------------------
-.. code-block:: rst
+A dynamic view illustrates how the units within a component interact over their
+interfaces to fulfill a specific use case or functionality. It is optional when the
+component's behaviour is straightforward and can be understood from the static view
+and interface documentation alone.
 
-   .. dd_dyn:: <Title>
-      :id: dd_dyn__<Component>__<Title>
-      :security: <YES|NO>
-      :safety: <QM|ASIL_B>
-      :status: <valid|invalid>
-      :implements: <link to component requirement id>
-      :satisfies: <link to component architecture id>
-      :belongs_to: <link to component id>
-      :includes: <link to sw_unit id>, <link to sw_unit interface id>
-
-      .. needarch:: or .. image:: <link to drawio image>
+Use standard UML behavioural diagrams (sequence diagrams, state machine diagrams)
+with ``.. uml::`` or ``.. image::`` directives.
 
 Units within the Component
 --------------------------
 
-In your rst file:
+The relationship between a unit and its parent component is established implicitly
+through the file path. Each component has its own directory, and units residing
+within that directory belong to it. The unit's attributes and behaviour are documented
+in the source code itself. A separate static diagram per unit is not required.
 
-.. code-block:: rst
+Interface documentation of a software unit is part of the source code (e.g. public
+API headers, trait definitions, or documented function signatures).
 
-   .. sw_unit:: cpp unit
-      :id: sw_unit__<Component>__<title>
-      :belongs_to: <link to component id>
+Inspection Checklist
+--------------------
 
-      This implements the ....
+The checklist for verification of the detailed design inspection can be found here:
 
-In your source file, any programming language, here with C++:
+.. toctree::
 
-.. code-block:: cpp
+   chklst_impl_inspection
 
-   # need-Id: sw_unit__<Component>__<title>
-   class <class name> {
-      public:
 
-   };
+Detail design example
+---------------------
 
-Interface View
---------------
+An example of documenting detailed design can be found in:
 
-In your rst file:
+   .. toctree::
 
-.. code-block:: rst
-
-   .. sw_unit_int:: <here InterfaceDemo - change it>
-      :id: sw_unit_int__<Component>__<title>
-      :belongs_to: <link to sw_unit id>
-      :implements: <real_arc_int, real_arc_int_op>
-
-      This implements the ....
-
-In your source file, any programming language, here with C++:
-
-.. code-block:: cpp
-
-   # need-Id: sw_unit__<Component>__<title>
-   class InterfaceDemo
-   {
-      public:
-         virtual ~InterfaceDemo() {}
-         virtual void OverrideMe() = 0;
-   };
-
--  For cpp using doxygen comments
-
-.. code-block:: cpp
-
-   /**
-      * @rst
-      * .. sw_unit_int:: cpp unit
-      *    :id: sw_unit_int__<Component>__<title>
-      *    :belongs_to: <link to sw_unit id>
-      *    :implements: <real_arc_int, real_arc_int_op>
-      *
-      *    This implements the ....
-      * @endrst
-   */
-
--  For rust
-
-.. code-block:: rust
-
-   //! .. sw_unit_int:: rust unit
-   //!     :id: sw_unit_int__<Component>__<title>
-   //!     :belongs_to: <link to sw_unit id>
-   //!     :implements: <real_arc_int, real_arc_int_op>
-   //!
-   //!     This implements the ....
+      detailed_design_example

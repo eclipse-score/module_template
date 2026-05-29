@@ -141,3 +141,22 @@ Internal Components
 
     - Replace the example content by the real content (according to :need:`gd_guidl__arch_design`)
     - Set the status to valid and start the review/merge process
+
+Component Architecture Template
+-------------------------------
+
+ A component architecture template is available to be used as a starting point for the documentation of the component architecture. It includes the main sections and example content to be adapted according to the real component architecture.
+
+.. toctree::
+
+   component_architecture_template
+
+
+Architecture Checklist
+----------------------
+
+See following architecture inspection checklist for verification of the architecture.
+
+.. toctree::
+
+   chklst_arc_inspection
