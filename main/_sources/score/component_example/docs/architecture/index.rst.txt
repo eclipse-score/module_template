@@ -76,7 +76,7 @@ A component can optional also consist of lower level components to further struc
    :id: comp__mod_temp_component_name_template
    :security: YES
    :safety: ASIL_B
-   :status: invalid
+   :status: valid
    :consists_of: comp__mod_temp_archex_sub_component_1, comp__mod_temp_archex_sub_component_2, comp__mod_temp_archex_sub_component_3
    :belongs_to: feat__mtef
 
@@ -84,7 +84,7 @@ A component can optional also consist of lower level components to further struc
    :id: comp_arc_sta__mod_temp_component_name__sv
    :security: YES
    :safety: ASIL_B
-   :status: invalid
+   :status: valid
    :belongs_to: comp__mod_temp_component_name_template
    :fulfils: comp_req__mod_temp_component_name__some_title
 
@@ -101,7 +101,7 @@ Dynamic Architecture
    :id: comp_arc_dyn__mod_temp_component_name__dv
    :security: YES
    :safety: ASIL_B
-   :status: invalid
+   :status: valid
    :belongs_to: comp__mod_temp_component_name_template
    :fulfils: comp_req__mod_temp_component_name__some_title
 
@@ -125,7 +125,7 @@ Internal Components
 
 .. comp_arc_sta:: Component Name Static View
    :id: comp_arc_sta__mod_temp_component_name__2
-   :status: invalid
+   :status: valid
    :safety: ASIL_B
    :security: YES
    :fulfils: comp_req__mod_temp_component_name__some_title
