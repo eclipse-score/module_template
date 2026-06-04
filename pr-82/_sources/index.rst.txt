@@ -64,7 +64,7 @@ The module template includes the following top-level structure:
     │                                   #   module verifications [wp__verification_module_ver_report],
     ├── examples/                       # Usage examples for the module / features
     ├── score/                          # Components of the module
-    │   ├── tests/                      # Module-level tests (e.g., feature integration tests, system tests) [wp__verification_comp_int_test]
+    │   ├── tests/                      # Module-level tests (e.g., feature integration tests, system tests) [wp__verification_feat_int_test]
     │   └── <component_name>/           # Component folder for each component of the module
     │       ├── docs/                   # Documentation of the component
     │       │   ├── architecture/       # Component architecture [wp__component_arch]
@@ -79,9 +79,9 @@ The module template includes the following top-level structure:
     │       │   ├── security_analysis/  # Security analysis [wp__sw_component_security_analysis]
     │       │   │                       #   (only if component architecture exists)
     │       │   └── manuals/            # User documentation (of a single component, e.g., user manual of a library component, optional)
-    │       └── src/                    # Source files, include files, unit tests [wp__verification_sw_unit_test],
-    │           ├── <lower_level_comp>/ # Lower level component (follows <component_name> structure)
-    │           └── tests/              # Component-level tests (e.g., unit tests) [wp__verification_sw_unit_test]
+    │       ├── src/                    # Source files, include files, unit tests [wp__verification_sw_unit_test],
+    │       │   └── <lower_level_comp>/ # Lower level component (follows <component_name> structure)
+    │       └── tests/                  # Component-level tests (e.g., integration or complex unit tests) [wp__verification_comp_int_test]
     ├── MODULE.bazel                    # Bazel module definition
     ├── BUILD                           # Root build rules
     ├── project_config.bzl              # Project metadata used by Bazel macros
