@@ -48,29 +48,29 @@ Verification Report contains:
     :widths: 1 2 5
 
     * - section_index
-           - section_key
-           - section_description
+      - section_key
+      - section_description
     * - 1
-           - verification_coverage
-           - Coverage on requirements, architecture, and detailed design including test and inspection results.
+      - verification_coverage
+      - Coverage on requirements, architecture, and detailed design including test and inspection results.
     * - 2
-           - dfa_report
-           - Report of component DFA results including verdict and open mitigations.
+      - dfa_report
+      - Report of component DFA results including verdict and open mitigations.
     * - 3
-           - safety_analysis_report
-           - Report of component safety analysis results including verdict and open mitigations.
+      - safety_analysis_report
+      - Report of component safety analysis results including verdict and open mitigations.
     * - 4
-           - unit_verification
-           - Unit-level verification coverage including structural coverage, static analysis, and manual inspection.
+      - unit_verification
+      - Unit-level verification coverage including structural coverage, static analysis, and manual inspection.
     * - 5
-           - software_component_qualification
-           - Verification results for qualification of pre-developed software components.
+      - software_component_qualification
+      - Verification results for qualification of pre-developed software components.
     * - 6
-           - test_results
-           - Per-testcase execution result status.
+      - test_results
+      - Per-testcase execution result status.
     * - 7
-           - test_logs
-           - Per-testcase execution logs with pass/fail/not_run status context.
+      - test_logs
+      - Per-testcase execution logs with pass/fail/not_run status context.
 
 **1. Verification Coverage**
 
