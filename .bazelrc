@@ -20,3 +20,7 @@ test --test_output=errors
 
 common --registry=https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/
 common --registry=https://bcr.bazel.build
+
+# Import custom user settings
+# Can be used to enable e.g. sanitizers or other features without modifying the main .bazelrc
+try-import %workspace%/user.bazelrc

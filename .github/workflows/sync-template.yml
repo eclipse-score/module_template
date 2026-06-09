@@ -1,5 +1,5 @@
 # *******************************************************************************
-# Copyright (c) 2025 Contributors to the Eclipse Foundation
+# Copyright (c) 2026 Contributors to the Eclipse Foundation
 #
 # See the NOTICE file(s) distributed with this work for additional
 # information regarding copyright ownership.
@@ -31,7 +31,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: false # needed see #557 and #627
       - name: Sync Template Changes
-        uses: AndreasAugustin/actions-template-sync@v2.5.2
+        uses: AndreasAugustin/actions-template-sync@v2.5.3
         with:
           source_gh_token: ${{ secrets.SCORE_APPROVALS_PAT }}
           target_gh_token: ${{ secrets.SCORE_APPROVALS_PAT}}

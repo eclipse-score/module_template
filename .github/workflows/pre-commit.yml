@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: 📥 Check out
         uses: actions/checkout@v6
-      - name: ⚙️ Setup uv
-        uses: astral-sh/setup-uv@v5
-      - name: 🛠️ Run pre-commit
-        run: uvx pre-commit run --all-files
+      - name: 🛠️ Install pre-commit
+        run: pip install pre-commit
+      - name: ✅ Run pre-commit
+        run: pre-commit run --all-files
