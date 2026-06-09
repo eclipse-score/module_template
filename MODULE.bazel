@@ -14,7 +14,7 @@ module(
     name = "cpp_rust_template_repository",
 )
 
-bazel_dep(name = "rules_python", version = "1.8.3", dev_dependency = True)
+bazel_dep(name = "rules_python", version = "2.0.2", dev_dependency = True)
 
 # Python 3.12: Required for testing infrastructure and code generation tools
 PYTHON_VERSION = "3.12"
@@ -44,7 +44,7 @@ pip.parse(
 use_repo(pip, "module_template_docs_hub_env")
 
 # Add GoogleTest dependency
-bazel_dep(name = "googletest", version = "1.17.0", dev_dependency = True)
+bazel_dep(name = "googletest", version = "1.17.0.bcr.2", dev_dependency = True)
 
 # Rust rules for Bazel
 bazel_dep(name = "rules_rust", version = "0.70.0")
@@ -71,7 +71,7 @@ register_toolchains("@llvm_toolchain//:all")
 
 # tooling
 bazel_dep(name = "score_tooling", version = "1.2.0", dev_dependency = True)
-bazel_dep(name = "aspect_rules_lint", version = "1.10.2", dev_dependency = True)
+bazel_dep(name = "aspect_rules_lint", version = "2.6.0", dev_dependency = True)
 bazel_dep(name = "buildifier_prebuilt", version = "8.5.1.2", dev_dependency = True)
 
 #docs-as-code
