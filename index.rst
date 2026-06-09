@@ -35,7 +35,7 @@ Module Layout
 
 The module template includes the following top-level structure:
 
-.. code-block:: text
+.. parsed-literal::
 
     <module_name>/                      # Root folder of the module, subfolder only if more than one module exists in the repository
     ├── .github/
@@ -64,7 +64,7 @@ The module template includes the following top-level structure:
     │                                   #   module verifications [wp__verification_module_ver_report],
     ├── examples/                       # Usage examples for the module / features
     ├── score/                          # Components of the module
-    │   ├── tests/                      # Module-level tests (e.g., feature integration tests, system tests) [wp__verification_comp_int_test]
+    │   ├── tests/                      # Module-level tests (e.g., feature integration tests, system tests) [wp__verification_feat_int_test]
     │   └── <component_name>/           # Component folder for each component of the module
     │       ├── docs/                   # Documentation of the component
     │       │   ├── architecture/       # Component architecture [wp__component_arch]
@@ -79,14 +79,76 @@ The module template includes the following top-level structure:
     │       │   ├── security_analysis/  # Security analysis [wp__sw_component_security_analysis]
     │       │   │                       #   (only if component architecture exists)
     │       │   └── manuals/            # User documentation (of a single component, e.g., user manual of a library component, optional)
-    │       └── src/                    # Source files, include files, unit tests [wp__verification_sw_unit_test],
-    │           ├── <lower_level_comp>/ # Lower level component (follows <component_name> structure)
-    │           └── tests/              # Component-level tests (e.g., unit tests) [wp__verification_sw_unit_test]
+    │       ├── src/                    # Source files, include files, unit tests [wp__verification_sw_unit_test],
+    │       │   └── <lower_level_comp>/ # Lower level component (follows <component_name> structure)
+    │       └── tests/                  # Component-level tests (e.g., integration or complex unit tests) [wp__verification_comp_int_test]
     ├── MODULE.bazel                    # Bazel module definition
     ├── BUILD                           # Root build rules
     ├── project_config.bzl              # Project metadata used by Bazel macros
     └── README.md                       # Entry point of the repository
 
+.. note::
+
+    The feature-specific subfolder under ``docs/features/<feature_name>/`` is only necessary
+    if more than one feature is implemented in the module.
+
+Module Folder Structure (Single-Feature Variant)
+------------------------------------------------
+
+The following variant keeps the same structure but removes the additional
+feature-name nesting under ``docs/features/``. In this case, the ``features/``
+subfolder is optional and omitted. This variant is intended for modules that only implement a single feature, to avoid unnecessary nesting.
+For identification of the single feature, the repository name or module name should be replicate the feature name.
+
+.. parsed-literal::
+
+    <module_name>/                      # Root folder of the module, subfolder only if more than one module exists in the repository
+    ├── .github/
+    │   └── workflows/                  # CI/CD pipelines
+    ├── docs/                           # Global documentation of the module and the single feature
+    │   ├── architecture/               # Feature architecture [wp__feature_arch] and of architecture review [wp__sw_arch_verification]
+    │   ├── safety_analysis/            # Feature safety analysis artifacts ([wp__feature_fmea], [wp__feature_dfa], [wp__requirements_feat_aou])
+    │   ├── safety_planning/            # Feature safety planning artifacts
+    │   ├── security_analysis/          # Feature security analysis artifacts [wp__feature_security_analysis]
+    │   ├── security_planning/          # Feature security planning artifacts
+    │   ├── manuals/                    # Module manual, integration manual, table of assumptions of use,
+    │   │                               #   safety manual [wp__module_safety_manual],
+    │   │                               #   needs table of [wp__requirements_feat_aou]
+    │   │                               #   security manual [wp__module_security_manual]
+    │   ├── release/                    # Module release note [wp__module_sw_release_note]
+    │   ├── safety_mgt/                 # Module safety plan [wp__module_safety_plan],
+    │   │                               #   module safety package [wp__module_safety_package],
+    │   │                               #   formal document and safety analysis reviews [wp__fdr_reports]
+    │   ├── security_mgt/               # Module security plan [wp__module_security_plan],
+    │   │                               #   module security package [wp__module_security_package],
+    │   │                               #   formal document reviews [wp__fdr_reports_security],
+    │   │                               #   module SW bill of material [wp__sw_module_sbom]
+    │   └── verification_report/        # Module verification report,
+    │                                   #   module verifications [wp__verification_module_ver_report],
+    ├── examples/                       # Usage examples for the module / features
+    ├── score/                          # Components of the module
+    │   ├── tests/                      # Module-level tests (e.g., feature integration tests, system tests) [wp__verification_feat_int_test]
+    │   └── <component_name>/           # Component folder for each component of the module
+    │       ├── docs/                   # Documentation of the component
+    │       │   ├── architecture/       # Component architecture [wp__component_arch]
+    │       │   │                       #   (only if lower level components exist)
+    |       |   |                       #   architecture review [wp__sw_arch_verification],
+    │       │   ├── detailed_design/    # Detailed design [wp__sw_implementation]
+    │       │   │                       #   code inspection [wp__sw_implementation_inspection]
+    │       │   ├── requirements/       # Component requirements [wp__requirements_comp],[wp__requirements_inspect]
+    │       │   ├── safety_analysis/    # Safety analysis [wp__sw_component_fmea], [wp__sw_component_dfa], [wp__requirements_comp_aou]
+    |       |   |                       # Component classification [wp__sw_component_class] for pre-existing software
+    │       │   │                       #   (only if component architecture exists)
+    │       │   ├── security_analysis/  # Security analysis [wp__sw_component_security_analysis]
+    │       │   │                       #   (only if component architecture exists)
+    │       │   └── manuals/            # User documentation (of a single component, e.g., user manual of a library component, optional)
+    │       ├── src/                    # Source files, include files, unit tests [wp__verification_sw_unit_test],
+    │       │   └── <lower_level_comp>/ # Lower level component (follows <component_name> structure)
+    │       └── tests/                  # Component-level tests (e.g., integration or complex unit tests) [wp__verification_comp_int_test]
+    ├── MODULE.bazel                    # Bazel module definition
+    ├── BUILD                           # Root build rules
+    ├── project_config.bzl              # Project metadata used by Bazel macros
+    └── README.md                       # Entry point of the repository
 
 Module / Feature Documentation
 ------------------------------
