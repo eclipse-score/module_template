@@ -11,23 +11,17 @@
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
 
-name: License check preparation
-on:
-  pull_request_target:
-    types: [opened, reopened, synchronize]
-  merge_group:
-    types: [checks_requested]
+name: Daily
 
 permissions:
-  pull-requests: write
-  issues: write
+  contents: write
+  pages: write
+  id-token: write
 
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at midnight UTC
 
 jobs:
-  license-check:
-    uses: eclipse-score/cicd-workflows/.github/workflows/license-check.yml@829b3e11ccbf924a5782f7bfed647cb1619fdf78 # v0.0.1
-    with:
-      repo-url: "${{ github.server_url }}/${{ github.repository }}"
-      bazel-target: "run --lockfile_mode=error //:license-check"
-    secrets:
-      dash-api-token: ${{ secrets.ECLIPSE_GITLAB_API_TOKEN }}
+  docs-cleanup:
+    uses: eclipse-score/cicd-workflows/.github/workflows/daily.yml@420415673830d4711ac818ee8524204d6d0039d6 # v2026-06-10
