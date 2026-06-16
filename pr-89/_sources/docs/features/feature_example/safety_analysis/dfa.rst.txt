@@ -17,7 +17,7 @@ DFA (Dependent Failure Analysis)
 ================================
 
 .. document:: [Your Feature Name] DFA
-   :id: doc__feature_example_dfa
+   :id: doc__feature_name_dfa
    :status: draft
    :safety: ASIL_B
    :security: NO
