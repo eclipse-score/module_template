@@ -286,9 +286,9 @@ Requirements for the Example
    :reqtype: Functional
    :security: YES
    :safety: ASIL_B
-   :satisfies: stkh_req__mtfn__example_req
+   :derived_from: stkh_req__mtfn__example_req
    :status: valid
-   :belongs_to: feat__mtef
+   :satisfied_by: feat__mtef
 
    The feature shall provide the functionality to ....
 
@@ -297,8 +297,8 @@ Requirements for the Example
    :reqtype: Functional
    :security: YES
    :safety: ASIL_B
-   :satisfies: feat_req__example_feature__example_req
+   :derived_from: feat_req__example_feature__example_req
    :status: valid
-   :belongs_to: comp__mod_temp_component_example_2
+   :satisfied_by: comp__mod_temp_component_example_2
 
    The component shall provide the Logical Operation 4 to get the ..
