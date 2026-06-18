@@ -14,7 +14,7 @@ module(
     name = "cpp_rust_template_repository",
 )
 
-bazel_dep(name = "rules_python", version = "2.0.2", dev_dependency = True)
+bazel_dep(name = "rules_python", version = "1.8.3", dev_dependency = True)
 
 # Python 3.12: Required for testing infrastructure and code generation tools
 PYTHON_VERSION = "3.12"
@@ -71,11 +71,11 @@ register_toolchains("@llvm_toolchain//:all")
 
 # tooling
 bazel_dep(name = "score_tooling", version = "1.2.0", dev_dependency = True)
-bazel_dep(name = "aspect_rules_lint", version = "2.6.0", dev_dependency = True)
+bazel_dep(name = "aspect_rules_lint", version = "1.10.2", dev_dependency = True)
 bazel_dep(name = "buildifier_prebuilt", version = "8.5.1.2", dev_dependency = True)
 
 #docs-as-code
-bazel_dep(name = "score_docs_as_code", version = "4.2.0", dev_dependency = True)
+bazel_dep(name = "score_docs_as_code", version = "4.5.0", dev_dependency = True)
 bazel_dep(name = "score_process", version = "1.5.4", dev_dependency = True)
 
 # grpc-java 1.66.0 imports a grpc extension repo removed in newer grpc versions.

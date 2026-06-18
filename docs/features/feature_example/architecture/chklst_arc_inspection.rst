@@ -14,7 +14,7 @@
 
 
 .. document:: [Your Feature Name] Architecture Inspection Checklist
-   :id: doc__feature_example_arc_inspection
+   :id: doc__feature_name_arc_inspection
    :status: draft
    :safety: ASIL_B
    :security: YES

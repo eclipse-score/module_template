@@ -11,21 +11,17 @@
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
 
-name: Gitlint check
+name: Daily
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at midnight UTC
+
 jobs:
-  lint-commits:
-    name: check-commit-messages
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
-      - name: Run Gitlint Action
-        if: ${{ github.event_name == 'pull_request' }}
-        uses: ./.github/actions/gitlint
-        with:
-          pr-number: ${{ github.event.number }}
+  docs-cleanup:
+    uses: eclipse-score/cicd-workflows/.github/workflows/daily.yml@dfc6ffae7b8db630dbf49865314df6c46802d385 # v2026-06-10
