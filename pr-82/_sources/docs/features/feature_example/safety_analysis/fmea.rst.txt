@@ -17,7 +17,7 @@ FMEA (Failure Modes and Effects Analysis)
 =========================================
 
 .. document:: [Your Feature Name] FMEA
-   :id: doc__feature_example_fmea
+   :id: doc__feature_name_fmea
    :status: draft
    :safety: ASIL_B
    :security: NO
