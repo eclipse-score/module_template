@@ -101,32 +101,6 @@ Logical Interfaces
 
 The logical interfaces of the feature are defined in the `logical interfaces` section of the feature documentation in the project repository.
 
-Module Viewpoint
-----------------
-
-The following modules are needed to be defined to be able to draw the static feature view.
-They will be replaced by linking the proper module definitions in the used module's repositories as soon as those exist.
-
-The rendered module and used-component examples are maintained in the
-`module template documentation <https://eclipse-score.github.io/module_template/main/>`_.
-
-.. code-block:: rst
-
-   .. mod:: Module Name
-      :id: mod__module_name
-      :includes: comp__component_name_template
-
-
-   .. mod_view_sta:: Module Name Static View
-      :id: mod_view_sta__feature_name__module_name
-      :includes: comp__component_name_template
-
-      .. needarch::
-         :scale: 50
-         :align: center
-
-         {{ draw_module(need(), needs) }}
-
 Used Components
 ---------------
 

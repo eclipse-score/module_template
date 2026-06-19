@@ -18,5 +18,6 @@ Manuals
 .. toctree::
    :titlesonly:
 
+   user_manuel
    safety_manual
    security_manual
