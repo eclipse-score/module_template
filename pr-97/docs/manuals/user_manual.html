@@ -586,16 +586,7 @@ into your project.</p>
 <h2>Module Configuration Details<a class="headerlink" href="#module-configuration-details" title="Link to this heading">#</a></h2>
 <p>&lt;A detailed explanation of the module configuration, including the purpose and effects of the settings might be explained in the files in the config subdirectory.&gt;</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">project_config.bzl</span></code> file at the root of the module defines metadata used by Bazel macros.
-This file controls build behavior and project-specific settings.</p>
-<section id="configuration-example">
-<h3>Configuration Example<a class="headerlink" href="#configuration-example" title="Link to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PROJECT_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;asil_level&quot;</span><span class="p">:</span> <span class="s2">&quot;QM&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;source_code&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;cpp&quot;</span><span class="p">,</span> <span class="s2">&quot;rust&quot;</span><span class="p">]</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</section>
+This file controls build behavior and project-specific settings. It should follow the S-CORE definition. See <a class="reference external" href="https://eclipse-score.github.io/score/main/users_guide/building_simple_application/first_score_module.html#project-config-bzl">S-CORE user guide for project_config.bzl</a> for details.</p>
 <section id="configuration-effects">
 <h3>Configuration Effects<a class="headerlink" href="#configuration-effects" title="Link to this heading">#</a></h3>
 <p>The configuration enables conditional build behavior:</p>
@@ -730,7 +721,6 @@ project’s issue tracker or contribute directly to the repository.</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-configuration-details">Module Configuration Details</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-example">Configuration Example</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-effects">Configuration Effects</a></li>
 </ul>
 </li>
