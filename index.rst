@@ -199,3 +199,13 @@ templates and guidelines.>
    docs/safety_mgt/index
    docs/security_mgt/index
    docs/verification_report/module_verification_report
+
+Feature Documentation of Module
+-------------------------------
+
+Link to the feature documentation of the module.
+
+.. toctree::
+   :maxdepth: 1
+
+   docs/features/index
