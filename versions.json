@@ -70,5 +70,9 @@
   {
     "version": "pr-96",
     "url": "https://eclipse-score.github.io/module_template/pr-96/"
+  },
+  {
+    "version": "pr-97",
+    "url": "https://eclipse-score.github.io/module_template/pr-97/"
   }
 ]
