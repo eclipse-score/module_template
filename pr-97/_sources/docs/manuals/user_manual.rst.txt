@@ -179,14 +179,6 @@ Integrating with Your Project
 
 3. Include headers and compile your code
 
-Best Practices
---------------
-
-* Always validate input parameters
-* Handle error codes and exceptions appropriately
-* Use the module in accordance with safety and security guidelines
-* Review the safety manual (wp__module_safety_manual) for safety-critical applications
-* Review the security manual (wp__module_security_manual) for security considerations
 
 API Reference
 =============
@@ -244,14 +236,12 @@ please refer to :doc:`security_manual`.
 Known Limitations
 =================
 
-* [Limitation 1]
-* [Limitation 2]
-* [Known issues and workarounds]
+* See the module release note: :doc:`/docs/release/release_note`
 
 Version History and Compatibility
 ==================================
 
-[Document version changes, API stability, deprecation notices, and migration guides]
+Refer to the module release note above for version-specific changes, compatibility notes, and known issues.
 
 **Current Version**: 1.0 (Draft)
 
