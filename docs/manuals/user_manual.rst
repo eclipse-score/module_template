@@ -32,28 +32,16 @@ into your project.
 .. note::
    This is a template user manual. Replace placeholder text with actual module-specific information.
 
-Feature List
-============
 
-Key features of this module:
+Environment Needs
+=================
 
-* Feature overview and navigation: :doc:`/docs/features/index`
-* Feature template and scope example: :doc:`/docs/features/feature_example/index`
-* Feature architecture and verification artifacts: :doc:`/docs/features/feature_example/architecture/index`
-* Feature safety artifacts (FMEA, DFA, AoU): :doc:`/docs/features/feature_example/safety_analysis/fmea`, :doc:`/docs/features/feature_example/safety_analysis/dfa`, and :doc:`/docs/features/feature_example/safety_analysis/aou_requirements_template`
-* Feature security artifacts: :doc:`/docs/features/feature_example/security_analysis/index`
-* Feature planning artifacts (safety/security): :doc:`/docs/features/feature_example/safety_planning/index` and :doc:`/docs/features/feature_example/security_planning/index`
-
-Platform Requirements
-=====================
-
-Supported Platforms
--------------------
+Basic needed software environment for the module development and usage:
 
 * **C++**: C++17 or later
 * **Rust**: 1.70 or later (if Rust support is included)
 * **Build System**: Bazel 6.0 or later
-* **Operating Systems**: Linux, macOS, Windows (as applicable)
+* **Operating Systems**: Linux, QNX
 
 Dependencies
 ------------
@@ -61,8 +49,11 @@ Dependencies
 [List key external dependencies, licenses, and version requirements]
 
 **Example:**
+
 * Standard library (STL/Core)
 * [Other required libraries]
+
+See also MODULE.bazel files for more details on dependencies.
 
 Quick Start - Building and Testing
 ===================================
@@ -100,6 +91,8 @@ To run component or feature integration tests:
 Module Configuration Details
 =============================
 
+<A detailed explanation of the module configuration, including the purpose and effects of the settings might be explained in the files in the config subdirectory.>
+
 The ``project_config.bzl`` file at the root of the module defines metadata used by Bazel macros.
 This file controls build behavior and project-specific settings.
 
@@ -122,38 +115,22 @@ The configuration enables conditional build behavior:
 * **Safety level**: The ASIL level affects safety-related build settings and validation
 * **Source code languages**: The build system optimizes for the configured languages
 
-Getting Started with Features and Components
-============================================
-
-Feature Documentation
----------------------
-
-For documentation on features implemented in the module:
-
-.. toctree::
-   :maxdepth: 1
-
-   /docs/features/index
-
-Component Documentation
------------------------
-
-For documentation of individual components within this module:
-
-.. toctree::
-   :maxdepth: 1
-
-   /score/component_example/docs/index
 
 Examples
---------
+========
 
-Useful examples and tutorials:
+<Useful examples and tutorials should be provided in the ``examples/`` directory. Link to specific examples here.>
 
-.. toctree::
-   :maxdepth: 1
+API Reference
+=============
 
-   /examples/docs/architecture_modeling_example
+For complete and detailed API documentation and descriptions, refer to the API documentation in the ``api_description/`` directory.
+
+Performance Considerations
+==========================
+
+This section covers performance characteristics, optimization strategies, and resource requirements.
+Refer to the ``performance/`` directory for detailed performance guides and benchmarks.
 
 Integration Guidelines
 ======================
@@ -180,49 +157,17 @@ Integrating with Your Project
 3. Include headers and compile your code
 
 
-API Reference
-=============
 
-For complete API documentation and descriptions, refer to the API documentation in the ``api_description/`` directory.
+Version History, Compatibility, and Troubleshooting
+===================================================
 
-Performance Considerations
-==========================
+For comprehensive information on the following topics, refer to :doc:`/docs/release/release_note`:
 
-This section covers performance characteristics, optimization strategies, and resource requirements.
-Refer to the ``performance/`` directory for detailed performance guides and benchmarks.
-
-Troubleshooting
-===============
-
-Common Issues and Solutions
-----------------------------
-
-**Issue: Build fails with undefined reference**
-
-   Check that all dependencies are properly declared in your BUILD file and that the module is correctly linked.
-
-**Issue: Runtime errors or crashes**
-
-   Verify that:
-   * You are using the module API correctly (refer to API Reference)
-   * All required initialization steps have been completed
-   * Input data meets the documented requirements
-
-**Issue: Performance problems**
-
-   Consult the Performance Considerations section or review the ``performance/`` documentation.
-
-Getting Help
-============
-
-For additional support and resources:
-
-* Review the API Reference documentation
-* Check the configuration examples in the ``config/`` folder
-* Refer to example implementations in ``examples/``
-* Consult the Safety Manual for safety-critical usage
-* Consult the Security Manual for security-related concerns
-* Contact the module maintainers or community forums
+* Version history and changes
+* Compatibility notes and upgrade instructions
+* Known issues and limitations
+* Troubleshooting tips and solutions
+* Security vulnerabilities (CVEs)
 
 Safety and Security
 ===================
@@ -232,24 +177,6 @@ please refer to :doc:`safety_manual` for detailed safety requirements and guidel
 
 **Security Considerations**: For information about security aspects and requirements,
 please refer to :doc:`security_manual`.
-
-Known Limitations
-=================
-
-* See the module release note: :doc:`/docs/release/release_note`
-
-Version History and Compatibility
-==================================
-
-Refer to the module release note above for version-specific changes, compatibility notes, and known issues.
-
-**Current Version**: 1.0 (Draft)
-
-Compatibility Notes
--------------------
-
-* Backward compatibility with previous versions: [Yes/No/Partial]
-* Migration guide for [previous version] users: [Link or reference]
 
 License
 =======
