@@ -196,16 +196,30 @@ templates and guidelines.>
 
    docs/manuals/index
    docs/release/release_note
+   docs/features/index
    docs/safety_mgt/index
    docs/security_mgt/index
    docs/verification_report/module_verification_report
 
-Feature Documentation of Module
--------------------------------
 
-Link to the feature documentation of the module.
+Component Documentation
+-----------------------
+
+For documentation of individual components within this module:
 
 .. toctree::
    :maxdepth: 1
 
-   docs/features/index
+   score/component_example/docs/index
+
+Architecture Modeling Example
+-----------------------------
+
+An example of modeling architecture in Sphinx Needs can be found in
+
+.. toctree::
+   :maxdepth: 1
+
+   examples/docs/architecture_modeling_example
+
+Please note, that is not a template for architecture documentation, but an example of how to use Sphinx Needs for architecture modeling. The architecture documentation of the components and features of the module should follow the provided templates and guidelines.
