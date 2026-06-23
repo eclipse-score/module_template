@@ -39,6 +39,7 @@ into your project.
 .. note::
    This is a template user manual. Replace placeholder text with actual module-specific information.
 
+For build and test of the module itself, please refer to the :ref:`quick-start-building-testing`.
 
 Environment Needs
 =================
