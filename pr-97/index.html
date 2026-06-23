@@ -702,7 +702,12 @@ templates and guidelines.&gt;</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">project_config.bzl</span></code> file at the root of the module defines metadata used by Bazel macros.
 This file controls build behavior and project-specific settings. It should follow the S-CORE definition.
 See <a class="reference external" href="https://eclipse-score.github.io/score/main/users_guide/building_simple_application/first_score_module.html#project-config-bzl">S-CORE user guide for project_config.bzl</a> for details.</p>
-<p>This enables conditional behavior (e.g., choosing <cite>clang-tidy</cite> for C++ or <cite>clippy</cite> for Rust).</p>
+<p>The configuration enables conditional build behavior:</p>
+<ul class="simple">
+<li><p><strong>Language-specific tools</strong>: For C++ code, tools like <code class="docutils literal notranslate"><span class="pre">clang-tidy</span></code> are used; for Rust code, <code class="docutils literal notranslate"><span class="pre">clippy</span></code> is used</p></li>
+<li><p><strong>Safety level</strong>: The ASIL level affects safety-related build settings and validation</p></li>
+<li><p><strong>Source code languages</strong>: The build system optimizes for the configured languages</p></li>
+</ul>
 </section>
 </section>
 

@@ -17,6 +17,14 @@
 User Manual
 ###########
 
+.. document:: User Manual
+   :id: doc__user_manual
+   :status: draft
+   :version: 1
+   :safety: QM
+   :security: NO
+   :realizes: wp__training_path[version==1]
+
 
 .. attention::
     Update the document metadata according to your needs, particularly linking to the corresponding
@@ -25,7 +33,7 @@ User Manual
 Overview
 ========
 
-This user manual provides comprehensive guidance for using the [Your Module Name] module.
+This user manual provides comprehensive guidance for using the [Your Module Name] module from an end customer perspective.
 It covers installation, configuration, basic usage, and best practices for integrating this module
 into your project.
 
@@ -55,20 +63,15 @@ Dependencies
 
 See also MODULE.bazel files for more details on dependencies.
 
-
 Module Configuration Details
 =============================
 
-<A detailed explanation of the module configuration for end users, including the purpose and effects of the settings might be explained in the files in the config subdirectory.>
+<A detailed explanation of the module configuration which can be done by end users, including the purpose and effects of the settings might be explained in the files in the config subdirectory.>
 
 Configuration Effects
 ---------------------
 
-The configuration enables conditional build behavior:
-
-* **Language-specific tools**: For C++ code, tools like ``clang-tidy`` are used; for Rust code, ``clippy`` is used
-* **Safety level**: The ASIL level affects safety-related build settings and validation
-* **Source code languages**: The build system optimizes for the configured languages
+<Explain how the configuration settings affect the module's behavior, performance, and integration with other components. Include examples of typical configurations and their outcomes.>
 
 
 Examples
