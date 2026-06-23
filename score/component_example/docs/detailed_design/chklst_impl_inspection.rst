@@ -106,8 +106,8 @@ See also :need:`doc_concept__wp_inspections` for further information about revie
      -
      -
    * - IMPL_03_01
-     - Do the interface names in component documentation match the implemented interface names of the unit?
-     - Compare interface names used in component architecture/detailed design documentation
+     - Do the UID of the interface in component documentation match the implemented interface names of the unit?
+     - Compare interface UIDs (which contains the interface name) in component architecture/detailed design documentation
        with public interfaces in source code (e.g. API headers, traits, public types/functions).
      -
      -
