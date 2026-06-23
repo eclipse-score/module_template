@@ -226,8 +226,10 @@ An example of modeling architecture in Sphinx Needs can be found in
 Please note, that is not a template for architecture documentation, but an example of how to use Sphinx Needs for architecture modeling. The architecture documentation of the components and features of the module should follow the provided templates and guidelines.
 
 
+.. _quick-start-building-testing:
+
 Quick Start - Building and Testing
-===================================
+==================================
 
 To build the entire module:
 
