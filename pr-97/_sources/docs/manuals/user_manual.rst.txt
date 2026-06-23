@@ -17,7 +17,7 @@
 User Manual
 ###########
 
-.. document:: User Manual
+.. document:: User Manual <module name>
    :id: doc__user_manual
    :status: draft
    :version: 1
@@ -27,8 +27,7 @@ User Manual
 
 
 .. attention::
-    Update the document metadata according to your needs, particularly linking to the corresponding
-    work package with the ``realizes`` field once work packages are defined.
+    Update the document metadata according to your needs.
 
 Overview
 ========
@@ -113,7 +112,6 @@ Integrating with Your Project
       )
 
 3. Include headers and compile your code
-
 
 
 Version History, Compatibility, and Troubleshooting
