@@ -261,4 +261,8 @@ The ``project_config.bzl`` file at the root of the module defines metadata used 
 This file controls build behavior and project-specific settings. It should follow the S-CORE definition.
 See `S-CORE user guide for project_config.bzl <https://eclipse-score.github.io/score/main/users_guide/building_simple_application/first_score_module.html#project-config-bzl>`_ for details.
 
-This enables conditional behavior (e.g., choosing `clang-tidy` for C++ or `clippy` for Rust).
+The configuration enables conditional build behavior:
+
+* **Language-specific tools**: For C++ code, tools like ``clang-tidy`` are used; for Rust code, ``clippy`` is used
+* **Safety level**: The ASIL level affects safety-related build settings and validation
+* **Source code languages**: The build system optimizes for the configured languages
