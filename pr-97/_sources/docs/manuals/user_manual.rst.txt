@@ -55,38 +55,6 @@ Dependencies
 
 See also MODULE.bazel files for more details on dependencies.
 
-Quick Start - Building and Testing
-===================================
-
-Building the Module
---------------------
-
-To build the entire module:
-
-.. code-block:: bash
-
-   bazel build //src/...
-
-Running Tests
---------------
-
-To run all tests:
-
-.. code-block:: bash
-
-   bazel test //...
-
-To run only unit tests:
-
-.. code-block:: bash
-
-   bazel test //src/...
-
-To run component or feature integration tests:
-
-.. code-block:: bash
-
-   bazel test //tests/...
 
 Module Configuration Details
 =============================

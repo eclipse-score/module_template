@@ -224,3 +224,37 @@ An example of modeling architecture in Sphinx Needs can be found in
    examples/docs/architecture_modeling_example
 
 Please note, that is not a template for architecture documentation, but an example of how to use Sphinx Needs for architecture modeling. The architecture documentation of the components and features of the module should follow the provided templates and guidelines.
+
+
+Quick Start - Building and Testing
+===================================
+
+Building the Module
+--------------------
+
+To build the entire module:
+
+.. code-block:: bash
+
+   bazel build //src/...
+
+Running Tests
+--------------
+
+To run all tests:
+
+.. code-block:: bash
+
+   bazel test //...
+
+To run only unit tests:
+
+.. code-block:: bash
+
+   bazel test //src/...
+
+To run component or feature integration tests:
+
+.. code-block:: bash
+
+   bazel test //tests/...

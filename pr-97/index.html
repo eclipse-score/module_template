@@ -679,6 +679,31 @@ templates and guidelines.&gt;</p>
 <p>Please note, that is not a template for architecture documentation, but an example of how to use Sphinx Needs for architecture modeling. The architecture documentation of the components and features of the module should follow the provided templates and guidelines.</p>
 </section>
 </section>
+<section id="quick-start-building-and-testing">
+<h1>Quick Start - Building and Testing<a class="headerlink" href="#quick-start-building-and-testing" title="Link to this heading">#</a></h1>
+<section id="building-the-module">
+<h2>Building the Module<a class="headerlink" href="#building-the-module" title="Link to this heading">#</a></h2>
+<p>To build the entire module:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bazel<span class="w"> </span>build<span class="w"> </span>//src/...
+</pre></div>
+</div>
+</section>
+<section id="running-tests">
+<h2>Running Tests<a class="headerlink" href="#running-tests" title="Link to this heading">#</a></h2>
+<p>To run all tests:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bazel<span class="w"> </span><span class="nb">test</span><span class="w"> </span>//...
+</pre></div>
+</div>
+<p>To run only unit tests:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bazel<span class="w"> </span><span class="nb">test</span><span class="w"> </span>//src/...
+</pre></div>
+</div>
+<p>To run component or feature integration tests:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bazel<span class="w"> </span><span class="nb">test</span><span class="w"> </span>//tests/...
+</pre></div>
+</div>
+</section>
+</section>
 
 
                 </article>
@@ -718,6 +743,7 @@ templates and guidelines.&gt;</p>
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Module Template Documentation</a><ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-layout">Module Layout</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-folder-structure-single-feature-variant">Module Folder Structure (Single-Feature Variant)</a></li>
@@ -725,6 +751,14 @@ templates and guidelines.&gt;</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#component-documentation">Component Documentation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#architecture-modeling-example">Architecture Modeling Example</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-start-building-and-testing">Quick Start - Building and Testing</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-module">Building the Module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">Running Tests</a></li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
   <div class="sidebar-secondary-item">
