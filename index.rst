@@ -249,7 +249,7 @@ To run only unit tests:
 
    bazel test //src/...
 
-To run component or feature integration tests:
+To run only component or feature integration tests:
 
 .. code-block:: bash
 
