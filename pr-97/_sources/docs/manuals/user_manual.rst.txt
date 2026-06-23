@@ -59,10 +59,7 @@ See also MODULE.bazel files for more details on dependencies.
 Module Configuration Details
 =============================
 
-<A detailed explanation of the module configuration, including the purpose and effects of the settings might be explained in the files in the config subdirectory.>
-
-The ``project_config.bzl`` file at the root of the module defines metadata used by Bazel macros.
-This file controls build behavior and project-specific settings. It should follow the S-CORE definition. See `S-CORE user guide for project_config.bzl <https://eclipse-score.github.io/score/main/users_guide/building_simple_application/first_score_module.html#project-config-bzl>`_ for details.
+<A detailed explanation of the module configuration for end users, including the purpose and effects of the settings might be explained in the files in the config subdirectory.>
 
 Configuration Effects
 ---------------------

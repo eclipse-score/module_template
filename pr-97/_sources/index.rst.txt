@@ -229,17 +229,11 @@ Please note, that is not a template for architecture documentation, but an examp
 Quick Start - Building and Testing
 ===================================
 
-Building the Module
---------------------
-
 To build the entire module:
 
 .. code-block:: bash
 
    bazel build //src/...
-
-Running Tests
---------------
 
 To run all tests:
 
@@ -258,3 +252,13 @@ To run component or feature integration tests:
 .. code-block:: bash
 
    bazel test //tests/...
+
+
+Module Build Configuration
+--------------------------
+
+The ``project_config.bzl`` file at the root of the module defines metadata used by Bazel macros.
+This file controls build behavior and project-specific settings. It should follow the S-CORE definition.
+See `S-CORE user guide for project_config.bzl <https://eclipse-score.github.io/score/main/users_guide/building_simple_application/first_score_module.html#project-config-bzl>`_ for details.
+
+This enables conditional behavior (e.g., choosing `clang-tidy` for C++ or `clippy` for Rust).

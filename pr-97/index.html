@@ -681,15 +681,10 @@ templates and guidelines.&gt;</p>
 </section>
 <section id="quick-start-building-and-testing">
 <h1>Quick Start - Building and Testing<a class="headerlink" href="#quick-start-building-and-testing" title="Link to this heading">#</a></h1>
-<section id="building-the-module">
-<h2>Building the Module<a class="headerlink" href="#building-the-module" title="Link to this heading">#</a></h2>
 <p>To build the entire module:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bazel<span class="w"> </span>build<span class="w"> </span>//src/...
 </pre></div>
 </div>
-</section>
-<section id="running-tests">
-<h2>Running Tests<a class="headerlink" href="#running-tests" title="Link to this heading">#</a></h2>
 <p>To run all tests:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bazel<span class="w"> </span><span class="nb">test</span><span class="w"> </span>//...
 </pre></div>
@@ -702,6 +697,12 @@ templates and guidelines.&gt;</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bazel<span class="w"> </span><span class="nb">test</span><span class="w"> </span>//tests/...
 </pre></div>
 </div>
+<section id="module-build-configuration">
+<h2>Module Build Configuration<a class="headerlink" href="#module-build-configuration" title="Link to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">project_config.bzl</span></code> file at the root of the module defines metadata used by Bazel macros.
+This file controls build behavior and project-specific settings. It should follow the S-CORE definition.
+See <a class="reference external" href="https://eclipse-score.github.io/score/main/users_guide/building_simple_application/first_score_module.html#project-config-bzl">S-CORE user guide for project_config.bzl</a> for details.</p>
+<p>This enables conditional behavior (e.g., choosing <cite>clang-tidy</cite> for C++ or <cite>clippy</cite> for Rust).</p>
 </section>
 </section>
 
@@ -753,8 +754,7 @@ templates and guidelines.&gt;</p>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-start-building-and-testing">Quick Start - Building and Testing</a><ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-module">Building the Module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">Running Tests</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-build-configuration">Module Build Configuration</a></li>
 </ul>
 </li>
 </ul>
