@@ -40,10 +40,9 @@ following tables. For all applicable failure initiators, the FMEA has to be perf
 Failure Mode List
 -----------------
 
-Fault Models for sequence diagrams
-  .. list-table:: Fault Models for sequence diagrams
-     :header-rows: 1
-     :widths: 10,20,10,20
+.. list-table:: Fault Models for sequence diagrams
+    :header-rows: 1
+    :widths: 10,20,10,20
 
     * - ID
       - Failure Mode
@@ -127,7 +126,7 @@ For all identified applicable failure initiators, the FMEA is performed in the f
        :sufficient: <yes|no>
        :status: <valid|invalid>
 
- .. note::   Argument is inside the 'content'. Therefore content is mandatory.
+      .. note::   Argument is inside the 'content'. Therefore content is mandatory.
 
 .. attention::
     The above directive must be updated according to your feature FMEA.
