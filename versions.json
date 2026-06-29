@@ -78,5 +78,9 @@
   {
     "version": "pr-98",
     "url": "https://eclipse-score.github.io/module_template/pr-98/"
+  },
+  {
+    "version": "pr-99",
+    "url": "https://eclipse-score.github.io/module_template/pr-99/"
   }
 ]
