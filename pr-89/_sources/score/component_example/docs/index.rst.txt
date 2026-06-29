@@ -27,8 +27,19 @@
    :realizes: wp__cmpt_request
    :tags: template
 
+.. code-block:: rst
+
+   .. comp:: Component Name
+      :id: comp__mod_temp_component_name_template
+      :security: YES
+      :safety: ASIL_B
+      :status: invalid
+      :implements: logic_arc_int__feature_name__interface_name1
+      :consists_of: comp__component_name_internal_1, comp__component_name_internal_2, comp__component_name_internal_3
+      :belongs_to: feat__feature_name
+
 .. attention::
-    The above directive must be updated according to your Component.
+    The above directives must be updated according to your Component.
 
     - Modify ``document`` to be your Component Name
     - Modify ``id`` to be your Component Name in upper snake case preceded by ``doc__``
@@ -54,7 +65,6 @@ Specification
 =============
 
 [Describe the requirements, architecture of any component.] or
-
 
 
 Backwards Compatibility
@@ -149,3 +159,20 @@ Footnotes
 =========
 
 [A collection of footnotes cited in the CR, and a place to list non-inline hyperlink targets.]
+
+
+Further Documentation of the component can be found in the following sections:
+
+Component Detail Information
+============================
+
+.. toctree::
+   :maxdepth: 1
+
+   architecture/index
+   detailed_design/index
+   requirements/index
+   safety_analysis/dfa
+   safety_analysis/fmea
+   safety_analysis/aou_requirements_template
+   component_classification

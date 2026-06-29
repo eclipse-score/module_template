@@ -26,8 +26,9 @@ Overview
 
 This repository provides a standardized setup for projects using **C++** or **Rust** and **Bazel** as a build system.
 It integrates best practices for build, test, CI/CD and documentation.
+It also provides an example for the documentation of an module with all necessary artifacts for safety and security management, verification and release management.
 It also provides an example of modeling architecture in Sphinx Needs in :doc:`/examples/docs/architecture_modeling_example`.
-It also provides the component architecture template snippets in :doc:`/score/component_example/docs/architecture/component_architecture_template`.
+It also provides the component architecture template snippets in :doc:`/score/component_example/docs/architecture/component_architecture`.
 It also provides an example of documenting detailed design in :doc:`/score/component_example/docs/detailed_design/detailed_design_example`.
 
 Module Layout
@@ -48,10 +49,16 @@ The module template includes the following top-level structure:
     │   │       ├── safety_planning/    # Feature safety planning artifacts
     │   │       ├── security_analysis/  # Feature security analysis artifacts [wp__feature_security_analysis]
     │   │       └── security_planning/  # Feature security planning artifacts
-    │   ├── manuals/                    # Module manual, integration manual, table of assumptions of use,
-    │   │                               #   safety manual [wp__module_safety_manual],
-    │   │                               #   needs table of [wp__requirements_feat_aou]
-    │   │                               #   security manual [wp__module_security_manual]
+    │   ├── manuals/                    # Module manual, integration manual, table of assumptions of use
+    │   │   |                           #   safety manual [wp__module_safety_manual],
+    │   │   |                           #   needs table of [wp__requirements_feat_aou]
+    │   │   |                           #   security manual [wp__module_security_manual]
+    │   │   │                           # Additional optional user centric documentation (e.g. configuration guide,
+    │   │   │                           #   examples user guide, APIs & usage, performance analysis)
+    │   │   ├── config/                 # Configuration guide (optional)
+    │   │   ├── examples/               # Examples user guide (optional)
+    │   │   ├── api_description/        # API detail description (optional)
+    │   │   └── performance/            # Performance analysis (optional)
     │   ├── release/                    # Module release note [wp__module_sw_release_note]
     │   ├── safety_mgt/                 # Module safety plan [wp__module_safety_plan],
     │   │                               #   module safety package [wp__module_safety_package],
@@ -112,9 +119,15 @@ For identification of the single feature, the repository name or module name sho
     │   ├── security_analysis/          # Feature security analysis artifacts [wp__feature_security_analysis]
     │   ├── security_planning/          # Feature security planning artifacts
     │   ├── manuals/                    # Module manual, integration manual, table of assumptions of use,
-    │   │                               #   safety manual [wp__module_safety_manual],
-    │   │                               #   needs table of [wp__requirements_feat_aou]
-    │   │                               #   security manual [wp__module_security_manual]
+    │   │   |                           #   safety manual [wp__module_safety_manual],
+    │   │   |                           #   needs table of [wp__requirements_feat_aou]
+    │   │   |                           #   security manual [wp__module_security_manual]
+    │   │   |                           # Additional optional user centric documentation (e.g. configuration guide,
+    │   │   |                           #   examples user guide, APIs & usage, performance analysis)
+    │   │   ├── config/                 # Configuration guide (optional)
+    │   │   ├── examples/               # Examples user guide (optional)
+    │   │   ├── api_description/        # APIs detail description (optional)
+    │   │   └── performance/            # Performance analysis (optional)
     │   ├── release/                    # Module release note [wp__module_sw_release_note]
     │   ├── safety_mgt/                 # Module safety plan [wp__module_safety_plan],
     │   │                               #   module safety package [wp__module_safety_package],
@@ -150,48 +163,75 @@ For identification of the single feature, the repository name or module name sho
     ├── project_config.bzl              # Project metadata used by Bazel macros
     └── README.md                       # Entry point of the repository
 
-Module / Feature Documentation
-------------------------------
+Module Documentation
+--------------------
+
+<Brief description of the module and the implemented feature(s).>
+
+<Module sphinx documentation template snippets for the module. The directives and their parameters
+should be updated according to the module and it's components. Further documentation of the module
+and the implemented feature(s) should be added in the respective sections of the documentation
+(e.g., feature architecture, safety analysis, security analysis, manuals, etc.) following the provided
+templates and guidelines.>
+
+.. code-block:: rst
+
+   .. mod:: Module Name
+      :id: mod__module_name
+      :includes: comp__component_name_template
+
+
+   .. mod_view_sta:: Module Name Static View
+      :id: mod_view_sta__feature_name__module_name
+      :includes: comp__component_name_template
+
+      .. needarch::
+         :scale: 50
+         :align: center
+
+         {{ draw_module(need(), needs) }}
+
 
 .. toctree::
    :maxdepth: 1
 
-   docs/features/index
    docs/manuals/index
    docs/release/release_note
+   docs/features/index
    docs/safety_mgt/index
    docs/security_mgt/index
    docs/verification_report/module_verification_report
 
-Component documentation
--------------------------------
+
+Component Documentation
+-----------------------
+
+For documentation of individual components within this module:
 
 .. toctree::
    :maxdepth: 1
 
    score/component_example/docs/index
-   score/component_example/docs/architecture/index
-   score/component_example/docs/detailed_design/index
-   score/component_example/docs/requirements/index
-   score/component_example/docs/safety_analysis/dfa
-   score/component_example/docs/safety_analysis/fmea
-   score/component_example/docs/safety_analysis/aou_requirements_template
-   score/component_example/docs/component_classification
 
-Examples
---------
+Architecture Modeling Example
+-----------------------------
+
+An example of modeling architecture in Sphinx Needs can be found in
 
 .. toctree::
    :maxdepth: 1
 
-   /examples/docs/architecture_modeling_example
+   examples/docs/architecture_modeling_example
+
+Please note, that is not a template for architecture documentation, but an example of how to use Sphinx Needs for architecture modeling. The architecture documentation of the components and features of the module should follow the provided templates and guidelines.
 
 
+.. _quick-start-building-testing:
 
-Quick Start
------------
+Quick Start - Building and Testing
+==================================
 
-To build the module:
+To build the entire module:
 
 .. code-block:: bash
 
@@ -203,30 +243,28 @@ To run all tests:
 
    bazel test //...
 
-To run Unit Tests:
+To run only unit tests:
 
 .. code-block:: bash
 
    bazel test //src/...
 
-To run Component / Feature Integration Tests:
+To run only component or feature integration tests:
 
 .. code-block:: bash
 
    bazel test //tests/...
 
-Module Configuration
---------------------
 
-The `project_config.bzl` file defines metadata used by Bazel macros.
+Module Build Configuration
+--------------------------
 
-Example:
+The ``project_config.bzl`` file at the root of the module defines metadata used by Bazel macros.
+This file controls build behavior and project-specific settings. It should follow the S-CORE definition.
+See `S-CORE user guide for project_config.bzl <https://eclipse-score.github.io/score/main/users_guide/building_simple_application/first_score_module.html#project-config-bzl>`_ for details.
 
-.. code-block:: python
+The configuration enables conditional build behavior:
 
-   PROJECT_CONFIG = {
-       "asil_level": "QM",
-       "source_code": ["cpp", "rust"]
-   }
-
-This enables conditional behavior (e.g., choosing `clang-tidy` for C++ or `clippy` for Rust).
+* **Language-specific tools**: For C++ code, tools like ``clang-tidy`` are used; for Rust code, ``clippy`` is used
+* **Safety level**: The ASIL level affects safety-related build settings and validation
+* **Source code languages**: The build system optimizes for the configured languages
