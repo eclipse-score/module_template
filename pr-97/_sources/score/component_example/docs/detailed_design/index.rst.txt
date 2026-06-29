@@ -35,7 +35,7 @@ An example of documenting detailed design can be found in:
 Inspection Checklist
 --------------------
 
-The checklist for verification of the detailed design inspection can be found here:
+The checklist for verification of the detailed design and code can be found here:
 
 .. toctree::
 
