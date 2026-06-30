@@ -29,7 +29,6 @@ For the main feature description and requirements, see the belonging `Feature <h
    architecture/chklst_arc_inspection.rst
    safety_analysis/fmea.rst
    safety_analysis/dfa.rst
-   safety_analysis/aou_requirements_template.rst
+   safety_analysis/aou_requirements.rst
    safety_planning/index.rst
    security_planning/index.rst
-   security_analysis/index.rst
