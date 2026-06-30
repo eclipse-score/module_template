@@ -16,7 +16,7 @@ AoU Feature Requirements
 ========================
 
 .. document:: [Your Feature Name] Feature AoU
-   :id: doc__feature_example_feat_aou
+   :id: doc__feature_name_feat_aou
    :status: draft
    :safety: ASIL_B
    :security: NO
