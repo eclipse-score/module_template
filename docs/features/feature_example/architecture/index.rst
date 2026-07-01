@@ -61,8 +61,12 @@ Mandatory: A motivation for the decomposition
 Static Architecture
 -------------------
 
-The live feature architecture template snippets are maintained in the
-`module template documentation <https://eclipse-score.github.io/module_template/main/>`__.
+<The static architecture of the feature can be described here. It includes the feature architecture diagrams and some descriptions.>
+
+.. note::
+   The Architecture can be split into multiple files, it is an high level architecture design
+   which can be shown without actual c++/rust interfaces and data types
+   and there will be link to internal architecture till code to get actual api descriptions.
 
 .. code-block:: rst
 
@@ -84,6 +88,8 @@ The live feature architecture template snippets are maintained in the
 Dynamic Architecture
 --------------------
 
+<The dynamic architecture of the feature can be described here. That can include sequence diagrams, state machines, and other dynamic views of the feature.>
+
 .. code-block:: rst
 
    .. feat_arc_dyn:: Dynamic View
@@ -101,54 +107,11 @@ Logical Interfaces
 
 The logical interfaces of the feature are defined in the `logical interfaces` section of the feature documentation in the project repository.
 
-Module Viewpoint
-----------------
-
-The following modules are needed to be defined to be able to draw the static feature view.
-They will be replaced by linking the proper module definitions in the used module's repositories as soon as those exist.
-
-The rendered module and used-component examples are maintained in the
-`module template documentation <https://eclipse-score.github.io/module_template/main/>`_.
-
-.. code-block:: rst
-
-   .. mod:: Module Name
-      :id: mod__module_name
-      :includes: comp__component_name_template
-
-
-   .. mod_view_sta:: Module Name Static View
-      :id: mod_view_sta__feature_name__module_name
-      :includes: comp__component_name_template
-
-      .. needarch::
-         :scale: 50
-         :align: center
-
-         {{ draw_module(need(), needs) }}
+See `SCORE Features <https://eclipse-score.github.io/score/main/features/index.html>`_ for more information.
 
 Used Components
 ---------------
 
-The following components are needed to be defined to be able to draw the static feature view.
-They will be replaced by linking the proper SW component definitions in the used module's repositories as soon as those exist.
+The components used by the feature are defined in the `components` section of the module documentation.
 
-.. code-block:: rst
-
-   .. comp:: Component Name
-      :id: comp__component_name_template
-      :safety: ASIL_B
-      :security: YES
-      :status: invalid
-      :implements: logic_arc_int__feature_name__interface_name1
-
-.. note::
-   Architecture can be split into multiple files, it is an high level architecture design
-   which can be shown without actual c++/rust interfaces and data types
-   and there will be link to internal architecture till code to get actual api descriptions.
-
-.. attention::
-    The above directives must be updated according to your feature architecture.
-
-    - Replace the example content by the real content (according to :need:`gd_guidl__arch_design`)
-    - Set the status to valid and start the review/merge process
+See :ref:`component_template` for an example component.
