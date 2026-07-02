@@ -174,5 +174,5 @@ Component Detail Information
    requirements/index
    safety_analysis/dfa
    safety_analysis/fmea
-   safety_analysis/aou_requirements_template
+   safety_analysis/aou_requirements
    component_classification
