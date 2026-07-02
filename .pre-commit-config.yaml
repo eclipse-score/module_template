@@ -24,7 +24,7 @@ repos:
         exclude: MODULE.bazel.lock
 
   - repo: https://github.com/eclipse-score/tooling
-    rev: 31ff8eee214e4e97ef8f5cb46e443273515b63ec
+    rev: d5dbc41a14d28c8be40077735492bb7808e98fb9
     hooks:
       - id: copyright
 
