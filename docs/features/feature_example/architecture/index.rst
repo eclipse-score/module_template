@@ -31,7 +31,7 @@ Feature Architecture
     - Modify ``Your Feature Name`` to be your Feature Name
     - Modify ``id`` to be your Feature Name in upper snake case preceded by ``doc__`` and followed by ``_architecture``
     - Adjust ``status`` to be ``valid``
-    - Adjust ``safety`` and ``tags`` according to your needs
+    - Adjust ``safety``, ``security``  and ``tags`` according to your needs
 
 Overview
 --------
