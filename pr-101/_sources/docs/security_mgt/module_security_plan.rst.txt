@@ -110,13 +110,6 @@ Security Plan
           - <Link to WP>
           - <WP status (manual)>
 
-        * - :need:`wp__module_sw_release_note`
-          - :need:`Software Development Plan Template <gd_temp__software_development_plan>`
-          - <automated>
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
-
         * - :need:`wp__module_security_manual`
           - :need:`gd_temp__module_security_manual`
           - <automated>
