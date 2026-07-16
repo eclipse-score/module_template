@@ -19,7 +19,7 @@ Safety Analysis Checklist
 .. document:: [Your Module Name] Safety Analysis Checklist
   :id: doc__mod_temp_module_name_safety_analysis_fdr
   :status: draft
-   :version: 1
+  :version: 1
   :safety: ASIL_B
   :security: YES
   :realizes: wp__fdr_reports
