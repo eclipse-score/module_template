@@ -19,6 +19,7 @@ DFA (Dependent Failure Analysis)
 .. document:: [Your Component Name] DFA
    :id: doc__mod_temp_component_name_dfa
    :status: draft
+   :version: 1
    :safety: ASIL_B
    :security: NO
    :realizes: wp__sw_component_dfa

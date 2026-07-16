@@ -22,6 +22,7 @@
 .. document:: [Your Component Name]
    :id: doc__mod_temp_component_name
    :status: draft
+   :version: 1
    :safety: ASIL_B
    :security: NO
    :realizes: wp__cmpt_request

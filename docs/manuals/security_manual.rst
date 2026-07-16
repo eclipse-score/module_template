@@ -20,6 +20,7 @@ Security Manual
 .. document:: [Your Module Name] Security Manual
    :id: doc__mod_temp_module_name_security_manual
    :status: draft
+   :version: 1
    :safety: ASIL_B
    :security: YES
    :realizes: wp__module_security_manual
