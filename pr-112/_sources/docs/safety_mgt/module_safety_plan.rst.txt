@@ -20,6 +20,7 @@ Safety Plan
 .. document:: [Your Module Name] Safety Plan
   :id: doc__mod_temp_module_name_safety_plan
   :status: draft
+  :version: 1
   :safety: ASIL_B
   :security: NO
   :realizes: wp__module_safety_plan

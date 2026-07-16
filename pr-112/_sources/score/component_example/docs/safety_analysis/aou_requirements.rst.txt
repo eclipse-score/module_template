@@ -18,6 +18,7 @@ AoU Component Requirements Template
 .. document:: [Your Component Name] Component AoU
    :id: doc__component_name_feat_aou
    :status: draft
+   :version: 1
    :safety: ASIL_B
    :security: NO
    :realizes: wp__requirements_comp_aou

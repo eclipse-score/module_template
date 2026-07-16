@@ -18,6 +18,7 @@ AoU Feature Requirements
 .. document:: [Your Feature Name] Feature AoU
    :id: doc__feature_name_feat_aou
    :status: draft
+   :version: 1
    :safety: ASIL_B
    :security: NO
    :realizes: wp__requirements_feat_aou

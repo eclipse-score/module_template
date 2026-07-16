@@ -29,6 +29,7 @@ Feature Architecture File
    :security: YES
    :safety: QM
    :status: valid
+   :version: 1
    :includes: logic_arc_int__example_feature__if_1, logic_arc_int__example_feature__if_2, logic_arc_int__example_feature__if_3
 
    This is the example feature which shall normally defined in the platform repo.
