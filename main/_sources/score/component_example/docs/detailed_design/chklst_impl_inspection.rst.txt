@@ -15,6 +15,7 @@
 .. document:: [Your Component Name] Implementation Inspection Checklist
   :id: doc__mod_temp_component_name_impl_inspection
   :status: draft
+  :version: 1
   :safety: ASIL_B
   :security: YES
   :realizes: wp__sw_implementation_inspection

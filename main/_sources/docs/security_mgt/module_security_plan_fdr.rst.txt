@@ -20,6 +20,7 @@ Security Plan Formal Review Report
 .. document:: [Your Module Name] Security Plan Formal Review
   :id: doc__mod_temp_module_name_security_plan_fdr
   :status: draft
+  :version: 1
   :safety: ASIL_B
   :security: YES
   :realizes: wp__fdr_reports

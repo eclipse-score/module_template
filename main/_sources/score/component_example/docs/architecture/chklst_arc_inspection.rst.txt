@@ -16,6 +16,7 @@
 .. document:: [Your Component Name] Architecture Inspection Checklist
   :id: doc__mod_temp_component_name_arc_inspection
   :status: draft
+  :version: 1
   :safety: ASIL_B
   :security: YES
   :realizes: wp__sw_arch_verification

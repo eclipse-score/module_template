@@ -18,6 +18,7 @@ Example: Detailed Design
 .. document:: [Your Component Name] Detailed Design
    :id: doc__mod_temp_component_name_detailed_design
    :status: draft
+   :version: 1
    :safety: ASIL_B
    :security: NO
    :realizes: wp__sw_implementation

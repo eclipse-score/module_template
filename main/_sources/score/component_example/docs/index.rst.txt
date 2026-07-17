@@ -22,6 +22,7 @@
 .. document:: [Your Component Name]
    :id: doc__mod_temp_component_name
    :status: draft
+   :version: 1
    :safety: ASIL_B
    :security: NO
    :realizes: wp__cmpt_request
@@ -52,74 +53,10 @@ Abstract
 [A short (~200 word) description of the component.]
 
 
-Rationale
-=========
-
-[Describe why particular design decisions were made.]
-
-.. note::
-   The rationale should provide evidence of consensus within the community and discuss important objections or concerns raised during discussion.
-   For the documentation of the decision the :need:`gd_temp__change_decision_record` can be used.
-
 Specification
 =============
 
 [Describe the requirements, architecture of any component.] or
-
-
-Backwards Compatibility
-=======================
-
-[Describe potential impact (especially including safety and security impacts) and severity on pre-existing platform/project elements.]
-
-
-Security Impact
-===============
-
-[How could a malicious user take advantage of this new/modified component?]
-
-.. note::
-   If there are security concerns in relation to the CR, those concerns should be explicitly written out to make sure reviewers of the CR are aware of them.
-
-Which security requirements are affected or has to be changed?
-Could the new/modified component enable new threat scenarios?
-Could the new/modified component enable new attack paths?
-Could the new/modified component impact functional safety?
-If applicable, which additional security measures must be implemented to mitigate the risk?
-
-.. note::
-   Use Security Software Critically Analysis, Vulnerability Analysis.
-   [Methods will be defined later in Process area Security Analysis]
-
-
-Safety Impact
-=============
-
-[How could the safety be impacted by the new/modified component?]
-
-.. note::
-   If there are safety concerns in relation to the CR, those concerns should be explicitly written out to make sure reviewers of the CR are aware of them.
-
-Which safety requirements are affected or has to be changed?
-Could the new/modified component be a potential common cause or cascading failure initiator?
-If applicable, which additional safety measures must be implemented to mitigate the risk?
-
-.. note::
-   Use Dependency Failure Analysis and/or Safety Software Critically Analysis.
-   [Methods will be defined later in Process area Safety Analysis]
-
-For new feature/component contributions:
-
-[What is the expected ASIL level?]
-[What is the expected classification of the contribution?]
-
-.. note::
-   Use the component classification method here to classify your component, if it shall to be used in a safety context: :need:`gd_temp__component_classification`.
-
-License Impact
-==============
-
-[How could the copyright impacted by the license of the new contribution?]
 
 
 How to Teach This
@@ -129,31 +66,6 @@ How to Teach This
 
 .. note::
    For a CR that adds new functionality or changes behaviour, it is helpful to include a section on how to teach users, new and experienced, how to apply the CR to their work.
-
-Rejected Ideas
-==============
-
-[Why certain ideas that were brought while discussing this CR were not ultimately pursued.]
-
-.. note::
-   Throughout the discussion of a CR, various ideas will be proposed which are not accepted.
-   Those rejected ideas should be recorded along with the reasoning as to why they were rejected.
-   This both helps record the thought process behind the final version of the CR as well as preventing people from bringing up the same rejected idea again in subsequent discussions.
-   In a way this section can be thought of as a breakout section of the Rationale section that is focused specifically on why certain ideas were not ultimately pursued.
-
-
-
-Open Issues
-===========
-
-[Any points that are still being decided/discussed.]
-
-.. note::
-   While a CR is in draft, ideas can come up which warrant further discussion.
-   Those ideas should be recorded so people know that they are being thought about but do not have a concrete resolution.
-   This helps make sure all issues required for the CR to be ready for consideration are complete and reduces people duplicating prior discussion.
-
-
 
 Footnotes
 =========
