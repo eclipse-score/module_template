@@ -20,6 +20,7 @@ Verification Report
 .. document:: [Your Module Name] Verification Report
    :id: doc__mod_temp_module_name_verification_report
    :status: draft
+   :version: 1
    :safety: ASIL_B
    :security: NO
    :realizes: wp__verification_module_ver_report

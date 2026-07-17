@@ -20,6 +20,7 @@ Feature Architecture
 .. document:: [Your Feature Name] Architecture
    :id: doc__feature_example_architecture
    :status: draft
+   :version: 1
    :safety: ASIL_B
    :security: NO
    :realizes: wp__feature_arch

@@ -18,6 +18,7 @@ Component Architecture Documentation
 .. document:: [Your Component Name] Architecture
    :id: doc__mod_temp_component_name_architecture
    :status: draft
+   :version: 1
    :safety: ASIL_B
    :security: NO
    :realizes: wp__component_arch

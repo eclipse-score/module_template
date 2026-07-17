@@ -19,6 +19,7 @@ DFA (Dependent Failure Analysis)
 .. document:: [Your Feature Name] DFA
    :id: doc__feature_name_dfa
    :status: draft
+   :version: 1
    :safety: ASIL_B
    :security: NO
    :realizes: wp__feature_dfa
