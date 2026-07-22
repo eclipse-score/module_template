@@ -20,6 +20,7 @@ Release Note
 .. document:: [Your Module Name] Release Note
    :id: doc__mod_temp_module_name_release_note
    :status: draft
+   :version: 1
    :safety: ASIL_B
    :security: NO
    :realizes: wp__module_sw_release_note

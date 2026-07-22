@@ -20,6 +20,7 @@ Feature Safety Work Products List
 .. document:: [Your Feature Name] Safety WPs
    :id: doc__feature_example_safety_wp
    :status: draft
+   :version: 1
    :safety: ASIL_B
    :security: NO
    :realizes: wp__platform_safety_plan

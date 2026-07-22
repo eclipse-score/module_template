@@ -18,6 +18,7 @@ Component <Name> Requirements
 .. document:: [Your Component Name] Requirements
    :id: doc__mod_temp_component_name_requirements
    :status: draft
+   :version: 1
    :safety: ASIL_B
    :security: YES
    :realizes: wp__requirements_comp[version==1]
