@@ -150,5 +150,9 @@
   {
     "version": "pr-116",
     "url": "https://eclipse-score.github.io/module_template/pr-116/"
+  },
+  {
+    "version": "pr-117",
+    "url": "https://eclipse-score.github.io/module_template/pr-117/"
   }
 ]
