@@ -39,6 +39,7 @@ Feature Architecture File
    :security: YES
    :safety: QM
    :status: valid
+   :version: 1
    :includes: logic_arc_int__example_feature__if_1, logic_arc_int__example_feature__if_2, logic_arc_int__example_feature__if_3
    :fulfils: feat_req__example_feature__example_req
    :belongs_to: feat__mtef
@@ -56,6 +57,7 @@ Feature Architecture File
    :security: YES
    :safety: ASIL_B
    :status: valid
+   :version: 1
    :fulfils: feat_req__example_feature__example_req
 
    .. needarch::
@@ -70,6 +72,7 @@ Feature Architecture File
    :security: YES
    :safety: ASIL_B
    :status: valid
+   :version: 1
    :fulfils: feat_req__example_feature__example_req
 
    .. needarch::
@@ -84,6 +87,7 @@ Feature Architecture File
    :security: YES
    :safety: ASIL_B
    :status: valid
+   :version: 1
    :fulfils: feat_req__example_feature__example_req
 
 
@@ -94,6 +98,7 @@ Feature Architecture File
    :security: YES
    :safety: ASIL_B
    :status: valid
+   :version: 1
    :included_by: logic_arc_int__example_feature__if_1
 
 .. logic_arc_int_op:: Logical Operation 2
@@ -101,6 +106,7 @@ Feature Architecture File
    :security: YES
    :safety: ASIL_B
    :status: valid
+   :version: 1
    :included_by: logic_arc_int__example_feature__if_1
 
 .. logic_arc_int_op:: Logical Operation 3
@@ -108,6 +114,7 @@ Feature Architecture File
    :security: YES
    :safety: ASIL_B
    :status: valid
+   :version: 1
    :included_by: logic_arc_int__example_feature__if_2
 
 .. logic_arc_int_op:: Logical Operation 4
@@ -115,6 +122,7 @@ Feature Architecture File
    :security: YES
    :safety: ASIL_B
    :status: valid
+   :version: 1
    :included_by: logic_arc_int__example_feature__if_2
 
 .. logic_arc_int_op:: Logical Operation 5
@@ -122,6 +130,7 @@ Feature Architecture File
    :security: YES
    :safety: ASIL_B
    :status: valid
+   :version: 1
    :included_by: logic_arc_int__example_feature__if_3
 
 .. logic_arc_int_op:: Logical Operation 6
@@ -129,6 +138,7 @@ Feature Architecture File
    :security: YES
    :safety: ASIL_B
    :status: valid
+   :version: 1
    :included_by: logic_arc_int__example_feature__if_3
 
 .. logic_arc_int_op:: Logical Operation 7
@@ -136,6 +146,7 @@ Feature Architecture File
    :security: YES
    :safety: ASIL_B
    :status: valid
+   :version: 1
    :included_by: logic_arc_int__example_feature__if_3
 
 .. logic_arc_int_op:: Logical Operation 8
@@ -143,6 +154,7 @@ Feature Architecture File
    :security: YES
    :safety: ASIL_B
    :status: valid
+   :version: 1
    :included_by: logic_arc_int__example_feature__if_3
 
 
@@ -154,12 +166,14 @@ Module View File
    :security: YES
    :safety: ASIL_B
    :status: valid
+   :version: 1
    :includes: comp__mod_temp_component_example_1, comp__mod_temp_component_example_2
 
    This is Module 1.
 
 .. mod_view_sta:: Module 1 Static View
    :id: mod_view_sta__example_feature__1
+   :version: 1
    :includes: comp__mod_temp_component_example_1, comp__mod_temp_component_example_2
 
    .. needarch::
@@ -173,12 +187,14 @@ Module View File
    :security: YES
    :safety: ASIL_B
    :status: valid
+   :version: 1
    :includes: comp__mod_temp_component_example_3
 
    This is Module 2.
 
 .. mod_view_sta:: Module 2 Static View
    :id: mod_view_sta__example_feature__2
+   :version: 1
    :includes: comp__mod_temp_component_example_3
 
    .. needarch::
@@ -195,6 +211,7 @@ Feature or Component Architecture File(s)
    :security: YES
    :safety: ASIL_B
    :status: valid
+   :version: 1
    :implements: logic_arc_int__example_feature__if_1
    :consists_of: comp__mod_temp_archex_sub_component_1, comp__mod_temp_archex_sub_component_2, comp__mod_temp_archex_sub_component_3
    :belongs_to: feat__mtef
@@ -206,6 +223,7 @@ Feature or Component Architecture File(s)
    :security: YES
    :safety: ASIL_B
    :status: valid
+   :version: 1
    :implements: logic_arc_int__example_feature__if_2
    :belongs_to: feat__mtef
 
@@ -216,6 +234,7 @@ Feature or Component Architecture File(s)
    :security: YES
    :safety: QM
    :status: valid
+   :version: 1
    :implements: logic_arc_int__example_feature__if_3
    :belongs_to: feat__mtef
 
@@ -224,6 +243,7 @@ Feature or Component Architecture File(s)
 .. comp_arc_sta:: Component 1 Static View
    :id: comp_arc_sta__example_feature__comp_1
    :status: valid
+   :version: 1
    :safety: ASIL_B
    :security: NO
    :belongs_to: comp__mod_temp_component_example_1
@@ -240,6 +260,7 @@ Feature or Component Architecture File(s)
 .. comp:: Component 1_1
    :id: comp__mod_temp_archex_sub_component_1
    :status: valid
+   :version: 1
    :safety: ASIL_B
    :security: NO
    :uses: logic_arc_int__example_feature__if_2
@@ -249,6 +270,7 @@ Feature or Component Architecture File(s)
 .. comp:: Component 1_2
    :id: comp__mod_temp_archex_sub_component_2
    :status: valid
+   :version: 1
    :safety: ASIL_B
    :security: NO
    :uses: logic_arc_int__example_feature__if_2
@@ -258,6 +280,7 @@ Feature or Component Architecture File(s)
 .. comp:: Component 1_3
    :id: comp__mod_temp_archex_sub_component_3
    :status: valid
+   :version: 1
    :safety: ASIL_B
    :security: NO
    :belongs_to: feat__mtef
@@ -277,6 +300,7 @@ Requirements for the Example
    :security: YES
    :rationale: needed for archdes example
    :status: valid
+   :version: 1
    :valid_from: v1.0.0
 
    The platform shall provide the feature ....
@@ -290,6 +314,7 @@ Requirements for the Example
    :safety: ASIL_B
    :derived_from: stkh_req__mtfn__example_req
    :status: valid
+   :version: 1
    :valid_from: v1.0.0
    :satisfied_by: feat__mtef
 
@@ -302,6 +327,7 @@ Requirements for the Example
    :safety: ASIL_B
    :derived_from: feat_req__example_feature__example_req
    :status: valid
+   :version: 1
    :satisfied_by: comp__mod_temp_component_example_2
 
    The component shall provide the Logical Operation 4 to get the ..

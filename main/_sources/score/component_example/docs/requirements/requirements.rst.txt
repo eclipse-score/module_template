@@ -45,6 +45,7 @@ Functional Requirements
    :safety: ASIL_B
    :derived_from: feat_req__example_feature__example_req
    :status: valid
+   :version: 1
    :satisfied_by: comp__mod_temp_component_name_template
 
    The Component shall do xyz to another component to bring it to this condition at this time
@@ -70,6 +71,7 @@ Assumption of Use Requirements
    :security: YES
    :safety: ASIL_B
    :status: valid
+   :version: 1
 
    The Component User shall do xyz to use the component safely/securely
 
@@ -82,6 +84,7 @@ Environmental Requirements
    :security: YES
    :safety: ASIL_B
    :status: invalid
+   :version: 1
    :tags: environment
 
    The Component shall only be used in a xyz environment to ensure its proper functioning.
