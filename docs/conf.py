@@ -11,19 +11,7 @@
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
 
-load("@score_docs_as_code//:docs.bzl", "docs_bundle")
+project = "Module Template Project"
+project_url = "https://eclipse-score.github.io/module_template/"
 
-docs_bundle(
-    name = "docs",
-    source_dir = "docs",
-    visibility = ["//visibility:public"],
-)
-
-# Needed for Dash tool to check python dependency licenses.
-filegroup(
-    name = "cargo_lock",
-    srcs = [
-        "Cargo.lock",
-    ],
-    visibility = ["//visibility:public"],
-)
+extensions = ["score_sphinx_bundle"]

@@ -13,17 +13,16 @@
 
 load("@score_docs_as_code//:docs.bzl", "docs_bundle")
 
+filegroup(
+    name = "all_sources",
+    srcs = glob(["src/**/*.cpp", "src/**/*.hpp"], allow_empty = True),
+)
+
 docs_bundle(
     name = "docs",
     source_dir = "docs",
-    visibility = ["//visibility:public"],
-)
-
-# Needed for Dash tool to check python dependency licenses.
-filegroup(
-    name = "cargo_lock",
-    srcs = [
-        "Cargo.lock",
+    scan_code = [
+        ":all_sources",
     ],
     visibility = ["//visibility:public"],
 )

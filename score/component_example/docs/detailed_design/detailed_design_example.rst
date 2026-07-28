@@ -12,6 +12,8 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
+.. _detailed_design_example:
+
 Example: Detailed Design
 ========================
 

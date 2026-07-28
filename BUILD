@@ -47,5 +47,15 @@ docs(
     data = [
         "@score_process//:needs_json",
     ],
-    source_dir = ".",
+    bundles = [
+        {
+            "bundle": "//score/component_example:docs",
+            "mount_at": "components/component_example",
+        },
+        {
+            "bundle": "//examples:docs",
+            "mount_at": "examples",
+        }
+    ],
+    source_dir = "docs",
 )

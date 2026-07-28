@@ -27,9 +27,9 @@ Overview
 This repository provides a standardized setup for projects using **C++** or **Rust** and **Bazel** as a build system.
 It integrates best practices for build, test, CI/CD and documentation.
 It also provides an example for the documentation of an module with all necessary artifacts for safety and security management, verification and release management.
-It also provides an example of modeling architecture in Sphinx Needs in :doc:`/examples/docs/architecture_modeling_example`.
-It also provides the component architecture template snippets in :doc:`/score/component_example/docs/architecture/component_architecture`.
-It also provides an example of documenting detailed design in :doc:`/score/component_example/docs/detailed_design/detailed_design_example`.
+It also provides an example of modeling architecture in Sphinx Needs in :ref:`definition_architectural_design`.
+It also provides the component architecture template snippets in :ref:`component_architecture`.
+It also provides an example of documenting detailed design in :ref:`detailed_design_example`.
 
 Module Layout
 -------------
@@ -195,23 +195,23 @@ templates and guidelines.>
 .. toctree::
    :maxdepth: 1
 
-   docs/manuals/index
-   docs/release/release_note
-   docs/features/index
-   docs/safety_mgt/index
-   docs/security_mgt/index
-   docs/verification_report/module_verification_report
+   manuals/index
+   release/release_note
+   features/index
+   safety_mgt/index
+   security_mgt/index
+   verification_report/module_verification_report
 
 
 Component Documentation
 -----------------------
 
-For documentation of individual components within this module:
+For documentation of individual components within this module see:
 
 .. toctree::
    :maxdepth: 1
 
-   score/component_example/docs/index
+   components/index
 
 Architecture Modeling Example
 -----------------------------
@@ -221,7 +221,7 @@ An example of modeling architecture in Sphinx Needs can be found in
 .. toctree::
    :maxdepth: 1
 
-   examples/docs/architecture_modeling_example
+   examples/index
 
 Please note, that is not a template for architecture documentation, but an example of how to use Sphinx Needs for architecture modeling. The architecture documentation of the components and features of the module should follow the provided templates and guidelines.
 
