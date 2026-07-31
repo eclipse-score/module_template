@@ -30,7 +30,6 @@ Feature Architecture File
    :safety: QM
    :status: valid
    :version: 1
-   :includes: logic_arc_int__example_feature__if_1, logic_arc_int__example_feature__if_2, logic_arc_int__example_feature__if_3
 
    This is the example feature which shall normally defined in the platform repo.
 
@@ -58,6 +57,7 @@ Feature Architecture File
    :safety: ASIL_B
    :status: valid
    :version: 1
+   :included_by: feat__mtef
    :fulfils: feat_req__example_feature__example_req
 
    .. needarch::
@@ -73,6 +73,7 @@ Feature Architecture File
    :safety: ASIL_B
    :status: valid
    :version: 1
+   :included_by: feat__mtef
    :fulfils: feat_req__example_feature__example_req
 
    .. needarch::
@@ -88,6 +89,7 @@ Feature Architecture File
    :safety: ASIL_B
    :status: valid
    :version: 1
+   :included_by: feat__mtef
    :fulfils: feat_req__example_feature__example_req
 
 
