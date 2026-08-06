@@ -194,5 +194,9 @@
   {
     "version": "pr-126",
     "url": "https://eclipse-score.github.io/module_template/pr-126/"
+  },
+  {
+    "version": "pr-128",
+    "url": "https://eclipse-score.github.io/module_template/pr-128/"
   }
 ]
