@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Features &#8212; Module Template Project  documentation</title>
+    <title>Module &#8212; Module Template Project  documentation</title>
   
   
   
@@ -62,7 +62,7 @@
     <script src="../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
     <script src="../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
     <script src="../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'features/index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'module/index';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.17.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://eclipse-score.github.io/module_template/versions.json';
@@ -73,8 +73,8 @@
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="[Your Feature Name]" href="feature_example/index.html" />
-    <link rel="prev" title="Example model of architectural design" href="../examples/architecture_modeling_example.html" />
+    <link rel="next" title="Manuals" href="manuals/index.html" />
+    <link rel="prev" title="Feature Security Work Products List" href="../features/feature_example/security_planning/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -171,15 +171,15 @@
 </li>
 
 
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="#">
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../features/index.html">
     Features
   </a>
 </li>
 
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../module/index.html">
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
     Module
   </a>
 </li>
@@ -338,15 +338,15 @@
 </li>
 
 
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="#">
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../features/index.html">
     Features
   </a>
 </li>
 
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../module/index.html">
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
     Module
   </a>
 </li>
@@ -443,7 +443,10 @@
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="feature_example/index.html">[Your Feature Name]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manuals/index.html">Manuals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release/release_note.html">Release Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="safety_mgt/index.html">Safety Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security_mgt/index.html">Security Management</a></li>
 </ul>
 </div>
 </nav></div>
@@ -484,7 +487,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Features</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Module</span></li>
   </ul>
 </nav>
 </div>
@@ -501,13 +504,40 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="features">
-<span id="features-template"></span><h1>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h1>
+  <section id="module">
+<h1>Module<a class="headerlink" href="#module" title="Link to this heading">#</a></h1>
+<p>&lt;Module sphinx documentation template snippets for the module. The directives and their parameters
+should be updated according to the module and it’s components.&gt;</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">mod</span><span class="p">::</span> Module Name
+   <span class="nc">:id:</span> mod__module_name
+   <span class="nc">:includes:</span> comp__component_name_template
+</pre></div>
+</div>
+<section id="module-view">
+<h2>Module View<a class="headerlink" href="#module-view" title="Link to this heading">#</a></h2>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">mod_view_sta</span><span class="p">::</span> Module Name Static View
+   <span class="nc">:id:</span> mod_view_sta__feature_name__module_name
+   <span class="nc">:includes:</span> comp__component_name_template
+
+<span class="p">   ..</span> <span class="ow">needarch</span><span class="p">::</span>
+      <span class="nc">:scale:</span> 50
+      <span class="nc">:align:</span> center
+
+      {{ draw_module(need(), needs) }}
+</pre></div>
+</div>
+</section>
+<section id="module-documents">
+<h2>Module Documents<a class="headerlink" href="#module-documents" title="Link to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="feature_example/index.html">[Your Feature Name]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manuals/index.html">Manuals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release/release_note.html">Release Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="safety_mgt/index.html">Safety Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security_mgt/index.html">Security Management</a></li>
 </ul>
 </div>
+</section>
 </section>
 
 
@@ -521,20 +551,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../examples/architecture_modeling_example.html"
+       href="../features/feature_example/security_planning/index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Example model of architectural design</p>
+        <p class="prev-next-title">Feature Security Work Products List</p>
       </div>
     </a>
     <a class="right-next"
-       href="feature_example/index.html"
+       href="manuals/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">[Your Feature Name]</p>
+        <p class="prev-next-title">Manuals</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -550,10 +580,23 @@
 
 
   <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-view">Module View</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-documents">Module Documents</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
 
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/eclipse-score/module_template/edit/main//home/runner/work/module_template/module_template/docs/features/index.rst">
+    <a href="https://github.com/eclipse-score/module_template/edit/main//home/runner/work/module_template/module_template/docs/module/index.rst">
       <i class="fa-solid fa-pencil"></i>
       
       
