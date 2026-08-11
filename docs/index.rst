@@ -32,7 +32,7 @@ templates and guidelines.>
 Feature Documentation
 ---------------------
 
-The Feature documentation covers the feature-level definition of Base Libraries, including architecture and safety planning artifacts.
+The Feature documentation covers the feature-level definition of <module name>, including architecture and safety planning artifacts.
 
 .. toctree::
    :maxdepth: 1
