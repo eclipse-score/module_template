@@ -91,7 +91,7 @@ single_version_override(
 #
 ###############################################################################
 bazel_dep(name = "score_bazel_cpp_toolchains", version = "0.5.4")
-bazel_dep(name = "score_bazel_platforms", version = "0.1.2")
+bazel_dep(name = "score_bazel_platforms", version = "1.0.0")
 
 # GCC Toolchains
 gcc = use_extension("@score_bazel_cpp_toolchains//extensions:gcc.bzl", "gcc")
