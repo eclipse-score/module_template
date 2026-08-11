@@ -524,24 +524,25 @@ It also provides an example of documenting detailed design in <a class="referenc
 │   │       ├── safety_planning/    # Feature safety planning artifacts
 │   │       ├── security_analysis/  # Feature security analysis artifacts [wp__feature_security_analysis]
 │   │       └── security_planning/  # Feature security planning artifacts
-│   ├── manuals/                    # Module manual, integration manual, table of assumptions of use
-│   │   |                           #   safety manual [wp__module_safety_manual],
-│   │   |                           #   needs table of [wp__requirements_feat_aou]
-│   │   |                           #   security manual [wp__module_security_manual]
-│   │   │                           # Additional optional user centric documentation (e.g. configuration guide,
-│   │   │                           #   examples user guide, APIs &amp; usage, performance analysis)
-│   │   ├── config/                 # Configuration guide (optional)
-│   │   ├── examples/               # Examples user guide (optional)
-│   │   ├── api_description/        # API detail description (optional)
-│   │   └── performance/            # Performance analysis (optional)
-│   ├── release/                    # Module release note [wp__module_sw_release_note]
-│   ├── safety_mgt/                 # Module safety plan [wp__module_safety_plan],
-│   │                               #   module safety package [wp__module_safety_package],
-│   │                               #   formal document and safety analysis reviews [wp__fdr_reports]
-│   ├── security_mgt/               # Module security plan [wp__module_security_plan],
-│   │                               #   module security package [wp__module_security_package],
-│   │                               #   formal document reviews [wp__fdr_reports_security],
-│   │                               #   module SW bill of material [wp__sw_module_sbom]
+│   ├── module/                     # Module documentation
+│   |   ├── manuals/                # User manual, integration manual, table of assumptions of use
+│   │   |   |                       #   safety manual [wp__module_safety_manual],
+│   │   |   |                       #   needs table of [wp__requirements_feat_aou]
+│   │   |   |                       #   security manual [wp__module_security_manual]
+│   │   |   │                       # Additional optional user centric documentation (e.g. configuration guide,
+│   │   |   │                       #   examples user guide, APIs &amp; usage, performance analysis)
+│   │   |   ├── config/             # Configuration guide (optional)
+│   │   |   ├── examples/           # Examples user guide (optional)
+│   │   |   ├── api_description/    # API detail description (optional)
+│   │   |   └── performance/        # Performance analysis (optional)
+│   |   ├── release/                # Module release note [wp__module_sw_release_note]
+│   |   ├── safety_mgt/             # Module safety plan [wp__module_safety_plan],
+│   |   │                           #   module safety package [wp__module_safety_package],
+│   |   │                           #   formal document and safety analysis reviews [wp__fdr_reports]
+│   |   └── security_mgt/           # Module security plan [wp__module_security_plan],
+│   |                               #   module security package [wp__module_security_package],
+│   |                               #   formal document reviews [wp__fdr_reports_security],
+│   |                               #   module SW bill of material [wp__sw_module_sbom]
 │   └── verification_report/        # Module verification report,
 │                                   #   module verifications [wp__verification_module_ver_report],
 ├── examples/                       # Usage examples for the module / features
@@ -586,29 +587,31 @@ For identification of the single feature, the repository name or module name sho
 ├── .github/
 │   └── workflows/                  # CI/CD pipelines
 ├── docs/                           # Global documentation of the module and the single feature
-│   ├── architecture/               # Feature architecture [wp__feature_arch] and of architecture review [wp__sw_arch_verification]
-│   ├── safety_analysis/            # Feature safety analysis artifacts ([wp__feature_fmea], [wp__feature_dfa], [wp__requirements_feat_aou])
-│   ├── safety_planning/            # Feature safety planning artifacts
-│   ├── security_analysis/          # Feature security analysis artifacts [wp__feature_security_analysis]
-│   ├── security_planning/          # Feature security planning artifacts
-│   ├── manuals/                    # Module manual, integration manual, table of assumptions of use,
-│   │   |                           #   safety manual [wp__module_safety_manual],
-│   │   |                           #   needs table of [wp__requirements_feat_aou]
-│   │   |                           #   security manual [wp__module_security_manual]
-│   │   |                           # Additional optional user centric documentation (e.g. configuration guide,
-│   │   |                           #   examples user guide, APIs &amp; usage, performance analysis)
-│   │   ├── config/                 # Configuration guide (optional)
-│   │   ├── examples/               # Examples user guide (optional)
-│   │   ├── api_description/        # APIs detail description (optional)
-│   │   └── performance/            # Performance analysis (optional)
-│   ├── release/                    # Module release note [wp__module_sw_release_note]
-│   ├── safety_mgt/                 # Module safety plan [wp__module_safety_plan],
-│   │                               #   module safety package [wp__module_safety_package],
-│   │                               #   formal document and safety analysis reviews [wp__fdr_reports]
-│   ├── security_mgt/               # Module security plan [wp__module_security_plan],
-│   │                               #   module security package [wp__module_security_package],
-│   │                               #   formal document reviews [wp__fdr_reports_security],
-│   │                               #   module SW bill of material [wp__sw_module_sbom]
+│   ├── features/                   # Feature folder parts for each feature which should be in module documentation
+│   │   ├── architecture/           # Feature architecture [wp__feature_arch] and of architecture review [wp__sw_arch_verification]
+│   │   ├── safety_analysis/        # Feature safety analysis artifacts ([wp__feature_fmea], [wp__feature_dfa], [wp__requirements_feat_aou])
+│   │   ├── safety_planning/        # Feature safety planning artifacts
+│   │   ├── security_analysis/      # Feature security analysis artifacts [wp__feature_security_analysis]
+│   │   └── security_planning/      # Feature security planning artifacts
+│   ├── module/                     # Module documentation
+│   |   ├── manuals/                # User manual, integration manual, table of assumptions of use
+│   │   |   |                       #   safety manual [wp__module_safety_manual],
+│   │   |   |                       #   needs table of [wp__requirements_feat_aou]
+│   │   |   |                       #   security manual [wp__module_security_manual]
+│   │   |   │                       # Additional optional user centric documentation (e.g. configuration guide,
+│   │   |   │                       #   examples user guide, APIs &amp; usage, performance analysis)
+│   │   |   ├── config/             # Configuration guide (optional)
+│   │   |   ├── examples/           # Examples user guide (optional)
+│   │   |   ├── api_description/    # API detail description (optional)
+│   │   |   └── performance/        # Performance analysis (optional)
+│   |   ├── release/                # Module release note [wp__module_sw_release_note]
+│   |   ├── safety_mgt/             # Module safety plan [wp__module_safety_plan],
+│   |   │                           #   module safety package [wp__module_safety_package],
+│   |   │                           #   formal document and safety analysis reviews [wp__fdr_reports]
+│   |   └── security_mgt/           # Module security plan [wp__module_security_plan],
+│   |                               #   module security package [wp__module_security_package],
+│   |                               #   formal document reviews [wp__fdr_reports_security],
+│   |                               #   module SW bill of material [wp__sw_module_sbom]
 │   └── verification_report/        # Module verification report,
 │                                   #   module verifications [wp__verification_module_ver_report],
 ├── examples/                       # Usage examples for the module / features
