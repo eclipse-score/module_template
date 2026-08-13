@@ -12,10 +12,8 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-.. _feature_architecture_template:
-
-Feature Architecture
-====================
+[Feature Name] Architecture
+===========================
 
 .. document:: [Your Feature Name] Architecture
    :id: doc__feature_example_architecture
@@ -29,8 +27,8 @@ Feature Architecture
 .. attention::
     The above directive must be updated according to your Feature.
 
-    - Modify ``Your Feature Name`` to be your Feature Name
-    - Modify ``id`` to be your Feature Name in upper snake case preceded by ``doc__`` and followed by ``_architecture``
+    - Modify ``Feature Name`` to be your Feature Name
+    - Modify ``id`` to be your Feature Name in lower snake case preceded by ``doc__`` and followed by ``_architecture``
     - Adjust ``status`` to be ``valid``
     - Adjust ``safety``, ``security``  and ``tags`` according to your needs
 

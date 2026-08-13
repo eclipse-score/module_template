@@ -12,21 +12,16 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-[Your Feature Name]
-###################
+[Feature Name]
+##############
 
-Abstract
-========
-
-[A short (~200 word) description of the feature.]
-
-For the main feature description and requirements, see the belonging `Feature <https://eclipse-score.github.io/score/main/features/index.html#features>`_ in the project repository.
+Feature description and requirements can be found in the SCORE Platform.
 
 .. toctree::
    :hidden:
 
    architecture/index.rst
-   architecture/chklst_arc_inspection.rst
+   architecture/arc_inspection.rst
    safety_analysis/fmea.rst
    safety_analysis/dfa.rst
    safety_analysis/aou_requirements.rst
