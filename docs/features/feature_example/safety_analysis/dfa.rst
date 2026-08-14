@@ -13,10 +13,10 @@
    # *******************************************************************************
 
 
-DFA (Dependent Failure Analysis)
-================================
+[Feature Name] Dependent Failure Analysis
+=========================================
 
-.. document:: [Your Feature Name] DFA
+.. document:: [Feature Name] DFA
    :id: doc__feature_name_dfa
    :status: draft
    :version: 1
@@ -30,12 +30,12 @@ DFA (Dependent Failure Analysis)
 .. attention::
     The above directive must be updated according to your Feature.
 
-    - Modify ``Your Feature Name`` to be your Feature Name
-    - Modify ``id`` to be your Feature Name in upper snake case preceded by ``doc__`` and succeeded by ``_dfa``
+    - Modify ``Feature Name`` to be your Feature Name
+    - Modify ``id`` to be your Feature Name in lower snake case preceded by ``doc__`` and succeeded by ``_dfa``
     - Adjust ``status`` to be ``valid``
     - Adjust ``safety`` and ``tags`` according to your needs
 
-The DFA for the feature [Your Feature Name] is performed. To show evidence that all failure initiators are considered, the applicability has to be filled out in the
+The DFA for the feature [Feature Name] is performed. To show evidence that all failure initiators are considered, the applicability has to be filled out in the
 following tables. For all applicable failure initiators, the DFA has to be performed.
 
 Dependent Failure Initiators

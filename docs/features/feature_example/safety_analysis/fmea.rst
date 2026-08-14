@@ -13,10 +13,10 @@
    # *******************************************************************************
 
 
-FMEA (Failure Modes and Effects Analysis)
-=========================================
+[Feature Name] Failure Modes and Effects Analysis
+=================================================
 
-.. document:: [Your Feature Name] FMEA
+.. document:: [Feature Name] FMEA
    :id: doc__feature_name_fmea
    :status: draft
    :version: 1
@@ -30,7 +30,7 @@ FMEA (Failure Modes and Effects Analysis)
 .. attention::
     The above directive must be updated according to your Feature.
 
-    - Modify ``Your Feature Name`` to be your Feature Name
+    - Modify ``Feature Name`` to be your Feature Name
     - Modify ``id`` to be your Feature Name in upper snake case preceded by ``doc__`` and succeeded by ``_fmea``
     - Adjust ``status`` to be ``valid``
     - Adjust ``safety`` and ``tags`` according to your needs

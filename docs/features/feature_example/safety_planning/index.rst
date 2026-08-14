@@ -12,12 +12,12 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-.. _feature_safety_wp_template:
 
-Feature Safety Work Products List
-#################################
 
-.. document:: [Your Feature Name] Safety WPs
+[Feature Name] Safety Work Products List
+########################################
+
+.. document:: [Feature Name] Safety WPs
    :id: doc__feature_example_safety_wp
    :status: draft
    :version: 1
@@ -29,7 +29,7 @@ Feature Safety Work Products List
 .. attention::
     The above directive must be updated according to your Feature.
 
-    - Modify ``Your Feature Name`` to be your Feature Name
+    - Modify ``Feature Name`` to be your Feature Name
     - Modify ``id`` to be your Module Name in upper snake case preceded by ``doc__`` and succeeded by ``_safety_wp``
     - Adjust ``status`` to be ``valid``
     - Adjust ``safety`` and ``tags`` according to your needs
@@ -44,10 +44,10 @@ Additional to the tailoring in the SW platform project as defined in the project
   - <work product/requirement> - <Argumentation why it is not needed or replaced by another work product or activity.>
 
 
-Safety Work products List
+Safety Work Products List
 =========================
 
-.. list-table:: Feature <feature_name> Work products
+.. list-table:: [Feature Name] Safety Work products
     :header-rows: 1
 
     * - Work product Id
