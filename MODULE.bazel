@@ -10,9 +10,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
-module(
-    name = "cpp_rust_template_repository",
-)
+module(name = "score_module_template")
 
 bazel_dep(name = "rules_python", version = "1.8.5", dev_dependency = True)
 
