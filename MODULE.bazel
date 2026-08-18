@@ -86,7 +86,7 @@ single_version_override(
 )
 
 # Provide the tools from the devcontainer to Bazel
-bazel_dep(name = "score_devcontainer", version = "1.11.0")
+bazel_dep(name = "score_devcontainer", version = "1.11.0", dev_dependency = True)
 
 ###############################################################################
 #
