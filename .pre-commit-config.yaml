@@ -23,11 +23,10 @@ repos:
         args: [--maxkb=50, --enforce-all] # increase or add git lfs if too strict
         exclude: MODULE.bazel.lock
 
-  - repo: https://github.com/eclipse-score/tooling
-    rev: 991cc658a4627251118f8241b00ffb1a3b1f0ab7
+  - repo: https://github.com/eclipse-score/tools
+    rev: 7694bf823421b5542cd2f45239b8bdf205dbface
     hooks:
       - id: copyright
-        args: [--exclusion-file, /dev/null]
 
   - repo: https://codeberg.org/fsfe/reuse-tool
     rev: a1bb792acda6fd0724936b4ebbdbc8eceb9c0459 # v6.2.0
