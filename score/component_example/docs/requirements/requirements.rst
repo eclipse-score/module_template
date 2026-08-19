@@ -38,19 +38,21 @@ Component <Name> Requirements
 Functional Requirements
 -----------------------
 
-.. comp_req:: Some Title
-   :id: comp_req__mod_temp_component_name__some_title
-   :reqtype: Process
-   :security: YES
-   :safety: ASIL_B
-   :derived_from: feat_req__example_feature__example_req
-   :status: valid
-   :version: 1
-   :satisfied_by: comp__mod_temp_component_name_template
+.. code-block:: rst
 
-   The Component shall do xyz to another component to bring it to this condition at this time
+   .. comp_req:: Some Title
+      :id: comp_req__mod_temp_component_name__some_title
+      :reqtype: Process
+      :security: YES
+      :safety: ASIL_B
+      :derived_from: feat_req__example_feature__example_req
+      :status: valid
+      :version: 1
+      :satisfied_by: comp__mod_temp_component_name_template
 
-   Note: (optional, not to be verified)
+      The Component shall do xyz to another component to bring it to this condition at this time
+
+      Note: (optional, not to be verified)
 
 .. attention::
     The above directive must be updated according to your component requirements.

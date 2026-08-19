@@ -34,10 +34,10 @@
       :id: comp__mod_temp_component_name_template
       :security: YES
       :safety: ASIL_B
-      :status: invalid
-      :implements: logic_arc_int__feature_name__interface_name1
-      :consists_of: comp__component_name_internal_1, comp__component_name_internal_2, comp__component_name_internal_3
-      :belongs_to: feat__feature_name
+      :status: valid
+      :implements: logic_arc_int__example_feature__if_1
+      :version: 1
+      :belongs_to: feat__mtef
 
 .. attention::
     The above directives must be updated according to your Component.

@@ -75,43 +75,39 @@ The components are designed to cover the expectations from the feature architect
 
 A component can optional also consist of lower level components to further structure the architecture. The component and its static views can also optionally use interfaces provided by other components.
 
-.. comp:: Component Name
-   :id: comp__mod_temp_component_name_template
-   :security: YES
-   :safety: ASIL_B
-   :status: valid
-   :version: 1
-   :consists_of: comp__mod_temp_archex_sub_component_1, comp__mod_temp_archex_sub_component_2, comp__mod_temp_archex_sub_component_3
-   :belongs_to: feat__mtef
+.. code-block:: rst
 
-.. comp_arc_sta:: Component Name (Static View)
-   :id: comp_arc_sta__mod_temp_component_name__sv
-   :security: YES
-   :safety: ASIL_B
-   :status: valid
-   :version: 1
-   :belongs_to: comp__mod_temp_component_name_template
-   :fulfils: comp_req__mod_temp_component_name__some_title
+   .. comp_arc_sta:: Component Name (Static View)
+      :id: comp_arc_sta__mod_temp_component_name__sv
+      :security: YES
+      :safety: ASIL_B
+      :status: valid
+      :version: 1
+      :belongs_to: comp__mod_temp_component_name_template
+      :fulfils: comp_req__mod_temp_component_name__some_title
 
-   .. needarch::
-      :scale: 50
-      :align: center
+      .. needarch::
+         :scale: 50
+         :align: center
 
-      {{ draw_component(need(), needs) }}
+         {{ draw_component(need(), needs) }}
 
 Dynamic Architecture
 --------------------
 
-.. comp_arc_dyn:: Dynamic View
-   :id: comp_arc_dyn__mod_temp_component_name__dv
-   :security: YES
-   :safety: ASIL_B
-   :status: valid
-   :version: 1
-   :belongs_to: comp__mod_temp_component_name_template
-   :fulfils: comp_req__mod_temp_component_name__some_title
+.. code-block:: rst
 
-   Put here a sequence diagram
+   .. comp_arc_dyn:: Dynamic View
+      :id: comp_arc_dyn__mod_temp_component_name__dv
+      :security: YES
+      :safety: ASIL_B
+      :status: valid
+      :version: 1
+      :belongs_to: comp__mod_temp_component_name_template
+      :fulfils: comp_req__mod_temp_component_name__some_title
+
+      Put here a sequence diagram
+
 
 Interfaces
 ----------
@@ -128,16 +124,20 @@ Interfaces
 Internal Components
 -------------------
 
-.. comp_arc_sta:: Component Name Static View
-   :id: comp_arc_sta__mod_temp_component_name__2
-   :status: valid
-   :version: 1
-   :safety: ASIL_B
-   :security: YES
-   :fulfils: comp_req__mod_temp_component_name__some_title
-   :belongs_to: comp__mod_temp_component_example_2
+<If a component is further split into internal components, the internal components are described here.>
 
-   No architecture but detailed design
+.. code-block:: rst
+
+   .. comp_arc_sta:: Component Name Static View
+      :id: comp_arc_sta__mod_temp_component_name__2
+      :status: valid
+      :version: 1
+      :safety: ASIL_B
+      :security: YES
+      :fulfils: comp_req__mod_temp_component_name__some_title
+      :belongs_to: comp__mod_temp_component_example_2
+
+      No architecture but detailed design
 
 .. note::
    Architecture can be split into multiple files. At component level the public interfaces to be used by the user and tester to be shown.
