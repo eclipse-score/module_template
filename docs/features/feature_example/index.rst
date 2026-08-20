@@ -27,3 +27,4 @@ Feature description and requirements can be found in the SCORE Platform.
    safety_analysis/aou_requirements.rst
    safety_planning/index.rst
    security_planning/index.rst
+   security_analysis/aou_requirements.rst

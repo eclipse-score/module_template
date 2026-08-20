@@ -88,3 +88,4 @@ Component Detail Information
    safety_analysis/fmea
    safety_analysis/aou_requirements
    component_classification
+   security_analysis/aou_requirements
