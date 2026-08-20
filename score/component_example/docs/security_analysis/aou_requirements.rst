@@ -19,8 +19,8 @@
    :id: doc__component_name_feat_sec_aou
    :status: draft
    :version: 1
-   :safety: ASIL_B
-   :security: NO
+   :safety: QM
+   :security: YES
    :realizes: wp__requirements_comp_aou
    :tags: template
 
@@ -45,7 +45,7 @@ Component AoU
       :id: aou_req__mod_temp_component_name__sec_next_title
       :reqtype: Process
       :security: YES
-      :safety: ASIL_B
+      :safety: QM
       :status: invalid
 
       The Component User shall do xyz to use the component securely
@@ -54,7 +54,7 @@ Component AoU
       :id: aou_req__mod_temp_component_name__another
       :reqtype: Process
       :security: YES
-      :safety: ASIL_B
+      :safety: QM
       :status: invalid
       :tags: environment
 
