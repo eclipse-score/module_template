@@ -119,3 +119,14 @@ The configuration enables conditional build behavior:
 * **Language-specific tools**: For C++ code, tools like ``clang-tidy`` are used; for Rust code, ``clippy`` is used
 * **Safety level**: The ASIL level affects safety-related build settings and validation
 * **Source code languages**: The build system optimizes for the configured languages
+
+
+Release Notes
+-------------
+
+The Module documentation covers the module-level view, including architecture, safety management documents, and the user manual.
+
+.. toctree::
+   :maxdepth: 1
+
+   release_notes/index
