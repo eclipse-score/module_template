@@ -73,8 +73,8 @@ bazel_dep(name = "aspect_rules_lint", version = "1.10.2", dev_dependency = True)
 bazel_dep(name = "buildifier_prebuilt", version = "8.5.1.2", dev_dependency = True)
 
 #docs-as-code
-bazel_dep(name = "score_docs_as_code", version = "8.0.1", dev_dependency = True)
-bazel_dep(name = "score_process_description", version = "2.1.1", dev_dependency = True)
+bazel_dep(name = "score_docs_as_code", version = "8.0.1")
+bazel_dep(name = "score_process_description", version = "2.1.2")
 
 # grpc-java 1.66.0 imports a grpc extension repo removed in newer grpc versions.
 # Force a compatible grpc-java version until upstream dependencies converge.
