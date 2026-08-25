@@ -45,7 +45,7 @@ use_format_targets()
 
 docs(
     data = [
-        "@score_process//:needs_json",
+        "@score_process_description//:needs_json",
     ],
     bundles = [
         {
