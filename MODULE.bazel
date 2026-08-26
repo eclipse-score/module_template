@@ -105,6 +105,13 @@ gcc.toolchain(
     use_default_package = True,
     version = "12.2.0",
 )
+gcc.toolchain(
+    name = "score_gcc_aarch64_toolchain",
+    target_cpu = "aarch64",
+    target_os = "linux",
+    use_default_package = True,
+    version = "12.2.0",
+)
 
 ## Elektobit Toolchains
 gcc.toolchain(
@@ -136,6 +143,7 @@ use_repo(
     "score_autosd10_aarch64_toolchain",
     "score_autosd10_x86_64_toolchain",
     "score_ebclfsa_toolchain",
+    "score_gcc_aarch64_toolchain",
     "score_gcc_x86_64_toolchain",
 )
 
@@ -194,6 +202,7 @@ qcc.toolchain(
 use_repo(
     qcc,
     "score_qcc_aarch64_toolchain",
+    "score_qcc_aarch64_toolchain_pkg",
     "score_qcc_x86_64_toolchain",
     "score_qcc_x86_64_toolchain_pkg",
 )
