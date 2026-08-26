@@ -286,5 +286,9 @@
   {
     "version": "pr-160",
     "url": "https://eclipse-score.github.io/module_template/pr-160/"
+  },
+  {
+    "version": "pr-161",
+    "url": "https://eclipse-score.github.io/module_template/pr-161/"
   }
 ]
