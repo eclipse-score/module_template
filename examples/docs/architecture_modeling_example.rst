@@ -295,32 +295,37 @@ Requirements for the Example
 
 .. note:: The stakeholder requirements shall be defined in the platform repo (`stakeholder requirements folder <https://eclipse-score.github.io/score/main/requirements/index.html>`_) and imported as sphinx needs objects. Here it is defined only to hold the example together and prevent errors because the sphinx needs meta model have mandatory links to it.
 
-.. stkh_req:: Example Stkh Req
-   :id: stkh_req__mtfn__example_req
-   :reqtype: Functional
-   :safety: ASIL_B
-   :security: YES
-   :rationale: needed for archdes example
-   :status: valid
-   :version: 1
-   :valid_from: v1.0.0
+.. code::
 
-   The platform shall provide the feature ....
+   .. stkh_req:: Example Stkh Req
+     :id: stkh_req__mtfn__example_req
+     :reqtype: Functional
+     :safety: ASIL_B
+     :security: YES
+     :rationale: needed for archdes example
+     :status: valid
+     :version: 1
+     :valid_from: v1.0.0
+
+     The platform shall provide the feature ....
 
 .. note:: The feature requirements shall be defined in the platform repo (in the requirements folder of the (`features <https://eclipse-score.github.io/score/main/features/index.html>`_)) and imported as sphinx needs objects. Here it is defined only to hold the example together and prevent errors because the sphinx needs meta model have mandatory links to it.
 
-.. feat_req:: Example Feature Req
-   :id: feat_req__example_feature__example_req
-   :reqtype: Functional
-   :security: YES
-   :safety: ASIL_B
-   :derived_from: stkh_req__mtfn__example_req
-   :status: valid
-   :version: 1
-   :valid_from: v1.0.0
-   :satisfied_by: feat__mtef
+.. code::
 
-   The feature shall provide the functionality to ....
+   .. feat_req:: Example Feature Req
+     :id: feat_req__example_feature__example_req
+     :reqtype: Functional
+     :security: YES
+     :safety: ASIL_B
+     :derived_from: stkh_req__mtfn__example_req
+     :status: valid
+     :version: 1
+     :valid_from: v1.0.0
+     :satisfied_by: feat__mtef
+
+     The feature shall provide the functionality to ....
+
 
 .. comp_req:: Example Component Req
    :id: comp_req__example_feature__example_req
