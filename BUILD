@@ -44,9 +44,6 @@ dash_license_checker(
 use_format_targets()
 
 docs(
-    data = [
-        "@score_process_description//:needs_json",
-    ],
     bundles = [
         {
             "bundle": "//score/component_example:docs",
@@ -55,7 +52,10 @@ docs(
         {
             "bundle": "//examples:docs",
             "mount_at": "examples",
-        }
+        },
+    ],
+    data = [
+        "@score_process_description//:needs_json",
     ],
     source_dir = "docs",
 )
