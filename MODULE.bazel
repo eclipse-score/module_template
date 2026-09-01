@@ -91,7 +91,7 @@ bazel_dep(name = "score_devcontainer", version = "1.11.0", dev_dependency = True
 # S-CORE Toolchains (DO NOT MODIFY)
 #
 ###############################################################################
-bazel_dep(name = "score_bazel_cpp_toolchains", version = "1.0.2")
+bazel_dep(name = "score_bazel_cpp_toolchains", version = "1.0.3")
 bazel_dep(name = "score_bazel_platforms", version = "1.1.0")
 
 # GCC Toolchains

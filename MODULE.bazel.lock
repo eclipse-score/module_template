@@ -772,8 +772,8 @@
     "https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/modules/rules_swift/1.16.0/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/modules/rules_swift/1.18.0/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/modules/rules_swift/2.1.1/MODULE.bazel": "not found",
-    "https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/modules/score_bazel_cpp_toolchains/1.0.2/MODULE.bazel": "50f40c39d43f34cb6792115e5f34ae1a16bfef0433e3077b876c31acfbdf9f91",
-    "https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/modules/score_bazel_cpp_toolchains/1.0.2/source.json": "fbbb55577e07946fd9eaf3d125cbeaf12dccf9440338ffd0e90afaac6efba3d4",
+    "https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/modules/score_bazel_cpp_toolchains/1.0.3/MODULE.bazel": "599f3f1123bc1400ade5bdd0c7c5470531885cf2fa1fa30024f23d5d21e6d58d",
+    "https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/modules/score_bazel_cpp_toolchains/1.0.3/source.json": "47eab63b3a98244787a9ab611f825d9c62d48bfdb5000173144d2f9e24b521b8",
     "https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/modules/score_bazel_platforms/0.0.3/MODULE.bazel": "14c96e378c08705a46abe0799d6236fe3095c342c34f83f8d1b3f6046ce00651",
     "https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/modules/score_bazel_platforms/1.0.0/MODULE.bazel": "e5e386e6fc0a447a2f4a47e872e3747822e9d58994b7b55e248c78e5a3e382c0",
     "https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/modules/score_bazel_platforms/1.1.0/MODULE.bazel": "e5c656abcad121a89cbabad3550bb20167a6865de219ef6e1c68ca30567e1c32",
@@ -4158,7 +4158,7 @@
     },
     "@@score_bazel_cpp_toolchains+//extensions:gcc.bzl%gcc": {
       "general": {
-        "bzlTransitiveDigest": "A9STU/tWw+bsbgTZ2stI52VvXi23H6AhnDuZ/XpiuDM=",
+        "bzlTransitiveDigest": "w+3nI76XENP/NdzSkBG5LURTQOmoWml9BWNMKzRVJco=",
         "usagesDigest": "W5YG/3zCV90Z/1+Fv4VeG/kThCQ+1ltTa2bFNInHyQ0=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
@@ -4171,6 +4171,7 @@
                 "https://github.com/eclipse-score/toolchains_gcc_packages/releases/download/v0.0.4/x86_64-unknown-linux-gnu_gcc12.tar.gz"
               ],
               "build_file": "@@score_bazel_cpp_toolchains+//packages/linux/x86_64/gcc/12.2.0:gcc.BUILD",
+              "patch_cmds": [],
               "sha256": "e9b9a7a63a5f8271b76d6e2057906b95c7a244e4931a8e10edeaa241e9f7c11e",
               "strip_prefix": "x86_64-unknown-linux-gnu"
             }
@@ -4182,6 +4183,7 @@
                 "https://github.com/eclipse-score/toolchains_gcc_packages/releases/download/v0.0.4/aarch64-unknown-linux-gnu_gcc12.tar.gz"
               ],
               "build_file": "@@score_bazel_cpp_toolchains+//packages/linux/aarch64/gcc/12.2.0:gcc.BUILD",
+              "patch_cmds": [],
               "sha256": "7279b1adb50361b21f5266b001980b6febb35fa8d83170901196b9edae3f06d9",
               "strip_prefix": "aarch64-unknown-linux-gnu"
             }
@@ -4193,6 +4195,7 @@
                 "https://github.com/Elektrobit/eb_corbos_toolkit/releases/download/v2.0.0-beta1/fastdev-sdk-ubuntu-ebclfsa-ebcl-qemuarm64.tar.gz"
               ],
               "build_file": "@@score_bazel_cpp_toolchains+//packages/linux/aarch64/ebclfsa/0.1.0:ebclfsa.BUILD",
+              "patch_cmds": [],
               "sha256": "f44286c28d831dc40acdac08ef49f38a2e9cbb057bea38c25834964693785287",
               "strip_prefix": "fastdev-sdk-ubuntu-ebclfsa-ebcl-qemuarm64"
             }
@@ -4204,6 +4207,7 @@
                 "https://github.com/eclipse-score/os_autosd/releases/download/v0.0.2/autosd-toolchain-x86_64.tar.gz"
               ],
               "build_file": "@@score_bazel_cpp_toolchains+//packages/linux/x86_64/autosd/10.0:autosd.BUILD",
+              "patch_cmds": [],
               "sha256": "25991056bd29d4cb37b11e42d0c09f55dc61d0b9d703f75d854cf614f688c96f",
               "strip_prefix": "sysroot"
             }
@@ -4215,6 +4219,7 @@
                 "https://github.com/eclipse-score/os_autosd/releases/download/v0.0.2/autosd-toolchain-aarch64.tar.gz"
               ],
               "build_file": "@@score_bazel_cpp_toolchains+//packages/linux/aarch64/autosd/10.0:autosd.BUILD",
+              "patch_cmds": [],
               "sha256": "e2f6a21681730e61ce39af19758003ba3568b093956a57cde136d5c73cf6540a",
               "strip_prefix": "sysroot"
             }
@@ -4226,6 +4231,7 @@
                 "https://www.qnx.com/download/download/88447/installation_qnx_804_260520.tar.xz"
               ],
               "build_file": "@@score_bazel_cpp_toolchains+//packages/qnx/aarch64/sdp/8.0.0:sdp.BUILD",
+              "patch_cmds": [],
               "sha256": "146312c0bf22aab66e8294a06403f2ec6cfeeb074d8fa11549faffd84b7fe778",
               "strip_prefix": ""
             }
@@ -4237,6 +4243,7 @@
                 "https://www.qnx.com/download/download/88447/installation_qnx_804_260520.tar.xz"
               ],
               "build_file": "@@score_bazel_cpp_toolchains+//packages/qnx/x86_64/sdp/8.0.0:sdp.BUILD",
+              "patch_cmds": [],
               "sha256": "146312c0bf22aab66e8294a06403f2ec6cfeeb074d8fa11549faffd84b7fe778",
               "strip_prefix": ""
             }
