@@ -51,9 +51,9 @@ Verification Report
 
 .. note::
 
-   The verification report is generated automatically by the codeblock above by the tools and contains all the needed information for the module verification. The report is based on the module verification plan and covers all the components of the module.
+   The verification report is generated automatically by the codeblock above by the tools and contains all the needed information for the module verification. The report is based on the module verification plan and workproduct module verification product (:need:`wp__verification_module_ver_report`) and covers all the components of the module.
 
-   The generated report should contain the following parts:
+   The generated report should contain the following parts which bases :
 
    .. code-block:: rst
 
