@@ -314,5 +314,9 @@
   {
     "version": "pr-168",
     "url": "https://eclipse-score.github.io/module_template/pr-168/"
+  },
+  {
+    "version": "pr-169",
+    "url": "https://eclipse-score.github.io/module_template/pr-169/"
   }
 ]
