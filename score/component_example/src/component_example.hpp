@@ -19,7 +19,6 @@
 namespace score {
 namespace component_example {
 
-// req-traceability: comp_req__component_example__hello_message
 std::string make_hello_message(const std::string& name);
 
 }  // namespace component_example
