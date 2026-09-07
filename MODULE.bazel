@@ -76,6 +76,10 @@ bazel_dep(name = "buildifier_prebuilt", version = "8.5.1.2", dev_dependency = Tr
 bazel_dep(name = "score_docs_as_code", version = "8.1.1")
 bazel_dep(name = "score_process_description", version = "2.1.2")
 
+# Local override for testing PR #661 + #682 (inspection record need types)
+# To test locally, run: bazel build --override_module=score_docs_as_code=/workspaces/docs-as-code-demo //:docs
+# Remove this comment when ready to test against main or a merged PR.
+
 # grpc-java 1.66.0 imports a grpc extension repo removed in newer grpc versions.
 # Force a compatible grpc-java version until upstream dependencies converge.
 single_version_override(

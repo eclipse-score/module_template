@@ -95,3 +95,97 @@ Verification Report contains:
 **Note1:** The verification report is valid for the module version tagged together with the report
 
 **Note2:** All the above lists are generated automatically
+
+.. note:: Showcase: Inspection Records (PR #661 + #682)
+
+   The following example demonstrates the ``mod_insp`` (inspection record) and
+   ``mod_insp_report`` (inspection report aggregator with completeness check) need
+   types from PRs #661 and #682. These are **not** part of the template yet — they
+   are shown here to test whether the feature works before proposing it upstream.
+
+.. mod:: Showcase Module
+   :id: mod__showcase_inspection_module
+   :security: YES
+   :safety: ASIL_B
+   :status: valid
+
+.. comp_req:: Sample Component Requirement 1
+   :id: comp_req__showcase_sample_01
+   :reqtype: Functional
+   :security: YES
+   :safety: ASIL_B
+   :status: valid
+
+.. comp_req:: Sample Component Requirement 2
+   :id: comp_req__showcase_sample_02
+   :reqtype: Functional
+   :security: YES
+   :safety: ASIL_B
+   :status: valid
+
+.. comp_arc_sta:: Sample Component Architecture 1
+   :id: comp_arc_sta__showcase_sample_01
+   :security: YES
+   :safety: ASIL_B
+   :status: valid
+
+.. mod_insp:: Approved Requirements Inspection (Record #1)
+   :id: mod_insp__showcase_req_01
+   :safety: ASIL_B
+   :security: YES
+   :status: valid
+   :inspection_type: requirements
+   :inspection_state: approved
+   :checklist_ref: gd_chklst__req_inspection
+   :reviewers: reviewer_a, reviewer_b
+   :belongs_to: mod__showcase_inspection_module
+   :inspects: comp_req__showcase_sample_01
+
+.. mod_insp:: Approved Requirements Inspection (Record #2)
+   :id: mod_insp__showcase_req_02
+   :safety: ASIL_B
+   :security: YES
+   :status: valid
+   :inspection_type: requirements
+   :inspection_state: approved
+   :checklist_ref: gd_chklst__req_inspection
+   :reviewers: reviewer_c
+   :belongs_to: mod__showcase_inspection_module
+   :inspects: comp_req__showcase_sample_02
+
+.. mod_insp:: Approved Architecture Inspection
+   :id: mod_insp__showcase_arc_01
+   :safety: ASIL_B
+   :security: YES
+   :status: valid
+   :inspection_type: architecture
+   :inspection_state: approved
+   :checklist_ref: gd_chklst__arc_inspection
+   :reviewers: reviewer_a
+   :belongs_to: mod__showcase_inspection_module
+   :inspects: comp_arc_sta__showcase_sample_01
+
+.. mod_insp_report:: Complete Inspection Report
+   :id: mod_ispr__showcase_complete
+   :safety: ASIL_B
+   :security: YES
+   :status: valid
+   :expected_inspections: requirements,architecture
+   :belongs_to: mod__showcase_inspection_module
+   :contains: mod_insp__showcase_req_01,mod_insp__showcase_req_02,mod_insp__showcase_arc_01
+
+.. note:: The above report passes the completeness check — all expected inspection
+   types (requirements, architecture) are covered by approved records.
+
+.. mod_insp_report:: Incomplete Inspection Report (Demo Warning)
+   :id: mod_ispr__showcase_incomplete
+   :safety: ASIL_B
+   :security: YES
+   :status: valid
+   :expected_inspections: requirements,architecture,implementation
+   :belongs_to: mod__showcase_inspection_module
+   :contains: mod_insp__showcase_req_01
+
+.. note:: The above report triggers a warning: "Inspection report is missing
+   approved inspection(s) for: architecture, implementation" — demonstrating the
+   completeness check from PR #682.
