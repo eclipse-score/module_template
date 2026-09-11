@@ -1,0 +1,27 @@
+description: "Type /sdlc or KICKOFF to start Eclipse S-CORE onboarding."
+entry_point: "tools.onboarding.cli:sdlc"
+skill: "onboarding.skill.md"
+
+collects:
+  - role
+  - repository
+  - technology
+  - contribution_type
+  - workflow
+
+produces:
+  - .onboarding/context.json
+
+handoffs:
+  - label: Start Issue Planning
+    agent: plan-issue-creation
+  - label: Start Technical Analysis
+    agent: plan-tech-analysis
+  - label: Start PLAN
+    agent: plan-requirements
+  - label: Start CODE (PoC / Spike)
+    agent: code-design
+
+notes: >
+  This agent only recommends a handoff. It never executes downstream agents
+  automatically; the contributor must confirm before a handoff is started.

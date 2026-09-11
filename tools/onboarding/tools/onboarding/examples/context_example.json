@@ -1,0 +1,23 @@
+{
+  "repository": {
+    "name": "module_template",
+    "asil": "QM",
+    "languages": ["rust", "cpp"],
+    "toolchains": ["llvm"],
+    "build_system": "Bazel",
+    "docs_system": "Sphinx"
+  },
+  "contributor": {
+    "role": "developer",
+    "module": null
+  },
+  "work_item": {
+    "type": "bug_fix",
+    "description": ""
+  },
+  "workflow": {
+    "selected": "sdlc_harness",
+    "reason": "Bug fixes benefit from SDLC Harness traceability.",
+    "user_override": false
+  }
+}
