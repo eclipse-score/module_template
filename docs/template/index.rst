@@ -75,7 +75,7 @@ Module Folder Structure
     │                                   #   module verifications [:need:`wp__verification_module_ver_report`],
     ├── examples/                       # Usage examples for the module / features
     ├── score/                          # Components of the module
-    │   ├── tests/                      # Module-level tests (e.g. feature integration tests) [:need:`wp__verification_feat_int_test`]
+    │   ├── tests/                      # Module-level tests (i.e., feature integration tests) [:need:`wp__verification_feat_int_test`]
     │   └── <component_name>/           # Component folder for each component of the module
     │       ├── docs/                   # Documentation of the component
     │       │   ├── architecture/       # Component architecture [:need:`wp__component_arch`]
