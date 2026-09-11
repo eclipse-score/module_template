@@ -10,10 +10,21 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
+load("@rules_cc//cc:defs.bzl", "cc_test")
+load("@rules_rust//rust:defs.bzl", "rust_test")
+
+rust_test(
+    name = "feature_integration_tests_rust",
+    size = "small",
+    srcs = ["test_main.rs"],
+)
+
 cc_test(
-    name = "cpp_test_main",
+    name = "feature_integration_tests_cpp",
+    size = "small",
     srcs = ["test_main.cpp"],
     deps = [
+        "//score/component_example",
         "@googletest//:gtest_main",  # GoogleTest dependency via Bazel Modules
     ],
 )

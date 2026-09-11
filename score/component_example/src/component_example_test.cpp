@@ -11,21 +11,18 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-#ifndef SCORE_COMPONENT_EXAMPLE_COMPONENT_EXAMPLE_HPP_
-#define SCORE_COMPONENT_EXAMPLE_COMPONENT_EXAMPLE_HPP_
+#include "score/component_example/src/component_example.hpp"
 
+#include <gtest/gtest.h>
 #include <string>
 
 namespace score {
 namespace component_example {
 
-// Unit
-std::string make_hello();
-
-// Component API
-std::string make_hello_message(const std::string& name);
+// Unit test for make_hello() function
+TEST(ComponentExampleTest, MakeHelloReturnsExpectedGreeting) {
+    EXPECT_EQ(make_hello(), "Hello");
+}
 
 }  // namespace component_example
 }  // namespace score
-
-#endif  // SCORE_COMPONENT_EXAMPLE_COMPONENT_EXAMPLE_HPP_
