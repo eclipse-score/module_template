@@ -77,7 +77,7 @@
     <link rel="prev" title="Module Template Documentation" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
+  <meta name="docsearch:version" content="0.0.0" />
   
     
     <script src="../_static/searchtools.js"></script>
@@ -175,7 +175,7 @@
 
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../features/index.html">
-    Features
+    [Feature Name]
   </a>
 </li>
 
@@ -355,7 +355,7 @@
 
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../features/index.html">
-    Features
+    [Feature Name]
   </a>
 </li>
 
@@ -539,15 +539,19 @@ It also provides an example of modeling architecture in Sphinx Needs in <a class
 It also provides the component architecture template snippets in <a class="reference internal" href="../components/component_example/architecture/component_architecture.html#component-architecture"><span class="std std-ref">[Component Name] Component Architecture Documentation</span></a>.
 It also provides an example of documenting detailed design in <a class="reference internal" href="../components/component_example/detailed_design/detailed_design_example.html#detailed-design-example"><span class="std std-ref">[Component Name] Detailed Design</span></a>.</p>
 </section>
-<section id="module-folder-structure-multiple-features-variant">
-<h2>Module Folder Structure (Multiple Features Variant)<a class="headerlink" href="#module-folder-structure-multiple-features-variant" title="Link to this heading">#</a></h2>
-<p>The module template includes the following top-level structure:</p>
+<section id="module-folder-structure">
+<h2>Module Folder Structure<a class="headerlink" href="#module-folder-structure" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When only a single feature is implemented in the module, the additional feature-name nesting under <code class="docutils literal notranslate"><span class="pre">docs/features/</span></code> can be omitted.
+If multiple features are to be references, then structure them under <code class="docutils literal notranslate"><span class="pre">docs/features/&lt;feature_name&gt;/</span></code>.</p>
+</div>
 <pre class="literal-block">&lt;module_name&gt;/                      # Root folder of the module, subfolder only if more than one module exists in the repository
 ├── .github/                        # GitHub configuration
 │   └── workflows/                  # CI/CD pipelines
 ├── docs/                           # Global documentation of the module
 │   ├── features/                   # Feature documentation and architecture
-│   │   └── &lt;feature_name&gt;/         # Folder for each feature parts which should be in module documentation
+│   │   └── &lt;feature_name&gt;/         # Folder for each feature parts which should be in module documentation. Omit in single feature case.
 │   │       ├── architecture/       # Feature architecture [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/architecture_design/architecture_workproducts.html#wp__feature_arch">wp__feature_arch</a>]
 |   |       |                       #   and of architecture review [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/architecture_design/architecture_workproducts.html#wp__sw_arch_verification">wp__sw_arch_verification</a>]
 │   │       ├── safety_analysis/    # Feature safety analysis artifacts
@@ -579,7 +583,7 @@ It also provides an example of documenting detailed design in <a class="referenc
 │                                   #   module verifications [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/verification/verification_workproducts.html#wp__verification_module_ver_report">wp__verification_module_ver_report</a>],
 ├── examples/                       # Usage examples for the module / features
 ├── score/                          # Components of the module
-│   ├── tests/                      # Module-level tests (e.g. feature integration tests) [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/verification/verification_workproducts.html#wp__verification_feat_int_test">wp__verification_feat_int_test</a>]
+│   ├── tests/                      # Module-level tests (i.e., feature integration tests) [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/verification/verification_workproducts.html#wp__verification_feat_int_test">wp__verification_feat_int_test</a>]
 │   └── &lt;component_name&gt;/           # Component folder for each component of the module
 │       ├── docs/                   # Documentation of the component
 │       │   ├── architecture/       # Component architecture [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/architecture_design/architecture_workproducts.html#wp__component_arch">wp__component_arch</a>]
@@ -594,77 +598,6 @@ It also provides an example of documenting detailed design in <a class="referenc
 │       │   ├── security_analysis/  # Security analysis [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_analysis/security_analysis_workproducts.html#wp__sw_component_security_analysis">wp__sw_component_security_analysis</a>]
 |       |   |                       #   (only if component architecture exists)
 │       │   │                       #   component AoU requirements [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements_comp_aou">wp__requirements_comp_aou</a>]
-│       │   └── manuals/            # User documentation (of a single component, e.g., user manual of a library component, optional)
-│       ├── src/                    # Source files, include files, unit tests [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/verification/verification_workproducts.html#wp__verification_sw_unit_test">wp__verification_sw_unit_test</a>],
-│       │   └── &lt;lower_level_comp&gt;/ # Lower level component (follows &lt;component_name&gt; structure)
-│       └── tests/                  # Component-level tests (e.g., integration or complex unit tests) [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/verification/verification_workproducts.html#wp__verification_comp_int_test">wp__verification_comp_int_test</a>]
-├── MODULE.bazel                    # Bazel module definition
-├── BUILD                           # Root build rules
-├── project_config.bzl              # Project metadata used by Bazel macros
-└── README.md                       # Entry point of the repository</pre>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The feature-specific subfolder under <code class="docutils literal notranslate"><span class="pre">docs/features/&lt;feature_name&gt;/</span></code> is only necessary
-if more than one feature is implemented in the module.</p>
-</div>
-</section>
-<section id="module-folder-structure-single-feature-variant">
-<h2>Module Folder Structure (Single-Feature Variant)<a class="headerlink" href="#module-folder-structure-single-feature-variant" title="Link to this heading">#</a></h2>
-<p>The following variant keeps the same structure but removes the additional
-feature-name nesting under <code class="docutils literal notranslate"><span class="pre">docs/features/</span></code>. In this case, the <code class="docutils literal notranslate"><span class="pre">features/</span></code>
-subfolder is optional and omitted. This variant is intended for modules that only implement a single feature, to avoid unnecessary nesting.
-For identification of the single feature, the repository name or module name should be replicate the feature name.</p>
-<pre class="literal-block">&lt;module_name&gt;/                      # Root folder of the module, subfolder only if more than one module exists in the repository
-├── .github/
-│   └── workflows/                  # CI/CD pipelines
-├── docs/                           # Global documentation of the module and the single feature
-│   ├── features/                   # Feature folder parts for each feature which should be in module documentation
-│   │   ├── architecture/           # Feature architecture [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/architecture_design/architecture_workproducts.html#wp__feature_arch">wp__feature_arch</a>]
-|   |   |                           #   and of architecture review [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/architecture_design/architecture_workproducts.html#wp__sw_arch_verification">wp__sw_arch_verification</a>]
-│   │   ├── safety_analysis/        # Feature safety analysis artifacts
-|   |   |                           #   ([<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/safety_analysis/safety_analysis_workproducts.html#wp__feature_fmea">wp__feature_fmea</a>], [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/safety_analysis/safety_analysis_workproducts.html#wp__feature_dfa">wp__feature_dfa</a>], [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements_feat_aou">wp__requirements_feat_aou</a>])
-│   │   ├── safety_planning/        # Feature safety planning artifacts
-│   │   ├── security_analysis/      # Feature security analysis artifacts
-|   |   |                           #  ([<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_analysis/security_analysis_workproducts.html#wp__feature_security_analysis">wp__feature_security_analysis</a>], [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements_feat_aou">wp__requirements_feat_aou</a>])
-│   │   └── security_planning/      # Feature security planning artifacts
-│   ├── module/                     # Module documentation
-│   |   ├── manuals/                # User manual, integration manual, table of assumptions of use
-│   │   |   |                       #   safety manual [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/safety_management/safety_management_workproducts.html#wp__module_safety_manual">wp__module_safety_manual</a>],
-│   │   |   |                       #   needs table of [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements_feat_aou">wp__requirements_feat_aou</a>]
-│   │   |   |                       #   security manual [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/security_management_workproducts.html#wp__module_security_manual">wp__module_security_manual</a>]
-│   │   |   │                       # Additional optional user centric documentation (e.g. configuration guide,
-│   │   |   │                       #   examples user guide, APIs &amp; usage, performance analysis)
-│   │   |   ├── config/             # Configuration guide (optional)
-│   │   |   ├── examples/           # Examples user guide (optional)
-│   │   |   ├── api_description/    # API detail description (optional)
-│   │   |   └── performance/        # Performance analysis (optional)
-│   |   ├── release/                # Module release note [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/release_management/release_workproducts.html#wp__module_sw_release_note">wp__module_sw_release_note</a>]
-│   |   ├── safety_mgt/             # Module safety plan [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/safety_management/safety_management_workproducts.html#wp__module_safety_plan">wp__module_safety_plan</a>],
-│   |   │                           #   module safety package [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/safety_management/safety_management_workproducts.html#wp__module_safety_package">wp__module_safety_package</a>],
-│   |   │                           #   formal document and safety analysis reviews [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/safety_management/safety_management_workproducts.html#wp__fdr_reports">wp__fdr_reports</a>]
-│   |   └── security_mgt/           # Module security plan [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/security_management_workproducts.html#wp__module_security_plan">wp__module_security_plan</a>],
-│   |                               #   module security package [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/security_management_workproducts.html#wp__module_security_package">wp__module_security_package</a>],
-│   |                               #   formal document reviews [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/security_management_workproducts.html#wp__fdr_reports_security">wp__fdr_reports_security</a>],
-│   |                               #   module SW bill of material [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/security_management_workproducts.html#wp__sw_module_sbom">wp__sw_module_sbom</a>]
-│   └── verification_report/        # Module verification report,
-│                                   #   module verifications [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/verification/verification_workproducts.html#wp__verification_module_ver_report">wp__verification_module_ver_report</a>],
-├── examples/                       # Usage examples for the module / features
-├── score/                          # Components of the module
-│   ├── tests/                      # Module-level tests (e.g. feature integration tests) [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/verification/verification_workproducts.html#wp__verification_feat_int_test">wp__verification_feat_int_test</a>]
-│   └── &lt;component_name&gt;/           # Component folder for each component of the module
-│       ├── docs/                   # Documentation of the component
-│       │   ├── architecture/       # Component architecture [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/architecture_design/architecture_workproducts.html#wp__component_arch">wp__component_arch</a>]
-│       │   │                       #   (only if lower level components exist)
-|       |   |                       #   architecture review [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/architecture_design/architecture_workproducts.html#wp__sw_arch_verification">wp__sw_arch_verification</a>],
-│       │   ├── detailed_design/    # Detailed design [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/implementation/implementation_workproducts.html#wp__sw_implementation">wp__sw_implementation</a>]
-│       │   │                       #   code inspection [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/implementation/implementation_workproducts.html#wp__sw_implementation_inspection">wp__sw_implementation_inspection</a>]
-│       │   ├── requirements/       # Component requirements [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements_comp">wp__requirements_comp</a>],[<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements_inspect">wp__requirements_inspect</a>]
-│       │   ├── safety_analysis/    # Safety analysis [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/safety_analysis/safety_analysis_workproducts.html#wp__sw_component_fmea">wp__sw_component_fmea</a>], [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/safety_analysis/safety_analysis_workproducts.html#wp__sw_component_dfa">wp__sw_component_dfa</a>], [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements_comp_aou">wp__requirements_comp_aou</a>]
-|       |   |                       # Component classification [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/safety_management/safety_management_workproducts.html#wp__sw_component_class">wp__sw_component_class</a>] for pre-existing software
-│       │   │                       #   (only if component architecture exists)
-│       │   ├── security_analysis/  # Security analysis [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_analysis/security_analysis_workproducts.html#wp__sw_component_security_analysis">wp__sw_component_security_analysis</a>]
-│       │   │                       #   (only if component architecture exists)
-|       |   |                       #   component AoU requirements [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements_comp_aou">wp__requirements_comp_aou</a>]
 │       │   └── manuals/            # User documentation (of a single component, e.g., user manual of a library component, optional)
 │       ├── src/                    # Source files, include files, unit tests [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/verification/verification_workproducts.html#wp__verification_sw_unit_test">wp__verification_sw_unit_test</a>],
 │       │   └── &lt;lower_level_comp&gt;/ # Lower level component (follows &lt;component_name&gt; structure)
@@ -728,8 +661,7 @@ For identification of the single feature, the repository name or module name sho
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-folder-structure-multiple-features-variant">Module Folder Structure (Multiple Features Variant)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-folder-structure-single-feature-variant">Module Folder Structure (Single-Feature Variant)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-folder-structure">Module Folder Structure</a></li>
 </ul>
   </nav></div>
 
