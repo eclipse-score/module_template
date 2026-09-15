@@ -21,7 +21,18 @@ cc_library(
 )
 
 cc_test(
-    name = "component_example_test",
+    name = "component_example_unit_tests",
+    size = "small",
+    srcs = ["src/component_example_test.cpp"],
+    deps = [
+        ":component_example",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "component_example_component_integration_tests",
+    size = "small",
     srcs = ["tests/component_example_test.cpp"],
     deps = [
         ":component_example",
@@ -31,9 +42,9 @@ cc_test(
 
 docs_bundle(
     name = "docs",
-    source_dir = "docs",
     code_targets = [
         ":component_example",
     ],
+    source_dir = "docs",
     visibility = ["//visibility:public"],
 )

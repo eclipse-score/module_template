@@ -16,8 +16,12 @@
 namespace score {
 namespace component_example {
 
+std::string make_hello() {
+    return "Hello";
+}
+
 std::string make_hello_message(const std::string& name) {
-    return "Hello, " + name + "!";
+    return make_hello() + ", " + name + "!";
 }
 
 }  // namespace component_example

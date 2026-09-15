@@ -1,0 +1,23 @@
+{
+  "repository": {
+    "name": "onboarding",
+    "asil": "QM",
+    "languages": [],
+    "toolchains": [],
+    "build_system": "Bazel",
+    "docs_system": "Unknown"
+  },
+  "contributor": {
+    "role": "reviewer",
+    "module": null
+  },
+  "work_item": {
+    "type": "bug_fix",
+    "description": ""
+  },
+  "workflow": {
+    "selected": "sdlc_harness",
+    "reason": "Bug fixes benefit from SDLC Harness traceability.",
+    "user_override": false
+  }
+}

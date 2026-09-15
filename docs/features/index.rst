@@ -12,13 +12,19 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-.. _features_template:
+[Feature Name]
+##############
 
-Features
-========
+Feature description and requirements can be found in the SCORE Platform.
 
 .. toctree::
-   :maxdepth: 1
-   :glob:
+   :hidden:
 
-   */index
+   architecture/index.rst
+   architecture/arc_inspection.rst
+   safety_analysis/fmea.rst
+   safety_analysis/dfa.rst
+   safety_analysis/aou_requirements.rst
+   safety_planning/index.rst
+   security_planning/index.rst
+   security_analysis/aou_requirements.rst

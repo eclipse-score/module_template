@@ -19,6 +19,10 @@
 namespace score {
 namespace component_example {
 
+// Unit
+std::string make_hello();
+
+// Component API
 std::string make_hello_message(const std::string& name);
 
 }  // namespace component_example

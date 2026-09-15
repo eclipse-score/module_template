@@ -11,7 +11,14 @@
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
 
-project = "Module Template Project"
-project_url = "https://eclipse-score.github.io/module_template/"
+"""Minimal onboarding agent: collects context, discovers repo, routes workflow."""
 
-extensions = ["score_sphinx_bundle"]
+from .models import ContextEnvelope, ContributorProfile, RepositoryContext, WorkItem, WorkflowSelection
+
+__all__ = [
+    "ContextEnvelope",
+    "ContributorProfile",
+    "RepositoryContext",
+    "WorkItem",
+    "WorkflowSelection",
+]

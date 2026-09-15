@@ -11,6 +11,9 @@
 // SPDX-License-Identifier: Apache-2.0
 // *******************************************************************************
 #[test]
+
+// Module-level tests (e.g. feature integration tests)
+// Only one component in this example.
 fn test_hello() {
     assert_eq!(2 + 2, 4);
 }
