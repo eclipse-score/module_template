@@ -19,6 +19,7 @@
 namespace score {
 namespace component_example {
 
+// Component Integration Test (CIT) for component_example component.
 TEST(ComponentExampleTest, MakeHelloMessageReturnsExpectedGreeting) {
     EXPECT_EQ(make_hello_message("World"), "Hello, World!");
     EXPECT_EQ(make_hello_message("SCORE"), "Hello, SCORE!");

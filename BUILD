@@ -24,7 +24,6 @@ copyright_checker(
     name = "copyright",
     srcs = [
         "score",
-        "tests",
         "//:BUILD",
         "//:MODULE.bazel",
     ],
@@ -57,5 +56,7 @@ docs(
     data = [
         "@score_process_description//:needs_json",
     ],
+    project = "Module Template Project",
+    project_url = "https://eclipse-score.github.io/module_template/",
     source_dir = "docs",
 )
