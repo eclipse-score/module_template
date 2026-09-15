@@ -100,6 +100,22 @@ bazel test //tests/...
 
 ---
 
+## Onboarding
+
+The repository includes the `score_onboarding` Bazel module to guide
+contributors into the appropriate Eclipse S-CORE SDLC workflow. From the
+repository root, start the interactive flow with:
+
+```sh
+bazel run @score_onboarding//tools/onboarding:sdlc
+```
+
+The tool reads repository metadata, collects the contributor role and change
+type, recommends a workflow, and writes the confirmed context to
+`.onboarding/context.json`. It does not start downstream agents automatically.
+
+---
+
 ## 🛠 Tools & Linters
 
 The template integrates **tools and linters** from **centralized repositories** to ensure consistency across projects.
