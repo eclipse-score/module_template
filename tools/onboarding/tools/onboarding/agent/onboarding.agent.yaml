@@ -36,5 +36,4 @@ handoffs:
     agent: code-design
 
 notes: >
-  This agent only recommends a handoff. It never executes downstream agents
-  automatically; the contributor must confirm before a handoff is started.
+  This agent only recommends a handoff. It never executes downstream agents automatically; the contributor must confirm before a handoff is started.
