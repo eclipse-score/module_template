@@ -27,3 +27,6 @@ try-import %workspace%/score.bazelrc/score_toolchain.bazelrc
 # Import custom user settings
 # Can be used to enable e.g. sanitizers or other features without modifying the main .bazelrc
 try-import %workspace%/user.bazelrc
+
+# Target configuration for CPU:x86-64|OS:Linux build (leveraging central configuration)
+build:x86_64-linux --config=score-linux-x86_64
