@@ -24,6 +24,8 @@ Feature Architecture File
 
 .. note:: The feature and the logical interfaces are normally defined in the platform repo (`features folder <https://eclipse-score.github.io/score/main/features/index.html>`_) and imported from there as sphinx needs objects. In this example it is defined here only, to hold the example consistent.
 
+.. Logical Interface Operations and Module Mapping
+
 .. feat:: Feature 1
    :id: feat__mtef
    :security: YES
@@ -66,6 +68,9 @@ Feature Architecture File
 
       {{ draw_interface(need(), needs) }}
 
+   Logical Interface 1 provides the primary control and communication interface for the feature.
+   It is implemented by sub-component 1 which handles the core functionality.
+
 
 .. logic_arc_int:: Logical Interface 2
    :id: logic_arc_int__example_feature__if_2
@@ -82,6 +87,9 @@ Feature Architecture File
 
       {{ draw_interface(need(), needs) }}
 
+   Logical Interface 2 provides support for data processing and communication between sub-components.
+   It is implemented by sub-component 2 which handles data flow and processing operations.
+
 
 .. logic_arc_int:: Logical Interface 3
    :id: logic_arc_int__example_feature__if_3
@@ -92,6 +100,7 @@ Feature Architecture File
    :included_by: feat__mtef
    :fulfils: feat_req__example_feature__example_req
 
+   Logical Interface 3 provides additional support and monitoring capabilities for the feature.
 
 .. Logical Interface Operation
 
@@ -169,9 +178,11 @@ Module View File
    :safety: ASIL_B
    :status: valid
    :version: 1
-   :includes: comp__mod_temp_component_example_1, comp__mod_temp_component_example_2
+   :includes: comp__mod_temp_component_example_1, comp__mod_temp_component_example_2, comp__mod_temp_archex_sub_component_1, comp__mod_temp_archex_sub_component_2
 
-   This is Module 1.
+   This module describes the mapping and implementation of logical interfaces through their implementing components and sub-components.
+   Logical Interface 1 is implemented by Component 1 and Sub-Component 1 (core control logic, operations 1 and 2).
+   Logical Interface 2 is implemented by Component 2 and Sub-Component 2 (data flow and processing, operations 3 and 4).
 
 .. mod_view_sta:: Module 1 Static View
    :id: mod_view_sta__example_feature__1
@@ -191,6 +202,8 @@ Module View File
    :status: valid
    :version: 1
    :includes: comp__mod_temp_component_example_3
+
+   This module contains Component 3 which implements Logical Interface 3 with support and monitoring capabilities.
 
    This is Module 2.
 
@@ -269,6 +282,11 @@ Feature or Component Architecture File(s)
    :implements: logic_arc_int__example_feature__if_1
    :belongs_to: feat__mtef
 
+   Sub-Component 1 implements Logical Interface 1 and provides the core control logic.
+
+   This module handles the primary operations required by the feature interface and coordinates
+   with other sub-components through Logical Interface 2 for data exchange and synchronization.
+
 .. comp:: Component 1_2
    :id: comp__mod_temp_archex_sub_component_2
    :status: valid
@@ -279,6 +297,11 @@ Feature or Component Architecture File(s)
    :implements: logic_arc_int__example_feature__if_2
    :belongs_to: feat__mtef
 
+   Sub-Component 2 implements Logical Interface 2 and provides data processing capabilities.
+
+   This module manages data flow, processing, and communication services required by the feature.
+   It ensures proper data handling and supports the operations defined in the logical interfaces.
+
 .. comp:: Component 1_3
    :id: comp__mod_temp_archex_sub_component_3
    :status: valid
@@ -286,6 +309,8 @@ Feature or Component Architecture File(s)
    :safety: ASIL_B
    :security: NO
    :belongs_to: feat__mtef
+
+   Example Sub-Component 3 description as part of Component 1.
 
 
 Requirements for the Example
