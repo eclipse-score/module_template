@@ -12,7 +12,7 @@
 # *******************************************************************************
 
 description: "Type /sdlc or KICKOFF to start Eclipse S-CORE onboarding."
-entry_point: "tools.onboarding.cli:sdlc"
+entry_point: "tools.onboarding.cli:cli"
 skill: "onboarding.skill.md"
 
 collects:
