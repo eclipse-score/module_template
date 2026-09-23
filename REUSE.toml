@@ -39,9 +39,6 @@ SPDX-FileCopyrightText = "Copyright (c) 2026 Contributors to the Eclipse Foundat
 SPDX-License-Identifier = "Apache-2.0"
 
 [[annotations]]
-path = [
-	"tools/onboarding/tools/onboarding/examples/context_example.json",
-	"tools/onboarding/tools/onboarding/schemas/context.schema.json",
-]
+path = ["tools/onboarding/tools/onboarding/schemas/context.schema.json"]
 SPDX-FileCopyrightText = "Copyright (c) 2026 Contributors to the Eclipse Foundation"
 SPDX-License-Identifier = "Apache-2.0"
