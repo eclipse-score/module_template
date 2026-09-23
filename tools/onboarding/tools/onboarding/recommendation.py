@@ -17,8 +17,6 @@ from __future__ import annotations
 
 WORKFLOWS = [
     "sdlc_harness",
-    "speckit",
-    "bmad",
     "technical_analysis",
     "issue_planning",
     "traditional",
@@ -28,8 +26,6 @@ WORKFLOWS = [
 # only recommends these; it never executes them.
 HANDOFF_MAP: dict[str, list[str]] = {
     "sdlc_harness": ["plan-tech-analysis", "plan-requirements", "code-design"],
-    "speckit": ["plan-issue-creation", "plan-requirements"],
-    "bmad": ["plan-tech-analysis", "plan-requirements"],
     "technical_analysis": ["plan-issue-creation", "plan-requirements"],
     "issue_planning": ["plan-tech-analysis", "plan-requirements"],
     "traditional": ["code-design"],
@@ -38,8 +34,8 @@ HANDOFF_MAP: dict[str, list[str]] = {
 # Base mapping from contribution_type to workflow, per onboarding.skill.md.
 _CONTRIBUTION_MAP: dict[str, tuple[str, str]] = {
     "bug_fix": ("sdlc_harness", "Bug fixes benefit from SDLC Harness traceability."),
-    "improvement": ("speckit", "Improvements are well-suited to spec-driven planning."),
-    "poc": ("bmad", "Proof-of-concept work fits a Build-Measure-Analyze-Design loop."),
+    "improvement": ("sdlc_harness", "Improvements require the full SDLC lifecycle for traceability."),
+    "poc": ("sdlc_harness", "Proof-of-concept work follows SDLC Harness for traceability."),
     "documentation": ("traditional", "Documentation-only changes can follow the traditional flow."),
     "feature": ("sdlc_harness", "New features require the full SDLC lifecycle for traceability."),
     "question": ("issue_planning", "Open questions should start with issue definition."),

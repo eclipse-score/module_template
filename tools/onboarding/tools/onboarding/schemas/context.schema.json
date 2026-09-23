@@ -50,7 +50,7 @@
       "properties": {
         "selected": {
           "type": "string",
-          "enum": ["sdlc_harness", "speckit", "bmad", "technical_analysis", "issue_planning", "traditional"]
+          "enum": ["sdlc_harness", "technical_analysis", "issue_planning", "traditional"]
         },
         "reason": { "type": "string" },
         "user_override": { "type": "boolean" }

@@ -13,8 +13,8 @@
 
 """Builds and writes the single onboarding context contract (Phase 4).
 
-Replaces the earlier per-workflow files (sdlc_input.json, speckit_input.json,
-bmad_input.json, ...) with one ``.onboarding/context.json`` every downstream
+Replaces the earlier per-workflow files (sdlc_input.json, ...) with one
+``.onboarding/context.json`` every downstream
 workflow can consume.
 """
 

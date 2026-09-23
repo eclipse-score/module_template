@@ -14,7 +14,7 @@
 """Data model for the onboarding context envelope.
 
 A single ``context.json`` replaces the earlier per-workflow input files
-(``sdlc_input.json``, ``speckit_input.json``, ``bmad_input.json`` ...).
+(``sdlc_input.json``, ...).
 Every downstream workflow reads the same envelope shape.
 """
 

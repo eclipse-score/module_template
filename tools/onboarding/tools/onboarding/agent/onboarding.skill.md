@@ -17,8 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 
 Single entry point into the Eclipse S-CORE AI SDLC ecosystem. Collects
 context, classifies the contribution, recommends a workflow, and hands off —
-it does not execute SDLC Harness, SpecKit, BMAD, Technical Analysis, or
-Planning itself.
+it does not execute SDLC Harness, Technical Analysis, or Planning itself.
 
 ## Role Detection
 Ask the contributor for their role: `developer`, `reviewer`, `maintainer`, or
@@ -43,8 +42,8 @@ Ask for the contribution type: `bug_fix`, `improvement`, `poc`,
 ## Workflow Recommendation
 Map contribution type to a workflow (see `recommendation.py`):
 - `bug_fix` → SDLC Harness
-- `improvement` → SpecKit
-- `poc` → BMAD
+- `improvement` → SDLC Harness
+- `poc` → SDLC Harness
 - `documentation` → Traditional
 - otherwise → Technical Analysis / Issue Planning
 

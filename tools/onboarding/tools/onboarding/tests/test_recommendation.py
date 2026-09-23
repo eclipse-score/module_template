@@ -21,13 +21,13 @@ class TestRecommendation(unittest.TestCase):
         workflow, _reason = recommend_workflow("bug_fix", asil="QM")
         self.assertEqual(workflow, "sdlc_harness")
 
-    def test_improvement_recommends_speckit(self) -> None:
+    def test_improvement_recommends_sdlc_harness(self) -> None:
         workflow, _reason = recommend_workflow("improvement", asil="QM")
-        self.assertEqual(workflow, "speckit")
+        self.assertEqual(workflow, "sdlc_harness")
 
-    def test_poc_recommends_bmad(self) -> None:
+    def test_poc_recommends_sdlc_harness(self) -> None:
         workflow, _reason = recommend_workflow("poc", asil="QM")
-        self.assertEqual(workflow, "bmad")
+        self.assertEqual(workflow, "sdlc_harness")
 
     def test_documentation_recommends_traditional(self) -> None:
         workflow, _reason = recommend_workflow("documentation", asil="QM")
@@ -39,8 +39,8 @@ class TestRecommendation(unittest.TestCase):
         self.assertIn("ASIL", reason)
 
     def test_user_override_is_honored(self) -> None:
-        selected, overridden = select_workflow("sdlc_harness", user_choice="bmad")
-        self.assertEqual(selected, "bmad")
+        selected, overridden = select_workflow("sdlc_harness", user_choice="traditional")
+        self.assertEqual(selected, "traditional")
         self.assertTrue(overridden)
 
     def test_accepting_recommendation_is_not_an_override(self) -> None:

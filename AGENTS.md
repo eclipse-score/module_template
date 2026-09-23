@@ -20,7 +20,7 @@ Start onboarding: `/sdlc` (or `bazel run @score_onboarding//tools/onboarding:sdl
 The onboarding agent (`tools/onboarding/`):
 - identifies repository context (ASIL, languages, toolchains, build/docs system)
 - classifies your contribution (bug fix, improvement, PoC, documentation, feature, question)
-- recommends a workflow (SDLC Harness, SpecKit, BMAD, Technical Analysis, Issue Planning, Traditional)
+- recommends a workflow (SDLC Harness, Technical Analysis, Issue Planning, Traditional)
 - writes a single context contract to `.onboarding/context.json`
 - recommends a handoff to the next agent — it never starts one automatically
 
