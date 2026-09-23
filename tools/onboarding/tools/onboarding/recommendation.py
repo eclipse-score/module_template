@@ -22,15 +22,6 @@ WORKFLOWS = [
     "traditional",
 ]
 
-# Downstream agents each workflow may hand off to (label -> agent id). Onboarding
-# only recommends these; it never executes them.
-HANDOFF_MAP: dict[str, list[str]] = {
-    "sdlc_harness": ["plan-tech-analysis", "plan-requirements", "code-design"],
-    "technical_analysis": ["plan-issue-creation", "plan-requirements"],
-    "issue_planning": ["plan-tech-analysis", "plan-requirements"],
-    "traditional": ["code-design"],
-}
-
 # Base mapping from contribution_type to workflow, per onboarding.skill.md.
 _CONTRIBUTION_MAP: dict[str, tuple[str, str]] = {
     "bug_fix": ("sdlc_harness", "Bug fixes benefit from SDLC Harness traceability."),
@@ -56,7 +47,3 @@ def select_workflow(recommended: str, user_choice: str | None = None) -> tuple[s
     if user_choice and user_choice in WORKFLOWS:
         return user_choice, user_choice != recommended
     return recommended, False
-
-
-def get_handoff_recommendations(workflow: str) -> list[str]:
-    return HANDOFF_MAP.get(workflow, [])

@@ -22,7 +22,6 @@ The onboarding agent (`tools/onboarding/`):
 - classifies your contribution (bug fix, improvement, PoC, documentation, feature, question)
 - recommends a workflow (SDLC Harness, Technical Analysis, Issue Planning, Traditional)
 - writes a single context contract to `.onboarding/context.json`
-- recommends a handoff to the next agent — it never starts one automatically
 
 See [`tools/onboarding/tools/onboarding/agent/onboarding.skill.md`](tools/onboarding/tools/onboarding/agent/onboarding.skill.md)
 for the full skill definition.

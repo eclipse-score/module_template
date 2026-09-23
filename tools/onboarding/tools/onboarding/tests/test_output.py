@@ -17,7 +17,7 @@ import unittest
 from pathlib import Path
 
 from tools.onboarding.models import RepositoryContext
-from tools.onboarding.output import build_context_envelope, handoff_summary, write_context
+from tools.onboarding.output import build_context_envelope, write_context
 
 
 class TestOutput(unittest.TestCase):
@@ -48,13 +48,6 @@ class TestOutput(unittest.TestCase):
             self.assertTrue(path.is_file())
             written = json.loads(path.read_text(encoding="utf-8"))
             self.assertEqual(written["workflow"]["selected"], "sdlc_harness")
-
-    def test_handoff_summary_matches_workflow(self) -> None:
-        repository = RepositoryContext(name="module_template", asil="QM")
-        envelope = build_context_envelope(
-            repository=repository, role="developer", contribution_type="bug_fix", workflow="traditional"
-        )
-        self.assertEqual(handoff_summary(envelope), ["code-design"])
 
 
 if __name__ == "__main__":

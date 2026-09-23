@@ -28,7 +28,7 @@ import os
 from pathlib import Path
 
 from .discovery import discover_repository
-from .output import build_context_envelope, handoff_summary, write_context
+from .output import build_context_envelope, write_context
 from .recommendation import WORKFLOWS, recommend_workflow, select_workflow
 from .state_machine import OnboardingStateMachine, State
 from .validators import ROLES, validate_contribution_type, validate_role
@@ -104,10 +104,6 @@ def run_sdlc(repo_root: Path) -> None:
     )
     path = write_context(envelope, repo_root)
     print(f"\nContext written to {path}")
-
-    print("\nRecommended next steps (confirm before starting):")
-    for agent in handoff_summary(envelope):
-        print(f"  - Start {agent}")
 
 
 def _default_repo_root() -> Path:

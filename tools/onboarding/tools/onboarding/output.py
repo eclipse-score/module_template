@@ -23,7 +23,6 @@ from __future__ import annotations
 from pathlib import Path
 
 from .models import ContextEnvelope, ContributorProfile, RepositoryContext, WorkflowSelection, WorkItem
-from .recommendation import get_handoff_recommendations
 
 DEFAULT_OUTPUT_DIR = ".onboarding"
 DEFAULT_OUTPUT_FILE = "context.json"
@@ -53,8 +52,3 @@ def write_context(envelope: ContextEnvelope, root: Path, output_dir: str = DEFAU
     target_path = target_dir / DEFAULT_OUTPUT_FILE
     target_path.write_text(envelope.to_json() + "\n", encoding="utf-8")
     return target_path
-
-
-def handoff_summary(envelope: ContextEnvelope) -> list[str]:
-    """Recommended next agents; onboarding never executes them itself."""
-    return get_handoff_recommendations(envelope.workflow.selected)
