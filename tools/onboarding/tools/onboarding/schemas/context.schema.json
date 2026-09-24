@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eclipse-score.org/schemas/onboarding/context.schema.json",
+  "title": "Onboarding Context Envelope",
+  "type": "object",
+  "required": ["repository", "contributor", "work_item", "workflow"],
+  "additionalProperties": false,
+  "properties": {
+    "repository": {
+      "type": "object",
+      "required": ["name", "asil"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "asil": { "type": "string", "enum": ["QM", "A", "B", "C", "D"] },
+        "languages": { "type": "array", "items": { "type": "string" } },
+        "toolchains": { "type": "array", "items": { "type": "string" } },
+        "build_system": { "type": "string" },
+        "docs_system": { "type": "string" }
+      }
+    },
+    "contributor": {
+      "type": "object",
+      "required": ["role"],
+      "additionalProperties": false,
+      "properties": {
+        "role": {
+          "type": "string",
+          "enum": ["developer", "reviewer", "maintainer", "committer"]
+        },
+        "module": { "type": ["string", "null"] }
+      }
+    },
+    "work_item": {
+      "type": "object",
+      "required": ["type"],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["bug_fix", "improvement", "poc", "documentation", "feature", "question"]
+        },
+        "description": { "type": "string" }
+      }
+    },
+    "workflow": {
+      "type": "object",
+      "required": ["selected"],
+      "additionalProperties": false,
+      "properties": {
+        "selected": {
+          "type": "string",
+          "enum": ["sdlc_harness", "technical_analysis", "issue_planning", "traditional"]
+        },
+        "reason": { "type": "string" },
+        "user_override": { "type": "boolean" }
+      }
+    }
+  }
+}
