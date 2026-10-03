@@ -1,0 +1,49 @@
+# *******************************************************************************
+# Copyright (c) 2026 Contributors to the Eclipse Foundation
+#
+# See the NOTICE file(s) distributed with this work for additional
+# information regarding copyright ownership.
+#
+# This program and the accompanying materials are made available under the
+# terms of the Apache License Version 2.0 which is available at
+# https://www.apache.org/licenses/LICENSE-2.0
+#
+# SPDX-License-Identifier: Apache-2.0
+# *******************************************************************************
+
+"""Maps onboarding answers to a recommended workflow, allows user override."""
+
+from __future__ import annotations
+
+WORKFLOWS = [
+    "sdlc_harness",
+    "technical_analysis",
+    "issue_planning",
+    "traditional",
+]
+
+# Base mapping from contribution_type to workflow, per onboarding.skill.md.
+_CONTRIBUTION_MAP: dict[str, tuple[str, str]] = {
+    "bug_fix": ("sdlc_harness", "Bug fixes benefit from SDLC Harness traceability."),
+    "improvement": ("sdlc_harness", "Improvements require the full SDLC lifecycle for traceability."),
+    "poc": ("sdlc_harness", "Proof-of-concept work follows SDLC Harness for traceability."),
+    "documentation": ("traditional", "Documentation-only changes can follow the traditional flow."),
+    "feature": ("sdlc_harness", "New features require the full SDLC lifecycle for traceability."),
+    "question": ("issue_planning", "Open questions should start with issue definition."),
+}
+
+
+def recommend_workflow(contribution_type: str, asil: str = "QM", description: str = "") -> tuple[str, str]:
+    """Rule-based recommendation. Returns (workflow, reason)."""
+    if asil and asil.upper() != "QM":
+        return "sdlc_harness", "Safety-relevant module (ASIL != QM) requires full SDLC Harness traceability."
+    if contribution_type in _CONTRIBUTION_MAP:
+        return _CONTRIBUTION_MAP[contribution_type]
+    return "technical_analysis", "Unclear or complex scope requires decomposition before planning."
+
+
+def select_workflow(recommended: str, user_choice: str | None = None) -> tuple[str, bool]:
+    """Returns (selected_workflow, was_overridden)."""
+    if user_choice and user_choice in WORKFLOWS:
+        return user_choice, user_choice != recommended
+    return recommended, False
