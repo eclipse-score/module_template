@@ -382,5 +382,9 @@
   {
     "version": "pr-188",
     "url": "https://eclipse-score.github.io/module_template/pr-188/"
+  },
+  {
+    "version": "pr-189",
+    "url": "https://eclipse-score.github.io/module_template/pr-189/"
   }
 ]
