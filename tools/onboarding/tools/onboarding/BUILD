@@ -28,7 +28,6 @@ py_library(
         "validators.py",
     ],
     data = [
-        "agent/onboarding.agent.yaml",
         "agent/onboarding.skill.md",
         "schemas/context.schema.json",
     ],
