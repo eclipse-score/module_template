@@ -55,7 +55,11 @@ traceability. The contributor may always override the recommendation.
 - Never write outside `.onboarding/context.json`.
 - Never auto-start a downstream agent; always require explicit confirmation.
 - Never fabricate repository metadata that discovery could not detect —
-  surface it as `"Unknown"` and let the contributor confirm/correct it.
+  surface it as `"Unknown"` and let the contributor confirm/correct it. The
+  ASIL level is the exception: the schema only accepts `QM, A, B, C, D`, so an
+  undetected or unrecognized value defaults to `"QM"` instead of `"Unknown"`.
+  `project_config.bzl` may spell this `"ASIL-A"`, `"ASIL-B"`, etc.; discovery
+  strips the `ASIL-` prefix so the stored value matches the schema.
 
 ## Open-source contribution rules
 Point contributors to `CONTRIBUTION.md` for PR/issue templates, the ECA/DCO

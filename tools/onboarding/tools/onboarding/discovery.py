@@ -32,9 +32,23 @@ def _read(path: Path) -> str:
         return ""
 
 
+VALID_ASIL_LEVELS = {"QM", "A", "B", "C", "D"}
+
+
 def _detect_asil(project_config_text: str) -> str:
+    """Detect and normalize the ASIL level to match the schema's enum (QM, A, B, C, D).
+
+    project_config.bzl commonly spells this "ASIL-A"/"ASIL-B"/etc. (see README.md);
+    strip that prefix so the value lines up with context.schema.json. Anything
+    missing or unrecognized falls back to "QM" rather than "Unknown", since the
+    schema does not accept "Unknown" for this field.
+    """
     match = re.search(r'"asil_level"\s*:\s*"([^"]+)"', project_config_text)
-    return match.group(1) if match else "QM"
+    if not match:
+        return "QM"
+    raw = match.group(1).strip().upper()
+    normalized = re.sub(r"^ASIL[-_ ]?", "", raw)
+    return normalized if normalized in VALID_ASIL_LEVELS else "QM"
 
 
 def _detect_declared_languages(project_config_text: str) -> list[str]:

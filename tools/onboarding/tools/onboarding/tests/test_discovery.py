@@ -59,6 +59,24 @@ class TestDiscovery(unittest.TestCase):
             self.assertEqual(repository.build_system, "Unknown")
             self.assertEqual(repository.docs_system, "Unknown")
 
+    def test_normalizes_asil_dash_prefix(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            _write(root, "project_config.bzl", 'PROJECT_CONFIG = {\n    "asil_level": "ASIL-B",\n}\n')
+
+            repository = discover_repository(root, name="module_template")
+
+            self.assertEqual(repository.asil, "B")
+
+    def test_unrecognized_asil_falls_back_to_qm(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            _write(root, "project_config.bzl", 'PROJECT_CONFIG = {\n    "asil_level": "not-a-real-level",\n}\n')
+
+            repository = discover_repository(root, name="module_template")
+
+            self.assertEqual(repository.asil, "QM")
+
 
 if __name__ == "__main__":
     unittest.main()
