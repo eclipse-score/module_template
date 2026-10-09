@@ -543,7 +543,7 @@
                   
   <section id="feature-name-architecture-inspection">
 <h1>[Feature Name] Architecture Inspection<a class="headerlink" href="#feature-name-architecture-inspection" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-5e80bebe">
+<div class="need_container docutils container" id="SNCB-008adc75">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__feature_name_arc_inspection">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -563,7 +563,7 @@
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">template</span></span></span></div>
-<div class="line"><span class="needs_version"><span class="needs_label">version: </span>2</span></div>
+<div class="line"><span class="needs_version"><span class="needs_label">version: </span>3</span></div>
 </span></span></div>
 <div class="line"><span><div class="line">realizes: <span class="realizes"><span><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/architecture_design/architecture_workproducts.html#wp__sw_arch_verification">wp__sw_arch_verification</a></span></span></div>
 </span></div>
@@ -658,48 +658,41 @@ See also <a class="external_link reference external" href="https://eclipse-score
 </thead>
 <tbody>
 <tr class="row-even"><td><p>ARC_01_01</p></td>
-<td><p>Is traceability from software architectural elements to requirements and to architectural elements at other levels (e.g., from a component to an interface) established in accordance with the “Relations between the architectural elements” described in <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/architecture_design/architecture_concept.html#doc_concept__arch_process">doc_concept__arch_process</a>?</p></td>
-<td><p>Traceability should be checked automatically by tooling in the future. This item will be removed from the checklist once the requirement (<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/architecture_design/guidance/architecture_process_reqs.html#gd_req__arch_build_blocks_corr">gd_req__arch_build_blocks_corr</a>) is implemented. Refer to <a class="reference external" href="https://eclipse-score.github.io/docs-as-code/main/internals/requirements/requirements.html">Tool Requirements</a> for the current status.</p></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>ARC_01_02</p></td>
 <td><p>Does the software architecture design take into account all requirements allocated to the architectural element, including functional, non-functional, safety, and security requirements, as well as all related design decisions?</p></td>
 <td><p>Check whether all requirements allocated to the architectural element are considered in the design. These include functional requirements (e.g., functional safety requirements), non-functional requirements (e.g., performance and reliability), and security requirements (e.g., confidentiality and integrity). Also ensure that all related design decisions are taken into account and documented in the architectural design. Security-related requirements should also be reviewed through the applicable cybersecurity process; this checklist does not replace cybersecurity activities.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>ARC_01_03</p></td>
+<tr class="row-odd"><td><p>ARC_01_02</p></td>
 <td><p>If the architectural element is related to any supplier manuals (including safety and security), are the relevant parts covered?</p></td>
 <td><p>If the architecture makes use of supplied elements, their manuals (e.g., safety manuals) must be considered; their functionality must match expectations, and their assumptions must be fulfilled. For a safety component, this means that the assumed Technical Safety Requirements and assumptions of use (AoUs) in the safety manual are covered.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>ARC_01_04</p></td>
+<tr class="row-even"><td><p>ARC_01_03</p></td>
 <td><p>Is the architectural element traceable to lower-level artifacts as defined by work-product traceability?</p></td>
-<td></td>
+<td><p>Check if every logical interface is provided by exactly one component and used by at least one. CHeck if every component of the feature is included by exactly one module.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>ARC_02_01</p></td>
+<tr class="row-odd"><td><p>ARC_02_01</p></td>
 <td><p>Is the software architecture design compliant with the overall feature architecture?</p></td>
 <td><p>At the component level, check against the feature architecture. At the feature level, check other features that use common components.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>ARC_02_02</p></td>
+<tr class="row-even"><td><p>ARC_02_02</p></td>
 <td><p>Are operations and interfaces named appropriately and comprehensibly in the architectural design?</p></td>
 <td><p>Check <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/architecture_design/guidance/architecture_guideline.html#gd_guidl__arch_design">gd_guidl__arch_design</a></p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>ARC_02_03</p></td>
+<tr class="row-odd"><td><p>ARC_02_03</p></td>
 <td><p>Has the correctness of data and control flows within the architectural elements been considered?</p></td>
 <td><p>For example, examine data definitions, transformations, integrity, and interactions; check error handling, data exchange between elements, correct responses to inputs, and documented decision-making.
 Note: Consistency is ensured by the process and tooling, which define each interface only once.</p></td>
@@ -707,42 +700,42 @@ Note: Consistency is ensured by the process and tooling, which define each inter
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>ARC_02_04</p></td>
+<tr class="row-even"><td><p>ARC_02_04</p></td>
 <td><p>Are the interfaces between the software architectural element and other architectural elements well defined and described?</p></td>
 <td><p>Check whether the interface description specifies expected behaviour for invalid inputs and errors. Could established protocols be used? Does the interface description document inputs, outputs, and error handling? Have loose coupling and limited exposure been considered? Can unit or integration tests be written against the interface? Has the amount of data transferred been considered appropriately? Is sensitive data protected appropriately, with no sensitive data exposed?</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>ARC_02_05</p></td>
+<tr class="row-odd"><td><p>ARC_02_05</p></td>
 <td><p>Does the software architectural element take applicable timing requirements into account?</p></td>
 <td><p>If there are strict timing requirements, execution-time analysis or estimation should be performed, and appropriate deadline monitoring should be considered.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>ARC_02_06</p></td>
+<tr class="row-even"><td><p>ARC_02_06</p></td>
 <td><p>Is the documentation of the software architectural element, including textual and graphical descriptions (e.g., UML diagrams), clear and complete?</p></td>
 <td><p>The use of semi-formal notation is expected for architectural elements with an allocated ASIL level. Is the architecture template filled out correctly?</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>ARC_03_01</p></td>
+<tr class="row-odd"><td><p>ARC_03_01</p></td>
 <td><p>Is the architectural element modular and encapsulated?</p></td>
 <td><p>Check, for example, that only the necessary interfaces are used and that interfaces and interactions are clearly defined. Project-specific design and coding guidelines may additionally require object-oriented design, appropriate use of access controls (e.g., private or protected), and limits on global variables.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>ARC_03_02</p></td>
+<tr class="row-even"><td><p>ARC_03_02</p></td>
 <td><p>Is the suitability of the software architecture for future modifications and maintainability considered?</p></td>
 <td><p>Check for loose coupling, separation of concerns, high cohesion, an interface versioning strategy, decision records, and the use of established design patterns.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>ARC_03_03</p></td>
+<tr class="row-odd"><td><p>ARC_03_03</p></td>
 <td><p>Does the software architecture demonstrate simplicity and avoid unnecessary complexity?</p></td>
 <td><p>Indicators of complexity include the number of use cases (corresponding to dynamic diagrams) allocated to a single design element; the number of interfaces and operations in an interface; the number of function parameters; global variables; complex types; and limited comprehensibility. The thresholds below are project-defined criteria, not ISO 26262 limits.</p>
 <p>Notes:</p>
@@ -752,14 +745,14 @@ Note: Consistency is ensured by the process and tooling, which define each inter
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>ARC_03_04</p></td>
+<tr class="row-even"><td><p>ARC_03_04</p></td>
 <td><p>Does the software architecture design follow best practices and design principles?</p></td>
 <td><p>Refer to architectural guidelines and recommendations within the project documentation.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>ARC_04_01</p></td>
+<tr class="row-odd"><td><p>ARC_04_01</p></td>
 <td><p>Where software elements with different safety classifications (e.g., different ASILs, or QM and ASIL) share resources, have applicable freedom-from-interference requirements been identified and addressed? Consider shared resources such as CPU time and memory. See also ARC_04_03.</p>
 <p>Note: See <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/iso26262/iso26262.html#std_req__iso26262__software_749">std_req__iso26262__software_749</a> and Annex D for partitioning and freedom-from-interference considerations.</p>
 </td>
@@ -769,7 +762,7 @@ Identify the shared resources and potential interference paths, and check that t
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>ARC_04_02</p></td>
+<tr class="row-even"><td><p>ARC_04_02</p></td>
 <td><p>Does the software architectural design consider feasibility with respect to the resources required by the embedded software, especially time-critical aspects such as startup time, as well as RAM, ROM, non-volatile memory, communication bandwidth, and processing-time limits, according to requirements or foreseeable customer needs? See also ARC_02_05.</p>
 <p>Note: See <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/iso26262/iso26262.html#std_req__iso26262__software_7413">std_req__iso26262__software_7413</a>.</p>
 </td>
@@ -778,7 +771,7 @@ Identify the shared resources and potential interference paths, and check that t
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>ARC_04_03</p></td>
+<tr class="row-odd"><td><p>ARC_04_03</p></td>
 <td><p>If your software architectural design includes processes and tasks, are their scheduling policies and priorities (or at least the necessary relationships among them) defined to ensure that timing requirements are met? Please note that the specific priorities or priority ranges will probably be defined in the project handbook or the software development plan.</p>
 <p>Note: See <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/iso26262/iso26262.html#std_req__iso26262__software_743">std_req__iso26262__software_743</a>.</p>
 </td>
@@ -806,6 +799,10 @@ Identify the shared resources and potential interference paths, and check that t
 <h3>Inspected Dynamic Architecture Views<a class="headerlink" href="#inspected-dynamic-architecture-views" title="Link to this heading">#</a></h3>
 <p>and the following dynamic views “valid” state and with “inspected” tag set are in the scope of this inspection:</p>
 <p class="needs_filter_warning" id="needtable-features/architecture/arc_inspection-1">No needs passed the filters</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For these static and dynamic views the inspected ground truth is documented in the rendered documentation and not in the source read by the drawing tool.</p>
+</div>
 </section>
 </section>
 </section>
