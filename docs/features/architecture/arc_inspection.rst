@@ -18,7 +18,7 @@
 .. document:: [Feature Name] Architecture Inspection
    :id: doc__feature_name_arc_inspection
    :status: draft
-   :version: 2
+   :version: 3
    :safety: ASIL_B
    :security: YES
    :realizes: wp__sw_arch_verification
@@ -85,26 +85,20 @@ Architecture Inspection Checklist
       - Remarks
       - Issue link
     * - ARC_01_01
-      - Is traceability from software architectural elements to requirements and to architectural elements at other levels (e.g., from a component to an interface) established in accordance with the “Relations between the architectural elements” described in :need:`doc_concept__arch_process`?
-      - Traceability should be checked automatically by tooling in the future. This item will be removed from the checklist once the requirement (:need:`Correlations of the architectural building blocks <gd_req__arch_build_blocks_corr>`) is implemented. Refer to `Tool Requirements <https://eclipse-score.github.io/docs-as-code/main/internals/requirements/requirements.html>`_ for the current status.
-      -
-      -
-      -
-    * - ARC_01_02
       - Does the software architecture design take into account all requirements allocated to the architectural element, including functional, non-functional, safety, and security requirements, as well as all related design decisions?
       - Check whether all requirements allocated to the architectural element are considered in the design. These include functional requirements (e.g., functional safety requirements), non-functional requirements (e.g., performance and reliability), and security requirements (e.g., confidentiality and integrity). Also ensure that all related design decisions are taken into account and documented in the architectural design. Security-related requirements should also be reviewed through the applicable cybersecurity process; this checklist does not replace cybersecurity activities.
       -
       -
       -
-    * - ARC_01_03
+    * - ARC_01_02
       - If the architectural element is related to any supplier manuals (including safety and security), are the relevant parts covered?
       - If the architecture makes use of supplied elements, their manuals (e.g., safety manuals) must be considered; their functionality must match expectations, and their assumptions must be fulfilled. For a safety component, this means that the assumed Technical Safety Requirements and assumptions of use (AoUs) in the safety manual are covered.
       -
       -
       -
-    * - ARC_01_04
+    * - ARC_01_03
       - Is the architectural element traceable to lower-level artifacts as defined by work-product traceability?
-      -
+      - Check if every logical interface is provided by exactly one component and used by at least one. CHeck if every component of the feature is included by exactly one module.
       -
       -
       -
@@ -235,3 +229,7 @@ and the following dynamic views "valid" state and with "inspected" tag set are i
    :columns: id;status;tags
    :colwidths: 25,25,25
    :sort: title
+
+.. note::
+
+   For these static and dynamic views the inspected ground truth is documented in the rendered documentation and not in the source read by the drawing tool.
