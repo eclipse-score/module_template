@@ -34,6 +34,8 @@
     - Adjust ``status`` to be ``valid``
     - Adjust ``safety`` and ``tags`` according to your needs
 
+.. note:: Create separate architecture, safety-analysis, and security-analysis documentation for lower-level components only when the component is decomposed into subcomponents and those artifacts apply. This document describes the current component and may be needed even when it has no subcomponents.
+
 
 Overview
 --------

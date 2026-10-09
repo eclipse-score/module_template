@@ -15,7 +15,7 @@
 .. document:: [Component Name] Implementation Inspection Checklist
   :id: doc__mod_temp_component_name_impl_inspection
   :status: draft
-  :version: 1
+  :version: 2
   :safety: ASIL_B
   :security: YES
   :realizes: wp__sw_implementation_inspection
@@ -35,26 +35,27 @@
 Purpose
 -------
 
-The purpose of this checklist is to collect the topics to be checked during implementation,
-i.e. in the detailed design and the source code of the units.
+The purpose of this checklist is to define the topics to be reviewed during implementation,
+including the detailed design and unit source code. Unit testing and structural coverage are
+addressed separately through the verification activities and report.
 
-The checklist shall be agnostic to which programming language is used. Differences shall be treated
-by linking to C++ or Rust specific documentation.
+The checklist is intended to be language-agnostic. Language-specific guidance should be referenced
+where applicable, for example, in the C++ or Rust documentation.
 
 Conduct
 -------
 
-As described in the concept :need:`doc_concept__wp_inspections` the following "inspection roles" are expected to be filled:
+As described in the concept :need:`doc_concept__wp_inspections`, the following inspection roles are expected to be assigned:
 
-- content responsible (author): <contributor/committer explicitly named here, who is the main author, as can be seen in config mgt tooling>
-- reviewer: <contributor/committer explicitly named here, who is the main content reviewer, must be different from content responsible>
-- moderator: <committer explicitly named here, who is is the safety manager, security manager or quality manager initiating the inspection>
+- content responsible (author): <contributor/committer explicitly named here who is the main author, as shown in configuration management tooling>
+- reviewer: <contributor/committer explicitly named here who is the main content reviewer; this person must differ from the content responsible>
+- moderator: <committer explicitly named here who initiates the inspection as the safety, security, or quality manager>
 
 Checklist
 ---------
 
-It is mandatory to fill in the "passed" column with "yes" or "no" for each checklist item and additionally to add in the remarks why it is passed or not passed.
-In case of "no" an issue link to the issue tracking system has to be added in the last column (if not solved in the same issue).
+Enter "yes" or "no" in the "Passed" column for each checklist item, and explain the result in the "Remarks" column.
+If "no" is entered, add a link to the corresponding issue in the "Issue link" column unless the finding is already tracked in the issue conducting the inspection.
 See also :need:`doc_concept__wp_inspections` for further information about reviews in general and inspection in particular.
 
 .. list-table:: Implementation Checklist
@@ -62,63 +63,58 @@ See also :need:`doc_concept__wp_inspections` for further information about revie
    :widths: 10,30,50,6,6,8
 
    * - Review ID
-     - Acceptance Criteria
+     - Acceptance criteria
      - Guidance
      - Passed
      - Remarks
      - Issue link
    * - IMPL_01_01
-     - Is the design according to guidelines?
-     - see :need:`gd_temp__detailed_design` and :need:`doc_concept__imp_concept`
-       (e.g. are the views done with the proposed UML diagrams)
+     - Does the detailed design follow the applicable project guidelines?
+     - See :need:`gd_temp__detailed_design` and :need:`doc_concept__imp_concept`.
+       For example, check whether design views use the notations recommended by the project.
      -
      -
      -
    * - IMPL_01_02
-     - Is the implementation according to specification?
-     - Check if the linked component requirements are fulfilled
-       and detailed design also matches architecture description.
+     - Does the implementation conform to the allocated requirements, architecture, and detailed design?
+     - Check whether the linked component requirements are fulfilled and whether the detailed design is consistent with the architecture description.
      -
      -
      -
    * - IMPL_01_03
-     - Are the design decisions and constraints documented?
-     - Check also for plausibility of these.
+     - Are the design decisions, assumptions, and constraints documented and justified?
+     - Check whether the rationale is clear and consistent with the requirements and architecture.
      -
      -
      -
    * - IMPL_01_04
-     - Are all external libraries used by the component specified in the detailed design?
-     - Check the automated dependency analysis.
-       Also make sure ASIL rated units also only use ASIL rated libraries.
+     - Are all external libraries and other third-party dependencies used by the component identified and assessed for the intended use?
+     - Check the automated dependency analysis and confirm that relevant safety evidence, assumptions, constraints, and usage conditions are documented. Where a dependency is used in a safety-related context, justify its suitability for the required safety integrity level; do not assume that an "ASIL-rated" label alone demonstrates suitability.
      -
      -
      -
    * - IMPL_02_01
-     - Are the static and dynamic code analysis reports verified for violations?
-     - All violations in ASIL related code must be justified. This includes the checks of coding guidelines.
+     - Have the static and dynamic code-analysis results been reviewed, and have the findings been resolved or justified?
+     - Review findings against the applicable coding guidelines. Resolve findings or document and approve the rationale for accepted deviations, especially in safety-related code.
      -
      -
      -
    * - IMPL_02_02
-     - Do manual checks, that are derived from the coding guideline, find no safety critical error?
-     - Check this for the programming language used (e.g. C++ <link_to_checks_list>, Rust <link_to_checks_list>)
+     - Have the manual checks required by the applicable coding guidelines been performed, with findings resolved or justified?
+     - Use the checks applicable to the programming language (e.g., C++ <link_to_checks_list>, Rust <link_to_checks_list>).
      -
      -
      -
    * - IMPL_03_01
-     - Do the UID of the interface in component documentation match the implemented interface names of the unit?
-     - Compare interface UIDs (which contains the interface name) in component architecture/detailed design documentation
-       with public interfaces in source code (e.g. API headers, traits, public types/functions).
+     - Are the interface UIDs in the component documentation traceable to the corresponding implemented public interfaces?
+     - Compare the interface UIDs in the component architecture and detailed design documentation with the corresponding public interfaces in the source code (e.g., API headers, traits, public types, or functions). The identifiers need not match source-level names exactly, but their correspondence should be clear.
      -
      -
      -
    * - IMPL_03_02
-     - Are detailed design and source code consistent and is the respective traceability established ?
-     - Check if available static and dynamic design diagrams and the textual descriptions match the code
-       (e.g. naming of interfaces, units, functions/operations/messages, data types).
-       Check if the folder/file names of the units and its source code matches the intended functionality.
-       For example if a unit is named "communication" it should not contain code for "data processing".
+     - Are the detailed design and source code consistent, and is traceability between them established?
+     - Check whether available static and dynamic design diagrams and textual descriptions match the code (e.g., the names of interfaces, units, functions, operations, messages, and data types).
+       Where required by project conventions, check whether unit folder and file names reflect their intended functionality. For example, a unit named "communication" should not contain unrelated data-processing code.
      -
      -
      -

@@ -62,14 +62,13 @@ Feature Architecture File
    :included_by: feat__mtef
    :fulfils: feat_req__example_feature__example_req
 
+   This interface carries the feature's primary control requests and status data. It connects the feature to the component responsible for core control, with inputs validated and errors reported through the operation results.
+
    .. needarch::
       :scale: 50
       :align: center
 
       {{ draw_interface(need(), needs) }}
-
-   Logical Interface 1 provides the primary control and communication interface for the feature.
-   It is implemented by sub-component 1 which handles the core functionality.
 
 
 .. logic_arc_int:: Logical Interface 2
@@ -81,14 +80,13 @@ Feature Architecture File
    :included_by: feat__mtef
    :fulfils: feat_req__example_feature__example_req
 
+   This interface transfers data between the feature and the component responsible for processing it. It supports data submission and retrieval, with operation results indicating success or an applicable error.
+
    .. needarch::
       :scale: 50
       :align: center
 
       {{ draw_interface(need(), needs) }}
-
-   Logical Interface 2 provides support for data processing and communication between sub-components.
-   It is implemented by sub-component 2 which handles data flow and processing operations.
 
 
 .. logic_arc_int:: Logical Interface 3
@@ -100,7 +98,7 @@ Feature Architecture File
    :included_by: feat__mtef
    :fulfils: feat_req__example_feature__example_req
 
-   Logical Interface 3 provides additional support and monitoring capabilities for the feature.
+   This interface exposes the feature's monitoring and diagnostic information. It provides status and event data to authorized consumers and reports errors when requested information is unavailable.
 
 .. Logical Interface Operation
 
@@ -112,6 +110,8 @@ Feature Architecture File
    :version: 1
    :included_by: logic_arc_int__example_feature__if_1
 
+   Accepts a control request and returns whether the request was accepted or an error occurred.
+
 .. logic_arc_int_op:: Logical Operation 2
    :id: logic_arc_int_op__example_feature__op_2
    :security: YES
@@ -119,6 +119,8 @@ Feature Architecture File
    :status: valid
    :version: 1
    :included_by: logic_arc_int__example_feature__if_1
+
+   Returns the current control status so the caller can determine the feature's state.
 
 .. logic_arc_int_op:: Logical Operation 3
    :id: logic_arc_int_op__example_feature__op_3
@@ -128,6 +130,8 @@ Feature Architecture File
    :version: 1
    :included_by: logic_arc_int__example_feature__if_2
 
+   Submits data for processing and reports whether the data was accepted or invalid.
+
 .. logic_arc_int_op:: Logical Operation 4
    :id: logic_arc_int_op__example_feature__op_4
    :security: YES
@@ -135,6 +139,8 @@ Feature Architecture File
    :status: valid
    :version: 1
    :included_by: logic_arc_int__example_feature__if_2
+
+   Retrieves the result of a completed data-processing request or reports that no result is available.
 
 .. logic_arc_int_op:: Logical Operation 5
    :id: logic_arc_int_op__example_feature__op_5
@@ -144,6 +150,8 @@ Feature Architecture File
    :version: 1
    :included_by: logic_arc_int__example_feature__if_3
 
+   Returns a health summary for the feature's monitored components.
+
 .. logic_arc_int_op:: Logical Operation 6
    :id: logic_arc_int_op__example_feature__op_6
    :security: YES
@@ -151,6 +159,8 @@ Feature Architecture File
    :status: valid
    :version: 1
    :included_by: logic_arc_int__example_feature__if_3
+
+   Retrieves diagnostic information for an identified component or reports that the information is unavailable.
 
 .. logic_arc_int_op:: Logical Operation 7
    :id: logic_arc_int_op__example_feature__op_7
@@ -160,6 +170,8 @@ Feature Architecture File
    :version: 1
    :included_by: logic_arc_int__example_feature__if_3
 
+   Publishes a monitoring event when a component's status changes.
+
 .. logic_arc_int_op:: Logical Operation 8
    :id: logic_arc_int_op__example_feature__op_8
    :security: YES
@@ -167,6 +179,8 @@ Feature Architecture File
    :status: valid
    :version: 1
    :included_by: logic_arc_int__example_feature__if_3
+
+   Acknowledges a monitoring event and reports whether the event identifier is valid.
 
 
 Module View File

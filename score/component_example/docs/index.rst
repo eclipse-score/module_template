@@ -78,6 +78,8 @@ Further Documentation of the component can be found in the following sections:
 Component Detail Information
 ============================
 
+.. note:: The documents listed below describe this component. Create separate architecture, safety-analysis, and security-analysis documents for subcomponents only when this component is decomposed into subcomponents and those artifacts apply.
+
 .. toctree::
    :maxdepth: 1
 
@@ -87,5 +89,5 @@ Component Detail Information
    safety_analysis/dfa
    safety_analysis/fmea
    safety_analysis/aou_requirements
-   component_classification
+   safety_analysis/component_classification
    security_analysis/aou_requirements

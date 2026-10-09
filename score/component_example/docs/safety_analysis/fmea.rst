@@ -25,6 +25,9 @@
    :realizes: wp__sw_component_fmea
    :tags: template
 
+
+.. note:: Create separate FMEA documentation for lower-level components only when the component is decomposed into subcomponents and a separate analysis applies. This document covers the current component's FMEA scope.
+
 .. note:: Use the content of the document to describe e.g. why a fault model is not applicable for the diagram.
 
 .. attention::
