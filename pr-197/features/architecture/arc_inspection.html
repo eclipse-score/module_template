@@ -543,7 +543,7 @@
                   
   <section id="feature-name-architecture-inspection">
 <h1>[Feature Name] Architecture Inspection<a class="headerlink" href="#feature-name-architecture-inspection" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-dace172d">
+<div class="need_container docutils container" id="SNCB-0bfacc3d">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__feature_name_arc_inspection">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -563,7 +563,7 @@
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">template</span></span></span></div>
-<div class="line"><span class="needs_version"><span class="needs_label">version: </span>2</span></div>
+<div class="line"><span class="needs_version"><span class="needs_label">version: </span>3</span></div>
 </span></span></div>
 <div class="line"><span><div class="line">realizes: <span class="realizes"><span><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/architecture_design/architecture_workproducts.html#wp__sw_arch_verification">wp__sw_arch_verification</a></span></span></div>
 </span></div>
@@ -630,45 +630,49 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Purpose</strong></p>
-<p>The purpose of the software architecture checklist is to ensure that the design meets the criteria and quality
-as defined per project processes and guidelines for feature and component architectural design elements.
-It helps to check the compliance with requirements, identify errors or inconsistencies, and ensure adherence to best practices.
-The checklist guides evaluation of the architecture design, identifies potential problems, and aids in communication and
+<blockquote>
+<div><p>The purpose of the software architecture checklist is to ensure that the design meets the criteria and quality standards
+defined by project processes and guidelines for feature and component architectural design elements.
+It helps check compliance with requirements, identify errors or inconsistencies, and ensure adherence to best practices.
+The checklist guides the evaluation of the architecture design, identifies potential problems, and aids in communication and
 documentation of architectural decisions to stakeholders.</p>
+</div></blockquote>
 <p><strong>Checklist</strong></p>
-<p>It is mandatory to fill in the “passed” column with “yes” or “no” for each checklist item and additionally to add in the remarks why it is passed or not passed.
-In case of “no” an issue link to the issue tracking system has to be added in the last column (if not solved in the same issue).
-If a Review ID is not applicable for your architecture, then state “”n/a” in status and comment accordingly in remarks.
+<blockquote>
+<div><p>Enter “yes” or “no” in the “Passed” column for each applicable checklist item, and explain the result in the “Remarks” column.
+If “no” is entered, add an issue link in the “Issue link” column unless the finding is already tracked in the current issue.
+If a Review ID is not applicable to your architecture, enter “n/a” in the “Passed” column and explain why in the “Remarks” column.
 See also <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/general_concepts/score_review_concept.html#doc_concept__wp_inspections">doc_concept__wp_inspections</a> for further information about reviews in general and inspection in particular.</p>
+</div></blockquote>
 </div>
 <div class="pst-scrollable-table-container"><table class="table" id="id6">
 <caption><span class="caption-number">Table 2 </span><span class="caption-text">Architecture Inspection Checklist</span><a class="headerlink" href="#id6" title="Link to this table">#</a></caption>
 <thead>
-<tr class="row-odd"><th class="head"><p>Review Id</p></th>
+<tr class="row-odd"><th class="head"><p>Review ID</p></th>
 <th class="head"><p>Acceptance criteria</p></th>
 <th class="head"><p>Guidance</p></th>
-<th class="head"><p>passed</p></th>
+<th class="head"><p>Passed</p></th>
 <th class="head"><p>Remarks</p></th>
 <th class="head"><p>Issue link</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>ARC_01_01</p></td>
-<td><p>Does the software architecture design consider all the requirements allocated to the architectural element, including functional, non-functional, safety, and security requirements and all related design decisions?</p></td>
-<td><p>Check if all requirements allocated to the architectural element are considered in the design. This includes functional requirements (e.g. functional safety requirements), non-functional requirements (e.g. performance, reliability), and security requirements (e.g. confidentiality, integrity). Additionally, ensure that all related design decisions are taken into account and documented in the architectural design.</p></td>
+<td><p>Does the software architecture design take into account all requirements allocated to the architectural element, including functional, non-functional, safety, and security requirements, as well as all related design decisions?</p></td>
+<td><p>Check whether all requirements allocated to the architectural element are considered in the design. These include functional requirements (e.g., functional safety requirements), non-functional requirements (e.g., performance and reliability), and security requirements (e.g., confidentiality and integrity). Also ensure that all related design decisions are taken into account and documented in the architectural design. Security-related requirements should also be reviewed through the applicable cybersecurity process; this checklist does not replace cybersecurity activities.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>ARC_01_02</p></td>
 <td><p>If the architectural element is related to any supplier manuals (including safety and security), are the relevant parts covered?</p></td>
-<td><p>If the architecture makes use of supplied elements, their manuals (like safety) have to be considered (i.e. its provided functionality matches the expectation and assumptions are fulfilled). Note that in case of safety component this means that assumed Technical Safety Requirements and AoUs of the safety manual are covered.</p></td>
+<td><p>If the architecture makes use of supplied elements, their manuals (e.g., safety manuals) must be considered; their functionality must match expectations, and their assumptions must be fulfilled. For a safety component, this means that the assumed Technical Safety Requirements and assumptions of use (AoUs) in the safety manual are covered.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>ARC_01_03</p></td>
-<td><p>Is the architectural element traceable to the lower-level artifacts as defined by the work product traceability?</p></td>
+<td><p>Is the architectural element traceable to lower-level artifacts as defined by the work-product traceability?</p></td>
 <td><p>Check if every logical interface is provided by exactly one component and used by at least one. CHeck if every component of the feature is included by exactly one module.</p></td>
 <td></td>
 <td></td>
@@ -676,101 +680,100 @@ See also <a class="external_link reference external" href="https://eclipse-score
 </tr>
 <tr class="row-odd"><td><p>ARC_02_01</p></td>
 <td><p>Is the software architecture design compliant with the overall feature architecture?</p></td>
-<td><p>On component level check against the feature architecture, on feature level check other features with common components used.</p></td>
+<td><p>At the component level, check against the feature architecture. At the feature level, check other features that use common components.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>ARC_02_02</p></td>
-<td><p>Is appropriate and comprehensible operation and interface naming present in the architectural design?</p></td>
+<td><p>Are operations and interfaces named appropriately and comprehensibly in the architectural design?</p></td>
 <td><p>Check <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/architecture_design/guidance/architecture_guideline.html#gd_guidl__arch_design">gd_guidl__arch_design</a></p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>ARC_02_03</p></td>
-<td><p>Are the correctness of data flow and control flow within the architectural elements considered?</p></td>
-<td><p>For example, examine definitions, transformations, integrity, and interaction of data; check error handling, data exchange between elements, correct response to inputs, and documented decision making.
-Note: Consistency is ensured by the process/tooling, by defining each interface only once.</p></td>
+<td><p>Has the correctness of data and control flows within the architectural elements been considered?</p></td>
+<td><p>For example, examine data definitions, transformations, integrity, and interactions; check error handling, data exchange between elements, correct responses to inputs, and documented decision-making.
+Note: Consistency is ensured by the process and tooling, which define each interface only once.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>ARC_02_04</p></td>
-<td><p>Are the interfaces between the software architectural element and other architectural elements well defined?</p></td>
-<td><p>Check if the interface handles undefined behaviour or errors; can established protocols be used; are the interfaces for inputs, outputs, and error codes documented; is loose coupling considered and only limited exposure; can unit or integration tests be written against the interface; data amount transferred; ensure no sensitive data is exposed;</p></td>
+<td><p>Are the interfaces between the software architectural element and other architectural elements well defined and described?</p></td>
+<td><p>Check whether the interface description specifies expected behaviour for invalid inputs and errors. Could established protocols be used? Does the interface description document inputs, outputs, and error handling? Have loose coupling and limited exposure been considered? Can unit or integration tests be written against the interface? Has the amount of data transferred been considered appropriately? Is sensitive data protected appropriately, with no sensitive data exposed?</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>ARC_02_05</p></td>
-<td><p>Does the software architectural element consider the timing constraints (from the parent requirement)?</p></td>
-<td><p>If there are strict timing requirements, a programming time estimation should be performed and deadline supervision should be considered.</p></td>
+<td><p>Does the software architectural element take applicable timing requirements into account?</p></td>
+<td><p>If there are strict timing requirements, execution-time analysis or estimation should be performed, and appropriate deadline monitoring should be considered.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>ARC_02_06</p></td>
 <td><p>Is the documentation of the software architectural element, including textual and graphical descriptions (e.g., UML diagrams), clear and complete?</p></td>
-<td><p>Use of semi-formal notation is expected for architectural elements with an allocated ASIL level. Is the architecture template correctly filled?</p></td>
+<td><p>The use of semi-formal notation is expected for architectural elements with an allocated ASIL level. Is the architecture template filled out correctly?</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>ARC_03_01</p></td>
 <td><p>Is the architectural element modular and encapsulated?</p></td>
-<td><p>Check, for example, that only minimal interfaces are used. The design should be object oriented. Interfaces and interactions are clearly defined. Usage of access types (private, protected) is properly set. Limited global variables.</p></td>
+<td><p>Check, for example, that only the necessary interfaces are used and that interfaces and interactions are clearly defined. Project-specific design and coding guidelines may additionally require object-oriented design, appropriate use of access controls (e.g., private or protected), and limits on global variables.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>ARC_03_02</p></td>
 <td><p>Is the suitability of the software architecture for future modifications and maintainability considered?</p></td>
-<td><p>Check for, for example, loose coupling, separation of concerns, high cohesion, versioning strategy for interfaces, decision records, and use of established design patterns.</p></td>
+<td><p>Check for loose coupling, separation of concerns, high cohesion, an interface versioning strategy, decision records, and the use of established design patterns.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>ARC_03_03</p></td>
-<td><p>Are simplicity and avoidance of unnecessary complexity present in the software architecture?</p></td>
-<td><p>Indicators of complexity include: the number of use cases (corresponding to dynamic diagrams) allocated to a single design element, the number of interfaces and operations in an interface, function parameters, global variables, complex types, and limited comprehensibility.</p>
+<td><p>Does the software architecture demonstrate simplicity and avoid unnecessary complexity?</p></td>
+<td><p>Indicators of complexity include the number of use cases (corresponding to dynamic diagrams) allocated to a single design element; the number of interfaces and operations in an interface; the number of function parameters; global variables; complex types; and limited comprehensibility. The thresholds below are project-defined criteria, not ISO 26262 limits.</p>
 <p>Notes:</p>
-<p>If the “number of use cases” or “number of interfaces” above exceeds “3” or “number of function parameters” exceeds “5” or the “number of operations” exceeds “20” or global variables are used, a design rationale is mandatory.</p>
+<p>A design rationale is mandatory if any of the following applies: the number of use cases or interfaces exceeds “3”; the number of function parameters exceeds “5”; the number of operations exceeds “20”; or global variables are used.</p>
 </td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>ARC_03_04</p></td>
-<td><p>Is the software architecture design following best practices and design principles?</p></td>
+<td><p>Does the software architecture design follow best practices and design principles?</p></td>
 <td><p>Refer to architectural guidelines and recommendations within the project documentation.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>ARC_04_01</p></td>
-<td><p>If your software architectural design includes processes with different safety ratings (QM/ASIL), is freedom from interference for shared resources (CPU time, shared memory, etc.) ensured? See also ARC_04_03.</p>
-<p>Note: see <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/iso26262/iso26262.html#std_req__iso26262__software_7411">std_req__iso26262__software_7411</a> and <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/iso26262/iso26262.html#std_req__iso26262__software_749">std_req__iso26262__software_749</a> with Annex D for partitioning to ensure freedom from interference.
-Note: Modules should not mix ASIL and QM processes unless justified otherwise; therefore, this question is only relevant on the feature level.</p>
+<td><p>Where software elements with different safety classifications (e.g., different ASILs, or QM and ASIL) share resources, have applicable freedom-from-interference requirements been identified and addressed? Consider shared resources such as CPU time and memory. See also ARC_04_03.</p>
+<p>Note: See <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/iso26262/iso26262.html#std_req__iso26262__software_749">std_req__iso26262__software_749</a> and Annex D for partitioning and freedom-from-interference considerations.</p>
 </td>
-<td><p>Check whether your architecture design complies with project guidelines to establish freedom from interference between components. This can be achieved, for example, by using a hypervisor or an OS that supports partitioning with an MMU or specific scheduling mechanisms, as well as safety mechanisms like watchdogs or program flow monitoring.
-Also check if the operating system supports freedom from interference between the processes and make sure an “Assumption of Use requirement” for this exists in your project. For example, see <a class="reference external" href="https://eclipse-score.github.io/score/main/requirements/platform_assumptions/index.html#aou_req__platform__process_isolation">score aou_req__platform__process_isolation</a>.</p></td>
+<td><p>Check whether your architecture design complies with project guidelines for establishing freedom from interference between components. This can be achieved, for example, by using a hypervisor or an OS that supports partitioning with an MMU or specific scheduling mechanisms, as well as safety mechanisms such as watchdogs or program-flow monitoring.
+Identify the shared resources and potential interference paths, and check that the selected measures address the applicable requirements. A hypervisor, operating system feature, or safety mechanism is not by itself evidence that freedom from interference has been achieved. Where the design relies on operating-system or platform guarantees, verify that these guarantees are specified and supported by applicable assumptions of use. For example, see <a class="reference external" href="https://eclipse-score.github.io/score/main/requirements/platform_assumptions/index.html#aou_req__platform__process_isolation">score aou_req__platform__process_isolation</a>.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>ARC_04_02</p></td>
-<td><p>Does the software architectural design consider its feasibility with respect to the required resources for the embedded software, especially for time-critical aspects like startup time, but also including RAM, ROM, non-volatile memory, communication bandwidth, and processing time limits according to the requirements or foreseeable customer needs? See also ARC_02_05.</p>
-<p>Note: see <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/iso26262/iso26262.html#std_req__iso26262__software_7413">std_req__iso26262__software_7413</a></p>
+<td><p>Does the software architectural design consider feasibility with respect to the resources required by the embedded software, especially time-critical aspects such as startup time, as well as RAM, ROM, non-volatile memory, communication bandwidth, and processing-time limits, according to requirements or foreseeable customer needs? See also ARC_02_05.</p>
+<p>Note: See <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/iso26262/iso26262.html#std_req__iso26262__software_7413">std_req__iso26262__software_7413</a>.</p>
 </td>
-<td><p>Check if there are any limits for resource consumption or timing aspects in your project, such as startup time, communication bandwidth, or memory usage. If such limits exist, ensure that your architecture takes these limits into account, especially with respect to scalability. For this, make an estimation of the required resources based on the architectural design and a prototypical implementation or a measurement of an existing implementation, and compare it to the defined limits or planned scalability. Check if any bottlenecks are present in the architecture that could lead to resource overuse or timing violations.</p></td>
+<td><p>Check whether there are any limits on resource consumption or timing in your project, such as startup time, communication bandwidth, or memory usage. If such limits exist, ensure that your architecture takes them into account, especially with respect to scalability. To do this, estimate the required resources based on the architectural design and a prototype or measurements of an existing implementation, and compare the estimates with the defined limits or planned scalability. Check whether any bottlenecks in the architecture could lead to excessive resource use or timing violations.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>ARC_04_03</p></td>
-<td><p>If your software architectural design includes processes and tasks, are their scheduling policies and priorities (at least the necessary relationships between them) defined to ensure that timing requirements are met? Please note that the particular priorities or priority ranges will probably be defined by the project handbook or the software development plan.</p>
-<p>Note: see <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/iso26262/iso26262.html#std_req__iso26262__software_743">std_req__iso26262__software_743</a></p>
+<td><p>If your software architectural design includes processes and tasks, are their scheduling policies and priorities (or at least the necessary relationships among them) defined to ensure that timing requirements are met? Please note that the specific priorities or priority ranges will probably be defined in the project handbook or the software development plan.</p>
+<p>Note: See <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/iso26262/iso26262.html#std_req__iso26262__software_743">std_req__iso26262__software_743</a>.</p>
 </td>
 <td><p>Provide a rationale for these scheduling policies and priorities, or explain why they are not needed.</p></td>
 <td></td>
