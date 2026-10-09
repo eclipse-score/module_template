@@ -30,7 +30,7 @@
     The above directive must be updated according to your Module.
 
     - Modify ``Your Module Name`` to be your Module Name
-    - Modify ``id`` to be your Module Name in upper snake case preceded by ``doc_`` and succeeded by ``security_plan``
+    - Modify ``id`` to be your Module Name in lower snake case preceded by ``doc__`` and followed by ``_security_plan``
     - Adjust ``status`` to be ``valid``
     - Adjust ``safety`` and ``tags`` according to your needs
 
@@ -83,21 +83,21 @@
           - <Link to WP>
           - <automated>
 
-        * - :need:`wp__fdr_reports` (Module Security Plan)
+        * - :need:`wp__fdr_reports_security` (Module Security Plan)
           - :need:`gd_chklst__security_plan`
           - <automated>
           - <Link to issue>
           - <Link to WP>
           - <automated>
 
-        * - :need:`wp__fdr_reports` (Module Security Package)
+        * - :need:`wp__fdr_reports_security` (Module Security Package)
           - :need:`Security Package Formal Review Checklist <gd_chklst__security_package>`
           - <automated>
           - <Link to issue>
           - <Link to WP>
           - <automated>
 
-        * - :need:`wp__fdr_reports` (Module's Security Analyses)
+        * - :need:`wp__fdr_reports_security` (Module's Security Analyses)
           - Security Analysis FDR tbd
           - <automated>
           - <Link to issue>
@@ -130,6 +130,13 @@
           - <automated>
           - <Link to issue>
           - <Link to WP>
+          - <automated>
+
+        * - :need:`wp__module_user_manual`
+          - :need:`gd_temp__rel_mod_user_manual`
+          - <automated>
+          - <Link to issue>
+          - :need:`doc__mod_temp_module_name_user_manual`
           - <automated>
 
         * - :need:`wp__sw_module_sbom`

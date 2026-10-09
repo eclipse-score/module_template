@@ -28,7 +28,7 @@
     The above directive must be updated according to your component.
 
     - Modify ``Component Name`` to be your component Name
-    - Modify ``id`` to be your component Name in lower snake case preceded by ``doc__`` and followed by ``_arc_inspection``
+    - Modify ``id`` to be your Component Name in lower snake case preceded by ``doc__`` and followed by ``_arc_inspection``
     - Adjust ``status`` to be ``valid``
     - Adjust ``safety``, ``security`` and ``tags`` according to your needs
 
