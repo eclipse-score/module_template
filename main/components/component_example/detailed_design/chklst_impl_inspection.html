@@ -484,7 +484,7 @@
 
 <li class="toctree-l2"><a class="reference internal" href="../safety_analysis/fmea.html">[Component Name] FMEA (Failure Modes and Effects Analysis)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../safety_analysis/aou_requirements.html">[Component Name] AoU Component Requirements Template</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../component_classification.html">[Component Name] Component Classification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../safety_analysis/component_classification.html">[Component Name] Component Classification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../security_analysis/aou_requirements.html">[Component Name] AoU Component Requirements Template</a></li>
 </ul>
 </details></li>
@@ -554,7 +554,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="need_container docutils container" id="SNCB-35f3bfa9">
+  <div class="need_container docutils container" id="SNCB-8a5bf2d9">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__mod_temp_component_name_impl_inspection">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -574,7 +574,7 @@
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">template</span></span></span></div>
-<div class="line"><span class="needs_version"><span class="needs_label">version: </span>1</span></div>
+<div class="line"><span class="needs_version"><span class="needs_label">version: </span>2</span></div>
 </span></span></div>
 <div class="line"><span><div class="line">realizes: <span class="realizes"><span><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/implementation/implementation_workproducts.html#wp__sw_implementation_inspection">wp__sw_implementation_inspection</a></span></span></div>
 </span></div>
@@ -612,24 +612,25 @@
 <h1>[Component Name] Implementation Inspection Checklist<a class="headerlink" href="#component-name-implementation-inspection-checklist" title="Link to this heading">#</a></h1>
 <section id="purpose">
 <h2>Purpose<a class="headerlink" href="#purpose" title="Link to this heading">#</a></h2>
-<p>The purpose of this checklist is to collect the topics to be checked during implementation,
-i.e. in the detailed design and the source code of the units.</p>
-<p>The checklist shall be agnostic to which programming language is used. Differences shall be treated
-by linking to C++ or Rust specific documentation.</p>
+<p>The purpose of this checklist is to define the topics to be reviewed during implementation,
+including the detailed design and unit source code. Unit testing and structural coverage are
+addressed separately through the verification activities and report.</p>
+<p>The checklist is intended to be language-agnostic. Language-specific guidance should be referenced
+where applicable, for example, in the C++ or Rust documentation.</p>
 </section>
 <section id="conduct">
 <h2>Conduct<a class="headerlink" href="#conduct" title="Link to this heading">#</a></h2>
-<p>As described in the concept <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/general_concepts/score_review_concept.html#doc_concept__wp_inspections">doc_concept__wp_inspections</a> the following “inspection roles” are expected to be filled:</p>
+<p>As described in the concept <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/general_concepts/score_review_concept.html#doc_concept__wp_inspections">doc_concept__wp_inspections</a>, the following inspection roles are expected to be assigned:</p>
 <ul class="simple">
-<li><p>content responsible (author): &lt;contributor/committer explicitly named here, who is the main author, as can be seen in config mgt tooling&gt;</p></li>
-<li><p>reviewer: &lt;contributor/committer explicitly named here, who is the main content reviewer, must be different from content responsible&gt;</p></li>
-<li><p>moderator: &lt;committer explicitly named here, who is is the safety manager, security manager or quality manager initiating the inspection&gt;</p></li>
+<li><p>content responsible (author): &lt;contributor/committer explicitly named here who is the main author, as shown in configuration management tooling&gt;</p></li>
+<li><p>reviewer: &lt;contributor/committer explicitly named here who is the main content reviewer; this person must differ from the content responsible&gt;</p></li>
+<li><p>moderator: &lt;committer explicitly named here who initiates the inspection as the safety, security, or quality manager&gt;</p></li>
 </ul>
 </section>
 <section id="checklist">
 <h2>Checklist<a class="headerlink" href="#checklist" title="Link to this heading">#</a></h2>
-<p>It is mandatory to fill in the “passed” column with “yes” or “no” for each checklist item and additionally to add in the remarks why it is passed or not passed.
-In case of “no” an issue link to the issue tracking system has to be added in the last column (if not solved in the same issue).
+<p>Enter “yes” or “no” in the “Passed” column for each checklist item, and explain the result in the “Remarks” column.
+If “no” is entered, add a link to the corresponding issue in the “Issue link” column unless the finding is already tracked in the issue conducting the inspection.
 See also <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/general_concepts/score_review_concept.html#doc_concept__wp_inspections">doc_concept__wp_inspections</a> for further information about reviews in general and inspection in particular.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id1">
 <caption><span class="caption-number">Table 23 </span><span class="caption-text">Implementation Checklist</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
@@ -643,7 +644,7 @@ See also <a class="external_link reference external" href="https://eclipse-score
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Review ID</p></th>
-<th class="head"><p>Acceptance Criteria</p></th>
+<th class="head"><p>Acceptance criteria</p></th>
 <th class="head"><p>Guidance</p></th>
 <th class="head"><p>Passed</p></th>
 <th class="head"><p>Remarks</p></th>
@@ -652,64 +653,59 @@ See also <a class="external_link reference external" href="https://eclipse-score
 </thead>
 <tbody>
 <tr class="row-even"><td><p>IMPL_01_01</p></td>
-<td><p>Is the design according to guidelines?</p></td>
-<td><p>see <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/implementation/guidance/detailed_design_template.html#gd_temp__detailed_design">gd_temp__detailed_design</a> and <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/implementation/implementation_concept.html#doc_concept__imp_concept">doc_concept__imp_concept</a>
-(e.g. are the views done with the proposed UML diagrams)</p></td>
+<td><p>Does the detailed design follow the applicable project guidelines?</p></td>
+<td><p>See <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/implementation/guidance/detailed_design_template.html#gd_temp__detailed_design">gd_temp__detailed_design</a> and <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/implementation/implementation_concept.html#doc_concept__imp_concept">doc_concept__imp_concept</a>.
+For example, check whether design views use the notations recommended by the project.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>IMPL_01_02</p></td>
-<td><p>Is the implementation according to specification?</p></td>
-<td><p>Check if the linked component requirements are fulfilled
-and detailed design also matches architecture description.</p></td>
+<td><p>Does the implementation conform to the allocated requirements, architecture, and detailed design?</p></td>
+<td><p>Check whether the linked component requirements are fulfilled and whether the detailed design is consistent with the architecture description.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>IMPL_01_03</p></td>
-<td><p>Are the design decisions and constraints documented?</p></td>
-<td><p>Check also for plausibility of these.</p></td>
+<td><p>Are the design decisions, assumptions, and constraints documented and justified?</p></td>
+<td><p>Check whether the rationale is clear and consistent with the requirements and architecture.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>IMPL_01_04</p></td>
-<td><p>Are all external libraries used by the component specified in the detailed design?</p></td>
-<td><p>Check the automated dependency analysis.
-Also make sure ASIL rated units also only use ASIL rated libraries.</p></td>
+<td><p>Are all external libraries and other third-party dependencies used by the component identified and assessed for the intended use?</p></td>
+<td><p>Check the automated dependency analysis and confirm that relevant safety evidence, assumptions, constraints, and usage conditions are documented. Where a dependency is used in a safety-related context, justify its suitability for the required safety integrity level; do not assume that an “ASIL-rated” label alone demonstrates suitability.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>IMPL_02_01</p></td>
-<td><p>Are the static and dynamic code analysis reports verified for violations?</p></td>
-<td><p>All violations in ASIL related code must be justified. This includes the checks of coding guidelines.</p></td>
+<td><p>Have the static and dynamic code-analysis results been reviewed, and have the findings been resolved or justified?</p></td>
+<td><p>Review findings against the applicable coding guidelines. Resolve findings or document and approve the rationale for accepted deviations, especially in safety-related code.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>IMPL_02_02</p></td>
-<td><p>Do manual checks, that are derived from the coding guideline, find no safety critical error?</p></td>
-<td><p>Check this for the programming language used (e.g. C++ &lt;link_to_checks_list&gt;, Rust &lt;link_to_checks_list&gt;)</p></td>
+<td><p>Have the manual checks required by the applicable coding guidelines been performed, with findings resolved or justified?</p></td>
+<td><p>Use the checks applicable to the programming language (e.g., C++ &lt;link_to_checks_list&gt;, Rust &lt;link_to_checks_list&gt;).</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>IMPL_03_01</p></td>
-<td><p>Do the UID of the interface in component documentation match the implemented interface names of the unit?</p></td>
-<td><p>Compare interface UIDs (which contains the interface name) in component architecture/detailed design documentation
-with public interfaces in source code (e.g. API headers, traits, public types/functions).</p></td>
+<td><p>Are the interface UIDs in the component documentation traceable to the corresponding implemented public interfaces?</p></td>
+<td><p>Compare the interface UIDs in the component architecture and detailed design documentation with the corresponding public interfaces in the source code (e.g., API headers, traits, public types, or functions). The identifiers need not match source-level names exactly, but their correspondence should be clear.</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>IMPL_03_02</p></td>
-<td><p>Are detailed design and source code consistent and is the respective traceability established ?</p></td>
-<td><p>Check if available static and dynamic design diagrams and the textual descriptions match the code
-(e.g. naming of interfaces, units, functions/operations/messages, data types).
-Check if the folder/file names of the units and its source code matches the intended functionality.
-For example if a unit is named “communication” it should not contain code for “data processing”.</p></td>
+<td><p>Are the detailed design and source code consistent, and is traceability between them established?</p></td>
+<td><p>Check whether available static and dynamic design diagrams and textual descriptions match the code (e.g., the names of interfaces, units, functions, operations, messages, and data types).
+Where required by project conventions, check whether unit folder and file names reflect their intended functionality. For example, a unit named “communication” should not contain unrelated data-processing code.</p></td>
 <td></td>
 <td></td>
 <td></td>
