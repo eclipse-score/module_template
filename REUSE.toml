@@ -24,7 +24,7 @@ SPDX-FileCopyrightText = "Copyright (c) 2026 Contributors to the Eclipse Foundat
 SPDX-License-Identifier = "Apache-2.0"
 
 [[annotations]]
-path = ["**/*.lock.json", "**/Cargo.lock", "MODULE.bazel.lock"]
+path = ["**/*.lock.json", "**/Cargo.lock", "MODULE.bazel.lock", "**/MODULE.bazel.lock"]
 SPDX-FileCopyrightText = "Copyright (c) 2026 Contributors to the Eclipse Foundation"
 SPDX-License-Identifier = "Apache-2.0"
 
@@ -34,6 +34,11 @@ SPDX-FileCopyrightText = "Copyright (c) 2026 Contributors to the Eclipse Foundat
 SPDX-License-Identifier = "Apache-2.0"
 
 [[annotations]]
-path = [".bazelversion"]
+path = [".bazelversion", "**/.bazelversion"]
+SPDX-FileCopyrightText = "Copyright (c) 2026 Contributors to the Eclipse Foundation"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = ["tools/onboarding/tools/onboarding/schemas/context.schema.json"]
 SPDX-FileCopyrightText = "Copyright (c) 2026 Contributors to the Eclipse Foundation"
 SPDX-License-Identifier = "Apache-2.0"

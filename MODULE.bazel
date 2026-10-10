@@ -14,6 +14,14 @@ module(name = "score_module_template")
 
 bazel_dep(name = "rules_python", version = "1.8.5", dev_dependency = True)
 
+# Onboarding agent, nested here as its own module so other repos can depend on
+# it directly via `bazel_dep(name = "score_onboarding", ...)`.
+bazel_dep(name = "score_onboarding", version = "0.1.0", dev_dependency = True)
+local_path_override(
+    module_name = "score_onboarding",
+    path = "tools/onboarding",
+)
+
 # Python 3.12: Required for testing infrastructure and code generation tools
 PYTHON_VERSION = "3.12"
 
