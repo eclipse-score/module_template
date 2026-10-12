@@ -28,7 +28,7 @@
     The above directive must be updated according to your Component.
 
     - Modify ``Component Name`` to be your Component Name
-    - Modify ``id`` to be your Component Name in upper snake case preceded by ``doc__`` and followed by ``_requirements``
+    - Modify ``id`` to be your Component Name in lower snake case preceded by ``doc__`` and followed by ``_requirements``
     - Adjust ``status`` to be ``valid``
     - Adjust ``safety``, ``security`` and ``tags`` according to your needs
 

@@ -18,16 +18,21 @@
 =========================
 
 .. document:: [Module Name] User Manual
-   :id: doc__user_manual
+   :id: doc__mod_temp_module_name_user_manual
    :status: draft
    :version: 1
    :safety: QM
    :security: NO
    :realizes: wp__module_user_manual[version==1]
-
+   :tags: template
 
 .. attention::
-    Update the document metadata according to your needs.
+    The above directive must be updated according to your Module.
+
+    - Modify ``Your Module Name`` to be your Module Name
+    - Modify ``id`` to be your Module Name in lower snake case preceded by ``doc__`` and followed by ``_user_manual``
+    - Adjust ``status`` to be ``valid``
+    - Adjust ``safety``, ``security`` and ``tags`` according to your needs
 
 Overview
 ========

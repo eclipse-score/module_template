@@ -30,7 +30,7 @@
     The above directive must be updated according to your Module.
 
     - Modify ``Your Module Name`` to be your Module Name or put "Platform"
-    - Modify ``id`` to be your Module Name in upper snake case preceded by ``doc__`` and succeeded by ``safety_manual``
+    - Modify ``id`` to be your Module Name in lower snake case preceded by ``doc__`` and followed by ``_safety_manual``
     - Adjust ``status`` to be ``valid``
     - Adjust ``safety`` and ``tags`` according to your needs
 
@@ -106,5 +106,5 @@ Safety Anomalies
 
 References
 ----------
-| <link to the user manual>
+| :need:`doc__mod_temp_module_name_user_manual`
 | <other links>

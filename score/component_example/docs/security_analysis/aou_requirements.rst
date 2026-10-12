@@ -16,7 +16,7 @@
 ====================================================
 
 .. document:: [Component Name] Component AoU
-   :id: doc__component_name_feat_sec_aou
+   :id: doc__mod_temp_component_name_comp_sec_aou
    :status: draft
    :version: 1
    :safety: QM
@@ -29,7 +29,7 @@
     The above directive must be updated according to your Component.
 
     - Modify ``Component Name`` to be your Component Name
-    - Modify ``id`` to be your Component Name in upper snake case preceded by ``doc__`` and followed by ``_comp_aou``
+    - Modify ``id`` to be your Component Name in lower snake case preceded by ``doc__`` and followed by ``_comp_sec_aou``
     - Adjust ``status`` to be ``valid``
     - Adjust ``safety``, ``security`` and ``tags`` according to your needs
 
