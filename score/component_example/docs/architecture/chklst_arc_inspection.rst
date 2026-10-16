@@ -184,10 +184,10 @@ Summary
 Inspected Static Architecture Views
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The following static views in "valid" state and with "inspected" tag set are in the scope of this inspection:
+The following static views in "valid_inspected" state are in the scope of this inspection:
 
 .. needtable::
-   :filter: "component_name" in docname and "architecture" in docname and docname is not None and status == "valid"
+   :filter: "component_name" in docname and "architecture" in docname and docname is not None
    :style: table
    :types: comp_arc_sta
    :tags: component_name
@@ -201,7 +201,7 @@ Inspected Dynamic Architecture Views
 and the following dynamic views:
 
 .. needtable::
-   :filter: "component_name" in docname and "architecture" in docname and docname is not None and status == "valid"
+   :filter: "component_name" in docname and "architecture" in docname and docname is not None
    :style: table
    :types: comp_arc_dyn
    :tags: component_name
