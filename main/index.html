@@ -800,19 +800,23 @@ templates and guidelines.&gt;</p>
 <p>This could also contain just a link to the repository’s README</p>
 </div>
 <p>To build the entire module:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bazel<span class="w"> </span>build<span class="w"> </span>//src/...
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bazel<span class="w"> </span>build<span class="w"> </span>//score/...
 </pre></div>
 </div>
 <p>To run all tests:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bazel<span class="w"> </span><span class="nb">test</span><span class="w"> </span>//...
 </pre></div>
 </div>
-<p>To run only unit tests:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bazel<span class="w"> </span><span class="nb">test</span><span class="w"> </span>//src/...
+<p>To run only the unit tests of a component (example):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bazel<span class="w"> </span><span class="nb">test</span><span class="w"> </span>//score/component_example:component_example_unit_tests
 </pre></div>
 </div>
-<p>To run only component or feature integration tests:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bazel<span class="w"> </span><span class="nb">test</span><span class="w"> </span>//tests/...
+<p>To run only the component integration tests of a component (example):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bazel<span class="w"> </span><span class="nb">test</span><span class="w"> </span>//score/component_example:component_example_component_integration_tests
+</pre></div>
+</div>
+<p>To run only feature integration tests:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bazel<span class="w"> </span><span class="nb">test</span><span class="w"> </span>//score/tests/...
 </pre></div>
 </div>
 <section id="module-build-configuration">
@@ -829,7 +833,7 @@ See <a class="reference external" href="https://eclipse-score.github.io/score/ma
 </section>
 <section id="release-notes">
 <h2>Release Notes<a class="headerlink" href="#release-notes" title="Link to this heading">#</a></h2>
-<p>The Module documentation covers the module-level view, including architecture, safety management documents, and the user manual.</p>
+<p>The Release Notes document the changes, known issues and compatibility information of each module release.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="release_notes/index.html">Release notes</a></li>
