@@ -219,7 +219,7 @@ The following static views in "valid_inspected" state are in the scope of this i
 Inspected Dynamic Architecture Views
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-and the following dynamic views "valid" state and with "inspected" tag set are in the scope of this inspection:
+and the following dynamic views in "valid_inspected" state are in the scope of this inspection:
 
 .. needtable::
    :filter: "feature_name" in docname and "architecture" in docname and docname is not None
