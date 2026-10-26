@@ -113,6 +113,7 @@ Improvements
 - Update dependency score_cpp_policies to v0.1.2 by @eclipse-score-bot in https://github.com/eclipse-score/module_template/pull/207
 - Update dependency score_docs_as_code to v8.5.1 by @eclipse-score-bot in https://github.com/eclipse-score/module_template/pull/211
 - Update dependency score_devcontainer to v1.11.3 by @eclipse-score-bot in https://github.com/eclipse-score/module_template/pull/212
+- Add release notes v020 by @masc2023 in https://github.com/eclipse-score/module_template/pull/213
 
 
 Bug Fixes
