@@ -74,10 +74,10 @@ bazel_dep(name = "buildifier_prebuilt", version = "8.5.1.2", dev_dependency = Tr
 
 #docs-as-code
 bazel_dep(name = "score_docs_as_code", version = "8.5.1")
-bazel_dep(name = "score_process_description", version = "2.1.2")
+bazel_dep(name = "score_process_description", version = "2.2.1")
 git_override(
     module_name = "score_process_description",
-    commit = "6606668a19d995829d9dbbf53950e5fc55b977e0",
+    commit = "c0d5e1cd37569712e11d2687c375cbd7ea3f709b",
     remote = "https://github.com/eclipse-score/process_description.git",
 )
 
