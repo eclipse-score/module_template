@@ -466,5 +466,9 @@
   {
     "version": "pr-213",
     "url": "https://eclipse-score.github.io/module_template/pr-213/"
+  },
+  {
+    "version": "v0.2.0",
+    "url": "https://eclipse-score.github.io/module_template/v0.2.0/"
   }
 ]
