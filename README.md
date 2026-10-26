@@ -86,16 +86,22 @@ All tests:
 bazel test //...
 ```
 
-Unit tests:
+Unit tests of a component (example):
 
 ```sh
-bazel test //score/...
+bazel test //score/component_example:component_example_unit_tests
 ```
 
-Component / Feature integration tests:
+Component integration tests of a component (example):
 
 ```sh
-bazel test //tests/...
+bazel test //score/component_example:component_example_component_integration_tests
+```
+
+Feature integration tests:
+
+```sh
+bazel test //score/tests/...
 ```
 
 ---
@@ -113,10 +119,10 @@ The template integrates **tools and linters** from **centralized repositories** 
 ## 📖 Documentation
 
 - A **centralized docs structure** is planned.
-- This template builds Sphinx from the repository root. The configuration stays in
-    `conf.py`, the main document is `docs/index.rst`, and the root `BUILD` target uses
-    a repository-local `docs.bzl` wrapper because the upstream SCORE docs macro does not
-    currently support `source_dir = "."`.
+- The documentation is built with the `docs` macro of
+    [docs-as-code](https://github.com/eclipse-score/docs-as-code) (root `BUILD`,
+    `source_dir = "docs"`). The main document is `docs/index.rst`; the component
+    documentation (e.g. `score/component_example/docs`) is mounted via `docs_bundle`.
 
 ```sh
 bazel run //:docs
