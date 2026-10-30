@@ -550,7 +550,7 @@
 <p class="admonition-title">Note</p>
 <p>Document header</p>
 </div>
-<div class="need_container docutils container" id="SNCB-40fb3dd5">
+<div class="need_container docutils container" id="SNCB-332d3787">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__mod_temp_component_name">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -559,7 +559,7 @@
 </td>
 <td class="head_center" colspan="2"><div class="needs_head line-block">
 <div class="line"><span><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></span></div>
-<div class="line"><span><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></span></div>
+<div class="line"><span><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></span></div>
 <div class="line"><span><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></span></div>
 </div>
 </td>
@@ -609,18 +609,30 @@
 <p>The above directives must be updated according to your Component.</p>
 <ul class="simple">
 <li><p>Modify <code class="docutils literal notranslate"><span class="pre">document</span></code> to be your Component Name</p></li>
-<li><p>Modify <code class="docutils literal notranslate"><span class="pre">id</span></code> to be your Component Name in upper snake case preceded by <code class="docutils literal notranslate"><span class="pre">doc__</span></code></p></li>
+<li><p>Modify <code class="docutils literal notranslate"><span class="pre">id</span></code> to be your Component Name in lower snake case preceded by <code class="docutils literal notranslate"><span class="pre">doc__</span></code></p></li>
 <li><p>Adjust <code class="docutils literal notranslate"><span class="pre">status</span></code> to be <code class="docutils literal notranslate"><span class="pre">valid</span></code></p></li>
-<li><p>Adjust <code class="docutils literal notranslate"><span class="pre">safety</span></code> and <code class="docutils literal notranslate"><span class="pre">tags</span></code> according to your needs</p></li>
+<li><p>Adjust <code class="docutils literal notranslate"><span class="pre">safety</span></code>, <code class="docutils literal notranslate"><span class="pre">security</span></code> and <code class="docutils literal notranslate"><span class="pre">tags</span></code> according to your needs</p></li>
+<li><p>Take the <code class="docutils literal notranslate"><span class="pre">comp</span></code> directive out of the code block and adapt it to your Component</p></li>
 </ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This document is the Component Request (CR) of the component. It describes the current state of the component.
+Content that belongs to a change of the component, like rationale, rejected ideas, open issues and the impact on
+safety, security and license, is documented in a Decision Record (<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/change_management/guidance/change_management_decision_record_template.html#gd_temp__change_decision_record">gd_temp__change_decision_record</a>) and,
+if needed, in an Impact Analysis (<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/change_management/guidance/change_management_impact_analysis_template.html#gd_temp__change_impact_analysis">gd_temp__change_impact_analysis</a>).</p>
 </div>
 <section id="abstract">
 <h2>Abstract<a class="headerlink" href="#abstract" title="Link to this heading">#</a></h2>
 <p>[A short (~200 word) description of the component.]</p>
 </section>
+<section id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Link to this heading">#</a></h2>
+<p>[Explain why the component is needed: which features or stakeholder needs it serves and why existing components are not sufficient.]</p>
+</section>
 <section id="specification">
 <h2>Specification<a class="headerlink" href="#specification" title="Link to this heading">#</a></h2>
-<p>[Describe the requirements, architecture of any component.] or</p>
+<p>[Describe the requirements and architecture of the component. Details are documented in the documents listed in Component Detail Information.]</p>
 </section>
 <section id="how-to-teach-this">
 <h2>How to Teach This<a class="headerlink" href="#how-to-teach-this" title="Link to this heading">#</a></h2>
@@ -633,10 +645,10 @@
 <section id="footnotes">
 <h2>Footnotes<a class="headerlink" href="#footnotes" title="Link to this heading">#</a></h2>
 <p>[A collection of footnotes cited in the CR, and a place to list non-inline hyperlink targets.]</p>
-<p>Further Documentation of the component can be found in the following sections:</p>
 </section>
 <section id="component-detail-information">
 <h2>Component Detail Information<a class="headerlink" href="#component-detail-information" title="Link to this heading">#</a></h2>
+<p>Further documentation of the component can be found in the following documents:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The documents listed below describe this component. Create separate architecture, safety-analysis, and security-analysis documents for subcomponents only when this component is decomposed into subcomponents and those artifacts apply.</p>
@@ -705,6 +717,7 @@
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specification">Specification</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-teach-this">How to Teach This</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">Footnotes</a></li>
