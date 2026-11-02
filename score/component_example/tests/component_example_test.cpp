@@ -21,6 +21,11 @@ namespace component_example {
 
 // Component Integration Test (CIT) for component_example component.
 TEST(ComponentExampleTest, MakeHelloMessageReturnsExpectedGreeting) {
+    RecordProperty("PartiallyVerifies", "comp_req__mod_temp_component_name__some_title");
+    RecordProperty("TestType", "requirements-based");
+    RecordProperty("DerivationTechnique", "requirements-analysis");
+    RecordProperty("Description", "Verify make_hello_message returns the greeting for each name.");
+
     EXPECT_EQ(make_hello_message("World"), "Hello, World!");
     EXPECT_EQ(make_hello_message("SCORE"), "Hello, SCORE!");
 }

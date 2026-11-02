@@ -53,7 +53,7 @@ docs(
             "mount_at": "examples",
         },
     ],
-    data = [
+    external_needs = [
         "@score_process_description//:needs_json",
     ],
     project = "Module Template Project",
