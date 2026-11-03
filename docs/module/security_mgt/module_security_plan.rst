@@ -43,7 +43,7 @@ Security Management Scope
 ==========================
 
 This Security Plan's scope is a SW module of the SW platform <link to module documentation in platform/modules/<modulename>/index.rst>.
-The module consists of one or more SW components and will be qualified as a OoC.
+The module consists of one or more SW components and will be qualified as a Component Out-of-Context (OoC).
 
 Security Management Roles
 ==========================
@@ -122,31 +122,31 @@ One set of work products for the module and one set for each component of the mo
           - WP status
 
         * - :need:`wp__module_security_plan`
-          - Security management guideline
+          - :need:`gd_guidl__security_plan_definitions`
           - <automated>
           - <Link to issue>
           - this document
           - see above
 
         * - :need:`wp__module_security_package`
-          - Security management guideline
+          - :need:`gd_guidl__security_package`
           - <automated>
           - <Link to issue>
-          - <Link to WP>
+          - this document (including the linked documentation)
           - <automated>
 
         * - :need:`wp__fdr_reports_security` (Module Security Plan)
           - :need:`gd_chklst__security_plan`
           - <automated>
           - <Link to issue>
-          - <Link to WP>
+          - :need:`doc__mod_temp_module_name_security_plan_fdr`
           - <automated>
 
         * - :need:`wp__fdr_reports_security` (Module Security Package)
           - :need:`Security Package Formal Review Checklist <gd_chklst__security_package>`
           - <automated>
           - <Link to issue>
-          - <Link to WP>
+          - :need:`doc__mod_temp_module_name_sec_pkg_fdr`
           - <automated>
 
         * - :need:`wp__fdr_reports_security` (Module's Security Analyses)
@@ -167,21 +167,21 @@ One set of work products for the module and one set for each component of the mo
           - :need:`gd_temp__module_security_manual`
           - <automated>
           - <Link to issue>
-          - <Link to WP>
+          - :need:`doc__mod_temp_module_name_security_manual`
           - <automated>
 
         * - :need:`wp__verification_module_ver_report`
-          - Verification process guidance
+          - :need:`gd_temp__mod_ver_report`
           - <automated>
           - <Link to issue>
-          - <Link to WP>
+          - :need:`doc__mod_temp_verification_report`
           - <automated>
 
         * - :need:`wp__module_sw_release_note`
-          - Release management guidance
+          - :need:`gd_temp__rel_mod_rel_note`
           - <automated>
           - <Link to issue>
-          - <Link to WP>
+          - :need:`doc__mod_temp_module_name_release_note`
           - <automated>
 
         * - :need:`wp__module_user_manual`
@@ -192,7 +192,7 @@ One set of work products for the module and one set for each component of the mo
           - <automated>
 
         * - :need:`wp__sw_module_sbom`
-          - Security management guidance
+          - :need:`gd_guidl__security_plan_definitions`
           - not started
           - <Link to issue>
           - <Link to WP>
@@ -210,31 +210,31 @@ One set of work products for the module and one set for each component of the mo
           - WP status
 
         * - :need:`wp__requirements_comp`
-          - <Link to process>
+          - :need:`gd_temp__req_comp_req`
           - <automated>
           - <Link to issue>
-          - <Link to WP>
+          - :need:`doc__mod_temp_component_name_requirements`
           - <automated>
 
         * - :need:`wp__requirements_comp_aou`
-          - <Link to process>
+          - :need:`gd_temp__req_aou_req`
           - <automated>
           - <Link to issue>
-          - <Link to WP>
+          - :need:`doc__mod_temp_component_name_comp_sec_aou`
           - <automated>
 
         * - :need:`wp__requirements_inspect`
-          - <Link to process>
+          - :need:`gd_chklst__req_inspection`
           - <automated>
           - n/a
           - Checklist used in Pull Request Review
           - n/a
 
         * - :need:`wp__component_arch`
-          - <Link to process>
+          - :need:`gd_temp__arch_comp`
           - <automated>
           - <Link to issue>
-          - <Link to WP>
+          - :need:`doc__mod_temp_component_name_architecture`
           - <automated>
 
         * - :need:`wp__sw_component_security_analysis`
@@ -245,36 +245,36 @@ One set of work products for the module and one set for each component of the mo
           - <automated>
 
         * - :need:`wp__sw_arch_verification`
-          - <Link to process>
+          - :need:`gd_chklst__arch_inspection_checklist`
           - <automated>
           - <Link to issue>
-          - <Link to WP>
+          - :need:`doc__mod_temp_component_name_arc_inspection`
           - <automated>
 
         * - :need:`wp__sw_implementation`
-          - <Link to process>
+          - :need:`gd_guidl__implementation`
           - <automated>
           - <Link to issue>
-          - <Link to WP>
+          - :need:`doc__mod_temp_component_name_detailed_design` & <Link to code>
           - <automated>
 
         * - :need:`wp__verification_sw_unit_test`
-          - <Link to process>
+          - :need:`gd_guidl__verification_guide`
           - <automated>
           - <Link to issue>
-          - <Link to WP>
+          - :need:`doc__mod_temp_verification_report`
           - <automated>
 
         * - :need:`wp__sw_implementation_inspection`
-          - <Link to process>
+          - :need:`gd_chklst__impl_inspection_checklist`
           - <automated>
           - <Link to issue>
-          - <Link to WP>
+          - :need:`doc__mod_temp_component_name_impl_inspection`
           - <automated>
 
         * - :need:`wp__verification_comp_int_test`
-          - <Link to process>
+          - :need:`gd_guidl__verification_guide`
           - <automated>
           - <Link to issue>
-          - <Link to WP>
+          - :need:`doc__mod_temp_verification_report`
           - <automated>
