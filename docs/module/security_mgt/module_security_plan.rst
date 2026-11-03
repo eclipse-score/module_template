@@ -34,30 +34,82 @@
     - Adjust ``status`` to be ``valid``
     - Adjust ``safety`` and ``tags`` according to your needs
 
+Security Management Context
+============================
 
-  | **1. Security Management Context**
-  | This Security Plan adds to the process security management guidance all the module development relevant work products needed for ISO SAE 21434 conformity.
-   |
-   | **2. Security Management Scope**
-   | This Security Plan's scope is a SW module of the SW platform <link to module documentation in platform/modules/<modulename>/index.rst>.
-   | The module consists of one or more SW components and will be qualified as a OoC.
-   |
-   | **3. Security Management Roles**
+This Security Plan adds to the process security management guidance all the module development relevant work products needed for ISO SAE 21434 conformity.
 
-   +---------------------------+--------------------------------------------------------------+
-   | Security Manager          | <link to Module's Security Manager assignment or name>       |
-   +---------------------------+--------------------------------------------------------------+
-   | Project Manager           | <link to Module's Project Lead assignment or name>           |
-   +---------------------------+--------------------------------------------------------------+
+Security Management Scope
+==========================
 
-  | **4. Tailoring**
-  | Additional to the tailoring in the SW platform project as defined in the process security management guidance we define here the additional tailoring on module level.
-   |
-   | - Excluded for this module are additionally the following work products (and their related requirements):
-   |   - <ISO SAE 21434 reference>: <work product/requirement> - <Argumentation why it is not needed or replaced by another work product or activity.>
-   |
-   | **5. Security Module Work Products**
-   | One set of work products for the module and one set for each component of the module:
+This Security Plan's scope is a SW module of the SW platform <link to module documentation in platform/modules/<modulename>/index.rst>.
+The module consists of one or more SW components and will be qualified as a OoC.
+
+Security Management Roles
+==========================
+
+.. list-table:: Module roles
+        :header-rows: 1
+
+        * - Role
+          - Assignee
+
+        * - Security Manager
+          - <link to Module's Security Manager assignment or name>
+
+        * - Project Manager
+          - <link to Module's Project Lead assignment or name>
+
+Tailoring
+=========
+
+Additional to the tailoring in the SW platform project as defined in the process security management guidance we define here the additional tailoring on module level.
+
+- Excluded for this module are additionally the following work products (and their related requirements):
+
+  - <ISO SAE 21434 reference>: <work product/requirement> - <Argumentation why it is not needed or replaced by another work product or activity.>
+
+Component Out-of-Context Assumptions
+======================================
+
+As this module is developed and qualified as a Component Out-of-Context (OoC), the following assumptions on its intended use, context and external interfaces are made. These assumptions are the basis for the module's cybersecurity requirements and shall be validated upon integration into an item or a higher-level component:
+
+- <assumption on intended use / operational environment>
+- <assumption on external interfaces>
+
+Off-the-Shelf / OSS Component Qualification
+=============================================
+
+If off-the-shelf or Open Source Software (OSS) components are integrated into this module, their cybersecurity-relevant documentation is gathered and analysed to determine whether the allocated cybersecurity requirements can be fulfilled and whether the existing documentation is sufficient to support the cybersecurity activities. The following OTS/OSS components are planned to be qualified this way:
+
+- <component name> - <maintenance status / known vulnerability history / available documentation> - <Link to qualification record or issue>
+
+If the existing documentation is insufficient for a component, the cybersecurity activities necessary to close the gap are identified here: <Link to issue/activity>.
+
+Cybersecurity Assessment Decision
+====================================
+
+The decision whether a Cybersecurity Assessment is performed for this module, and the rationale for that decision, is documented here:
+
+- Decision: <YES | NO>
+- Rationale: <rationale for the decision, e.g. based on the module's TARA results and/or organizational criteria>
+- If YES: responsible assessor, independent from the development team: <link to assignment>
+
+Vulnerability Monitoring and Management
+==========================================
+
+For this module, the following is defined for the continual cybersecurity activities after release:
+
+- Sources monitored for new cybersecurity information (e.g. advisories for used OTS/OSS components): <list sources>
+- SBOM generation: <tool/process used to generate and maintain the module's SBOM>
+- Vulnerability scan cadence: <e.g. on every release, on a fixed schedule, ...>
+- Triage and remediation responsible: <link to role/assignment>
+- Escalation to the cybersecurity incident response process: <link to process/contact>
+
+Security Module Work Products
+==============================
+
+One set of work products for the module and one set for each component of the module:
 
 .. list-table:: Module Work Products
         :header-rows: 1
