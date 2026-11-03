@@ -123,7 +123,7 @@ Feature Requirements Status
 ---------------------------
 
 .. needtable::
-   :filter: docname is not None and "feature_example" in docname and "requirements" in docname
+   :filter: docname is not None and "feature_name" in docname and "requirements" in docname
    :style: table
    :types: feat_req
    :tags: feature_name

@@ -62,7 +62,7 @@ List of AoUs expected from the environment the platform / module runs on:
    results = []
 
    for need in needs.filter_types(["aou_req"]):
-      if need and "environment" in need["tags"]:
+      if need and "environment" in need["tags"] and need["safety"] != "QM":
                 results.append(need)
 
 .. attention::
@@ -90,7 +90,7 @@ This means for every feature the user selects, the platform safety manual and th
    results = []
 
    for need in needs.filter_types(["aou_req"]):
-      if need and "environment" not in need["tags"]:
+      if need and "environment" not in need["tags"] and need["safety"] != "QM":
                 results.append(need)
 
 .. attention::
