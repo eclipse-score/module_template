@@ -103,22 +103,28 @@ Security concept of the OoC
 | <Describe here the security concept incl. which attack paths are taken care of, reactions of the implemented functions under threatened operating conditions ... if this is not already documented sufficiently in the feature documentation "security impact" section of all the features the module is used in.>
 
 Cybersecurity Claims and Residual Risk
-----------------------------------------
-| For cybersecurity risks that were treated by "accept" or "share" in the module's TARA risk treatment decision (rather than mitigated by a cybersecurity requirement), the resulting cybersecurity claim and the residual risk are documented here. These claims are assumptions the integrator has to fulfil, or risks the integrator knowingly accepts, when using this module.
-| <List here the cybersecurity claims and the residual risk per accepted/shared threat scenario, with a link to the corresponding TARA entry.>
+--------------------------------------
+
+For cybersecurity risks that were treated by "accept" or "share" in the module's TARA risk treatment decision (rather than mitigated by a cybersecurity requirement), the resulting cybersecurity claim and the residual risk are documented here. These claims are assumptions the integrator has to fulfil, or risks the integrator knowingly accepts, when using this module.
+
+<List here the cybersecurity claims and the residual risk per accepted/shared threat scenario, with a link to the corresponding TARA entry.>
 
 Secure Configuration and Hardening
--------------------------------------
-| <Describe here the assumptions on cryptographic algorithms/key and secrets management, and on OS-level access control (e.g. secure boot, HSM/TEE usage, user/process privilege separation) the module relies on. These are in addition to the general Assumptions of Use above.>
+----------------------------------
+
+<Describe here the assumptions on cryptographic algorithms/key and secrets management, and on OS-level access control (e.g. secure boot, HSM/TEE usage, user/process privilege separation) the module relies on. These are in addition to the general Assumptions of Use above.>
 
 Security Weaknesses, Vulnerabilities
 ------------------------------------
-| Weaknesses, vulnerabilities (bugs in security relevant SW, detected by testing or by users, which could not be fixed) known before release are documented in the platform/module release notes <add link to release note>.
-| Vulnerabilities discovered after release shall be reported via <link to SECURITY.md / PSIRT contact for this module>.
+
+Weaknesses, vulnerabilities (bugs in security relevant SW, detected by testing or by users, which could not be fixed) known before release are documented in the platform/module release notes <add link to release note>.
+
+Vulnerabilities discovered after release shall be reported via <link to SECURITY.md / PSIRT contact for this module>.
 
 Security Support
--------------------
-| <Describe here until when security support (i.e. vulnerability monitoring and fixes) is provided for this module/version, and what happens at end of security support.>
+----------------
+
+<Describe here until when security support (i.e. vulnerability monitoring and fixes) is provided for this module/version, and what happens at end of security support.>
 
 References
 ----------
