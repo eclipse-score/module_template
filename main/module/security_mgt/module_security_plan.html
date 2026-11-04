@@ -477,6 +477,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../safety_mgt/index.html">Safety Management</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Security Management</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a aria-current="page" class="current reference internal" href="#">[Module Name] Security Plan</a></li>
+
+
+
+
+
+
+
+
+
 <li class="toctree-l2"><a class="reference internal" href="module_security_plan_fdr.html">[Module Name] Security Plan Formal Review Report</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_security_package_fdr.html">[Module Name] Security Package Formal Review Report</a></li>
 </ul>
@@ -550,7 +559,7 @@
 <p class="admonition-title">Note</p>
 <p>Document header</p>
 </div>
-<div class="need_container docutils container" id="SNCB-f54a1459">
+<div class="need_container docutils container" id="SNCB-96a35328">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__mod_temp_module_name_security_plan">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -596,51 +605,96 @@
 </div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<blockquote>
-<div><p>The above directive must be updated according to your Module.</p>
+<p>The above directive must be updated according to your Module.</p>
 <ul class="simple">
 <li><p>Modify <code class="docutils literal notranslate"><span class="pre">Your</span> <span class="pre">Module</span> <span class="pre">Name</span></code> to be your Module Name</p></li>
 <li><p>Modify <code class="docutils literal notranslate"><span class="pre">id</span></code> to be your Module Name in lower snake case preceded by <code class="docutils literal notranslate"><span class="pre">doc__</span></code> and followed by <code class="docutils literal notranslate"><span class="pre">_security_plan</span></code></p></li>
 <li><p>Adjust <code class="docutils literal notranslate"><span class="pre">status</span></code> to be <code class="docutils literal notranslate"><span class="pre">valid</span></code></p></li>
 <li><p>Adjust <code class="docutils literal notranslate"><span class="pre">safety</span></code> and <code class="docutils literal notranslate"><span class="pre">tags</span></code> according to your needs</p></li>
 </ul>
-</div></blockquote>
-<div class="line-block">
-<div class="line"><strong>1. Security Management Context</strong></div>
-<div class="line">This Security Plan adds to the process security management guidance all the module development relevant work products needed for ISO SAE 21434 conformity.
-|
-| <strong>2. Security Management Scope</strong>
-| This Security Plan’s scope is a SW module of the SW platform &lt;link to module documentation in platform/modules/&lt;modulename&gt;/index.rst&gt;.
-| The module consists of one or more SW components and will be qualified as a OoC.
-|
-| <strong>3. Security Management Roles</strong></div>
 </div>
-<blockquote>
-<div><div class="pst-scrollable-table-container"><table class="table">
+</section>
+<section id="security-management-context">
+<h1>Security Management Context<a class="headerlink" href="#security-management-context" title="Link to this heading">#</a></h1>
+<p>This Security Plan adds to the process security management guidance all the module development relevant work products needed for ISO SAE 21434 conformity.</p>
+</section>
+<section id="security-management-scope">
+<h1>Security Management Scope<a class="headerlink" href="#security-management-scope" title="Link to this heading">#</a></h1>
+<p>This Security Plan’s scope is a SW module of the SW platform &lt;link to module documentation in platform/modules/&lt;modulename&gt;/index.rst&gt;.
+The module consists of one or more SW components and will be qualified as a Component Out-of-Context (OoC).</p>
+</section>
+<section id="security-management-roles">
+<h1>Security Management Roles<a class="headerlink" href="#security-management-roles" title="Link to this heading">#</a></h1>
+<div class="pst-scrollable-table-container"><table class="table" id="id1">
+<caption><span class="caption-number">Table 18 </span><span class="caption-text">Module roles</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Role</p></th>
+<th class="head"><p>Assignee</p></th>
+</tr>
+</thead>
 <tbody>
-<tr class="row-odd"><td><p>Security Manager</p></td>
+<tr class="row-even"><td><p>Security Manager</p></td>
 <td><p>&lt;link to Module’s Security Manager assignment or name&gt;</p></td>
 </tr>
-<tr class="row-even"><td><p>Project Manager</p></td>
+<tr class="row-odd"><td><p>Project Manager</p></td>
 <td><p>&lt;link to Module’s Project Lead assignment or name&gt;</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-</div></blockquote>
-<div class="line-block">
-<div class="line"><strong>4. Tailoring</strong></div>
-<div class="line">Additional to the tailoring in the SW platform project as defined in the process security management guidance we define here the additional tailoring on module level.
-|
-| - Excluded for this module are additionally the following work products (and their related requirements):
-|   - &lt;ISO SAE 21434 reference&gt;: &lt;work product/requirement&gt; - &lt;Argumentation why it is not needed or replaced by another work product or activity.&gt;
-|
-| <strong>5. Security Module Work Products</strong>
-| One set of work products for the module and one set for each component of the module:</div>
-</div>
-</div>
-<div class="pst-scrollable-table-container"><table class="table" id="id1">
-<caption><span class="caption-number">Table 18 </span><span class="caption-text">Module Work Products</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+</section>
+<section id="tailoring">
+<h1>Tailoring<a class="headerlink" href="#tailoring" title="Link to this heading">#</a></h1>
+<p>Additional to the tailoring in the SW platform project as defined in the process security management guidance we define here the additional tailoring on module level.</p>
+<ul class="simple">
+<li><p>Excluded for this module are additionally the following work products (and their related requirements):</p>
+<ul>
+<li><p>&lt;ISO SAE 21434 reference&gt;: &lt;work product/requirement&gt; - &lt;Argumentation why it is not needed or replaced by another work product or activity.&gt;</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="component-out-of-context-assumptions">
+<h1>Component Out-of-Context Assumptions<a class="headerlink" href="#component-out-of-context-assumptions" title="Link to this heading">#</a></h1>
+<p>As this module is developed and qualified as a Component Out-of-Context (OoC), the following assumptions on its intended use, context and external interfaces are made. These assumptions are the basis for the module’s cybersecurity requirements and shall be validated upon integration into an item or a higher-level component:</p>
+<ul class="simple">
+<li><p>&lt;assumption on intended use / operational environment&gt;</p></li>
+<li><p>&lt;assumption on external interfaces&gt;</p></li>
+</ul>
+</section>
+<section id="off-the-shelf-oss-component-qualification">
+<h1>Off-the-Shelf / OSS Component Qualification<a class="headerlink" href="#off-the-shelf-oss-component-qualification" title="Link to this heading">#</a></h1>
+<p>If off-the-shelf or Open Source Software (OSS) components are integrated into this module, their cybersecurity-relevant documentation is gathered and analysed to determine whether the allocated cybersecurity requirements can be fulfilled and whether the existing documentation is sufficient to support the cybersecurity activities. The following OTS/OSS components are planned to be qualified this way:</p>
+<ul class="simple">
+<li><p>&lt;component name&gt; - &lt;maintenance status / known vulnerability history / available documentation&gt; - &lt;Link to qualification record or issue&gt;</p></li>
+</ul>
+<p>If the existing documentation is insufficient for a component, the cybersecurity activities necessary to close the gap are identified here: &lt;Link to issue/activity&gt;.</p>
+</section>
+<section id="cybersecurity-assessment-decision">
+<h1>Cybersecurity Assessment Decision<a class="headerlink" href="#cybersecurity-assessment-decision" title="Link to this heading">#</a></h1>
+<p>The decision whether a Cybersecurity Assessment is performed for this module, and the rationale for that decision, is documented here:</p>
+<ul class="simple">
+<li><p>Decision: &lt;YES | NO&gt;</p></li>
+<li><p>Rationale: &lt;rationale for the decision, e.g. based on the module’s TARA results and/or organizational criteria&gt;</p></li>
+<li><p>If YES: responsible assessor, independent from the development team: &lt;link to assignment&gt;</p></li>
+</ul>
+</section>
+<section id="vulnerability-monitoring-and-management">
+<h1>Vulnerability Monitoring and Management<a class="headerlink" href="#vulnerability-monitoring-and-management" title="Link to this heading">#</a></h1>
+<p>For this module, the following is defined for the continual cybersecurity activities after release:</p>
+<ul class="simple">
+<li><p>Sources monitored for new cybersecurity information (e.g. advisories for used OTS/OSS components): &lt;list sources&gt;</p></li>
+<li><p>SBOM generation: &lt;tool/process used to generate and maintain the module’s SBOM&gt;</p></li>
+<li><p>Vulnerability scan cadence: &lt;e.g. on every release, on a fixed schedule, …&gt;</p></li>
+<li><p>Triage and remediation responsible: &lt;link to role/assignment&gt;</p></li>
+<li><p>Escalation to the cybersecurity incident response process: &lt;link to process/contact&gt;</p></li>
+</ul>
+</section>
+<section id="security-module-work-products">
+<h1>Security Module Work Products<a class="headerlink" href="#security-module-work-products" title="Link to this heading">#</a></h1>
+<p>One set of work products for the module and one set for each component of the module:</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id2">
+<caption><span class="caption-number">Table 19 </span><span class="caption-text">Module Work Products</span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Work Product Id</p></th>
 <th class="head"><p>Link to process</p></th>
@@ -652,31 +706,31 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/security_management_workproducts.html#wp__module_security_plan">wp__module_security_plan</a></p></td>
-<td><p>Security management guideline</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/guidance/security_management_guideline.html#gd_guidl__security_plan_definitions">gd_guidl__security_plan_definitions</a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 <td><p>&lt;Link to issue&gt;</p></td>
 <td><p>this document</p></td>
 <td><p>see above</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/security_management_workproducts.html#wp__module_security_package">wp__module_security_package</a></p></td>
-<td><p>Security management guideline</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/guidance/security_management_guideline.html#gd_guidl__security_package">gd_guidl__security_package</a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 <td><p>&lt;Link to issue&gt;</p></td>
-<td><p>&lt;Link to WP&gt;</p></td>
+<td><p>this document (including the linked documentation)</p></td>
 <td><p>&lt;automated&gt;</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/security_management_workproducts.html#wp__fdr_reports_security">wp__fdr_reports_security</a> (Module Security Plan)</p></td>
 <td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/guidance/checklist_security_plan.html#gd_chklst__security_plan">gd_chklst__security_plan</a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 <td><p>&lt;Link to issue&gt;</p></td>
-<td><p>&lt;Link to WP&gt;</p></td>
+<td><p><a class="reference internal" href="module_security_plan_fdr.html#doc__mod_temp_module_name_security_plan_fdr" title="doc__mod_temp_module_name_security_plan_fdr"><em class="xref need">[Module Name] Security Plan... (doc__mod_temp_module_name_security_plan_fdr)</em></a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/security_management_workproducts.html#wp__fdr_reports_security">wp__fdr_reports_security</a> (Module Security Package)</p></td>
 <td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/guidance/checklist_security_package.html#gd_chklst__security_package">gd_chklst__security_package</a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 <td><p>&lt;Link to issue&gt;</p></td>
-<td><p>&lt;Link to WP&gt;</p></td>
+<td><p><a class="reference internal" href="module_security_package_fdr.html#doc__mod_temp_module_name_sec_pkg_fdr" title="doc__mod_temp_module_name_sec_pkg_fdr"><em class="xref need">[Module Name] Security Pack... (doc__mod_temp_module_name_sec_pkg_fdr)</em></a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/security_management_workproducts.html#wp__fdr_reports_security">wp__fdr_reports_security</a> (Module’s Security Analyses)</p></td>
@@ -697,21 +751,21 @@
 <td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/guidance/security_manual_templates.html#gd_temp__module_security_manual">gd_temp__module_security_manual</a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 <td><p>&lt;Link to issue&gt;</p></td>
-<td><p>&lt;Link to WP&gt;</p></td>
+<td><p><a class="reference internal" href="../manuals/security_manual.html#doc__mod_temp_module_name_security_manual" title="doc__mod_temp_module_name_security_manual"><em class="xref need">[Module Name] Security Manual (doc__mod_temp_module_name_security_manual)</em></a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/verification/verification_workproducts.html#wp__verification_module_ver_report">wp__verification_module_ver_report</a></p></td>
-<td><p>Verification process guidance</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/verification/guidance/verification_report_template.html#gd_temp__mod_ver_report">gd_temp__mod_ver_report</a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 <td><p>&lt;Link to issue&gt;</p></td>
-<td><p>&lt;Link to WP&gt;</p></td>
+<td><p><a class="reference internal" href="../../verification_report/module_verification_report.html#doc__mod_temp_verification_report" title="doc__mod_temp_verification_report"><em class="xref need">[Module Name] Verification ... (doc__mod_temp_verification_report)</em></a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/release_management/release_workproducts.html#wp__module_sw_release_note">wp__module_sw_release_note</a></p></td>
-<td><p>Release management guidance</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/release_management/guidance/release_templates.html#gd_temp__rel_mod_rel_note">gd_temp__rel_mod_rel_note</a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 <td><p>&lt;Link to issue&gt;</p></td>
-<td><p>&lt;Link to WP&gt;</p></td>
+<td><p><a class="reference internal" href="../release/release_note.html#doc__mod_temp_module_name_release_note" title="doc__mod_temp_module_name_release_note"><em class="xref need">[Module Name] Release Note (doc__mod_temp_module_name_release_note)</em></a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/release_management/release_workproducts.html#wp__module_user_manual">wp__module_user_manual</a></p></td>
@@ -722,7 +776,7 @@
 <td><p>&lt;automated&gt;</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/security_management_workproducts.html#wp__sw_module_sbom">wp__sw_module_sbom</a></p></td>
-<td><p>Security management guidance</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/guidance/security_management_guideline.html#gd_guidl__security_plan_definitions">gd_guidl__security_plan_definitions</a></p></td>
 <td><p>not started</p></td>
 <td><p>&lt;Link to issue&gt;</p></td>
 <td><p>&lt;Link to WP&gt;</p></td>
@@ -731,8 +785,8 @@
 </tbody>
 </table>
 </div>
-<div class="pst-scrollable-table-container"><table class="table" id="id2">
-<caption><span class="caption-number">Table 19 </span><span class="caption-text">Component &lt;name&gt; Work Products</span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
+<div class="pst-scrollable-table-container"><table class="table" id="id3">
+<caption><span class="caption-number">Table 20 </span><span class="caption-text">Component &lt;name&gt; Work Products</span><a class="headerlink" href="#id3" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Work Product Id</p></th>
 <th class="head"><p>Link to process</p></th>
@@ -744,31 +798,31 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements_comp">wp__requirements_comp</a></p></td>
-<td><p>&lt;Link to process&gt;</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/requirements_engineering/guidance/requirements_templates.html#gd_temp__req_comp_req">gd_temp__req_comp_req</a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 <td><p>&lt;Link to issue&gt;</p></td>
-<td><p>&lt;Link to WP&gt;</p></td>
+<td><p><a class="reference internal" href="../../components/component_example/requirements/requirements.html#doc__mod_temp_component_name_requirements" title="doc__mod_temp_component_name_requirements"><em class="xref need">[Component Name] Requirements (doc__mod_temp_component_name_requirements)</em></a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements_comp_aou">wp__requirements_comp_aou</a></p></td>
-<td><p>&lt;Link to process&gt;</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/requirements_engineering/guidance/requirements_templates.html#gd_temp__req_aou_req">gd_temp__req_aou_req</a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 <td><p>&lt;Link to issue&gt;</p></td>
-<td><p>&lt;Link to WP&gt;</p></td>
+<td><p><a class="reference internal" href="../../components/component_example/security_analysis/aou_requirements.html#doc__mod_temp_component_name_comp_sec_aou" title="doc__mod_temp_component_name_comp_sec_aou"><em class="xref need">[Component Name] Component AoU (doc__mod_temp_component_name_comp_sec_aou)</em></a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements_inspect">wp__requirements_inspect</a></p></td>
-<td><p>&lt;Link to process&gt;</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/requirements_engineering/guidance/requirements_inspection_checklist.html#gd_chklst__req_inspection">gd_chklst__req_inspection</a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 <td><p>n/a</p></td>
 <td><p>Checklist used in Pull Request Review</p></td>
 <td><p>n/a</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/architecture_design/architecture_workproducts.html#wp__component_arch">wp__component_arch</a></p></td>
-<td><p>&lt;Link to process&gt;</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/architecture_design/guidance/component_architecture_template.html#gd_temp__arch_comp">gd_temp__arch_comp</a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 <td><p>&lt;Link to issue&gt;</p></td>
-<td><p>&lt;Link to WP&gt;</p></td>
+<td><p><a class="reference internal" href="../../components/component_example/architecture/component_architecture.html#doc__mod_temp_component_name_architecture" title="doc__mod_temp_component_name_architecture"><em class="xref need">[Component Name] Architecture (doc__mod_temp_component_name_architecture)</em></a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_analysis/security_analysis_workproducts.html#wp__sw_component_security_analysis">wp__sw_component_security_analysis</a></p></td>
@@ -779,38 +833,38 @@
 <td><p>&lt;automated&gt;</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/architecture_design/architecture_workproducts.html#wp__sw_arch_verification">wp__sw_arch_verification</a></p></td>
-<td><p>&lt;Link to process&gt;</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/architecture_design/guidance/architecture_inspection_checklist.html#gd_chklst__arch_inspection_checklist">gd_chklst__arch_inspection_checklist</a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 <td><p>&lt;Link to issue&gt;</p></td>
-<td><p>&lt;Link to WP&gt;</p></td>
+<td><p><a class="reference internal" href="../../components/component_example/architecture/chklst_arc_inspection.html#doc__mod_temp_component_name_arc_inspection" title="doc__mod_temp_component_name_arc_inspection"><em class="xref need">[Component Name] Architectu... (doc__mod_temp_component_name_arc_inspection)</em></a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/implementation/implementation_workproducts.html#wp__sw_implementation">wp__sw_implementation</a></p></td>
-<td><p>&lt;Link to process&gt;</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/implementation/guidance/implementation_guideline.html#gd_guidl__implementation">gd_guidl__implementation</a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 <td><p>&lt;Link to issue&gt;</p></td>
-<td><p>&lt;Link to WP&gt;</p></td>
+<td><p><a class="reference internal" href="../../components/component_example/detailed_design/detailed_design_example.html#doc__mod_temp_component_name_detailed_design" title="doc__mod_temp_component_name_detailed_design"><em class="xref need">[Component Name] Detailed D... (doc__mod_temp_component_name_detailed_design)</em></a> &amp; &lt;Link to code&gt;</p></td>
 <td><p>&lt;automated&gt;</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/verification/verification_workproducts.html#wp__verification_sw_unit_test">wp__verification_sw_unit_test</a></p></td>
-<td><p>&lt;Link to process&gt;</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/verification/guidance/verification_guideline.html#gd_guidl__verification_guide">gd_guidl__verification_guide</a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 <td><p>&lt;Link to issue&gt;</p></td>
-<td><p>&lt;Link to WP&gt;</p></td>
+<td><p><a class="reference internal" href="../../verification_report/module_verification_report.html#doc__mod_temp_verification_report" title="doc__mod_temp_verification_report"><em class="xref need">[Module Name] Verification ... (doc__mod_temp_verification_report)</em></a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/implementation/implementation_workproducts.html#wp__sw_implementation_inspection">wp__sw_implementation_inspection</a></p></td>
-<td><p>&lt;Link to process&gt;</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/implementation/guidance/implementation_checklist.html#gd_chklst__impl_inspection_checklist">gd_chklst__impl_inspection_checklist</a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 <td><p>&lt;Link to issue&gt;</p></td>
-<td><p>&lt;Link to WP&gt;</p></td>
+<td><p><a class="reference internal" href="../../components/component_example/detailed_design/chklst_impl_inspection.html#doc__mod_temp_component_name_impl_inspection" title="doc__mod_temp_component_name_impl_inspection"><em class="xref need">[Component Name] Implementa... (doc__mod_temp_component_name_impl_inspection)</em></a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/verification/verification_workproducts.html#wp__verification_comp_int_test">wp__verification_comp_int_test</a></p></td>
-<td><p>&lt;Link to process&gt;</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/verification/guidance/verification_guideline.html#gd_guidl__verification_guide">gd_guidl__verification_guide</a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 <td><p>&lt;Link to issue&gt;</p></td>
-<td><p>&lt;Link to WP&gt;</p></td>
+<td><p><a class="reference internal" href="../../verification_report/module_verification_report.html#doc__mod_temp_verification_report" title="doc__mod_temp_verification_report"><em class="xref need">[Module Name] Verification ... (doc__mod_temp_verification_report)</em></a></p></td>
 <td><p>&lt;automated&gt;</p></td>
 </tr>
 </tbody>
@@ -856,6 +910,28 @@
                 <dialog id="pst-secondary-sidebar-modal"></dialog>
                 <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">[Module Name] Security Plan</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#security-management-context">Security Management Context</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#security-management-scope">Security Management Scope</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#security-management-roles">Security Management Roles</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tailoring">Tailoring</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#component-out-of-context-assumptions">Component Out-of-Context Assumptions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#off-the-shelf-oss-component-qualification">Off-the-Shelf / OSS Component Qualification</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cybersecurity-assessment-decision">Cybersecurity Assessment Decision</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vulnerability-monitoring-and-management">Vulnerability Monitoring and Management</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#security-module-work-products">Security Module Work Products</a></li>
+</ul>
+
+  </nav></div>
 
   <div class="sidebar-secondary-item">
 

@@ -561,7 +561,7 @@
 <p class="admonition-title">Note</p>
 <p>Document header</p>
 </div>
-<div class="need_container docutils container" id="SNCB-3d7cf8c7">
+<div class="need_container docutils container" id="SNCB-18ed24a8">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__mod_temp_module_name_security_manual">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -661,6 +661,10 @@ Also the HW related failures are taken into account by the system integrator, if
 </table>
 </div>
 </div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Make sure these AoU are here for a security reason, i.e. every one “mitigates” a security analysis entry.</p>
+</div>
 </section>
 <section id="assumptions-on-the-user">
 <h3>Assumptions on the User<a class="headerlink" href="#assumptions-on-the-user" title="Link to this heading">#</a></h3>
@@ -668,9 +672,12 @@ Also the HW related failures are taken into account by the system integrator, if
 <div class="line">As there is no assumption on which specific OS and HW is used, the integration testing of the stakeholder and feature requirements is expected to be performed by the user of the platform OoC. Tests covering all stakeholder and feature requirements performed on a reference platform (tbd link to reference platform specification), reviewed and passed are included in the platform OoC security package.</div>
 <div class="line">Additionally the components of the platform may have additional specific assumptions how they are used. These are part of every module documentation: &lt;link to add&gt;. Assumptions from components to their users can be fulfilled in two ways:</div>
 <div class="line">1. There are assumption which need to be fulfilled by all SW components, e.g. “every user of an IPC mechanism needs to make sure that he provides correct data (e.g. including appropriate security (access) control)” - in this case the AoU is marked as “platform”.</div>
-<div class="line">2. There are assumption which can be fulfilled by a security control realized by some other Project platform component and are therefore not relevant for an user who uses the whole platform. But those are relevant if you chose to use the module OcC stand-alone - in this case the AoU is marked as “module”. An example would be the “JSON read” which requires “The user shall provide a string as input which is not corrupted due to HW or QM SW errors.” - which is covered when using together with safe &lt;Project&gt; platform persistency feature.</div>
+<div class="line">2. There are assumption which can be fulfilled by a security control realized by some other Project platform component and are therefore not relevant for an user who uses the whole platform. But those are relevant if you chose to use the module OoC stand-alone - in this case the AoU is marked as “module”. An example would be an “external API input” AoU which requires “The user shall provide input that has been validated/sanitized against injection and has not been tampered with in transit” - which is covered when using together with the &lt;Project&gt; platform’s input validation / secure transport feature.</div>
 </div>
 <p>List of AoUs on the user of the platform features or the module of this Security Manual:</p>
+<p>Note: Platform security manual collects all platform wide AoU (have to be fulfilled by the user for any feature).
+Module security manual collects all AoUs specific to a feature and its realizing components.
+This means for every feature the user selects, the platform security manual and the related module manual has to be considered.</p>
 <div class="needstable_wrapper docutils container" id="needtable-module/manuals/security_manual-1">
 <div class="pst-scrollable-table-container"><table class="NEEDS_TABLE table" id="needtable-module/manuals/security_manual-1-table_node">
 <colgroup>
@@ -693,6 +700,10 @@ Also the HW related failures are taken into account by the system integrator, if
 </table>
 </div>
 </div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Make sure these AoU are here for a security reason, i.e. every one “mitigates” a security analysis entry.</p>
+</div>
 </section>
 </section>
 <section id="security-concept-of-the-ooc">
@@ -701,11 +712,23 @@ Also the HW related failures are taken into account by the system integrator, if
 <div class="line">&lt;Describe here the security concept incl. which attack paths are taken care of, reactions of the implemented functions under threatened operating conditions … if this is not already documented sufficiently in the feature documentation “security impact” section of all the features the module is used in.&gt;</div>
 </div>
 </section>
+<section id="cybersecurity-claims-and-residual-risk">
+<h2>Cybersecurity Claims and Residual Risk<a class="headerlink" href="#cybersecurity-claims-and-residual-risk" title="Link to this heading">#</a></h2>
+<p>For cybersecurity risks that were treated by “accept” or “share” in the module’s TARA risk treatment decision (rather than mitigated by a cybersecurity requirement), the resulting cybersecurity claim and the residual risk are documented here. These claims are assumptions the integrator has to fulfil, or risks the integrator knowingly accepts, when using this module.</p>
+<p>&lt;List here the cybersecurity claims and the residual risk per accepted/shared threat scenario, with a link to the corresponding TARA entry.&gt;</p>
+</section>
+<section id="secure-configuration-and-hardening">
+<h2>Secure Configuration and Hardening<a class="headerlink" href="#secure-configuration-and-hardening" title="Link to this heading">#</a></h2>
+<p>&lt;Describe here the assumptions on cryptographic algorithms/key and secrets management, and on OS-level access control (e.g. secure boot, HSM/TEE usage, user/process privilege separation) the module relies on. These are in addition to the general Assumptions of Use above.&gt;</p>
+</section>
 <section id="security-weaknesses-vulnerabilities">
 <h2>Security Weaknesses, Vulnerabilities<a class="headerlink" href="#security-weaknesses-vulnerabilities" title="Link to this heading">#</a></h2>
-<div class="line-block">
-<div class="line">Weaknesses, vulnerabilities (bugs in security relevant SW, detected by testing or by users, which could not be fixed) known before release are documented in the platform/module release notes &lt;add link to release note&gt;.</div>
-</div>
+<p>Weaknesses, vulnerabilities (bugs in security relevant SW, detected by testing or by users, which could not be fixed) known before release are documented in the platform/module release notes &lt;add link to release note&gt;.</p>
+<p>Vulnerabilities discovered after release shall be reported via &lt;link to SECURITY.md / PSIRT contact for this module&gt;.</p>
+</section>
+<section id="security-support">
+<h2>Security Support<a class="headerlink" href="#security-support" title="Link to this heading">#</a></h2>
+<p>&lt;Describe here until when security support (i.e. vulnerability monitoring and fixes) is provided for this module/version, and what happens at end of security support.&gt;</p>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
@@ -771,7 +794,10 @@ Also the HW related failures are taken into account by the system integrator, if
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#security-concept-of-the-ooc">Security concept of the OoC</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cybersecurity-claims-and-residual-risk">Cybersecurity Claims and Residual Risk</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#secure-configuration-and-hardening">Secure Configuration and Hardening</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#security-weaknesses-vulnerabilities">Security Weaknesses, Vulnerabilities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#security-support">Security Support</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
   </nav></div>
