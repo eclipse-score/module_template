@@ -39,7 +39,17 @@
 The purpose of this review checklist is to provide a guidence for reviewing the Security Plans for each module.
 Each Module Security Plan shall have one checklist filled.
 
-**2. Checklist**
+**2. Conduct**
+
+As described in :need:`wf__p_formal_security_rv`, the formal document review is performed by an "external" security auditor, supported by the Security Manager:
+
+- reviewer: <committer with security manager/auditor skills explicitly named here>
+
+.. note::
+    :need:`wf__p_formal_security_rv` is currently marked as "tailored out (needs discussion)" at process level.
+    Confirm with the Security Manager whether a formal review is actually performed for this Module before relying on this checklist.
+
+**3. Checklist**
 
 See also the review concept for further information about reviews in general and inspection in particular.
 
@@ -49,76 +59,99 @@ See also the review concept for further information about reviews in general and
         * - Id
           - Security Plan activity
           - Compliant to ISO SAE 21434?
+          - Reference
           - Comment
 
         * - 1
           - Is the rationale for the Security Work Products tailoring included?
           - [YES | NO ]
+          - :need:`[[title]] <std_req__isosae21434__prj_management_6431>`
+            :need:`[[title]] <std_req__isosae21434__prj_management_6432>`
           - <Rationale for result>
 
         * - 2
           - Is impact analysis planned in case of re-use of SW (needed for every release following the first formal release)?
           - [YES | NO ]
+          - :need:`[[title]] <std_req__isosae21434__prj_management_6441>`
+            :need:`[[title]] <std_req__isosae21434__prj_management_6442>`
+            :need:`[[title]] <std_req__isosae21434__prj_management_6443>`
           - <Rationale for result>
 
         * - 3
-          - Does the Security Plan define all needed activities for security management (including review and security audit)?
+          - Does the Security Plan define all needed activities for security management (including formal document review and security audit/assessment)?
           - [YES | NO ]
-          - <Rationale for result>
+          - :need:`[[title]] <std_req__isosae21434__prj_management_6411>`
+            :need:`[[title]] <std_wp__isosae21434__org_management_555>`
+          - Security audit and assessment have no dedicated ``std_req`` modeled in the process description, only the related work products/workflows (:need:`wf__p_fs_audit_security`, :need:`wf__p_formal_security_rv`).
 
         * - 4
           - Does the Security Plan define all needed activities for SW development, integration and verification?
           - [YES | NO ]
+          - :need:`[[title]] <std_req__isosae21434__prj_management_6421>`
           - <Rationale for result>
 
         * - 5
-          - Does the Security Plan define all needed activities for security analysis?
+          - Does the Security Plan define all needed activities for security analysis (TARA)?
           - [YES | NO ]
+          - :need:`[[title]] <std_req__isosae21434__prj_management_6421>`
           - <Rationale for result>
 
         * - 6
-          - Does the Security Plan define all needed activities for supporting processes (incl. tool mgt)?
+          - Does the Security Plan define all needed activities for supporting processes (incl. tool mgt, configuration and change management)?
           - [YES | NO ]
+          - :need:`[[title]] <std_req__isosae21434__prj_management_6421>`
           - <Rationale for result>
 
         * - 7
           - Does the Security Plan document a responsible for all activities?
           - [YES | NO ]
+          - :need:`[[title]] <std_req__isosae21434__prj_management_6411>`
           - <Rationale for result>
 
         * - 8
-          - If OSS software components is used, is it planned to be qualified?
+          - If OTS/OSS software components are used, is it planned to be qualified (e.g. maintenance status, CVE history, sufficiency of existing documentation)?
           - [YES | NO ]
+          - :need:`[[title]] <std_req__isosae21434__prj_management_6461>`
+            :need:`[[title]] <std_req__isosae21434__prj_management_6462>`
           - <Rationale for result>
 
         * - 9
           - Is a Security Manager and a Project Lead appointed for the project?
           - [YES | NO ]
+          - :need:`[[title]] <std_req__isosae21434__prj_management_6411>`
           - <Rationale for result>
 
         * - 10
           - Is Security Plan sufficiently linked to the Project Plan?
           - [YES | NO ]
+          - :need:`[[title]] <std_req__isosae21434__prj_management_6421>`
           - <Rationale for result>
 
         * - 11
           - Is Security Plan updated iteratively to show the progress?
           - [YES | NO ]
+          - :need:`[[title]] <std_req__isosae21434__prj_management_6421>`
           - <Rationale for result>
 
         * - 12
           - If Out-of-context software components is used, are the assumptions documented?
           - [YES | NO ]
+          - :need:`[[title]] <std_req__isosae21434__prj_management_6451>`
+            :need:`[[title]] <std_req__isosae21434__prj_management_6452>`
+            :need:`[[title]] <std_req__isosae21434__prj_management_6453>`
           - <Rationale for result>
 
         * - 13
           - Does the Security Plan define all needed activities for SBOM generation?
           - [YES | NO ]
+          - :need:`[[title]] <std_req__isosae21434__prj_management_6461>`
           - <Rationale for result>
 
         * - 14
           - Does the Security Plan define regular vulnerability scans for the generated SBOM?
           - [YES | NO ]
+          - :need:`[[title]] <std_req__isosae21434__continual_8521>`
+            :need:`[[title]] <std_req__isosae21434__continual_8621>`
           - <Rationale for result>
 
 .. note::

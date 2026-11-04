@@ -21,7 +21,7 @@
   :status: draft
   :version: 1
   :safety: ASIL_B
-  :security: YES
+  :security: NO
   :realizes: wp__fdr_reports
   :tags: template
 

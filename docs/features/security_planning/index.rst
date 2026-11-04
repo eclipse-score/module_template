@@ -16,7 +16,7 @@
 ##########################################
 
 .. document:: [Feature Name] Security WPs
-   :id: doc__feature_example_security_planning_wp
+   :id: doc__feature_example_security_wp
    :status: draft
    :version: 1
    :safety: ASIL_B
@@ -91,7 +91,7 @@ Security Work Products List
 .. attention::
     The above table must be updated according to your feature security planning.
 
-    - Fill the work producs links
+    - Fill the work products links
 
 Feature Security Package
 ========================

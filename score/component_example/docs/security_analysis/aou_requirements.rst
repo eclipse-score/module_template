@@ -51,7 +51,7 @@ Component AoU
       The Component User shall do xyz to use the component securely
 
    .. aou_req:: Another Title
-      :id: aou_req__mod_temp_component_name__another
+      :id: aou_req__mod_temp_component_name__sec_another
       :reqtype: Process
       :security: YES
       :safety: QM
