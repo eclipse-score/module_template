@@ -29,7 +29,7 @@ Feature Architecture File
 .. feat:: Feature 1
    :id: feat__mtef
    :security: YES
-   :safety: QM
+   :safety: ASIL_B
    :status: valid
    :version: 1
 
@@ -38,7 +38,7 @@ Feature Architecture File
 .. feat_arc_sta:: Feature 1 Static View
    :id: feat_arc_sta__example_feature__sta
    :security: YES
-   :safety: QM
+   :safety: ASIL_B
    :status: valid
    :version: 1
    :includes: logic_arc_int__example_feature__if_1, logic_arc_int__example_feature__if_2, logic_arc_int__example_feature__if_3
@@ -243,6 +243,7 @@ Feature or Component Architecture File(s)
    :version: 1
    :implements: logic_arc_int__example_feature__if_1
    :consists_of: comp__mod_temp_archex_sub_component_1, comp__mod_temp_archex_sub_component_2, comp__mod_temp_archex_sub_component_3
+   :fulfils: aou_req__example_feature__example_req
    :belongs_to: feat__mtef
 
    Example Component 1 description.
@@ -251,6 +252,7 @@ Feature or Component Architecture File(s)
    :id: comp__mod_temp_component_example_2
    :security: YES
    :safety: ASIL_B
+   :fulfils: aou_req__example_feature__example_req
    :status: valid
    :version: 1
    :implements: logic_arc_int__example_feature__if_2
@@ -291,6 +293,7 @@ Feature or Component Architecture File(s)
    :status: valid
    :version: 1
    :safety: ASIL_B
+   :fulfils: aou_req__example_feature__example_req
    :security: NO
    :uses: logic_arc_int__example_feature__if_2
    :implements: logic_arc_int__example_feature__if_1
@@ -306,6 +309,7 @@ Feature or Component Architecture File(s)
    :status: valid
    :version: 1
    :safety: ASIL_B
+   :fulfils: aou_req__example_feature__example_req
    :security: NO
    :uses: logic_arc_int__example_feature__if_2
    :implements: logic_arc_int__example_feature__if_2
@@ -321,6 +325,7 @@ Feature or Component Architecture File(s)
    :status: valid
    :version: 1
    :safety: ASIL_B
+   :fulfils: aou_req__example_feature__example_req
    :security: NO
    :belongs_to: feat__mtef
 
@@ -361,6 +366,16 @@ Requirements for the Example
 
    The feature shall provide the functionality to ....
 
+.. aou_req:: Example Assumption of Use Req
+   :id: aou_req__example_feature__example_req
+   :reqtype: Process
+   :security: YES
+   :safety: ASIL_B
+   :status: valid
+   :version: 1
+
+   The Component User shall use the feature within its specified operating conditions.
+
 .. comp_req:: Example Component Req
    :id: comp_req__example_feature__example_req
    :reqtype: Functional
@@ -369,6 +384,6 @@ Requirements for the Example
    :derived_from: feat_req__example_feature__example_req
    :status: valid
    :version: 1
-   :satisfied_by: comp__mod_temp_component_example_2
+   :satisfied_by: comp__mod_temp_component_example_1, comp__mod_temp_component_example_2, comp__mod_temp_archex_sub_component_1, comp__mod_temp_archex_sub_component_2, comp__mod_temp_archex_sub_component_3
 
    The component shall provide the Logical Operation 4 to get the ..
