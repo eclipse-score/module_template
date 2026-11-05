@@ -69,6 +69,11 @@ register_toolchains("@llvm_toolchain//:all")
 
 # tooling
 bazel_dep(name = "score_tooling", version = "3.0.2", dev_dependency = True)
+single_version_override(
+    module_name = "score_tooling",
+    patches = ["//:score_tooling-cargo-lock.patch"],
+    patch_strip = 0,
+)
 bazel_dep(name = "aspect_rules_lint", version = "2.5.0", dev_dependency = True)
 bazel_dep(name = "buildifier_prebuilt", version = "8.5.1.2", dev_dependency = True)
 
