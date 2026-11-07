@@ -558,5 +558,9 @@
   {
     "version": "pr-241",
     "url": "https://eclipse-score.github.io/module_template/pr-241/"
+  },
+  {
+    "version": "pr-239",
+    "url": "https://eclipse-score.github.io/module_template/pr-239/"
   }
 ]
