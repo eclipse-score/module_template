@@ -24,6 +24,9 @@ common --registry=https://bcr.bazel.build
 # Import toolchain bazelrc file
 try-import %workspace%/score.bazelrc/score_toolchain.bazelrc
 
+# Warning exceptions for targets using the existing _score_common configuration.
+build:_score_common --cxxopt=-Wno-error=mismatched-new-delete
+
 # Import custom user settings
 # Can be used to enable e.g. sanitizers or other features without modifying the main .bazelrc
 try-import %workspace%/user.bazelrc
