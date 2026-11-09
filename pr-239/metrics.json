@@ -107,7 +107,7 @@
         }
       }
     },
-    "comp__mod_temp_archex_sub_component_2": {
+    "comp__mod_temp_archex_sub_component_1": {
       "requirements": {
         "status": {
           "valid": 0,
@@ -133,7 +133,7 @@
         }
       }
     },
-    "comp__mod_temp_archex_sub_component_1": {
+    "comp__mod_temp_archex_sub_component_2": {
       "requirements": {
         "status": {
           "valid": 0,
