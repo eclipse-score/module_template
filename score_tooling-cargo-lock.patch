@@ -1,0 +1,5 @@
+--- cargo-bazel-lock.json
++++ cargo-bazel-lock.json
+@@ -2 +2 @@
+-  "checksum": "c2597c5747e30cb4c8758c28ad80db87bcfc09a3d60cf6f6926469a978546ed7",
++  "checksum": "ff4ebbded3f633e59c0bac8fb72ead4f61f3cc776381740bb371fef0399927f3",
