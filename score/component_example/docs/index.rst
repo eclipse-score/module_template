@@ -24,20 +24,18 @@
    :status: draft
    :version: 1
    :safety: ASIL_B
-   :security: YES
+   :security: NO
    :realizes: wp__cmpt_request
    :tags: template
 
-.. code-block:: rst
-
-   .. comp:: Component Name
-      :id: comp__mod_temp_component_name_template
-      :security: YES
-      :safety: ASIL_B
-      :status: valid
-      :implements: logic_arc_int__example_feature__if_1
-      :version: 1
-      :belongs_to: feat__mtef
+.. comp:: Component Name
+   :id: comp__mod_temp_component_name_template
+   :security: YES
+   :safety: ASIL_B
+   :status: valid
+   :implements: logic_arc_int__example_feature__if_1
+   :version: 1
+   :belongs_to: feat__mtef
 
 .. attention::
     The above directives must be updated according to your Component.
