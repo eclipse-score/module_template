@@ -477,6 +477,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../safety_mgt/index.html">Safety Management</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Security Management</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="module_security_plan.html">[Module Name] Security Plan</a></li>
+
+
+
+
+
+
+
+
+
 <li class="toctree-l2 current active"><a aria-current="page" class="current reference internal" href="#">[Module Name] Security Plan Formal Review Report</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_security_package_fdr.html">[Module Name] Security Package Formal Review Report</a></li>
 </ul>
@@ -550,7 +559,7 @@
 <p class="admonition-title">Note</p>
 <p>Document header</p>
 </div>
-<div class="need_container docutils container" id="SNCB-62fe516c">
+<div class="need_container docutils container" id="SNCB-ee0bdf2f">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__mod_temp_module_name_security_plan_fdr">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -607,14 +616,25 @@
 <p><strong>1. Purpose</strong></p>
 <p>The purpose of this review checklist is to provide a guidence for reviewing the Security Plans for each module.
 Each Module Security Plan shall have one checklist filled.</p>
-<p><strong>2. Checklist</strong></p>
+<p><strong>2. Conduct</strong></p>
+<p>As described in <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/security_management_workflow.html#wf__p_formal_security_rv">wf__p_formal_security_rv</a>, the formal document review is performed by an “external” security auditor, supported by the Security Manager:</p>
+<ul class="simple">
+<li><p>reviewer: &lt;committer with security manager/auditor skills explicitly named here&gt;</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/security_management_workflow.html#wf__p_formal_security_rv">wf__p_formal_security_rv</a> is currently marked as “tailored out (needs discussion)” at process level.
+Confirm with the Security Manager whether a formal review is actually performed for this Module before relying on this checklist.</p>
+</div>
+<p><strong>3. Checklist</strong></p>
 <p>See also the review concept for further information about reviews in general and inspection in particular.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id1">
-<caption><span class="caption-number">Table 20 </span><span class="caption-text">Security Plan Checklist</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 21 </span><span class="caption-text">Security Plan Checklist</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Id</p></th>
 <th class="head"><p>Security Plan activity</p></th>
 <th class="head"><p>Compliant to ISO SAE 21434?</p></th>
+<th class="head"><p>Reference</p></th>
 <th class="head"><p>Comment</p></th>
 </tr>
 </thead>
@@ -622,71 +642,93 @@ Each Module Security Plan shall have one checklist filled.</p>
 <tr class="row-even"><td><p>1</p></td>
 <td><p>Is the rationale for the Security Work Products tailoring included?</p></td>
 <td><p>[YES | NO ]</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__prj_management_6431">std_req__isosae21434__prj_management_6431</a>
+<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__prj_management_6432">std_req__isosae21434__prj_management_6432</a></p></td>
 <td><p>&lt;Rationale for result&gt;</p></td>
 </tr>
 <tr class="row-odd"><td><p>2</p></td>
 <td><p>Is impact analysis planned in case of re-use of SW (needed for every release following the first formal release)?</p></td>
 <td><p>[YES | NO ]</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__prj_management_6441">std_req__isosae21434__prj_management_6441</a>
+<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__prj_management_6442">std_req__isosae21434__prj_management_6442</a>
+<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__prj_management_6443">std_req__isosae21434__prj_management_6443</a></p></td>
 <td><p>&lt;Rationale for result&gt;</p></td>
 </tr>
 <tr class="row-even"><td><p>3</p></td>
-<td><p>Does the Security Plan define all needed activities for security management (including review and security audit)?</p></td>
+<td><p>Does the Security Plan define all needed activities for security management (including formal document review and security audit/assessment)?</p></td>
 <td><p>[YES | NO ]</p></td>
-<td><p>&lt;Rationale for result&gt;</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__prj_management_6411">std_req__isosae21434__prj_management_6411</a>
+<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_wp__isosae21434__org_management_555">std_wp__isosae21434__org_management_555</a></p></td>
+<td><p>Security audit and assessment have no dedicated <code class="docutils literal notranslate"><span class="pre">std_req</span></code> modeled in the process description, only the related work products/workflows (<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/security_management_workflow.html#wf__p_fs_audit_security">wf__p_fs_audit_security</a>, <a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/security_management/security_management_workflow.html#wf__p_formal_security_rv">wf__p_formal_security_rv</a>).</p></td>
 </tr>
 <tr class="row-odd"><td><p>4</p></td>
 <td><p>Does the Security Plan define all needed activities for SW development, integration and verification?</p></td>
 <td><p>[YES | NO ]</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__prj_management_6421">std_req__isosae21434__prj_management_6421</a></p></td>
 <td><p>&lt;Rationale for result&gt;</p></td>
 </tr>
 <tr class="row-even"><td><p>5</p></td>
-<td><p>Does the Security Plan define all needed activities for security analysis?</p></td>
+<td><p>Does the Security Plan define all needed activities for security analysis (TARA)?</p></td>
 <td><p>[YES | NO ]</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__prj_management_6421">std_req__isosae21434__prj_management_6421</a></p></td>
 <td><p>&lt;Rationale for result&gt;</p></td>
 </tr>
 <tr class="row-odd"><td><p>6</p></td>
-<td><p>Does the Security Plan define all needed activities for supporting processes (incl. tool mgt)?</p></td>
+<td><p>Does the Security Plan define all needed activities for supporting processes (incl. tool mgt, configuration and change management)?</p></td>
 <td><p>[YES | NO ]</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__prj_management_6421">std_req__isosae21434__prj_management_6421</a></p></td>
 <td><p>&lt;Rationale for result&gt;</p></td>
 </tr>
 <tr class="row-even"><td><p>7</p></td>
 <td><p>Does the Security Plan document a responsible for all activities?</p></td>
 <td><p>[YES | NO ]</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__prj_management_6411">std_req__isosae21434__prj_management_6411</a></p></td>
 <td><p>&lt;Rationale for result&gt;</p></td>
 </tr>
 <tr class="row-odd"><td><p>8</p></td>
-<td><p>If OSS software components is used, is it planned to be qualified?</p></td>
+<td><p>If OTS/OSS software components are used, is it planned to be qualified (e.g. maintenance status, CVE history, sufficiency of existing documentation)?</p></td>
 <td><p>[YES | NO ]</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__prj_management_6461">std_req__isosae21434__prj_management_6461</a>
+<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__prj_management_6462">std_req__isosae21434__prj_management_6462</a></p></td>
 <td><p>&lt;Rationale for result&gt;</p></td>
 </tr>
 <tr class="row-even"><td><p>9</p></td>
 <td><p>Is a Security Manager and a Project Lead appointed for the project?</p></td>
 <td><p>[YES | NO ]</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__prj_management_6411">std_req__isosae21434__prj_management_6411</a></p></td>
 <td><p>&lt;Rationale for result&gt;</p></td>
 </tr>
 <tr class="row-odd"><td><p>10</p></td>
 <td><p>Is Security Plan sufficiently linked to the Project Plan?</p></td>
 <td><p>[YES | NO ]</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__prj_management_6421">std_req__isosae21434__prj_management_6421</a></p></td>
 <td><p>&lt;Rationale for result&gt;</p></td>
 </tr>
 <tr class="row-even"><td><p>11</p></td>
 <td><p>Is Security Plan updated iteratively to show the progress?</p></td>
 <td><p>[YES | NO ]</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__prj_management_6421">std_req__isosae21434__prj_management_6421</a></p></td>
 <td><p>&lt;Rationale for result&gt;</p></td>
 </tr>
 <tr class="row-odd"><td><p>12</p></td>
 <td><p>If Out-of-context software components is used, are the assumptions documented?</p></td>
 <td><p>[YES | NO ]</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__prj_management_6451">std_req__isosae21434__prj_management_6451</a>
+<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__prj_management_6452">std_req__isosae21434__prj_management_6452</a>
+<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__prj_management_6453">std_req__isosae21434__prj_management_6453</a></p></td>
 <td><p>&lt;Rationale for result&gt;</p></td>
 </tr>
 <tr class="row-even"><td><p>13</p></td>
 <td><p>Does the Security Plan define all needed activities for SBOM generation?</p></td>
 <td><p>[YES | NO ]</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__prj_management_6461">std_req__isosae21434__prj_management_6461</a></p></td>
 <td><p>&lt;Rationale for result&gt;</p></td>
 </tr>
 <tr class="row-odd"><td><p>14</p></td>
 <td><p>Does the Security Plan define regular vulnerability scans for the generated SBOM?</p></td>
 <td><p>[YES | NO ]</p></td>
+<td><p><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__continual_8521">std_req__isosae21434__continual_8521</a>
+<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/standards/isosae21434/isosae21434.html#std_req__isosae21434__continual_8621">std_req__isosae21434__continual_8621</a></p></td>
 <td><p>&lt;Rationale for result&gt;</p></td>
 </tr>
 </tbody>
