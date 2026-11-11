@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "need": "comp_req__mod_temp_component_name__some_title",
+    "links": {
+      "CodeLinks": [
+        {
+          "file": "score/component_example/src/component_example.cpp",
+          "line": 23,
+          "tag": "// req-traceability:",
+          "need": "comp_req__mod_temp_component_name__some_title",
+          "full_line": "// req-traceability: comp_req__mod_temp_component_name__some_title",
+          "repo_name": "local_repo",
+          "hash": "",
+          "url": ""
+        }
+      ],
+      "TestLinks": []
+    }
+  }
+]
