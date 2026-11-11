@@ -40,7 +40,7 @@ Functional Requirements
 
 .. comp_req:: Some Title
    :id: comp_req__mod_temp_component_name__some_title
-   :reqtype: Process
+   :reqtype: Functional
    :security: YES
    :safety: ASIL_B
    :derived_from: feat_req__example_feature__example_req
@@ -48,7 +48,7 @@ Functional Requirements
    :version: 1
    :satisfied_by: comp__mod_temp_component_name_template
 
-   The Component shall do xyz to another component to bring it to this condition at this time
+   The component shall return the greeting "Hello, <name>!" for a given name through make_hello_message.
 
    Note: (optional, not to be verified)
 
