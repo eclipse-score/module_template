@@ -67,6 +67,9 @@ Static Architecture
    which can be shown without actual c++/rust interfaces and data types
    and there will be link to internal architecture till code to get actual api descriptions.
 
+.. note::
+   The ``fulfils`` link is optional on architecture views. Include it only when the view fulfills a requirement.
+
 .. code-block:: rst
 
    .. feat_arc_sta:: Feature Static View
@@ -88,9 +91,6 @@ Dynamic Architecture
 --------------------
 
 <The dynamic architecture of the feature can be described here. That can include sequence diagrams, state machines, and other dynamic views of the feature.>
-
-.. note::
-   The ``fulfils`` link is optional. Include it only when the architecture view fulfills a requirement.
 
 .. code-block:: rst
 
