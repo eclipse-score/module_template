@@ -67,6 +67,9 @@ Static Architecture
    which can be shown without actual c++/rust interfaces and data types
    and there will be link to internal architecture till code to get actual api descriptions.
 
+.. note::
+   The ``fulfils`` link is optional on architecture views. Include it only when the view fulfills a requirement.
+
 .. code-block:: rst
 
    .. feat_arc_sta:: Feature Static View
