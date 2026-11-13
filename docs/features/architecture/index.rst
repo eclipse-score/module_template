@@ -89,6 +89,9 @@ Dynamic Architecture
 
 <The dynamic architecture of the feature can be described here. That can include sequence diagrams, state machines, and other dynamic views of the feature.>
 
+.. note::
+   The ``fulfils`` link is optional. Include it only when the architecture view fulfills a requirement.
+
 .. code-block:: rst
 
    .. feat_arc_dyn:: Dynamic View

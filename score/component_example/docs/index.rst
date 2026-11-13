@@ -45,6 +45,8 @@
     - Adjust ``status`` to be ``valid``
     - Adjust ``safety``, ``security`` and ``tags`` according to your needs
     - Take the ``comp`` directive out of the code block and adapt it to your Component
+    - The ``implements``, ``uses``, ``consists_of`` and ``fulfils`` links on ``comp`` are optional;
+      include them when applicable
 
 .. note::
    This document is the Component Request (CR) of the component. It describes the current state of the component.
