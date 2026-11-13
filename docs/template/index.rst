@@ -36,6 +36,9 @@ Module Folder Structure
     When only a single feature is implemented in the module, the additional feature-name nesting under ``docs/features/`` can be omitted.
     If multiple features are to be references, then structure them under ``docs/features/<feature_name>/``.
 
+    Shared implementation code used by multiple components may be placed in ``score/common/src/``.
+    If the reusable code has its own component architecture, requirements, or tests, model it as a named component instead.
+
 .. parsed-literal::
 
     <module_name>/                      # Root folder of the module, subfolder only if more than one module exists in the repository
@@ -75,6 +78,8 @@ Module Folder Structure
     │                                   #   module verifications [:need:`wp__verification_module_ver_report`],
     ├── examples/                       # Usage examples for the module / features
     ├── score/                          # Components of the module
+    │   ├── common/                     # Shared implementation code used by multiple components (optional)
+    │   │   └── src/                    # Shared source files and include files
     │   ├── tests/                      # Module-level tests (i.e., feature integration tests) [:need:`wp__verification_feat_int_test`]
     │   └── <component_name>/           # Component folder for each component of the module
     │       ├── docs/                   # Documentation of the component
