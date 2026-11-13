@@ -384,6 +384,6 @@ Requirements for the Example
    :derived_from: feat_req__example_feature__example_req
    :status: valid
    :version: 1
-   :satisfied_by: comp__mod_temp_component_example_2, comp__mod_temp_archex_sub_component_2
+   :satisfied_by: comp__mod_temp_component_example_1, comp__mod_temp_component_example_2, comp__mod_temp_archex_sub_component_1, comp__mod_temp_archex_sub_component_2, comp__mod_temp_archex_sub_component_3
 
    The component shall provide the Logical Operation 4 to get the ..
