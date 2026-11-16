@@ -130,6 +130,10 @@ For all identified applicable failure initiators, the FMEA is performed in the f
 
       .. note::   argument is inside the 'content'. Therefore content is mandatory
 
+.. note::
+   ``safety_relevant``, ``failure_root_cause`` and ``mitigation_issue`` are optional. The ``mitigated_by`` link is
+   optional while the FMEA is invalid, but is required when its status is valid.
+
 .. attention::
     The above directive must be updated according to your component FMEA.
 

@@ -56,7 +56,7 @@ Functional Requirements
     The above directive must be updated according to your component requirements.
 
     - Replace the example content by the real content for your first requirement
-    - Set ``derived_from`` with links to Feature requirements
+    - ``derived_from`` is an optional link to Feature requirements; include it when applicable
     - Set ``satisfied_by`` with a link to the right Component id
     - Set ``safety`` and ``security`` to the right value
     - Set the status to valid and start the review/merge process

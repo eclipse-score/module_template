@@ -203,6 +203,10 @@ For all identified applicable failure initiators, the DFA is performed in the fo
 
 .. note::   Argument is inside the 'content'. Therefore content is mandatory.
 
+.. note::
+   ``safety_relevant`` and ``mitigation_issue`` are optional. The ``mitigated_by`` link is optional while the DFA is
+   invalid, but is required when its status is valid.
+
 .. attention::
     The above directive must be updated according to your component DFA.
 

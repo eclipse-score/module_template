@@ -77,6 +77,10 @@ The components are designed to cover the expectations from the feature architect
 
 A component can optional also consist of lower level components to further structure the architecture. The component and its static views can also optionally use interfaces provided by other components.
 
+.. note::
+   The ``fulfils`` link is optional on architecture views and interfaces. Include it only when the element fulfills a
+   component requirement. The ``uses`` link is optional when an architecture view uses an interface.
+
 .. code-block:: rst
 
    .. comp_arc_sta:: Component Name (Static View)
