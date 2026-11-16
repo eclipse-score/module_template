@@ -20,6 +20,7 @@ std::string make_hello() {
     return "Hello";
 }
 
+// req-traceability: comp_req__mod_temp_component_name__some_title
 std::string make_hello_message(const std::string& name) {
     return make_hello() + ", " + name + "!";
 }

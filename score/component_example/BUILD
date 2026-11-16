@@ -45,6 +45,7 @@ docs_bundle(
     code_targets = [
         ":component_example",
     ],
+    primary_need_id = "comp__mod_temp_component_name_template",
     source_dir = "docs",
     visibility = ["//visibility:public"],
 )
