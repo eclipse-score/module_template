@@ -545,6 +545,8 @@ It also provides an example of documenting detailed design in <a class="referenc
 <p class="admonition-title">Note</p>
 <p>When only a single feature is implemented in the module, the additional feature-name nesting under <code class="docutils literal notranslate"><span class="pre">docs/features/</span></code> can be omitted.
 If multiple features are to be references, then structure them under <code class="docutils literal notranslate"><span class="pre">docs/features/&lt;feature_name&gt;/</span></code>.</p>
+<p>Shared implementation code used by multiple components may be placed in <code class="docutils literal notranslate"><span class="pre">score/common/src/</span></code>.
+If the reusable code has its own component architecture, requirements, or tests, model it as a named component instead.</p>
 </div>
 <pre class="literal-block">&lt;module_name&gt;/                      # Root folder of the module, subfolder only if more than one module exists in the repository
 ├── .github/                        # GitHub configuration
@@ -583,6 +585,8 @@ If multiple features are to be references, then structure them under <code class
 │                                   #   module verifications [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/verification/verification_workproducts.html#wp__verification_module_ver_report">wp__verification_module_ver_report</a>],
 ├── examples/                       # Usage examples for the module / features
 ├── score/                          # Components of the module
+│   ├── common/                     # Shared implementation code used by multiple components (optional)
+│   │   └── src/                    # Shared source files and include files
 │   ├── tests/                      # Module-level tests (i.e., feature integration tests) [<a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/verification/verification_workproducts.html#wp__verification_feat_int_test">wp__verification_feat_int_test</a>]
 │   └── &lt;component_name&gt;/           # Component folder for each component of the module
 │       ├── docs/                   # Documentation of the component
