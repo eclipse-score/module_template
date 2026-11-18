@@ -549,7 +549,7 @@
                   
   <section id="component-name-fmea-failure-modes-and-effects-analysis">
 <h1>[Component Name] FMEA (Failure Modes and Effects Analysis)<a class="headerlink" href="#component-name-fmea-failure-modes-and-effects-analysis" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-a90fcabe">
+<div class="need_container docutils container" id="SNCB-d9889b21">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__mod_temp_component_name_fmea">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -721,7 +721,7 @@
    <span class="nc">:mitigated_by:</span> <span class="nt">&lt;ID from Component Requirement | ID from AoU Component Requirement&gt;</span>
    <span class="nc">:mitigation_issue:</span> <span class="nt">&lt;ID from Issue Tracker&gt;</span>
    <span class="nc">:sufficient:</span> <span class="nt">&lt;yes|no&gt;</span>
-   <span class="nc">:status:</span> <span class="nt">&lt;valid|invalid&gt;</span>
+   <span class="nc">:status:</span> <span class="nt">&lt;draft|valid|invalid&gt;</span>
 
 <span class="p">  ..</span> <span class="ow">note</span><span class="p">::</span>   argument is inside the 'content'. Therefore content is mandatory
 </pre></div>
@@ -729,7 +729,8 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code class="docutils literal notranslate"><span class="pre">safety_relevant</span></code>, <code class="docutils literal notranslate"><span class="pre">failure_root_cause</span></code> and <code class="docutils literal notranslate"><span class="pre">mitigation_issue</span></code> are optional. The <code class="docutils literal notranslate"><span class="pre">mitigated_by</span></code> link is
-optional while the FMEA is invalid, but is required when its status is valid.</p>
+optional while the FMEA is draft or invalid, but is required when its status is valid.
+Use <code class="docutils literal notranslate"><span class="pre">draft</span></code> as long as the analysis is not finished, e.g. only a <code class="docutils literal notranslate"><span class="pre">mitigation_issue</span></code> is linked.</p>
 </div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
