@@ -126,13 +126,14 @@ For all identified applicable failure initiators, the FMEA is performed in the f
        :mitigated_by: <ID from Component Requirement | ID from AoU Component Requirement>
        :mitigation_issue: <ID from Issue Tracker>
        :sufficient: <yes|no>
-       :status: <valid|invalid>
+       :status: <draft|valid|invalid>
 
       .. note::   argument is inside the 'content'. Therefore content is mandatory
 
 .. note::
    ``safety_relevant``, ``failure_root_cause`` and ``mitigation_issue`` are optional. The ``mitigated_by`` link is
-   optional while the FMEA is invalid, but is required when its status is valid.
+   optional while the FMEA is draft or invalid, but is required when its status is valid.
+   Use ``draft`` as long as the analysis is not finished, e.g. only a ``mitigation_issue`` is linked.
 
 .. attention::
     The above directive must be updated according to your component FMEA.

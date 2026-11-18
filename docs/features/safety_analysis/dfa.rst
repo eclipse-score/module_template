@@ -198,13 +198,14 @@ For all identified applicable failure initiators, the DFA is performed in the fo
        :mitigated_by: <ID from Feature Requirement | ID from AoU Feature Requirement>
        :mitigation_issue: <ID from Issue Tracker>
        :sufficient: <yes|no>
-       :status: <valid|invalid>
+       :status: <draft|valid|invalid>
 
  .. note::   Argument is inside the 'content'. Therefore content is mandatory.
 
 .. note::
    ``safety_relevant`` and ``mitigation_issue`` are optional. The ``mitigated_by`` link is optional while the DFA is
-   invalid, but is required when its status is valid.
+   draft or invalid, but is required when its status is valid.
+   Use ``draft`` as long as the analysis is not finished, e.g. only a ``mitigation_issue`` is linked.
 
 .. attention::
     The above directive must be updated according to your feature DFA.
