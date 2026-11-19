@@ -622,5 +622,9 @@
   {
     "version": "pr-256",
     "url": "https://eclipse-score.github.io/module_template/pr-256/"
+  },
+  {
+    "version": "pr-257",
+    "url": "https://eclipse-score.github.io/module_template/pr-257/"
   }
 ]
