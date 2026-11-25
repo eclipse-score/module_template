@@ -22,6 +22,7 @@ should be updated according to the module and it's components.>
 
    .. mod:: Module Name
       :id: mod__module_name
+      :maturity: preview
       :includes: comp__component_name_template
 
 Module View

@@ -188,6 +188,7 @@ Module View File
 
 .. mod:: Module 1
    :id: mod__mtef_archex_module_1
+   :maturity: preview
    :security: YES
    :safety: ASIL_B
    :status: valid
@@ -211,6 +212,7 @@ Module View File
 
 .. mod:: Module 2
    :id: mod__mtef_archex_module_2
+   :maturity: preview
    :security: YES
    :safety: ASIL_B
    :status: valid
